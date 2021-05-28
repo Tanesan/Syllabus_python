@@ -1,5 +1,6 @@
 from time import sleep
 from selenium import webdriver
+import chromedriver_binary
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
