@@ -1,17 +1,11 @@
 from time import sleep
-import bz2
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from flask import Flask, request, abort, jsonify
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import firestore
 
-cred = credentials.Certificate("/Users/keitotanemura/Downloads/univ-syllabus-firebase-adminsdk-nfe0l-4c2d865d8d.json")
-firebase_admin.initialize_app(cred)
-db = firestore.client()
+
 app = Flask(__name__)
 app.config["JSON_AS_ASCII"] = False
 data = {}
