@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from flask import Flask, request, abort, jsonify
-from os import os
+import os
 # from fastapi import FastAPI
 
 app = Flask(__name__)
