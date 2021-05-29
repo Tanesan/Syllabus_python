@@ -44,9 +44,9 @@ def main():
     #           92, 93, 94, 95, 96, 97, 98]:
     for m in [22]:
         data = {}
-        searchingADJa = {}
         for i in range(1):
             subject = {}
+            searchingADJa = {}
             fin = 0
             driver.get('https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree')
             select_element = driver.find_element(By.ID, 'selLsnMngPostCd')
@@ -160,16 +160,15 @@ def main():
                 i += 1
             subject.setdefault('開講期', grading["項番No.1"][1])
             oneset = {}
-            oneset.setdefault(name, subject)
-            data.setdefault(str(m), oneset)
+            # oneset.setdefault(name, subject)
+            data.setdefault(str(m), subject)
             searchingADJa.setdefault(name, {**othersJa, **subject})
             searchingADEn.setdefault(name, {**othersEn, **subject})
-            # print(searchingADJa)
+            with open('docs/all/' + str(m) + '.json', 'w') as f:
+                json.dump(searchingADJa, f, ensure_ascii=False)
             sleep(5)
         with open("docs/" + str(m) + '.json', 'w') as f:
             json.dump(data, f, ensure_ascii=False)
-        with open('docs/all/' + str(m) + '.json', 'w') as f:
-            json.dump(searchingADJa, f, ensure_ascii=False)
         print(m)
     driver.quit()
     return
