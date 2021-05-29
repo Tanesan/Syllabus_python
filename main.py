@@ -162,7 +162,7 @@ def main():
             oneset = {}
             # oneset.setdefault(name, subject)
             data.setdefault(name, subject)
-            searchingADJa.setdefault({**othersJa, **subject})
+            searchingADJa = {**othersJa, **subject}
             # searchingADEn.setdefault(name, {**othersEn, **subject})
             with open('docs/all/' + str(name) + '.json', 'w') as f:
                 json.dump(searchingADJa, f, ensure_ascii=False)
