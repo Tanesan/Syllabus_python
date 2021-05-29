@@ -1,3 +1,5 @@
 Flask==1.1.2
 chromedriver-binary==91.0.4472.19.0
 selenium==3.141.0
+rq
+redis

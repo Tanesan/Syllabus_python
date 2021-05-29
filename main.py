@@ -6,11 +6,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from flask import Flask, request, abort, jsonify
 import os
+import redis
+from rq import Worker, Queue, Connection
+from worker import conn
+
 # from fastapi import FastAPI
 
-app = Flask(__name__)
+# app = Flask(__name__)
+app = Queue(connection=conn)
 # app = FastAPI()
-app.config["JSON_AS_ASCII"] = False
+# app.config["JSON_AS_ASCII"] = False
 data = {}
 searchingADJa = {}
 searchingADEn = {}
@@ -34,7 +39,9 @@ def main():
     # options.add_experimental_option("prefs", prefs)
     # driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver', options=options)
     driver = webdriver.Chrome(options=options)
-    for m in [21, 22, 23,24, 25, 26, 28, 29, 31, 32, 34, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98]:
+    for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
+              52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
+              92, 93, 94, 95, 96, 97, 98]:
         for i in range(1):
             subject = {}
             fin = 0
@@ -81,15 +88,18 @@ def main():
                             'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('td')) == 1:
                         i = x
                         # print(x, len(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')))
-                        if len(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('th')) == 0:
+                        if len(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
+                                'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('th')) == 0:
                             i = 0
                         # print(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
                         #     'tbody').find_elements_by_tag_name('tr')[i].find_elements_by_tag_name('th')[0].text)
-                        grading.setdefault(((driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                            'tbody').find_elements_by_tag_name('tr')[i].find_elements_by_tag_name('th')[0].text)+str(x)).replace("\n", ""),
-                                           driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                                               'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('td')[
-                                               0].text)
+                        grading.setdefault(
+                            ((driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
+                                'tbody').find_elements_by_tag_name('tr')[i].find_elements_by_tag_name('th')[
+                                  0].text) + str(x)).replace("\n", ""),
+                            driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
+                                'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('td')[
+                                0].text)
                     else:
                         num = []
                         # print(str(x) +"A")
@@ -98,21 +108,26 @@ def main():
                             num.append(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
                                 'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name(
                                 'td')[y].text)
-                        grading.setdefault((driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                            'tbody').find_elements_by_tag_name('tr')[0].find_elements_by_tag_name('th')[0].text + str(
-                            x)).replace("\n", ""),
-                                           num)
+                        grading.setdefault(
+                            (driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
+                                'tbody').find_elements_by_tag_name('tr')[0].find_elements_by_tag_name('th')[
+                                 0].text + str(
+                                x)).replace("\n", ""),
+                            num)
             # 教室情報
             school_leassons = {}
-            school_leassons.setdefault('項番', driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblNo').get_attribute(
-                'value'))
+            school_leassons.setdefault('項番',
+                                       driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblNo').get_attribute(
+                                           'value'))
             school_leassons.setdefault('履修年度',
-                                       driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblTacFcy').get_attribute(
+                                       driver.find_element_by_name(
+                                           'lstSlbtchinftJ002List_st[0].lblTacFcy').get_attribute(
                                            'value'))
             school_leassons.setdefault('開講期', driver.find_element_by_name(
                 'lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_02').get_attribute('value'))
             school_leassons.setdefault('曜時',
-                                       driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblTmtxCd').get_attribute(
+                                       driver.find_element_by_name(
+                                           'lstSlbtchinftJ002List_st[0].lblTmtxCd').get_attribute(
                                            'value'))
             school_leassons.setdefault('使用開講期', driver.find_element_by_name(
                 'lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_03').get_attribute('value'))
@@ -138,7 +153,7 @@ def main():
             othersJa.setdefault('評価', grading)
             i = 1
             while "項番No." + str(i) in grading:
-                subject.setdefault('時限'+str(i), grading["項番No." + str(i)][2])
+                subject.setdefault('時限' + str(i), grading["項番No." + str(i)][2])
                 i += 1
             subject.setdefault('開講期', grading["項番No.1"][1])
             oneset = {}
@@ -150,28 +165,37 @@ def main():
             sleep(5)
             print(data)
     driver.quit()
-    return
+    return data, searchingADJa
+
 
 # @app.get("/api/subject/<id>")
-@app.route("/api/subject/<id>", methods=['GET'])
+# @app.route("/api/subject/<id>", methods=['GET'])
+(result, searchingData) = app.enqueue(main, '')
+
+
+@app.route("/api/subject/<id>")
 def callback(id):
-    return jsonify(data[id])
+    return jsonify(result[id])
+
 
 # @app.get('/ja/api/<id>')
 @app.route('/ja/api/<id>', methods=['GET'])
 def check__subject_ja(id):
     # print(searchingADJa)
-    return jsonify(searchingADJa[id])
+    return jsonify(searchingData[id])
 
-# @app.get('/en/api/<id>')
-@app.route('/en/api/<id>', methods=['GET'])
-def check__subject_en(id):
-    # print(searchingADEn)
-    return jsonify(searchingADEn[id])
+
+# # @app.get('/en/api/<id>')
+# @app.route('/en/api/<id>', methods=['GET'])
+# def check__subject_en(id):
+#     # print(searchingADEn)
+#     return jsonify(searchingADEn[id])
+
 
 @app.after_request
 def after_request(response):
-  response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Origin', '*')
+
 
 if __name__ == "__main__":
     main()
