@@ -39,11 +39,12 @@ def main():
     # driver = Selenium::WebDriver.for :remote, desired_capabilities: :chrome
     driver = webdriver.Chrome(options=options)
 
-    for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
-              52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
-              92, 93, 94, 95, 96, 97, 98]:
+    # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
+    #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
+    #           92, 93, 94, 95, 96, 97, 98]:
+    for m in [22]:
         data = {}
-        for i in range(1000000):
+        for i in range(1):
             subject = {}
             searchingADJa = {}
             fin = 0
@@ -137,21 +138,21 @@ def main():
             #                            driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblClrNm').get_attribute(
             #                                'value'))
             othersJa = {}
-            othersEn = {}
+            # othersEn = {}
             risyuuki = driver.find_element_by_name('lblAc201ScrDispNm_01').get_attribute('value')
             othersJa.setdefault('履修期', risyuuki[0: risyuuki.find('／')])
-            othersEn.setdefault('履修期', risyuuki[risyuuki.find('／') + 1:len(risyuuki) + 1])
+            # othersEn.setdefault('履修期', risyuuki[risyuuki.find('／') + 1:len(risyuuki) + 1])
             language = driver.find_element_by_name('lblVolCd1').get_attribute('value')
             othersJa.setdefault('主な教授言語', language[0: language.find('／')])
-            othersEn.setdefault('主な教授言語', language[language.find('／') + 1:len(risyuuki) + 1])
+            # othersEn.setdefault('主な教授言語', language[language.find('／') + 1:len(risyuuki) + 1])
             othersJa.setdefault('授業目的', driver.find_element_by_name('lblVolItm2').get_attribute('value'))
-            othersEn.setdefault('授業目的(英文)', driver.find_element_by_name('lblVolItm78').get_attribute('value'))
+            # othersEn.setdefault('授業目的(英文)', driver.find_element_by_name('lblVolItm78').get_attribute('value'))
             othersJa.setdefault('到達目標', driver.find_element_by_name('lblVolItm3').get_attribute('value'))
-            othersEn.setdefault('到達目標(英文)', driver.find_element_by_name('lblVolItm79').get_attribute('value'))
+            # othersEn.setdefault('到達目標(英文)', driver.find_element_by_name('lblVolItm79').get_attribute('value'))
             othersJa.setdefault('授業方法', driver.find_element_by_name('lblVolItm43').get_attribute('value'))
             # othersJa.setdefault('教室情報', school_leassons)
             othersJa.setdefault('トピック', topic)
-            othersEn.setdefault('トピック', topic)
+            # othersEn.setdefault('トピック', topic)
             othersJa.setdefault('評価', grading)
             i = 1
             while "項番No." + str(i) in grading:
@@ -161,8 +162,8 @@ def main():
             oneset = {}
             # oneset.setdefault(name, subject)
             data.setdefault(name, subject)
-            searchingADJa.setdefault(name, {**othersJa, **subject})
-            searchingADEn.setdefault(name, {**othersEn, **subject})
+            searchingADJa.setdefault({**othersJa, **subject})
+            # searchingADEn.setdefault(name, {**othersEn, **subject})
             with open('docs/all/' + str(name) + '.json', 'w') as f:
                 json.dump(searchingADJa, f, ensure_ascii=False)
             sleep(5)
