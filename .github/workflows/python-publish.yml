@@ -49,4 +49,5 @@ jobs:
           git add .
           git commit -m "Commit Message"
           git pull
+          git config pull.rebase true
           git push origin master
