@@ -3,3 +3,4 @@ chromedriver-binary==91.0.4472.19.0
 selenium==3.141.0
 fastapi==0.58.1
 uvicorn==0.11.5
+gunicorn==20.0.4
