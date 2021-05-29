@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from flask import Flask, request, abort, jsonify
-import os
+from os import os
 # from fastapi import FastAPI
 
 app = Flask(__name__)
@@ -175,4 +175,5 @@ def after_request(response):
 
 if __name__ == "__main__":
     main()
-    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)), threaded=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, host="0.0.0.0", port=port, threaded=True)
