@@ -9,7 +9,7 @@ from selenium.webdriver.support.select import Select
 # import redis
 # from rq import Worker, Queue, Connection
 # from worker import conn
-
+import json
 # from fastapi import FastAPI
 
 # app = Flask(__name__)
@@ -41,9 +41,10 @@ def main():
     # driver = Selenium::WebDriver.for :remote, desired_capabilities: :chrome
     driver = webdriver.Chrome(options=options)
 
-    for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
-              52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
-              92, 93, 94, 95, 96, 97, 98]:
+    # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
+    #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
+    #           92, 93, 94, 95, 96, 97, 98]:
+    for m in [21]:
         for i in range(1):
             subject = {}
             fin = 0
@@ -165,8 +166,9 @@ def main():
             searchingADEn.setdefault(name, {**othersEn, **subject})
             # print(searchingADJa)
             sleep(5)
-            print(data)
     driver.quit()
+    with open('population.json', 'w') as f:
+        json.dump(data, f, ensure_ascii=False)
     return data, searchingADJa
 
 
