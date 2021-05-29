@@ -1,19 +1,19 @@
 from time import sleep
 from selenium import webdriver
-import chromedriver_binary
-from selenium.webdriver.chrome.options import Options
+# import chromedriver_binary
+# from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
-from flask import Flask, request, abort, jsonify
-import os
-import redis
-from rq import Worker, Queue, Connection
-from worker import conn
+# from flask import Flask, request, abort, jsonify
+# import os
+# import redis
+# from rq import Worker, Queue, Connection
+# from worker import conn
 
 # from fastapi import FastAPI
 
 # app = Flask(__name__)
-app = Queue(connection=conn)
+# app = Queue(connection=conn)
 # app = FastAPI()
 # app.config["JSON_AS_ASCII"] = False
 data = {}
@@ -38,7 +38,8 @@ def main():
     # prefs = {"profile.default_content_setting_values.notifications": 2}
     # options.add_experimental_option("prefs", prefs)
     # driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver', options=options)
-    driver = webdriver.Chrome(options=options)
+    # driver = Selenium::WebDriver.for :remote, desired_capabilities: :chrome
+    driver = webdriver.Chrome()
     for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
               52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
               92, 93, 94, 95, 96, 97, 98]:
@@ -170,19 +171,19 @@ def main():
 
 # @app.get("/api/subject/<id>")
 # @app.route("/api/subject/<id>", methods=['GET'])
-(result, searchingData) = app.enqueue(main, '')
+# (result, searchingData) = app.enqueue(main, '')
 
 
-@app.route("/api/subject/<id>")
-def callback(id):
-    return jsonify(result[id])
+# @app.route("/api/subject/<id>")
+# def callback(id):
+#     return jsonify(result[id])
 
 
 # @app.get('/ja/api/<id>')
-@app.route('/ja/api/<id>', methods=['GET'])
-def check__subject_ja(id):
-    # print(searchingADJa)
-    return jsonify(searchingData[id])
+# @app.route('/ja/api/<id>', methods=['GET'])
+# def check__subject_ja(id):
+#     # print(searchingADJa)
+#     return jsonify(searchingData[id])
 
 
 # # @app.get('/en/api/<id>')
@@ -191,13 +192,13 @@ def check__subject_ja(id):
 #     # print(searchingADEn)
 #     return jsonify(searchingADEn[id])
 
-
-@app.after_request
-def after_request(response):
-    response.headers.add('Access-Control-Allow-Origin', '*')
+#
+# @app.after_request
+# def after_request(response):
+#     response.headers.add('Access-Control-Allow-Origin', '*')
 
 
 if __name__ == "__main__":
     main()
-    port = int(os.environ.get('PORT', 5000))
-    app.run(debug=False, host="0.0.0.0", port=port, threaded=True)
+    # port = int(os.environ.get('PORT', 5000))
+    # app.run(debug=False, host="0.0.0.0", port=port, threaded=True)
