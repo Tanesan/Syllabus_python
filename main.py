@@ -6,11 +6,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from flask import Flask, request, abort, jsonify
 import os
-from fastapi import FastAPI
+# from fastapi import FastAPI
 
-# app = Flask(__name__)
-app = FastAPI()
-# app.config["JSON_AS_ASCII"] = False
+app = Flask(__name__)
+# app = FastAPI()
+app.config["JSON_AS_ASCII"] = False
 data = {}
 searchingADJa = {}
 searchingADEn = {}
@@ -154,21 +154,21 @@ def main():
     return
 
 
-# @app.route("/api/subject/<id>", methods=['GET'])
-@app.get("/api/subject/<id>")
+@app.route("/api/subject/<id>", methods=['GET'])
+# @app.get("/api/subject/<id>")
 async def callback(id):
     return jsonify(data[id])
 
 
-# @app.route('/ja/api/<id>', methods=['GET'])
-@app.get('/ja/api/<id>')
+@app.route('/ja/api/<id>', methods=['GET'])
+# @app.get('/ja/api/<id>')
 async def check__subject_ja(id):
     # print(searchingADJa)
     return jsonify(searchingADJa[id])
 
 
-# @app.route('/en/api/<id>', methods=['GET'])
-@app.get('/en/api/<id>')
+@app.route('/en/api/<id>', methods=['GET'])
+# @app.get('/en/api/<id>')
 async def check__subject_en(id):
     # print(searchingADEn)
     return jsonify(searchingADEn[id])
@@ -176,4 +176,4 @@ async def check__subject_en(id):
 
 if __name__ == "__main__":
     main()
-    # app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)), threaded=True)
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)), threaded=True)
