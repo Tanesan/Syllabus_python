@@ -153,23 +153,20 @@ def main():
             driver.quit()
     return
 
-
-@app.route("/api/subject/<id>", methods=['GET'])
 # @app.get("/api/subject/<id>")
-async def callback(id):
+@app.route("/api/subject/<id>", methods=['GET'])
+def callback(id):
     return jsonify(data[id])
 
-
-@app.route('/ja/api/<id>', methods=['GET'])
 # @app.get('/ja/api/<id>')
-async def check__subject_ja(id):
+@app.route('/ja/api/<id>', methods=['GET'])
+def check__subject_ja(id):
     # print(searchingADJa)
     return jsonify(searchingADJa[id])
 
-
-@app.route('/en/api/<id>', methods=['GET'])
 # @app.get('/en/api/<id>')
-async def check__subject_en(id):
+@app.route('/en/api/<id>', methods=['GET'])
+def check__subject_en(id):
     # print(searchingADEn)
     return jsonify(searchingADEn[id])
 
