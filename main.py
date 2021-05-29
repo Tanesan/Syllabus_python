@@ -169,6 +169,9 @@ def check__subject_en(id):
     # print(searchingADEn)
     return jsonify(searchingADEn[id])
 
+@app.after_request
+def after_request(response):
+  response.headers.add('Access-Control-Allow-Origin', '*')
 
 if __name__ == "__main__":
     main()
