@@ -9,8 +9,8 @@ name: ActionsTest # GitHub Actionsにつける名前。任意で良い。
 
 on:
   push:
-    paths:
-      - '*.py'
+    branches:
+      - main
 
 jobs:
   build:
