@@ -39,12 +39,12 @@ def main():
     # driver = Selenium::WebDriver.for :remote, desired_capabilities: :chrome
     driver = webdriver.Chrome(options=options)
 
-    # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
-    #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
-    #           92, 93, 94, 95, 96, 97, 98]:
-    for m in [21]:
+    for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
+              52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
+              92, 93, 94, 95, 96, 97, 98]:
+    # for m in [21]:
         data = {}
-        for i in range(1):
+        for i in range(100000):
             subject = {}
             fin = 0
             driver.get('https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree')
@@ -167,6 +167,7 @@ def main():
             sleep(5)
         with open("docs/" + str(m) + '.json', 'w') as f:
             json.dump(data, f, ensure_ascii=False)
+        print(m)
     driver.quit()
     with open('docs/all/all.json', 'w') as f:
         json.dump(searchingADJa, f, ensure_ascii=False)
