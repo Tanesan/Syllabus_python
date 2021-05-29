@@ -161,10 +161,10 @@ def main():
             subject.setdefault('開講期', grading["項番No.1"][1])
             oneset = {}
             # oneset.setdefault(name, subject)
-            data.setdefault(str(m), subject)
+            data.setdefault(name, subject)
             searchingADJa.setdefault(name, {**othersJa, **subject})
             searchingADEn.setdefault(name, {**othersEn, **subject})
-            with open('docs/all/' + str(m) + '.json', 'w') as f:
+            with open('docs/all/' + str(name) + '.json', 'w') as f:
                 json.dump(searchingADJa, f, ensure_ascii=False)
             sleep(5)
         with open("docs/" + str(m) + '.json', 'w') as f:
