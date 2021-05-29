@@ -53,4 +53,4 @@ jobs:
           git commit -m "Commit Message" -a
           git config pull.rebase false
           git pull
-          git push origin master
+          git push origin main
