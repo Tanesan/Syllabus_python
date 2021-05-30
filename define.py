@@ -127,7 +127,7 @@ def act(m):
         searchingADJa = {**othersJa, **subject}
         with open('docs/all/' + str(name) + '.json', 'w') as f:
             json.dump(searchingADJa, f, ensure_ascii=False)
-        sleep(5)
+        sleep(3)
     with open("docs/" + str(m) + '.json', 'w') as f:
         json.dump(data, f, ensure_ascii=False)
     driver.quit()
