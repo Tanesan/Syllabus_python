@@ -35,18 +35,19 @@ jobs:
         run: |
             git config --local user.email "keito.12.10@icloud.com"
             git config --local user.name "Tanesan"
-      - name: git settin
-        run: |
-            ls
-            pwd
+
             
   build0:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: git settin
+        run: |
+            ls
+            pwd
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python github/home/main.py
+          python /home/runner/work/Syllabus_python/Syllabus_python/main.py
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
