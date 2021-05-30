@@ -25,6 +25,8 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
       - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
         uses: actions/setup-python@v2 # Pythonのセットアップ
         with:
