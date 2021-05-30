@@ -1,9 +1,5 @@
 from define import act
 
-searchingADEn = {}
-searchingADJa = {}
-
-if __name__ == '__main__':
-    a = [21, 22, 23]
-    for i in a:
-        act(i)
+a = [21, 22, 23]
+for i in a:
+    act(i)
