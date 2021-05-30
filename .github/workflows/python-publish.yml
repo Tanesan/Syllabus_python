@@ -18,8 +18,8 @@ jobs:
     steps:
         - name: git setting
           run: |
-            git config --local user.email "keito.12.10@icloud.com"
-            git config --local user.name "Tanesan"
+            git config --global user.email "keito.12.10@icloud.com"
+            git config --global user.name "Tanesan"
   build0:
     runs-on: ubuntu-latest
     needs: build
