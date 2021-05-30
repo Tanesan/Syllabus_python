@@ -1,5 +1,6 @@
 from define import act
 
-a = [28, 29, 31]
+a = [23]
 for i in a:
     act(i)
+    print("A")

@@ -13,7 +13,8 @@ def act(m):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
-    driver = webdriver.Chrome(options=options)
+    # driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver', options=options)
     print("A")
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
@@ -30,8 +31,10 @@ def act(m):
         select_object = Select(select_element)
         select_object.select_by_index(1)
         select_object.select_by_value(str(m))
+        driver.implicitly_wait(5)
         driver.find_element_by_name('ESearch').click()
         for a in range(int(i / 100)):
+            sleep(1)
             driver.find_element_by_name('ENext').click()
         if len(driver.find_elements_by_name('ERefer')) <= i % 100:
             break
@@ -127,7 +130,7 @@ def act(m):
         searchingADJa = {**othersJa, **subject}
         with open('docs/all/' + str(name) + '.json', 'w') as f:
             json.dump(searchingADJa, f, ensure_ascii=False)
-        sleep(3)
+        sleep(2)
         print(i)
     with open("docs/" + str(m) + '.json', 'w') as f:
         json.dump(data, f, ensure_ascii=False)

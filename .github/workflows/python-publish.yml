@@ -15,7 +15,6 @@ on:
 jobs:
   build0:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v2
         with:
@@ -40,52 +39,225 @@ jobs:
         run: |
             git config --local user.email "keito.12.10@icloud.com"
             git config --local user.name "Tanesan"
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main1.py
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main2.py
-#
-#
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main3.py
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main4.py
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main4.py
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main5.py
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#            python main5.py
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#            python main6.py
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#            python main7.py
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#            python main8.py
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#            python main9.py
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#            python main10.py
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#            python main11.py
-
-
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main0.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main1.py
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main2.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main3.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main4.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+            python main5.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+            python main6.py
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+            python main7.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+            python main8.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+            python main9.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+            python main10.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main11.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main12.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main13.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main14.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main15.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main16.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main17.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main18.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main19.py
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main20.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main21.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main22.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main23.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main24.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main25.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main26.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main27.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main28.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main29.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main30.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main31.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main32.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main33.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main34.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main35.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main36.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main37.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main38.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main39.py
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main40.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main41.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main42.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main43.py
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main44.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main45.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main46.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main47.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main48.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main49.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main50.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main51.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main52.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main53.py
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main54.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main55.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main56.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main57.py
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main58.py
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
