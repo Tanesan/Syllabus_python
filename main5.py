@@ -4,6 +4,6 @@ searchingADEn = {}
 searchingADJa = {}
 
 if __name__ == '__main__':
-    a = [21, 22, 23]
+    a = [43, 44, 45]
     for i in a:
         act(i)
