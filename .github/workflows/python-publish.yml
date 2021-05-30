@@ -42,7 +42,7 @@ jobs:
     steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python define.py main.py
+          python main.py
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
