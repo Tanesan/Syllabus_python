@@ -31,30 +31,18 @@ jobs:
           pip install chromedriver-binary
           pip install selenium
 
-      - name: Run define.py # Pythonファイルの実行
-        run: |
-          python main.py
-      
       - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
+          run: |
+            git config --local user.email "keito.12.10@icloud.com"
+            git config --local user.name "Tanesan"
 
-      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-        run: |
-          git add .
-          git commit -m "Commit Message" -a
-          git config pull.rebase false
-          git pull
-          git push origin main
-      
+  build0:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main1.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
+          python define.py main.py
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -64,22 +52,13 @@ jobs:
           git pull
           git push origin main
           
+  build1:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main1.py
-      
-      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-        run: |
-          git add .
-          git commit -m "Commit Message" -a
-          git config pull.rebase false
-          git pull
-          git push origin main
-          
-      
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-          python main1.py
+          python define.py main1.py
 
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
@@ -89,10 +68,13 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
-          
+  build2:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main2.py
+          python define.py main2.py
 
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
@@ -102,10 +84,13 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
-      
+  build3:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main3.py
+          python define.py main3.py
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -114,10 +99,13 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
-          
+  build4:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main4.py
+          python define.py main4.py
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -126,10 +114,13 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
-          
+  build5:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main5.py
+          python define.py main5.py
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -138,10 +129,13 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
-          
+  build6:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main6.py
+          python define.py main6.py
  
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -150,10 +144,13 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
-          
+  build7:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main7.py
+          python define.py main7.py
  
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -162,10 +159,13 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
-          
+  build8:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main8.py
+          python define.py main8.py
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -174,10 +174,13 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
-          
+  build9:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main9.py
+          python define.py main9.py
 
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
@@ -187,10 +190,13 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
-          
+  build10:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main10.py
+          python define.py main10.py
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -199,7 +205,10 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
-          
+  build11:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main11.py
@@ -211,7 +220,10 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
-      
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build, build1, build2, build3, build4, build5, build6, build7, build8, bulid9, build10, build11]
+    steps:
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
