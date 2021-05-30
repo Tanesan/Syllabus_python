@@ -74,11 +74,7 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main1.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
+      
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
@@ -91,10 +87,7 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main1.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
+
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -107,10 +100,7 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main2.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
+
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -123,10 +113,6 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main3.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -139,10 +125,6 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main4.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -155,10 +137,6 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main5.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -171,11 +149,7 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main6.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
+ 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
@@ -187,11 +161,7 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main7.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
+ 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
@@ -203,10 +173,6 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main8.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -219,10 +185,7 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main9.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
+
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -235,10 +198,6 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main10.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
@@ -251,10 +210,6 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main11.py
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
