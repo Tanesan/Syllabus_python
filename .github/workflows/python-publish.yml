@@ -57,13 +57,7 @@ jobs:
           python main4.py
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main4.py
-      - name: Run main.py # Pythonファイルの実行
-        run: |
           python main5.py
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-            python main5.py
       - name: Run main.py # Pythonファイルの実行
         run: |
             python main6.py
