@@ -46,8 +46,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python /home/runner/work/Syllabus_python/Syllabus_python/define.py /home/runner/work/Syllabus_python/Syllabus_python/main.py
-          python define.py main.py
+          python main.py
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
