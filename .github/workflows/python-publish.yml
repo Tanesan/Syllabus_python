@@ -41,6 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - uses: actions/checkout@v2
       - name: git settin
         run: |
             ls
@@ -48,6 +49,7 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python /home/runner/work/Syllabus_python/Syllabus_python/main.py
+          python main.py
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
