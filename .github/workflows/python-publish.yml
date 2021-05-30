@@ -222,7 +222,7 @@ jobs:
           git push origin main
   deploy:
     runs-on: ubuntu-latest
-    needs: [build, build1, build2, build3, build4, build5, build6, build7, build8, bulid9, build10, build11]
+    needs: [build, build1, build2, build3, build4, build5, build6, build7, build8, build9, build10, build11]
     steps:
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
