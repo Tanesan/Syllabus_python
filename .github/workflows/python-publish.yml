@@ -32,7 +32,7 @@ jobs:
           pip install selenium
 
       - name: git setting
-          run: |
+        run: |
             git config --local user.email "keito.12.10@icloud.com"
             git config --local user.name "Tanesan"
 
