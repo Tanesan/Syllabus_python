@@ -2,7 +2,7 @@ import os
 
 index = 0
 for i in range(59):
-    print("build" + str(i) +",")
+    print("builded" + str(i) +",")
 #     print("""
 #
 # builded"""+str(i)+""":
