@@ -33,40 +33,207 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main.py
-      
-      - name: git setting
-        run: |
-            git config --local user.email "keito.12.10@icloud.com"
-            git config --local user.name "Tanesan"
+          python main0.py
+
+  builded0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main0.py
+
+
+  builded1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main1.py
-      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-        run: |
-          git add .
-          git commit -m "Commit Message" -a
-          git config pull.rebase false
-          git pull
-          git push origin main
+
+
+  builded2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main2.py
+
+
+  builded3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main3.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+  builded4:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main4.py
+
+
+  builded5:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
-            python main5.py
+          python main5.py
+
+
+  builded6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
-            python main6.py
+          python main6.py
+
+
+  builded7:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main7.py
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
@@ -74,168 +241,955 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
+
+  builded8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
-            python main7.py
+          python main8.py
+
+
+  builded9:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
-            python main8.py
+          python main9.py
+
+
+  builded10:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
-            python main9.py
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-            python main10.py
+          python main10.py
+
+
+  builded11:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main11.py
+
+
+  builded12:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main12.py
+
+
+  builded13:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main13.py
+
+
+  builded14:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main14.py
+
+
+  builded15:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main15.py
+
+
+  builded16:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main16.py
+
+
+  builded17:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main17.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+  builded18:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main18.py
+
+
+  builded19:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main19.py
-      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-        run: |
-          git add .
-          git commit -m "Commit Message" -a
-          git config pull.rebase false
-          git pull
-          git push origin main
+
+
+  builded20:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main20.py
+
+
+  builded21:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main21.py
+
+
+  builded22:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main22.py
+
+
+  builded23:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main23.py
+
+
+  builded24:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main24.py
+
+
+  builded25:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main25.py
+
+
+  builded26:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main26.py
+
+
+  builded27:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main27.py
+
+
+  builded28:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main28.py
+
+
+  builded29:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main29.py
+
+
+  builded30:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main30.py
+
+
+  builded31:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main31.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+  builded32:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main32.py
+
+
+  builded33:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main33.py
+
+
+  builded34:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main34.py
+
+
+  builded35:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main35.py
+
+
+  builded36:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main36.py
+
+
+  builded37:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main37.py
+
+
+  builded38:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main38.py
+
+
+  builded39:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main39.py
-      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-        run: |
-          git add .
-          git commit -m "Commit Message" -a
-          git config pull.rebase false
-          git pull
-          git push origin main
+
+
+  builded40:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main40.py
+
+
+  builded41:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main41.py
+
+
+  builded42:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main42.py
+
+
+  builded43:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main43.py
-      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-        run: |
-          git add .
-          git commit -m "Commit Message" -a
-          git config pull.rebase false
-          git pull
-          git push origin main
+
+
+  builded44:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main44.py
+
+
+  builded45:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main45.py
+
+
+  builded46:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main46.py
+
+
+  builded47:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main47.py
-      - name: Run main.py # Pythonファイルの実行
+
+      - name: git setting
         run: |
-          python main48.py
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-          python main49.py
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-          python main50.py
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-          python main51.py
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-          python main52.py
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-          python main53.py
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
@@ -243,21 +1197,264 @@ jobs:
           git config pull.rebase false
           git pull
           git push origin main
+
+  builded48:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main48.py
+
+
+  builded49:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main49.py
+
+
+  builded50:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main50.py
+
+
+  builded51:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main51.py
+
+
+  builded52:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main52.py
+
+
+  builded53:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main53.py
+
+
+  builded54:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main54.py
+
+
+  builded55:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main55.py
+
+
+  builded56:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main56.py
+
+
+  builded57:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main57.py
+
+
+  builded58:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main58.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
