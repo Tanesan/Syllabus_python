@@ -13,28 +13,6 @@ on:
       - main
 
 jobs:
-  build0:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-        uses: actions/setup-python@v2 # Pythonのセットアップ
-        with:
-          python-version: "3.x" # Pythonのバージョン指定
-
-      - name: Install dependencies # Pythonの依存環境のインストール
-        run: | #このような書き方で複数行を一気に実行することができる。
-            python -m pip install --upgrade pip
-            pip install Flask
-            pip install chromedriver-binary
-            pip install selenium
-
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-          python main0.py
-
   builded0:
     runs-on: ubuntu-latest
     steps:
@@ -1466,10 +1444,68 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: [build0]
+    needs: [ build0,
+             build1,
+             build2,
+             build3,
+             build4,
+             build5,
+             build6,
+             build7,
+             build8,
+             build9,
+             build10,
+             build11,
+             build12,
+             build13,
+             build14,
+             build15,
+             build16,
+             build17,
+             build18,
+             build19,
+             build20,
+             build21,
+             build22,
+             build23,
+             build24,
+             build25,
+             build26,
+             build27,
+             build28,
+             build29,
+             build30,
+             build31,
+             build32,
+             build33,
+             build34,
+             build35,
+             build36,
+             build37,
+             build38,
+             build39,
+             build40,
+             build41,
+             build42,
+             build43,
+             build44,
+             build45,
+             build46,
+             build47,
+             build48,
+             build49,
+             build50,
+             build51,
+             build52,
+             build53,
+             build54,
+             build55,
+             build56,
+             build57,
+             build58 ]
     steps:
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
-        with: 
+        with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
