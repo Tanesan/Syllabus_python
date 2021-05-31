@@ -35,9 +35,24 @@ jobs:
         run: |
           python main0.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded1:
     runs-on: ubuntu-latest
+    needs: builded0
     steps:
       - uses: actions/checkout@v2
         with:
@@ -58,9 +73,24 @@ jobs:
         run: |
           python main1.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded2:
     runs-on: ubuntu-latest
+    needs: builded1
     steps:
       - uses: actions/checkout@v2
         with:
@@ -81,9 +111,24 @@ jobs:
         run: |
           python main2.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded3:
     runs-on: ubuntu-latest
+    needs: builded2
     steps:
       - uses: actions/checkout@v2
         with:
@@ -117,8 +162,11 @@ jobs:
           git pull
           git push origin main
 
+
+
   builded4:
     runs-on: ubuntu-latest
+    needs: builded3
     steps:
       - uses: actions/checkout@v2
         with:
@@ -139,9 +187,24 @@ jobs:
         run: |
           python main4.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded5:
     runs-on: ubuntu-latest
+    needs: builded4
     steps:
       - uses: actions/checkout@v2
         with:
@@ -162,9 +225,24 @@ jobs:
         run: |
           python main5.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded6:
     runs-on: ubuntu-latest
+    needs: builded5
     steps:
       - uses: actions/checkout@v2
         with:
@@ -185,9 +263,24 @@ jobs:
         run: |
           python main6.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded7:
     runs-on: ubuntu-latest
+    needs: builded6
     steps:
       - uses: actions/checkout@v2
         with:
@@ -207,6 +300,7 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: |
           python main7.py
+
       - name: git setting
         run: |
           git config --local user.email "keito.12.10@icloud.com"
@@ -220,8 +314,11 @@ jobs:
           git pull
           git push origin main
 
+
+
   builded8:
     runs-on: ubuntu-latest
+    needs: builded7
     steps:
       - uses: actions/checkout@v2
         with:
@@ -242,9 +339,24 @@ jobs:
         run: |
           python main8.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded9:
     runs-on: ubuntu-latest
+    needs: builded8
     steps:
       - uses: actions/checkout@v2
         with:
@@ -265,9 +377,24 @@ jobs:
         run: |
           python main9.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded10:
     runs-on: ubuntu-latest
+    needs: builded9
     steps:
       - uses: actions/checkout@v2
         with:
@@ -288,9 +415,24 @@ jobs:
         run: |
           python main10.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded11:
     runs-on: ubuntu-latest
+    needs: builded10
     steps:
       - uses: actions/checkout@v2
         with:
@@ -311,9 +453,24 @@ jobs:
         run: |
           python main11.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded12:
     runs-on: ubuntu-latest
+    needs: builded11
     steps:
       - uses: actions/checkout@v2
         with:
@@ -334,9 +491,24 @@ jobs:
         run: |
           python main12.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded13:
     runs-on: ubuntu-latest
+    needs: builded12
     steps:
       - uses: actions/checkout@v2
         with:
@@ -357,9 +529,24 @@ jobs:
         run: |
           python main13.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded14:
     runs-on: ubuntu-latest
+    needs: builded13
     steps:
       - uses: actions/checkout@v2
         with:
@@ -380,9 +567,24 @@ jobs:
         run: |
           python main14.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded15:
     runs-on: ubuntu-latest
+    needs: builded14
     steps:
       - uses: actions/checkout@v2
         with:
@@ -403,9 +605,24 @@ jobs:
         run: |
           python main15.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded16:
     runs-on: ubuntu-latest
+    needs: builded15
     steps:
       - uses: actions/checkout@v2
         with:
@@ -426,9 +643,24 @@ jobs:
         run: |
           python main16.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded17:
     runs-on: ubuntu-latest
+    needs: builded16
     steps:
       - uses: actions/checkout@v2
         with:
@@ -462,8 +694,11 @@ jobs:
           git pull
           git push origin main
 
+
+
   builded18:
     runs-on: ubuntu-latest
+    needs: builded17
     steps:
       - uses: actions/checkout@v2
         with:
@@ -484,9 +719,24 @@ jobs:
         run: |
           python main18.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded19:
     runs-on: ubuntu-latest
+    needs: builded18
     steps:
       - uses: actions/checkout@v2
         with:
@@ -507,9 +757,24 @@ jobs:
         run: |
           python main19.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded20:
     runs-on: ubuntu-latest
+    needs: builded19
     steps:
       - uses: actions/checkout@v2
         with:
@@ -530,9 +795,24 @@ jobs:
         run: |
           python main20.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded21:
     runs-on: ubuntu-latest
+    needs: builded20
     steps:
       - uses: actions/checkout@v2
         with:
@@ -553,9 +833,24 @@ jobs:
         run: |
           python main21.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded22:
     runs-on: ubuntu-latest
+    needs: builded21
     steps:
       - uses: actions/checkout@v2
         with:
@@ -576,9 +871,24 @@ jobs:
         run: |
           python main22.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded23:
     runs-on: ubuntu-latest
+    needs: builded22
     steps:
       - uses: actions/checkout@v2
         with:
@@ -599,9 +909,24 @@ jobs:
         run: |
           python main23.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded24:
     runs-on: ubuntu-latest
+    needs: builded23
     steps:
       - uses: actions/checkout@v2
         with:
@@ -622,9 +947,24 @@ jobs:
         run: |
           python main24.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded25:
     runs-on: ubuntu-latest
+    needs: builded24
     steps:
       - uses: actions/checkout@v2
         with:
@@ -645,9 +985,24 @@ jobs:
         run: |
           python main25.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded26:
     runs-on: ubuntu-latest
+    needs: builded25
     steps:
       - uses: actions/checkout@v2
         with:
@@ -668,9 +1023,24 @@ jobs:
         run: |
           python main26.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded27:
     runs-on: ubuntu-latest
+    needs: builded26
     steps:
       - uses: actions/checkout@v2
         with:
@@ -691,9 +1061,24 @@ jobs:
         run: |
           python main27.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded28:
     runs-on: ubuntu-latest
+    needs: builded27
     steps:
       - uses: actions/checkout@v2
         with:
@@ -714,9 +1099,24 @@ jobs:
         run: |
           python main28.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded29:
     runs-on: ubuntu-latest
+    needs: builded28
     steps:
       - uses: actions/checkout@v2
         with:
@@ -737,9 +1137,24 @@ jobs:
         run: |
           python main29.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded30:
     runs-on: ubuntu-latest
+    needs: builded29
     steps:
       - uses: actions/checkout@v2
         with:
@@ -760,9 +1175,24 @@ jobs:
         run: |
           python main30.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded31:
     runs-on: ubuntu-latest
+    needs: builded30
     steps:
       - uses: actions/checkout@v2
         with:
@@ -797,8 +1227,10 @@ jobs:
           git push origin main
 
 
+
   builded32:
     runs-on: ubuntu-latest
+    needs: builded31
     steps:
       - uses: actions/checkout@v2
         with:
@@ -819,9 +1251,24 @@ jobs:
         run: |
           python main32.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded33:
     runs-on: ubuntu-latest
+    needs: builded32
     steps:
       - uses: actions/checkout@v2
         with:
@@ -842,9 +1289,24 @@ jobs:
         run: |
           python main33.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded34:
     runs-on: ubuntu-latest
+    needs: builded33
     steps:
       - uses: actions/checkout@v2
         with:
@@ -865,9 +1327,24 @@ jobs:
         run: |
           python main34.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded35:
     runs-on: ubuntu-latest
+    needs: builded34
     steps:
       - uses: actions/checkout@v2
         with:
@@ -888,9 +1365,24 @@ jobs:
         run: |
           python main35.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded36:
     runs-on: ubuntu-latest
+    needs: builded35
     steps:
       - uses: actions/checkout@v2
         with:
@@ -911,9 +1403,24 @@ jobs:
         run: |
           python main36.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded37:
     runs-on: ubuntu-latest
+    needs: builded36
     steps:
       - uses: actions/checkout@v2
         with:
@@ -934,9 +1441,24 @@ jobs:
         run: |
           python main37.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded38:
     runs-on: ubuntu-latest
+    needs: builded37
     steps:
       - uses: actions/checkout@v2
         with:
@@ -957,9 +1479,24 @@ jobs:
         run: |
           python main38.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded39:
     runs-on: ubuntu-latest
+    needs: builded38
     steps:
       - uses: actions/checkout@v2
         with:
@@ -980,9 +1517,24 @@ jobs:
         run: |
           python main39.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded40:
     runs-on: ubuntu-latest
+    needs: builded39
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1003,9 +1555,24 @@ jobs:
         run: |
           python main40.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded41:
     runs-on: ubuntu-latest
+    needs: builded40
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1026,9 +1593,24 @@ jobs:
         run: |
           python main41.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded42:
     runs-on: ubuntu-latest
+    needs: builded41
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1049,9 +1631,24 @@ jobs:
         run: |
           python main42.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded43:
     runs-on: ubuntu-latest
+    needs: builded42
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1072,9 +1669,24 @@ jobs:
         run: |
           python main43.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded44:
     runs-on: ubuntu-latest
+    needs: builded43
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1095,9 +1707,24 @@ jobs:
         run: |
           python main44.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded45:
     runs-on: ubuntu-latest
+    needs: builded44
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1118,9 +1745,24 @@ jobs:
         run: |
           python main45.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded46:
     runs-on: ubuntu-latest
+    needs: builded45
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1141,9 +1783,24 @@ jobs:
         run: |
           python main46.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded47:
     runs-on: ubuntu-latest
+    needs: builded46
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1177,8 +1834,11 @@ jobs:
           git pull
           git push origin main
 
+
+
   builded48:
     runs-on: ubuntu-latest
+    needs: builded47
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1199,9 +1859,24 @@ jobs:
         run: |
           python main48.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded49:
     runs-on: ubuntu-latest
+    needs: builded48
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1222,9 +1897,24 @@ jobs:
         run: |
           python main49.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded50:
     runs-on: ubuntu-latest
+    needs: builded49
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1245,9 +1935,24 @@ jobs:
         run: |
           python main50.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded51:
     runs-on: ubuntu-latest
+    needs: builded50
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1268,9 +1973,24 @@ jobs:
         run: |
           python main51.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded52:
     runs-on: ubuntu-latest
+    needs: builded51
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1291,9 +2011,24 @@ jobs:
         run: |
           python main52.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded53:
     runs-on: ubuntu-latest
+    needs: builded52
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1314,9 +2049,24 @@ jobs:
         run: |
           python main53.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded54:
     runs-on: ubuntu-latest
+    needs: builded53
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1337,9 +2087,24 @@ jobs:
         run: |
           python main54.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded55:
     runs-on: ubuntu-latest
+    needs: builded54
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1360,9 +2125,24 @@ jobs:
         run: |
           python main55.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded56:
     runs-on: ubuntu-latest
+    needs: builded55
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1383,9 +2163,24 @@ jobs:
         run: |
           python main56.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded57:
     runs-on: ubuntu-latest
+    needs: builded56
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1406,9 +2201,24 @@ jobs:
         run: |
           python main57.py
 
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main
+
+
 
   builded58:
     runs-on: ubuntu-latest
+    needs: builded57
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1444,65 +2254,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: [ builded0,
-             builded1,
-             builded2,
-             builded3,
-             builded4,
-             builded5,
-             builded6,
-             builded7,
-             builded8,
-             builded9,
-             builded10,
-             builded11,
-             builded12,
-             builded13,
-             builded14,
-             builded15,
-             builded16,
-             builded17,
-             builded18,
-             builded19,
-             builded20,
-             builded21,
-             builded22,
-             builded23,
-             builded24,
-             builded25,
-             builded26,
-             builded27,
-             builded28,
-             builded29,
-             builded30,
-             builded31,
-             builded32,
-             builded33,
-             builded34,
-             builded35,
-             builded36,
-             builded37,
-             builded38,
-             builded39,
-             builded40,
-             builded41,
-             builded42,
-             builded43,
-             builded44,
-             builded45,
-             builded46,
-             builded47,
-             builded48,
-             builded49,
-             builded50,
-             builded51,
-             builded52,
-             builded53,
-             builded54,
-             builded55,
-             builded56,
-             builded57,
-             builded58]
+    needs: [builded58]
     steps:
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
