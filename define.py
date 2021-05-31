@@ -1,6 +1,6 @@
 import json
 from time import sleep
-
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
@@ -132,6 +132,10 @@ def act(m, a, b):
             json.dump(searchingADJa, f, ensure_ascii=False)
         sleep(2)
         print(i)
+    if os.path.isfile("docs/" + str(m) + '.json'):
+        json_open = open("docs/" + str(m) + '.json', 'r')
+        json_load = json.load(json_open)
+        data.update(json_load)
     with open("docs/" + str(m) + '.json', 'w') as f:
         json.dump(data, f, ensure_ascii=False)
     driver.quit()
