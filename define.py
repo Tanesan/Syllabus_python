@@ -9,7 +9,7 @@ searchingADEn = {}
 searchingADJa = {}
 
 
-def act(m):
+def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
@@ -23,7 +23,7 @@ def act(m):
     #     data = {}
 
     data = {}
-    for i in range(100000):
+    for i in range(a, b):
         subject = {}
         fin = 0
         driver.get('https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree')
