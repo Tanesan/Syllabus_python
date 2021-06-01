@@ -47,7 +47,7 @@ jobs:
           git commit -m "Commit Message"
           git config pull.rebase false
           git pull
-          git push origin main -f
+          git push origin main -f  || true
 
 
 
@@ -85,7 +85,7 @@ jobs:
           git commit -m "Commit Message"
           git config pull.rebase false
           git pull
-          git push origin main -f
+          git push origin main -f  || true
 
   buildedc0:
     runs-on: ubuntu-latest
@@ -121,7 +121,7 @@ jobs:
           git commit -m "Commit Message"
           git config pull.rebase false
           git pull
-          git push origin main -f
+          git push origin main -f  || true
 
 
 
@@ -159,7 +159,7 @@ jobs:
           git commit -m "Commit Message"
           git config pull.rebase false
           git pull
-          git push origin main -f
+          git push origin main -f  || true
 
 
   buildedb1:
@@ -193,10 +193,10 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" -a
+          git commit -m "Commit Message"
           git config pull.rebase false
           git pull
-          git push origin main -f
+          git push origin main -f  || true
 
   buildedc1:
     runs-on: ubuntu-latest
