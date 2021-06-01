@@ -217,13 +217,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -258,13 +253,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -299,13 +289,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc2:
     runs-on: ubuntu-latest
@@ -338,13 +323,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -379,13 +359,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -420,13 +395,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc3:
     runs-on: ubuntu-latest
@@ -459,13 +429,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -500,13 +465,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -541,13 +501,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc4:
     runs-on: ubuntu-latest
@@ -580,13 +535,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -621,13 +571,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -662,13 +607,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc5:
     runs-on: ubuntu-latest
@@ -701,13 +641,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -742,13 +677,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -783,13 +713,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc6:
     runs-on: ubuntu-latest
@@ -822,13 +747,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -863,13 +783,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -904,13 +819,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc7:
     runs-on: ubuntu-latest
@@ -943,13 +853,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -984,13 +889,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1025,13 +925,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc8:
     runs-on: ubuntu-latest
@@ -1064,13 +959,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1105,13 +995,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1146,13 +1031,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc9:
     runs-on: ubuntu-latest
@@ -1185,13 +1065,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1226,13 +1101,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1267,13 +1137,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc10:
     runs-on: ubuntu-latest
@@ -1306,13 +1171,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1347,13 +1207,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1388,13 +1243,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc11:
     runs-on: ubuntu-latest
@@ -1427,13 +1277,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1468,13 +1313,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1509,13 +1349,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc12:
     runs-on: ubuntu-latest
@@ -1548,13 +1383,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1589,13 +1419,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1630,13 +1455,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc13:
     runs-on: ubuntu-latest
@@ -1669,13 +1489,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1710,13 +1525,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1751,13 +1561,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc14:
     runs-on: ubuntu-latest
@@ -1790,13 +1595,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1831,13 +1631,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1872,13 +1667,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc15:
     runs-on: ubuntu-latest
@@ -1911,13 +1701,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1952,13 +1737,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -1993,13 +1773,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc16:
     runs-on: ubuntu-latest
@@ -2032,13 +1807,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2073,13 +1843,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2114,13 +1879,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc17:
     runs-on: ubuntu-latest
@@ -2153,13 +1913,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2194,13 +1949,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2235,13 +1985,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc18:
     runs-on: ubuntu-latest
@@ -2274,13 +2019,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2315,13 +2055,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2356,13 +2091,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc19:
     runs-on: ubuntu-latest
@@ -2395,13 +2125,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2436,13 +2161,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2477,13 +2197,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc20:
     runs-on: ubuntu-latest
@@ -2516,13 +2231,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2557,13 +2267,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2598,13 +2303,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc21:
     runs-on: ubuntu-latest
@@ -2637,13 +2337,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2678,13 +2373,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2719,13 +2409,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc22:
     runs-on: ubuntu-latest
@@ -2758,13 +2443,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2799,13 +2479,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2840,13 +2515,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc23:
     runs-on: ubuntu-latest
@@ -2879,13 +2549,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2920,13 +2585,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -2961,13 +2621,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc24:
     runs-on: ubuntu-latest
@@ -3000,13 +2655,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3041,13 +2691,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3082,13 +2727,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc25:
     runs-on: ubuntu-latest
@@ -3121,13 +2761,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3162,13 +2797,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3203,13 +2833,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc26:
     runs-on: ubuntu-latest
@@ -3242,13 +2867,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3283,13 +2903,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3324,13 +2939,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc27:
     runs-on: ubuntu-latest
@@ -3363,13 +2973,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3404,13 +3009,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3445,13 +3045,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc28:
     runs-on: ubuntu-latest
@@ -3484,13 +3079,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3525,13 +3115,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3566,13 +3151,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc29:
     runs-on: ubuntu-latest
@@ -3605,13 +3185,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3646,13 +3221,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3687,13 +3257,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc30:
     runs-on: ubuntu-latest
@@ -3726,13 +3291,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3767,13 +3327,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3808,13 +3363,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc31:
     runs-on: ubuntu-latest
@@ -3847,13 +3397,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3888,13 +3433,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -3929,13 +3469,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc32:
     runs-on: ubuntu-latest
@@ -3968,13 +3503,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4009,13 +3539,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4050,13 +3575,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc33:
     runs-on: ubuntu-latest
@@ -4089,13 +3609,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4130,13 +3645,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4171,13 +3681,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc34:
     runs-on: ubuntu-latest
@@ -4210,13 +3715,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4251,13 +3751,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4292,13 +3787,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc35:
     runs-on: ubuntu-latest
@@ -4331,13 +3821,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4372,13 +3857,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4413,13 +3893,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc36:
     runs-on: ubuntu-latest
@@ -4452,13 +3927,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4493,13 +3963,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4534,13 +3999,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc37:
     runs-on: ubuntu-latest
@@ -4573,13 +4033,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4614,13 +4069,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4655,13 +4105,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc38:
     runs-on: ubuntu-latest
@@ -4694,13 +4139,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4735,13 +4175,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4776,13 +4211,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc39:
     runs-on: ubuntu-latest
@@ -4815,13 +4245,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4856,13 +4281,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4897,13 +4317,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc40:
     runs-on: ubuntu-latest
@@ -4936,13 +4351,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -4977,13 +4387,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5018,13 +4423,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc41:
     runs-on: ubuntu-latest
@@ -5057,13 +4457,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5098,13 +4493,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5139,13 +4529,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc42:
     runs-on: ubuntu-latest
@@ -5178,13 +4563,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5219,13 +4599,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5260,13 +4635,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc43:
     runs-on: ubuntu-latest
@@ -5299,13 +4669,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5340,13 +4705,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5381,13 +4741,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc44:
     runs-on: ubuntu-latest
@@ -5420,13 +4775,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5461,13 +4811,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5502,13 +4847,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc45:
     runs-on: ubuntu-latest
@@ -5541,13 +4881,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5582,13 +4917,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5623,13 +4953,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc46:
     runs-on: ubuntu-latest
@@ -5662,13 +4987,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5703,13 +5023,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5744,13 +5059,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc47:
     runs-on: ubuntu-latest
@@ -5783,13 +5093,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5824,13 +5129,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5865,13 +5165,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc48:
     runs-on: ubuntu-latest
@@ -5904,13 +5199,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5945,13 +5235,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -5986,13 +5271,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc49:
     runs-on: ubuntu-latest
@@ -6025,13 +5305,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6066,13 +5341,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6107,13 +5377,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc50:
     runs-on: ubuntu-latest
@@ -6146,13 +5411,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6187,13 +5447,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6228,13 +5483,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc51:
     runs-on: ubuntu-latest
@@ -6267,13 +5517,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6308,13 +5553,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6349,13 +5589,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc52:
     runs-on: ubuntu-latest
@@ -6388,13 +5623,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6429,13 +5659,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6470,13 +5695,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc53:
     runs-on: ubuntu-latest
@@ -6509,13 +5729,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6550,13 +5765,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6591,13 +5801,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc54:
     runs-on: ubuntu-latest
@@ -6630,13 +5835,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6671,13 +5871,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6712,13 +5907,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc55:
     runs-on: ubuntu-latest
@@ -6751,13 +5941,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6792,13 +5977,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6833,13 +6013,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc56:
     runs-on: ubuntu-latest
@@ -6872,13 +6047,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6913,13 +6083,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -6954,13 +6119,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc57:
     runs-on: ubuntu-latest
@@ -6993,13 +6153,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -7034,13 +6189,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
 
 
@@ -7075,13 +6225,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   buildedc58:
     runs-on: ubuntu-latest
@@ -7114,13 +6259,8 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
 
   deploy:
     runs-on: ubuntu-latest
