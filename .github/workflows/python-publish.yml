@@ -49,7 +49,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -90,8 +90,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc0:
@@ -130,8 +129,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -172,8 +170,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -213,8 +210,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc1:
@@ -253,8 +249,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -295,8 +290,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -337,8 +331,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc2:
@@ -377,8 +370,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -419,8 +411,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -461,8 +452,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc3:
@@ -501,8 +491,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -543,8 +532,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -585,8 +573,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc4:
@@ -625,8 +612,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -667,8 +653,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -709,8 +694,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc5:
@@ -749,8 +733,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -791,8 +774,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -833,8 +815,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc6:
@@ -873,8 +854,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -915,8 +895,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -957,8 +936,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc7:
@@ -997,8 +975,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1039,8 +1016,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1081,8 +1057,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc8:
@@ -1121,8 +1096,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1163,8 +1137,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1205,8 +1178,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc9:
@@ -1245,8 +1217,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1287,8 +1258,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1329,8 +1299,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc10:
@@ -1369,8 +1338,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1411,8 +1379,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1453,8 +1420,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc11:
@@ -1493,8 +1459,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1535,8 +1500,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1577,8 +1541,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc12:
@@ -1617,8 +1580,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1659,8 +1621,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1701,8 +1662,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc13:
@@ -1741,8 +1701,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1783,8 +1742,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1825,8 +1783,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc14:
@@ -1865,8 +1822,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1907,8 +1863,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -1949,8 +1904,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc15:
@@ -1989,8 +1943,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2031,8 +1984,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2073,8 +2025,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc16:
@@ -2113,8 +2064,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2155,8 +2105,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2197,8 +2146,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc17:
@@ -2237,8 +2185,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2279,8 +2226,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2321,8 +2267,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc18:
@@ -2361,8 +2306,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2403,8 +2347,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2445,8 +2388,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc19:
@@ -2485,8 +2427,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2527,8 +2468,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2569,8 +2509,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc20:
@@ -2609,8 +2548,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2651,8 +2589,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2693,8 +2630,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc21:
@@ -2733,8 +2669,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2775,8 +2710,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2817,8 +2751,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc22:
@@ -2857,8 +2790,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2899,8 +2831,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -2941,8 +2872,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc23:
@@ -2981,8 +2911,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3023,8 +2952,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3065,8 +2993,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc24:
@@ -3105,8 +3032,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3147,8 +3073,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3189,8 +3114,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc25:
@@ -3229,8 +3153,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3271,8 +3194,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3313,8 +3235,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc26:
@@ -3353,8 +3274,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3395,8 +3315,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3437,8 +3356,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc27:
@@ -3477,8 +3395,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3519,8 +3436,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3561,8 +3477,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc28:
@@ -3601,8 +3516,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3643,8 +3557,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3685,8 +3598,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc29:
@@ -3725,8 +3637,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3767,8 +3678,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3809,8 +3719,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc30:
@@ -3849,8 +3758,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3891,8 +3799,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -3933,8 +3840,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc31:
@@ -3973,8 +3879,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4015,8 +3920,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4057,8 +3961,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc32:
@@ -4097,8 +4000,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4139,8 +4041,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4181,8 +4082,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc33:
@@ -4221,8 +4121,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4263,8 +4162,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4305,8 +4203,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc34:
@@ -4345,8 +4242,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4387,8 +4283,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4429,8 +4324,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc35:
@@ -4469,8 +4363,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4511,8 +4404,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4553,8 +4445,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc36:
@@ -4593,8 +4484,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4635,8 +4525,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4677,8 +4566,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc37:
@@ -4717,8 +4605,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4759,8 +4646,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4801,8 +4687,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc38:
@@ -4841,8 +4726,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4883,8 +4767,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -4925,8 +4808,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc39:
@@ -4965,8 +4847,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5007,8 +4888,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5049,8 +4929,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc40:
@@ -5089,8 +4968,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5131,8 +5009,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5173,8 +5050,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc41:
@@ -5213,8 +5089,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5255,8 +5130,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5297,8 +5171,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc42:
@@ -5337,8 +5210,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5379,8 +5251,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5421,8 +5292,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc43:
@@ -5461,8 +5331,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5503,8 +5372,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5545,8 +5413,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc44:
@@ -5585,8 +5452,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5627,8 +5493,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5669,8 +5534,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc45:
@@ -5709,8 +5573,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5751,8 +5614,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5793,8 +5655,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc46:
@@ -5833,8 +5694,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5875,8 +5735,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5917,8 +5776,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc47:
@@ -5957,8 +5815,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -5999,8 +5856,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6041,8 +5897,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc48:
@@ -6081,8 +5936,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6123,8 +5977,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6165,8 +6018,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc49:
@@ -6205,8 +6057,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6247,8 +6098,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6289,8 +6139,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc50:
@@ -6329,8 +6178,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6371,8 +6219,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6413,8 +6260,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc51:
@@ -6453,8 +6299,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6495,8 +6340,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6537,8 +6381,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc52:
@@ -6577,8 +6420,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6619,8 +6461,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6661,8 +6502,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc53:
@@ -6701,8 +6541,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6743,8 +6582,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6785,8 +6623,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc54:
@@ -6825,8 +6662,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6867,8 +6703,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6909,8 +6744,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc55:
@@ -6949,8 +6783,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -6991,8 +6824,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -7033,8 +6865,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc56:
@@ -7073,8 +6904,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -7115,8 +6945,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -7157,8 +6986,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc57:
@@ -7197,8 +7025,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -7239,8 +7066,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
 
@@ -7281,8 +7107,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   buildedc58:
@@ -7321,8 +7146,7 @@ jobs:
           	git commit -m "Commit Message" -a
           	git config pull.rebase false
           	git pull
-            git checkout theirs
-          	git push origin main
+          	git push origin main -f
            fi
 
   deploy:
