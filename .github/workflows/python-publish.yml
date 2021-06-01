@@ -56,7 +56,7 @@ jobs:
 
   buildedb0:
     runs-on: ubuntu-latest
-#    needs: builded0
+    needs: builded0
     steps:
       - uses: actions/checkout@v2
         with:
