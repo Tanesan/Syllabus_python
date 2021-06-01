@@ -164,7 +164,7 @@ jobs:
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
-          git add -N .
+          git add .
           git commit -m "Commit Message"
           git config pull.rebase false
           git pull
@@ -202,13 +202,10 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          if ! git diff --exit-code --quiet
-          then
-          	git commit -m "Commit Message" -a
-          	git config pull.rebase false
-          	git pull
-          	git push origin main -f
-           fi
+          git commit -m "Commit Message" -a
+          git config pull.rebase false
+          git pull
+          git push origin main -f
 
   buildedc1:
     runs-on: ubuntu-latest

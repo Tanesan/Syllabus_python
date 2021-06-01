@@ -13,8 +13,8 @@ def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
-    driver = webdriver.Chrome(options=options)
-    # driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver', options=options)
+    # driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver', options=options)
     print("A")
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
@@ -36,8 +36,11 @@ def act(m, a, b):
         for a in range(int(i / 100)):
             sleep(1)
             driver.find_element_by_name('ENext').click()
-        if int(driver.find_element_by_name('lstSlbinftJ016RList_st['+ str(len(driver.find_elements_by_name('ERefer')) - 1) +'].lblNo').get_attribute('value')) <= i:
-            break
+        if len(driver.find_elements_by_name('ERefer')) != 0:
+            if int(driver.find_element_by_name('lstSlbinftJ016RList_st[' + str(len(driver.find_elements_by_name('ERefer')) - 1) +'].lblNo').get_attribute('value')) <= i:
+                break
+        else:
+            sleep(5)
         if fin == 1:
             break
         driver.find_elements_by_name('ERefer')[i % 100].click()
@@ -132,7 +135,7 @@ def act(m, a, b):
             json.dump(searchingADJa, f, ensure_ascii=False)
         sleep(2)
         print(i)
-    if os.path.isfile("docs/" + str(m) + '.json'):
+    if os.path.isfile("docs/" + str(m) + '.json') and os.stat("docs/" + str(m) + '.json').st_size > 0:
         json_open = open("docs/" + str(m) + '.json', 'r')
         json_load = json.load(json_open)
         data.update(json_load)
