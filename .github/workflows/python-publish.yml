@@ -751,747 +751,747 @@ jobs:
 #
 
 
-#
-#  builded7:
-#    runs-on: ubuntu-latest
-##    needs: buildedb6
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main7.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  buildedb7:
-#    runs-on: ubuntu-latest
-#    needs: builded7
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb7.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#  buildedc7:
-#    runs-on: ubuntu-latest
-#    needs: buildedb7
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc7.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  builded8:
-#    runs-on: ubuntu-latest
-#    needs: buildedb7
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main8.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  buildedb8:
-#    runs-on: ubuntu-latest
-#    needs: builded8
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb8.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#  buildedc8:
-#    runs-on: ubuntu-latest
-#    needs: buildedb8
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc8.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  builded9:
-#    runs-on: ubuntu-latest
-#    needs: buildedb8
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main9.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  buildedb9:
-#    runs-on: ubuntu-latest
-#    needs: builded9
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb9.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#  buildedc9:
-#    runs-on: ubuntu-latest
-#    needs: buildedb9
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc9.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  builded10:
-#    runs-on: ubuntu-latest
-#    needs: buildedb9
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main10.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  buildedb10:
-#    runs-on: ubuntu-latest
-#    needs: builded10
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb10.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#  buildedc10:
-#    runs-on: ubuntu-latest
-#    needs: buildedb10
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc10.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  builded11:
-#    runs-on: ubuntu-latest
-#    needs: buildedb10
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main11.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  buildedb11:
-#    runs-on: ubuntu-latest
-#    needs: builded11
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb11.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#  buildedc11:
-#    runs-on: ubuntu-latest
-#    needs: buildedb11
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc11.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  builded12:
-#    runs-on: ubuntu-latest
-#    needs: buildedb11
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main12.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  buildedb12:
-#    runs-on: ubuntu-latest
-#    needs: builded12
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb12.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#  buildedc12:
-#    runs-on: ubuntu-latest
-#    needs: buildedb12
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc12.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  builded13:
-#    runs-on: ubuntu-latest
-#    needs: buildedb12
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main13.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#
-#
-#  buildedb13:
-#    runs-on: ubuntu-latest
-#    needs: builded13
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb13.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
-#  buildedc13:
-#    runs-on: ubuntu-latest
-#    needs: buildedb13
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc13.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
-#
-#
+
+  builded7:
+    runs-on: ubuntu-latest
+#    needs: buildedb6
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main7.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  buildedb7:
+    runs-on: ubuntu-latest
+    needs: builded7
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb7.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+  buildedc7:
+    runs-on: ubuntu-latest
+    needs: buildedb7
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc7.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  builded8:
+    runs-on: ubuntu-latest
+    needs: buildedb7
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main8.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  buildedb8:
+    runs-on: ubuntu-latest
+    needs: builded8
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb8.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+  buildedc8:
+    runs-on: ubuntu-latest
+    needs: buildedb8
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc8.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  builded9:
+    runs-on: ubuntu-latest
+    needs: buildedb8
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main9.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  buildedb9:
+    runs-on: ubuntu-latest
+    needs: builded9
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb9.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+  buildedc9:
+    runs-on: ubuntu-latest
+    needs: buildedb9
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc9.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  builded10:
+    runs-on: ubuntu-latest
+    needs: buildedb9
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main10.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  buildedb10:
+    runs-on: ubuntu-latest
+    needs: builded10
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb10.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+  buildedc10:
+    runs-on: ubuntu-latest
+    needs: buildedb10
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc10.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  builded11:
+    runs-on: ubuntu-latest
+    needs: buildedb10
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main11.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  buildedb11:
+    runs-on: ubuntu-latest
+    needs: builded11
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb11.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+  buildedc11:
+    runs-on: ubuntu-latest
+    needs: buildedb11
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc11.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  builded12:
+    runs-on: ubuntu-latest
+    needs: buildedb11
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main12.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  buildedb12:
+    runs-on: ubuntu-latest
+    needs: builded12
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb12.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+  buildedc12:
+    runs-on: ubuntu-latest
+    needs: buildedb12
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc12.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  builded13:
+    runs-on: ubuntu-latest
+    needs: buildedb12
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main13.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+
+
+  buildedb13:
+    runs-on: ubuntu-latest
+    needs: builded13
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb13.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
+  buildedc13:
+    runs-on: ubuntu-latest
+    needs: buildedb13
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc13.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git push origin main -f  || true
+
+
 #
 #
 #  builded14:
@@ -1602,7 +1602,7 @@ jobs:
 
   builded15:
     runs-on: ubuntu-latest
-#    needs: buildedb14
+    needs: buildedc13
     steps:
       - uses: actions/checkout@v2
         with:
