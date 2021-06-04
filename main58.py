@@ -1,5 +1,7 @@
 from define import act
-a = [36, 98]
+import os
+a = [98]
+if os.path.isfile("docs/" + str(a[0]) + '.json'):
+    os.remove("docs/" + str(a[0]) + '.json')
 for i in a:
     act(i, 0, 500)
-    print("A")
