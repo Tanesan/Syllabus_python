@@ -13,8 +13,8 @@ def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
-    # driver = webdriver.Chrome(options=options)
-    driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver', options=options)
+    driver = webdriver.Chrome(options=options)
+    # driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver', options=options)
     print("A")
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
