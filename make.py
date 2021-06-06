@@ -15,30 +15,30 @@ a = [""" + str(i) + """]
 if os.path.isfile("docs/" + str(a[0]) + '.json'):
     os.remove("docs/" + str(a[0]) + '.json')
 for i in a:
-    act(i, 0, 500)
+    act(i, 0, 550)
 """)  # ファイルは作成されました
         f.close()
-        index += 1
 
-    #     path = 'mainb' + str(index) + '.py'
-    #     f = open(path, 'w')
-    #     f.write("""from define import act
-    # a = [""" + str(i) + """]
-    # for i in a:
-    #     act(i, 500, 1000)
-    #     print("A")
-    #  """)  # 何も書き込まなくてファイルは作成されました
-    #     f.close()
-    #
-    #     path = 'mainc' + str(index) + '.py'
-    #     f = open(path, 'w')
-    #     f.write("""from define import act
-    # a = [""" + str(i) + """]
-    # for i in a:
-    #     act(i, 1000, 1500)
-    #     print("A")
-    #  """)  # 何も書き込まなくてファイルは作成されました
-    #     f.close()
+
+        path = 'mainb' + str(index) + '.py'
+        f = open(path, 'w')
+        f.write("""from define import act
+a = [""" + str(i) + """]
+for i in a:
+        act(i, 550, 1000)
+print("A")
+""")  # 何も書き込まなくてファイルは作成されました
+        f.close()
+
+        path = 'mainc' + str(index) + '.py'
+        f = open(path, 'w')
+        f.write("""from define import act
+a = [""" + str(i) + """]
+for i in a:
+        act(i, 1000, 1400)
+        print("A")
+""")  # 何も書き込まなくてファイルは作成されました
+        f.close()
 
 #     print("""
 #
@@ -153,4 +153,4 @@ for i in a:
 #           git pull
 #           git push origin main
 #           """)
-#     index += 1
+        index += 1
