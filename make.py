@@ -3,109 +3,97 @@ import os
 index = 0
 
 for i in [
-    21,
-    22,
-    23,
-    24,
-    25,
-    26,
-    28,
-    29,
-    31,
-    32,
-    34,
-    37,
-    38,
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46,
-    47,
-    48,
-    49,
-    50,
-    51,
-    52,
-    53,
-    61,
-    62,
-    63,
-    64,
-    65,
-    66,
-    68,
-    69,
-    70,
-    71,
-    72,
-    73,
-    74,
-    75,
-    81,
-    82,
-    83,
-    84,
-    85,
-    86,
-    88,
-    89,
-    90,
-    91,
-    92,
-    93,
-    94,
-    95,
-    96,
-    97,
-    98,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        31,
+        32,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
 ]:
     # for i in range(59):
     path = "main" + str(index) + ".py"
     f = open(path, "w")
-    f.write(
-        """from define import act
+    f.write("""from define import act
 import os
-a = ["""
-        + str(i)
-        + """]
+a = [""" + str(i) + """]
 if os.path.isfile("docs/" + str(a[0]) + '.json'):
     os.remove("docs/" + str(a[0]) + '.json')
 for i in a:
     act(i, 0, 550)
-"""
-    )  # ファイルは作成されました
+""")  # ファイルは作成されました
     f.close()
 
     path = "mainb" + str(index) + ".py"
     f = open(path, "w")
-    f.write(
-        """from define import act
-a = ["""
-        + str(i)
-        + """]
+    f.write("""from define import act
+a = [""" + str(i) + """]
 for i in a:
         act(i, 550, 1000)
 print("A")
-"""
-    )  # 何も書き込まなくてファイルは作成されました
+""")  # 何も書き込まなくてファイルは作成されました
     f.close()
 
     path = "mainc" + str(index) + ".py"
     f = open(path, "w")
-    f.write(
-        """from define import act
-a = ["""
-        + str(i)
-        + """]
+    f.write("""from define import act
+a = [""" + str(i) + """]
 for i in a:
         act(i, 1000, 1400)
         print("A")
-"""
-    )  # 何も書き込まなくてファイルは作成されました
+""")  # 何も書き込まなくてファイルは作成されました
     f.close()
 
     #     print("""
