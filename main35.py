@@ -1,5 +1,6 @@
-from define import act
 import os
+
+from define import act
 
 a = [69]
 if os.path.isfile("docs/" + str(a[0]) + ".json"):
