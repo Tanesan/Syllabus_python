@@ -1,5 +1,5 @@
 from define import act
-a = [62]
+a = [22]
 for i in a:
-        act(i, 550, 900)
+        act(i, 1300, 1500)
 print("A")
