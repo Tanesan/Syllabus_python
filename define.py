@@ -130,6 +130,7 @@ def act(m, a, b):
         othersJa.setdefault('授業方法', driver.find_element_by_name('lblVolItm43').get_attribute('value'))
         othersJa.setdefault('トピック', topic)
         othersJa.setdefault('評価', grading)
+        print(i)
         i = 1
         while "項番No." + str(i) in grading:
             subject.setdefault('時限' + str(i), grading["項番No." + str(i)][2])
@@ -140,7 +141,6 @@ def act(m, a, b):
         with open('docs/all/' + str(name) + '.json', 'w') as f:
             json.dump(searchingADJa, f, ensure_ascii=False)
         sleep(2)
-        print(i)
     data_all = {}
     data_all.update(data)
     if os.path.isfile("docs/all.json") and os.stat("docs/all.json").st_size > 0:

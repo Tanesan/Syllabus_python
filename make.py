@@ -25,7 +25,7 @@ for i in a:
         f.write("""from define import act
 a = [""" + str(i) + """]
 for i in a:
-        act(i, 550, 900)
+        act(i, 550, 950)
 print("A")
 """)  # 何も書き込まなくてファイルは作成されました
         f.close()
@@ -35,7 +35,7 @@ print("A")
         f.write("""from define import act
 a = [""" + str(i) + """]
 for i in a:
-        act(i, 900, 1300)
+        act(i, 950, 1300)
         print("A")
 """)  # 何も書き込まなくてファイルは作成されました
         f.close()
