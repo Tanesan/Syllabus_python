@@ -124,8 +124,9 @@ def act(m, a, b):
         othersJa = {}
         risyuuki = driver.find_element_by_name('lblAc201ScrDispNm_01').get_attribute('value')
         othersJa.setdefault('履修期', risyuuki[0: risyuuki.find('／')])
-        language = driver.find_element_by_name('lblVolCd1').get_attribute('value')
-        othersJa.setdefault('主な教授言語', language[0: language.find('／')])
+        if len(driver.find_elements_by_name('lblVolCd1')) != 0:
+            language = driver.find_element_by_name('lblVolCd1').get_attribute('value')
+            othersJa.setdefault('主な教授言語', language[0: language.find('／')])
         othersJa.setdefault('授業目的', driver.find_element_by_name('lblVolItm2').get_attribute('value'))
         othersJa.setdefault('到達目標', driver.find_element_by_name('lblVolItm3').get_attribute('value'))
         othersJa.setdefault('授業方法', driver.find_element_by_name('lblVolItm43').get_attribute('value'))
