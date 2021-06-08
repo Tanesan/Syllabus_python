@@ -24,6 +24,7 @@ def act(m, a, b):
 
     data = {}
     for i in range(a, b):
+        print(i)
         subject = {}
         fin = 0
         driver.get('https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree')
@@ -130,7 +131,6 @@ def act(m, a, b):
         othersJa.setdefault('授業方法', driver.find_element_by_name('lblVolItm43').get_attribute('value'))
         othersJa.setdefault('トピック', topic)
         othersJa.setdefault('評価', grading)
-        print(i)
         i = 1
         while "項番No." + str(i) in grading:
             subject.setdefault('時限' + str(i), grading["項番No." + str(i)][2])
