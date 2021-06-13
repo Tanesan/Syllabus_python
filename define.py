@@ -37,8 +37,9 @@ def act(m, a, b):
         for a in range(int(i / 100)):
             sleep(1)
             if len(driver.find_elements_by_name('ENext')) == 0:
+                if fin == 1:
+                    break
                 fin = 1
-                break
             else:
                 driver.find_element_by_name('ENext').click()
         if len(driver.find_elements_by_name('ERefer')) != 0:
