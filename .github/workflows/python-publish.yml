@@ -14,109 +14,8 @@ on:
 #      - main
 
 jobs:
-
-#   builded0:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#         with:
-#           token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#       - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#         uses: actions/setup-python@v2 # Pythonのセットアップ
-#         with:
-#           python-version: "3.x" # Pythonのバージョン指定
-
-#       - name: Install dependencies # Pythonの依存環境のインストール
-#         run: | #このような書き方で複数行を一気に実行することができる。
-#           python -m pip install --upgrade pip
-#           pip install Flask
-#           pip install chromedriver-binary
-#           pip install selenium
-
-#       - name: Run main.py # Pythonファイルの実行
-#         run: |
-#           python main0.py
-
-#       - name: git setting
-#         run: |
-#           git config --local user.email "keito.12.10@icloud.com"
-#           git config --local user.name "Tanesan"
-
-#       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#         run: |
-#           git add .
-#           git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
-
-
-#   buildedb0:
-#     runs-on: ubuntu-latest
-#     needs: builded0
-#     steps:
-#       - uses: actions/checkout@v2
-#         with:
-#           token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#       - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#         uses: actions/setup-python@v2 # Pythonのセットアップ
-#         with:
-#           python-version: "3.x" # Pythonのバージョン指定
-
-#       - name: Install dependencies # Pythonの依存環境のインストール
-#         run: | #このような書き方で複数行を一気に実行することができる。
-#           python -m pip install --upgrade pip
-#           pip install Flask
-#           pip install chromedriver-binary
-#           pip install selenium
-
-#       - name: Run main.py # Pythonファイルの実行
-#         run: |
-#           python mainb0.py
-
-#       - name: git setting
-#         run: |
-#           git config --local user.email "keito.12.10@icloud.com"
-#           git config --local user.name "Tanesan"
-
-#       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#         run: |
-#           git add .
-#           git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
-#   buildedc0:
-#     runs-on: ubuntu-latest
-#     needs: buildedb0
-#     steps:
-#       - uses: actions/checkout@v2
-#         with:
-#           token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#       - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#         uses: actions/setup-python@v2 # Pythonのセットアップ
-#         with:
-#           python-version: "3.x" # Pythonのバージョン指定
-
-#       - name: Install dependencies # Pythonの依存環境のインストール
-#         run: | #このような書き方で複数行を一気に実行することができる。
-#           python -m pip install --upgrade pip
-#           pip install Flask
-#           pip install chromedriver-binary
-#           pip install selenium
-
-#       - name: Run main.py # Pythonファイルの実行
-#         run: |
-#           python mainc0.py
-
-#       - name: git setting
-#         run: |
-#           git config --local user.email "keito.12.10@icloud.com"
-#           git config --local user.name "Tanesan"
-
-#       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#         run: |
-#           git add .
-#           git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#  builded1:
+#  builded0:
 #    runs-on: ubuntu-latest
-##     needs: buildedb0
 #    steps:
 #      - uses: actions/checkout@v2
 #        with:
@@ -135,7 +34,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python main1.py
+#          python main0.py
 #
 #      - name: git setting
 #        run: |
@@ -145,13 +44,116 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-##
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+#
+#
+#
+#  buildedb0:
+#    runs-on: ubuntu-latest
+#    needs: buildeda0
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+#        uses: actions/setup-python@v2 # Pythonのセットアップ
+#        with:
+#          python-version: "3.x" # Pythonのバージョン指定
+#
+#      - name: Install dependencies # Pythonの依存環境のインストール
+#        run: | #このような書き方で複数行を一気に実行することができる。
+#          python -m pip install --upgrade pip
+#          pip install Flask
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py # Pythonファイルの実行
+#        run: |
+#          python mainb0.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+#        run: |
+#          git add .
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+#
+#  buildedc0:
+#    runs-on: ubuntu-latest
+#    needs: buildedb0
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+#        uses: actions/setup-python@v2 # Pythonのセットアップ
+#        with:
+#          python-version: "3.x" # Pythonのバージョン指定
+#
+#      - name: Install dependencies # Pythonの依存環境のインストール
+#        run: | #このような書き方で複数行を一気に実行することができる。
+#          python -m pip install --upgrade pip
+#          pip install Flask
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py # Pythonファイルの実行
+#        run: |
+#          python mainc0.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+#        run: |
+#          git add .
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+#
+#
+#
+#  builded1:
+#    runs-on: ubuntu-latest
+#    needs: buildedc0
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+#        uses: actions/setup-python@v2 # Pythonのセットアップ
+#        with:
+#          python-version: "3.x" # Pythonのバージョン指定
+#
+#      - name: Install dependencies # Pythonの依存環境のインストール
+#        run: | #このような書き方で複数行を一気に実行することができる。
+#          python -m pip install --upgrade pip
+#          pip install Flask
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py # Pythonファイルの実行
+#        run: |
+#          python main0.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+#        run: |
+#          git add .
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+#
 #
 #
 #  buildedb1:
 #    runs-on: ubuntu-latest
-##    needs: builded1
+#    needs: buildeda1
 #    steps:
 #      - uses: actions/checkout@v2
 #        with:
@@ -170,7 +172,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python mainb1.py
+#          python mainb0.py
 #
 #      - name: git setting
 #        run: |
@@ -180,8 +182,7 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #  buildedc1:
 #    runs-on: ubuntu-latest
@@ -204,7 +205,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python mainc1.py
+#          python mainc0.py
 #
 #      - name: git setting
 #        run: |
@@ -214,48 +215,13 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
-#
-#  buildedd1:
-#    runs-on: ubuntu-latest
-#    needs: buildedb1
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python maind1.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #
 #
 #  builded2:
 #    runs-on: ubuntu-latest
-#    needs: buildedd1
+#    needs: buildedc1
 #    steps:
 #      - uses: actions/checkout@v2
 #        with:
@@ -274,7 +240,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python main2.py
+#          python main0.py
 #
 #      - name: git setting
 #        run: |
@@ -284,14 +250,13 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #
-
 #
 #  buildedb2:
 #    runs-on: ubuntu-latest
-##    needs: builded2
+#    needs: buildeda2
 #    steps:
 #      - uses: actions/checkout@v2
 #        with:
@@ -310,7 +275,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python mainb2.py
+#          python mainb0.py
 #
 #      - name: git setting
 #        run: |
@@ -320,8 +285,7 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #  buildedc2:
 #    runs-on: ubuntu-latest
@@ -344,7 +308,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python mainc2.py
+#          python mainc0.py
 #
 #      - name: git setting
 #        run: |
@@ -354,14 +318,13 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #
 #
 #  builded3:
 #    runs-on: ubuntu-latest
-#    needs: buildedb2
+#    needs: buildedc2
 #    steps:
 #      - uses: actions/checkout@v2
 #        with:
@@ -380,7 +343,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python main3.py
+#          python main0.py
 #
 #      - name: git setting
 #        run: |
@@ -390,14 +353,13 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #
 #
 #  buildedb3:
 #    runs-on: ubuntu-latest
-#    needs: builded3
+#    needs: buildeda3
 #    steps:
 #      - uses: actions/checkout@v2
 #        with:
@@ -416,7 +378,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python mainb3.py
+#          python mainb0.py
 #
 #      - name: git setting
 #        run: |
@@ -426,8 +388,7 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #  buildedc3:
 #    runs-on: ubuntu-latest
@@ -450,7 +411,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python mainc3.py
+#          python mainc0.py
 #
 #      - name: git setting
 #        run: |
@@ -460,14 +421,13 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #
 #
 #  builded4:
 #    runs-on: ubuntu-latest
-#    needs: buildedb3
+#    needs: buildedc3
 #    steps:
 #      - uses: actions/checkout@v2
 #        with:
@@ -486,7 +446,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python main4.py
+#          python main0.py
 #
 #      - name: git setting
 #        run: |
@@ -496,14 +456,13 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #
 #
 #  buildedb4:
 #    runs-on: ubuntu-latest
-#    needs: builded4
+#    needs: buildeda4
 #    steps:
 #      - uses: actions/checkout@v2
 #        with:
@@ -522,7 +481,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python mainb4.py
+#          python mainb0.py
 #
 #      - name: git setting
 #        run: |
@@ -532,8 +491,7 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #  buildedc4:
 #    runs-on: ubuntu-latest
@@ -556,7 +514,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python mainc4.py
+#          python mainc0.py
 #
 #      - name: git setting
 #        run: |
@@ -566,12 +524,13 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+#
 #
 #
 #  builded5:
 #    runs-on: ubuntu-latest
-#    needs: buildedb4
+#    needs: buildedc4
 #    steps:
 #      - uses: actions/checkout@v2
 #        with:
@@ -590,7 +549,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python main5.py
+#          python main0.py
 #
 #      - name: git setting
 #        run: |
@@ -600,14 +559,13 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #
 #
 #  buildedb5:
 #    runs-on: ubuntu-latest
-#    needs: builded5
+#    needs: buildeda5
 #    steps:
 #      - uses: actions/checkout@v2
 #        with:
@@ -626,7 +584,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python mainb5.py
+#          python mainb0.py
 #
 #      - name: git setting
 #        run: |
@@ -636,8 +594,7 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 #  buildedc5:
 #    runs-on: ubuntu-latest
@@ -660,7 +617,7 @@ jobs:
 #
 #      - name: Run main.py # Pythonファイルの実行
 #        run: |
-#          python mainc5.py
+#          python mainc0.py
 #
 #      - name: git setting
 #        run: |
@@ -670,14 +627,116 @@ jobs:
 #      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
 #        run: |
 #          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
+#
+#
+#  builded6:
+#    runs-on: ubuntu-latest
+#    needs: buildedc5
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+#        uses: actions/setup-python@v2 # Pythonのセットアップ
+#        with:
+#          python-version: "3.x" # Pythonのバージョン指定
+#
+#      - name: Install dependencies # Pythonの依存環境のインストール
+#        run: | #このような書き方で複数行を一気に実行することができる。
+#          python -m pip install --upgrade pip
+#          pip install Flask
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py # Pythonファイルの実行
+#        run: |
+#          python main0.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+#        run: |
+#          git add .
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+#
+#
+#
+#  buildedb6:
+#    runs-on: ubuntu-latest
+#    needs: buildeda6
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+#        uses: actions/setup-python@v2 # Pythonのセットアップ
+#        with:
+#          python-version: "3.x" # Pythonのバージョン指定
+#
+#      - name: Install dependencies # Pythonの依存環境のインストール
+#        run: | #このような書き方で複数行を一気に実行することができる。
+#          python -m pip install --upgrade pip
+#          pip install Flask
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py # Pythonファイルの実行
+#        run: |
+#          python mainb0.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+#        run: |
+#          git add .
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+#
+#  buildedc6:
+#    runs-on: ubuntu-latest
+#    needs: buildedb6
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+#        uses: actions/setup-python@v2 # Pythonのセットアップ
+#        with:
+#          python-version: "3.x" # Pythonのバージョン指定
+#
+#      - name: Install dependencies # Pythonの依存環境のインストール
+#        run: | #このような書き方で複数行を一気に実行することができる。
+#          python -m pip install --upgrade pip
+#          pip install Flask
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py # Pythonファイルの実行
+#        run: |
+#          python mainc0.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+#        run: |
+#          git add .
+#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 #
 
 
-  builded6:
+  builded7:
     runs-on: ubuntu-latest
-#    needs: buildedb5
+#    needs: buildedc6
     steps:
       - uses: actions/checkout@v2
         with:
@@ -696,7 +755,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main6.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -710,116 +769,9 @@ jobs:
 
 
 
-
-  buildedb6:
-    runs-on: ubuntu-latest
-    needs: builded6
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-        uses: actions/setup-python@v2 # Pythonのセットアップ
-        with:
-          python-version: "3.x" # Pythonのバージョン指定
-
-      - name: Install dependencies # Pythonの依存環境のインストール
-        run: | #このような書き方で複数行を一気に実行することができる。
-          python -m pip install --upgrade pip
-          pip install Flask
-          pip install chromedriver-binary
-          pip install selenium
-
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-          python mainb6.py
-
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
-      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-        run: |
-          git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
-
-  buildedc6:
-    runs-on: ubuntu-latest
-    needs: buildedb6
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-        uses: actions/setup-python@v2 # Pythonのセットアップ
-        with:
-          python-version: "3.x" # Pythonのバージョン指定
-
-      - name: Install dependencies # Pythonの依存環境のインストール
-        run: | #このような書き方で複数行を一気に実行することができる。
-          python -m pip install --upgrade pip
-          pip install Flask
-          pip install chromedriver-binary
-          pip install selenium
-
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-          python mainc6.py
-
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
-      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-        run: |
-          git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
-
-
-
-  builded7:
-    runs-on: ubuntu-latest
-    needs: buildedb6
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-        uses: actions/setup-python@v2 # Pythonのセットアップ
-        with:
-          python-version: "3.x" # Pythonのバージョン指定
-
-      - name: Install dependencies # Pythonの依存環境のインストール
-        run: | #このような書き方で複数行を一気に実行することができる。
-          python -m pip install --upgrade pip
-          pip install Flask
-          pip install chromedriver-binary
-          pip install selenium
-
-      - name: Run main.py # Pythonファイルの実行
-        run: |
-          python main7.py
-
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
-      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-        run: |
-          git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
-
-
-
   buildedb7:
     runs-on: ubuntu-latest
-    needs: builded7
+    needs: buildeda7
     steps:
       - uses: actions/checkout@v2
         with:
@@ -838,7 +790,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb7.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -848,8 +800,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc7:
     runs-on: ubuntu-latest
@@ -872,7 +823,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc7.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -882,14 +833,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded8:
     runs-on: ubuntu-latest
-    needs: buildedb7
+    needs: buildedc7
     steps:
       - uses: actions/checkout@v2
         with:
@@ -908,7 +858,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main8.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -918,14 +868,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb8:
     runs-on: ubuntu-latest
-    needs: builded8
+    needs: buildeda8
     steps:
       - uses: actions/checkout@v2
         with:
@@ -944,7 +893,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb8.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -954,8 +903,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc8:
     runs-on: ubuntu-latest
@@ -978,7 +926,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc8.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -988,14 +936,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded9:
     runs-on: ubuntu-latest
-    needs: buildedb8
+    needs: buildedc8
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1014,7 +961,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main9.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -1024,14 +971,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb9:
     runs-on: ubuntu-latest
-    needs: builded9
+    needs: buildeda9
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1050,7 +996,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb9.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -1060,8 +1006,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc9:
     runs-on: ubuntu-latest
@@ -1084,7 +1029,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc9.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -1094,14 +1039,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded10:
     runs-on: ubuntu-latest
-    needs: buildedb9
+    needs: buildedc9
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1120,7 +1064,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main10.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -1130,14 +1074,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb10:
     runs-on: ubuntu-latest
-    needs: builded10
+    needs: buildeda10
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1156,7 +1099,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb10.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -1166,8 +1109,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc10:
     runs-on: ubuntu-latest
@@ -1190,7 +1132,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc10.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -1200,14 +1142,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded11:
     runs-on: ubuntu-latest
-    needs: buildedb10
+    needs: buildedc10
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1226,7 +1167,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main11.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -1236,14 +1177,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb11:
     runs-on: ubuntu-latest
-    needs: builded11
+    needs: buildeda11
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1262,7 +1202,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb11.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -1272,8 +1212,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc11:
     runs-on: ubuntu-latest
@@ -1296,7 +1235,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc11.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -1306,14 +1245,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded12:
     runs-on: ubuntu-latest
-    needs: buildedb11
+    needs: buildedc11
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1332,7 +1270,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main12.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -1342,14 +1280,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb12:
     runs-on: ubuntu-latest
-    needs: builded12
+    needs: buildeda12
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1368,7 +1305,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb12.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -1378,8 +1315,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc12:
     runs-on: ubuntu-latest
@@ -1402,7 +1338,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc12.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -1412,14 +1348,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded13:
     runs-on: ubuntu-latest
-    needs: buildedb12
+    needs: buildedc12
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1438,7 +1373,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main13.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -1448,14 +1383,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb13:
     runs-on: ubuntu-latest
-    needs: builded13
+    needs: buildeda13
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1474,7 +1408,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb13.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -1484,8 +1418,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc13:
     runs-on: ubuntu-latest
@@ -1508,7 +1441,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc13.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -1518,118 +1451,11 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
-
-#
-#
-#  builded14:
-#    runs-on: ubuntu-latest
-#    needs: buildedb13
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main14.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
-#
-#
-#
-#  buildedb14:
-#    runs-on: ubuntu-latest
-#    needs: builded14
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb14.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
-
-#  buildedc14:
-#    runs-on: ubuntu-latest
-##    needs: buildedb14
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc14.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-#
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
-  builded15:
+  builded14:
     runs-on: ubuntu-latest
     needs: buildedc13
     steps:
@@ -1650,7 +1476,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main15.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -1660,14 +1486,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
-
-  buildedb15:
+  buildedb14:
     runs-on: ubuntu-latest
-    needs: builded15
+    needs: buildeda14
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1686,7 +1511,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb15.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -1696,8 +1521,110 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
+  buildedc14:
+    runs-on: ubuntu-latest
+    needs: buildedb14
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc0.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+
+
+
+  builded15:
+    runs-on: ubuntu-latest
+    needs: buildedc14
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main0.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+
+
+
+  buildedb15:
+    runs-on: ubuntu-latest
+    needs: buildeda15
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb0.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc15:
     runs-on: ubuntu-latest
@@ -1720,7 +1647,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc15.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -1730,14 +1657,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded16:
     runs-on: ubuntu-latest
-    needs: buildedb15
+    needs: buildedc15
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1756,7 +1682,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main16.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -1766,14 +1692,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb16:
     runs-on: ubuntu-latest
-    needs: builded16
+    needs: buildeda16
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1792,7 +1717,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb16.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -1802,8 +1727,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc16:
     runs-on: ubuntu-latest
@@ -1826,7 +1750,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc16.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -1836,14 +1760,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded17:
     runs-on: ubuntu-latest
-    needs: buildedb16
+    needs: buildedc16
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1862,7 +1785,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main17.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -1872,14 +1795,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb17:
     runs-on: ubuntu-latest
-    needs: builded17
+    needs: buildeda17
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1898,7 +1820,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb17.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -1908,8 +1830,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc17:
     runs-on: ubuntu-latest
@@ -1932,7 +1853,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc17.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -1942,14 +1863,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded18:
     runs-on: ubuntu-latest
-    needs: buildedb17
+    needs: buildedc17
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1968,7 +1888,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main18.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -1978,14 +1898,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb18:
     runs-on: ubuntu-latest
-    needs: builded18
+    needs: buildeda18
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2004,7 +1923,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb18.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -2014,8 +1933,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc18:
     runs-on: ubuntu-latest
@@ -2038,7 +1956,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc18.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -2048,14 +1966,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded19:
     runs-on: ubuntu-latest
-    needs: buildedb18
+    needs: buildedc18
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2074,7 +1991,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main19.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -2084,14 +2001,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb19:
     runs-on: ubuntu-latest
-    needs: builded19
+    needs: buildeda19
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2110,7 +2026,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb19.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -2120,8 +2036,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc19:
     runs-on: ubuntu-latest
@@ -2144,7 +2059,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc19.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -2154,14 +2069,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded20:
     runs-on: ubuntu-latest
-    needs: buildedb19
+    needs: buildedc19
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2180,7 +2094,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main20.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -2190,14 +2104,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb20:
     runs-on: ubuntu-latest
-    needs: builded20
+    needs: buildeda20
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2216,7 +2129,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb20.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -2226,8 +2139,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc20:
     runs-on: ubuntu-latest
@@ -2250,7 +2162,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc20.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -2260,14 +2172,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded21:
     runs-on: ubuntu-latest
-    needs: buildedb20
+    needs: buildedc20
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2286,7 +2197,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main21.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -2296,14 +2207,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb21:
     runs-on: ubuntu-latest
-    needs: builded21
+    needs: buildeda21
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2322,7 +2232,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb21.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -2332,8 +2242,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc21:
     runs-on: ubuntu-latest
@@ -2356,7 +2265,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc21.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -2366,14 +2275,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded22:
     runs-on: ubuntu-latest
-    needs: buildedb21
+    needs: buildedc21
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2392,7 +2300,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main22.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -2402,14 +2310,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb22:
     runs-on: ubuntu-latest
-    needs: builded22
+    needs: buildeda22
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2428,7 +2335,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb22.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -2438,8 +2345,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc22:
     runs-on: ubuntu-latest
@@ -2462,7 +2368,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc22.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -2472,14 +2378,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded23:
     runs-on: ubuntu-latest
-    needs: buildedb22
+    needs: buildedc22
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2498,7 +2403,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main23.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -2508,14 +2413,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb23:
     runs-on: ubuntu-latest
-    needs: builded23
+    needs: buildeda23
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2534,7 +2438,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb23.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -2544,8 +2448,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc23:
     runs-on: ubuntu-latest
@@ -2568,7 +2471,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc23.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -2578,14 +2481,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded24:
     runs-on: ubuntu-latest
-    needs: buildedb23
+    needs: buildedc23
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2604,7 +2506,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main24.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -2614,14 +2516,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb24:
     runs-on: ubuntu-latest
-    needs: builded24
+    needs: buildeda24
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2640,7 +2541,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb24.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -2650,8 +2551,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc24:
     runs-on: ubuntu-latest
@@ -2674,7 +2574,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc24.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -2684,14 +2584,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded25:
     runs-on: ubuntu-latest
-    needs: buildedb24
+    needs: buildedc24
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2710,7 +2609,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main25.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -2720,14 +2619,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb25:
     runs-on: ubuntu-latest
-    needs: builded25
+    needs: buildeda25
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2746,7 +2644,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb25.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -2756,8 +2654,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc25:
     runs-on: ubuntu-latest
@@ -2780,7 +2677,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc25.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -2790,14 +2687,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded26:
     runs-on: ubuntu-latest
-    needs: buildedb25
+    needs: buildedc25
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2816,7 +2712,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main26.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -2826,14 +2722,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb26:
     runs-on: ubuntu-latest
-    needs: builded26
+    needs: buildeda26
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2852,7 +2747,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb26.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -2862,8 +2757,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc26:
     runs-on: ubuntu-latest
@@ -2886,7 +2780,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc26.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -2896,14 +2790,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded27:
     runs-on: ubuntu-latest
-    needs: buildedb26
+    needs: buildedc26
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2922,7 +2815,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main27.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -2932,14 +2825,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb27:
     runs-on: ubuntu-latest
-    needs: builded27
+    needs: buildeda27
     steps:
       - uses: actions/checkout@v2
         with:
@@ -2958,7 +2850,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb27.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -2968,8 +2860,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc27:
     runs-on: ubuntu-latest
@@ -2992,7 +2883,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc27.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -3002,14 +2893,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded28:
     runs-on: ubuntu-latest
-    needs: buildedb27
+    needs: buildedc27
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3028,7 +2918,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main28.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -3038,14 +2928,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb28:
     runs-on: ubuntu-latest
-    needs: builded28
+    needs: buildeda28
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3064,7 +2953,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb28.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -3074,8 +2963,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc28:
     runs-on: ubuntu-latest
@@ -3098,7 +2986,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc28.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -3108,14 +2996,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded29:
     runs-on: ubuntu-latest
-    needs: buildedb28
+    needs: buildedc28
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3134,7 +3021,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main29.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -3144,14 +3031,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb29:
     runs-on: ubuntu-latest
-    needs: builded29
+    needs: buildeda29
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3170,7 +3056,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb29.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -3180,8 +3066,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc29:
     runs-on: ubuntu-latest
@@ -3204,7 +3089,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc29.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -3214,14 +3099,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded30:
     runs-on: ubuntu-latest
-    needs: buildedb29
+    needs: buildedc29
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3240,7 +3124,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main30.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -3250,14 +3134,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb30:
     runs-on: ubuntu-latest
-    needs: builded30
+    needs: buildeda30
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3276,7 +3159,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb30.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -3286,8 +3169,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc30:
     runs-on: ubuntu-latest
@@ -3310,7 +3192,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc30.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -3320,14 +3202,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded31:
     runs-on: ubuntu-latest
-    needs: buildedb30
+    needs: buildedc30
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3346,7 +3227,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main31.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -3356,14 +3237,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb31:
     runs-on: ubuntu-latest
-    needs: builded31
+    needs: buildeda31
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3382,7 +3262,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb31.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -3392,8 +3272,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc31:
     runs-on: ubuntu-latest
@@ -3416,7 +3295,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc31.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -3426,14 +3305,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded32:
     runs-on: ubuntu-latest
-    needs: buildedb31
+    needs: buildedc31
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3452,7 +3330,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main32.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -3462,14 +3340,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb32:
     runs-on: ubuntu-latest
-    needs: builded32
+    needs: buildeda32
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3488,7 +3365,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb32.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -3498,8 +3375,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc32:
     runs-on: ubuntu-latest
@@ -3522,7 +3398,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc32.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -3532,14 +3408,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded33:
     runs-on: ubuntu-latest
-    needs: buildedb32
+    needs: buildedc32
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3558,7 +3433,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main33.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -3568,14 +3443,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb33:
     runs-on: ubuntu-latest
-    needs: builded33
+    needs: buildeda33
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3594,7 +3468,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb33.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -3604,8 +3478,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc33:
     runs-on: ubuntu-latest
@@ -3628,7 +3501,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc33.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -3638,14 +3511,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded34:
     runs-on: ubuntu-latest
-    needs: buildedb33
+    needs: buildedc33
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3664,7 +3536,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main34.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -3674,14 +3546,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb34:
     runs-on: ubuntu-latest
-    needs: builded34
+    needs: buildeda34
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3700,7 +3571,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb34.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -3710,8 +3581,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc34:
     runs-on: ubuntu-latest
@@ -3734,7 +3604,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc34.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -3744,14 +3614,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded35:
     runs-on: ubuntu-latest
-    needs: buildedb34
+    needs: buildedc34
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3770,7 +3639,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main35.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -3780,14 +3649,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb35:
     runs-on: ubuntu-latest
-    needs: builded35
+    needs: buildeda35
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3806,7 +3674,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb35.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -3816,8 +3684,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc35:
     runs-on: ubuntu-latest
@@ -3840,7 +3707,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc35.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -3850,14 +3717,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded36:
     runs-on: ubuntu-latest
-    needs: buildedb35
+    needs: buildedc35
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3876,7 +3742,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main36.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -3886,14 +3752,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb36:
     runs-on: ubuntu-latest
-    needs: builded36
+    needs: buildeda36
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3912,7 +3777,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb36.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -3922,8 +3787,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc36:
     runs-on: ubuntu-latest
@@ -3946,7 +3810,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc36.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -3956,14 +3820,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded37:
     runs-on: ubuntu-latest
-    needs: buildedb36
+    needs: buildedc36
     steps:
       - uses: actions/checkout@v2
         with:
@@ -3982,7 +3845,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main37.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -3992,14 +3855,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb37:
     runs-on: ubuntu-latest
-    needs: builded37
+    needs: buildeda37
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4018,7 +3880,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb37.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -4028,8 +3890,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc37:
     runs-on: ubuntu-latest
@@ -4052,7 +3913,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc37.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -4062,14 +3923,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded38:
     runs-on: ubuntu-latest
-    needs: buildedb37
+    needs: buildedc37
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4088,7 +3948,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main38.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -4098,14 +3958,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb38:
     runs-on: ubuntu-latest
-    needs: builded38
+    needs: buildeda38
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4124,7 +3983,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb38.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -4134,8 +3993,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc38:
     runs-on: ubuntu-latest
@@ -4158,7 +4016,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc38.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -4168,14 +4026,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded39:
     runs-on: ubuntu-latest
-    needs: buildedb38
+    needs: buildedc38
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4194,7 +4051,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main39.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -4204,14 +4061,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb39:
     runs-on: ubuntu-latest
-    needs: builded39
+    needs: buildeda39
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4230,7 +4086,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb39.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -4240,8 +4096,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc39:
     runs-on: ubuntu-latest
@@ -4264,7 +4119,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc39.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -4274,14 +4129,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded40:
     runs-on: ubuntu-latest
-    needs: buildedb39
+    needs: buildedc39
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4300,7 +4154,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main40.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -4310,14 +4164,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb40:
     runs-on: ubuntu-latest
-    needs: builded40
+    needs: buildeda40
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4336,7 +4189,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb40.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -4346,8 +4199,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc40:
     runs-on: ubuntu-latest
@@ -4370,7 +4222,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc40.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -4380,14 +4232,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded41:
     runs-on: ubuntu-latest
-    needs: buildedb40
+    needs: buildedc40
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4406,7 +4257,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main41.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -4416,14 +4267,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb41:
     runs-on: ubuntu-latest
-    needs: builded41
+    needs: buildeda41
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4442,7 +4292,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb41.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -4452,8 +4302,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc41:
     runs-on: ubuntu-latest
@@ -4476,7 +4325,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc41.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -4486,14 +4335,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded42:
     runs-on: ubuntu-latest
-    needs: buildedb41
+    needs: buildedc41
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4512,7 +4360,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main42.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -4522,14 +4370,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb42:
     runs-on: ubuntu-latest
-    needs: builded42
+    needs: buildeda42
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4548,7 +4395,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb42.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -4558,8 +4405,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc42:
     runs-on: ubuntu-latest
@@ -4582,7 +4428,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc42.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -4592,14 +4438,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded43:
     runs-on: ubuntu-latest
-    needs: buildedb42
+    needs: buildedc42
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4618,7 +4463,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main43.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -4628,14 +4473,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb43:
     runs-on: ubuntu-latest
-    needs: builded43
+    needs: buildeda43
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4654,7 +4498,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb43.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -4664,8 +4508,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc43:
     runs-on: ubuntu-latest
@@ -4688,7 +4531,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc43.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -4698,14 +4541,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded44:
     runs-on: ubuntu-latest
-    needs: buildedb43
+    needs: buildedc43
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4724,7 +4566,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main44.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -4734,14 +4576,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb44:
     runs-on: ubuntu-latest
-    needs: builded44
+    needs: buildeda44
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4760,7 +4601,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb44.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -4770,8 +4611,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc44:
     runs-on: ubuntu-latest
@@ -4794,7 +4634,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc44.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -4804,14 +4644,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded45:
     runs-on: ubuntu-latest
-    needs: buildedb44
+    needs: buildedc44
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4830,7 +4669,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main45.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -4840,14 +4679,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb45:
     runs-on: ubuntu-latest
-    needs: builded45
+    needs: buildeda45
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4866,7 +4704,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb45.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -4876,8 +4714,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc45:
     runs-on: ubuntu-latest
@@ -4900,7 +4737,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc45.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -4910,14 +4747,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded46:
     runs-on: ubuntu-latest
-    needs: buildedb45
+    needs: buildedc45
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4936,7 +4772,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main46.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -4946,14 +4782,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb46:
     runs-on: ubuntu-latest
-    needs: builded46
+    needs: buildeda46
     steps:
       - uses: actions/checkout@v2
         with:
@@ -4972,7 +4807,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb46.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -4982,8 +4817,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc46:
     runs-on: ubuntu-latest
@@ -5006,7 +4840,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc46.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -5016,14 +4850,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded47:
     runs-on: ubuntu-latest
-    needs: buildedb46
+    needs: buildedc46
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5042,7 +4875,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main47.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -5052,14 +4885,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb47:
     runs-on: ubuntu-latest
-    needs: builded47
+    needs: buildeda47
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5078,7 +4910,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb47.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -5088,8 +4920,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc47:
     runs-on: ubuntu-latest
@@ -5112,7 +4943,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc47.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -5122,14 +4953,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded48:
     runs-on: ubuntu-latest
-    needs: buildedb47
+    needs: buildedc47
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5148,7 +4978,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main48.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -5158,14 +4988,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb48:
     runs-on: ubuntu-latest
-    needs: builded48
+    needs: buildeda48
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5184,7 +5013,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb48.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -5194,8 +5023,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc48:
     runs-on: ubuntu-latest
@@ -5218,7 +5046,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc48.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -5228,14 +5056,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded49:
     runs-on: ubuntu-latest
-    needs: buildedb48
+    needs: buildedc48
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5254,7 +5081,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main49.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -5264,14 +5091,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb49:
     runs-on: ubuntu-latest
-    needs: builded49
+    needs: buildeda49
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5290,7 +5116,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb49.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -5300,8 +5126,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc49:
     runs-on: ubuntu-latest
@@ -5324,7 +5149,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc49.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -5334,14 +5159,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded50:
     runs-on: ubuntu-latest
-    needs: buildedb49
+    needs: buildedc49
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5360,7 +5184,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main50.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -5370,14 +5194,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb50:
     runs-on: ubuntu-latest
-    needs: builded50
+    needs: buildeda50
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5396,7 +5219,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb50.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -5406,8 +5229,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc50:
     runs-on: ubuntu-latest
@@ -5430,7 +5252,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc50.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -5440,14 +5262,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded51:
     runs-on: ubuntu-latest
-    needs: buildedb50
+    needs: buildedc50
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5466,7 +5287,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main51.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -5476,14 +5297,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb51:
     runs-on: ubuntu-latest
-    needs: builded51
+    needs: buildeda51
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5502,7 +5322,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb51.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -5512,8 +5332,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc51:
     runs-on: ubuntu-latest
@@ -5536,7 +5355,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc51.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -5546,14 +5365,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded52:
     runs-on: ubuntu-latest
-    needs: buildedb51
+    needs: buildedc51
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5572,7 +5390,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main52.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -5582,14 +5400,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb52:
     runs-on: ubuntu-latest
-    needs: builded52
+    needs: buildeda52
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5608,7 +5425,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb52.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -5618,8 +5435,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc52:
     runs-on: ubuntu-latest
@@ -5642,7 +5458,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc52.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -5652,14 +5468,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded53:
     runs-on: ubuntu-latest
-    needs: buildedb52
+    needs: buildedc52
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5678,7 +5493,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main53.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -5688,14 +5503,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb53:
     runs-on: ubuntu-latest
-    needs: builded53
+    needs: buildeda53
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5714,7 +5528,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb53.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -5724,8 +5538,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc53:
     runs-on: ubuntu-latest
@@ -5748,7 +5561,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc53.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -5758,14 +5571,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded54:
     runs-on: ubuntu-latest
-    needs: buildedb53
+    needs: buildedc53
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5784,7 +5596,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main54.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -5794,14 +5606,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb54:
     runs-on: ubuntu-latest
-    needs: builded54
+    needs: buildeda54
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5820,7 +5631,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb54.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -5830,8 +5641,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc54:
     runs-on: ubuntu-latest
@@ -5854,7 +5664,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc54.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -5864,14 +5674,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded55:
     runs-on: ubuntu-latest
-    needs: buildedb54
+    needs: buildedc54
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5890,7 +5699,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main55.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -5900,14 +5709,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb55:
     runs-on: ubuntu-latest
-    needs: builded55
+    needs: buildeda55
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5926,7 +5734,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb55.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -5936,8 +5744,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc55:
     runs-on: ubuntu-latest
@@ -5960,7 +5767,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc55.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -5970,14 +5777,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded56:
     runs-on: ubuntu-latest
-    needs: buildedb55
+    needs: buildedc55
     steps:
       - uses: actions/checkout@v2
         with:
@@ -5996,7 +5802,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main56.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -6006,14 +5812,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb56:
     runs-on: ubuntu-latest
-    needs: builded56
+    needs: buildeda56
     steps:
       - uses: actions/checkout@v2
         with:
@@ -6032,7 +5837,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb56.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -6042,8 +5847,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc56:
     runs-on: ubuntu-latest
@@ -6066,7 +5870,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc56.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -6076,14 +5880,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded57:
     runs-on: ubuntu-latest
-    needs: buildedb56
+    needs: buildedc56
     steps:
       - uses: actions/checkout@v2
         with:
@@ -6102,7 +5905,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main57.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -6112,14 +5915,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb57:
     runs-on: ubuntu-latest
-    needs: builded57
+    needs: buildeda57
     steps:
       - uses: actions/checkout@v2
         with:
@@ -6138,7 +5940,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb57.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -6148,8 +5950,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc57:
     runs-on: ubuntu-latest
@@ -6172,7 +5973,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc57.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -6182,14 +5983,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   builded58:
     runs-on: ubuntu-latest
-    needs: buildedb57
+    needs: buildedc57
     steps:
       - uses: actions/checkout@v2
         with:
@@ -6208,7 +6008,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main58.py
+          python main0.py
 
       - name: git setting
         run: |
@@ -6218,14 +6018,13 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
 
 
   buildedb58:
     runs-on: ubuntu-latest
-    needs: builded58
+    needs: buildeda58
     steps:
       - uses: actions/checkout@v2
         with:
@@ -6244,7 +6043,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainb58.py
+          python mainb0.py
 
       - name: git setting
         run: |
@@ -6254,8 +6053,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   buildedc58:
     runs-on: ubuntu-latest
@@ -6278,7 +6076,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python mainc58.py
+          python mainc0.py
 
       - name: git setting
         run: |
@@ -6288,8 +6086,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -Xtheirs&& git push origin main -f  || true
-
+          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
 
   deploy:
     runs-on: ubuntu-latest
