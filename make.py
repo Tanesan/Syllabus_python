@@ -144,4 +144,4 @@ buildedc""" + str(i) + """:
           git add .
           git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true 
           """)
-        # index += 1
+    index += 1
