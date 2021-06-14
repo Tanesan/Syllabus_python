@@ -43,8 +43,9 @@ jobs:
 
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
+          git branch 0A && git checkout 0A &&
           git add .
-          git commit -m "Commit Message" && git branch 0A  && git push && git pull-request  || true
+          git commit -m "Commit Message" && git push && hub pull-request  || true
 
 
 
