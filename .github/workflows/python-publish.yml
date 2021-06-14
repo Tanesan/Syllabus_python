@@ -45,7 +45,7 @@ jobs:
         run: |
           git branch 0A && git checkout 0A &&
           git add .
-          git commit -m "Commit Message" && git push && hub pull-request  || true
+          git commit -m "Commit Message" && git push --set-upstream origin 0A && hub pull-request  || true
 
 
 

@@ -4,4 +4,4 @@ a = [97]
 if os.path.isfile("docs/" + str(a[0]) + '.json'):
     os.remove("docs/" + str(a[0]) + '.json')
 for i in a:
-    act(i, 1, 2)
+    act(i, 3, 4)
