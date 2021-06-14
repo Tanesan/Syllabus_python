@@ -73,14 +73,14 @@ builded""" + str(i) + """:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch """ + str(index) + """A  && git push && git pull-request  || true
           """)
 
     print("""
 
 buildedb""" + str(i) + """:
     runs-on: ubuntu-latest
-    needs: buildeda""" + str(i) + """
+    needs: builded""" + str(i) + """
     steps:
       - uses: actions/checkout@v2
         with:
@@ -109,7 +109,7 @@ buildedb""" + str(i) + """:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
            git add .
-           git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+           git commit -m "Commit Message" && git branch """ + str(index) + """B && git push && git pull-request  || true
 
 buildedc""" + str(i) + """:
     runs-on: ubuntu-latest
@@ -142,6 +142,6 @@ buildedc""" + str(i) + """:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true 
+          git commit -m "Commit Message" && git branch """ + str(index) + """C && git push && git pull-request  || true
           """)
     index += 1

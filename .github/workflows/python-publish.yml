@@ -14,730 +14,729 @@ on:
 #      - main
 
 jobs:
-#
-#  builded0:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main0.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  buildedb0:
-#    runs-on: ubuntu-latest
-#    needs: builded0
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb0.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#  buildedc0:
-#    runs-on: ubuntu-latest
-#    needs: buildedb0
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc0.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  builded1:
-#    runs-on: ubuntu-latest
-#    needs: buildedc0
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main1.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  buildedb1:
-#    runs-on: ubuntu-latest
-#    needs: builded1
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb1.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#  buildedc1:
-#    runs-on: ubuntu-latest
-#    needs: buildedb1
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc1.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  builded2:
-#    runs-on: ubuntu-latest
-#    needs: buildedc1
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main2.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  buildedb2:
-#    runs-on: ubuntu-latest
-#    needs: builded2
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb2.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#  buildedc2:
-#    runs-on: ubuntu-latest
-#    needs: buildedb2
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc2.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  builded3:
-#    runs-on: ubuntu-latest
-#    needs: buildedc2
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main3.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  buildedb3:
-#    runs-on: ubuntu-latest
-#    needs: builded3
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb3.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#  buildedc3:
-#    runs-on: ubuntu-latest
-#    needs: buildedb3
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc3.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  builded4:
-#    runs-on: ubuntu-latest
-#    needs: buildedc3
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main4.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  buildedb4:
-#    runs-on: ubuntu-latest
-#    needs: builded4
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb4.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#  buildedc4:
-#    runs-on: ubuntu-latest
-#    needs: buildedb4
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc4.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  builded5:
-#    runs-on: ubuntu-latest
-#    needs: buildedc4
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main5.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  buildedb5:
-#    runs-on: ubuntu-latest
-#    needs: builded5
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb5.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#  buildedc5:
-#    runs-on: ubuntu-latest
-#    needs: buildedb5
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc5.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  builded6:
-#    runs-on: ubuntu-latest
-#    needs: buildedc5
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main6.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#
-#
-#  buildedb6:
-#    runs-on: ubuntu-latest
-#    needs: builded6
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb6.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
-#  buildedc6:
-#    runs-on: ubuntu-latest
-#    needs: buildedb6
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc6.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
-#
+  builded0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main0.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 0A  && git push && git pull-request  || true
+
+
+
+  buildedb0:
+    runs-on: ubuntu-latest
+    needs: builded0
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb0.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 0B && git push && git pull-request  || true
+
+  buildedc0:
+    runs-on: ubuntu-latest
+    needs: buildedb0
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc0.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 0C && git push && git pull-request  || true
+
+
+
+  builded1:
+    runs-on: ubuntu-latest
+    needs: buildedc0
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main1.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 1A  && git push && git pull-request  || true
+
+
+
+  buildedb1:
+    runs-on: ubuntu-latest
+    needs: builded1
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb1.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 1B && git push && git pull-request  || true
+
+  buildedc1:
+    runs-on: ubuntu-latest
+    needs: buildedb1
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc1.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 1C && git push && git pull-request  || true
+
+
+
+  builded2:
+    runs-on: ubuntu-latest
+    needs: buildedc1
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main2.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 2A  && git push && git pull-request  || true
+
+
+
+  buildedb2:
+    runs-on: ubuntu-latest
+    needs: builded2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb2.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 2B && git push && git pull-request  || true
+
+  buildedc2:
+    runs-on: ubuntu-latest
+    needs: buildedb2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc2.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 2C && git push && git pull-request  || true
+
+
+
+  builded3:
+    runs-on: ubuntu-latest
+    needs: buildedc2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main3.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 3A  && git push && git pull-request  || true
+
+
+
+  buildedb3:
+    runs-on: ubuntu-latest
+    needs: builded3
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb3.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 3B && git push && git pull-request  || true
+
+  buildedc3:
+    runs-on: ubuntu-latest
+    needs: buildedb3
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc3.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 3C && git push && git pull-request  || true
+
+
+
+  builded4:
+    runs-on: ubuntu-latest
+    needs: buildedc3
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main4.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 4A  && git push && git pull-request  || true
+
+
+
+  buildedb4:
+    runs-on: ubuntu-latest
+    needs: builded4
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb4.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 4B && git push && git pull-request  || true
+
+  buildedc4:
+    runs-on: ubuntu-latest
+    needs: buildedb4
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc4.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 4C && git push && git pull-request  || true
+
+
+
+  builded5:
+    runs-on: ubuntu-latest
+    needs: buildedc4
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main5.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 5A  && git push && git pull-request  || true
+
+
+
+  buildedb5:
+    runs-on: ubuntu-latest
+    needs: builded5
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb5.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 5B && git push && git pull-request  || true
+
+  buildedc5:
+    runs-on: ubuntu-latest
+    needs: buildedb5
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc5.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 5C && git push && git pull-request  || true
+
+
+
+  builded6:
+    runs-on: ubuntu-latest
+    needs: buildedc5
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main6.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 6A  && git push && git pull-request  || true
+
+
+
+  buildedb6:
+    runs-on: ubuntu-latest
+    needs: builded6
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb6.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 6B && git push && git pull-request  || true
+
+  buildedc6:
+    runs-on: ubuntu-latest
+    needs: buildedb6
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc6.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git branch 6C && git push && git pull-request  || true
+
 
 
   builded7:
     runs-on: ubuntu-latest
-#    needs: buildedc6
+    needs: buildedc6
     steps:
       - uses: actions/checkout@v2
         with:
@@ -766,7 +765,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 7A  && git push && git pull-request  || true
 
 
 
@@ -801,7 +800,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 7B && git push && git pull-request  || true
 
   buildedc7:
     runs-on: ubuntu-latest
@@ -834,7 +833,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 7C && git push && git pull-request  || true
 
 
 
@@ -869,7 +868,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 8A  && git push && git pull-request  || true
 
 
 
@@ -904,7 +903,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 8B && git push && git pull-request  || true
 
   buildedc8:
     runs-on: ubuntu-latest
@@ -937,7 +936,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 8C && git push && git pull-request  || true
 
 
 
@@ -972,7 +971,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 9A  && git push && git pull-request  || true
 
 
 
@@ -1007,7 +1006,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 9B && git push && git pull-request  || true
 
   buildedc9:
     runs-on: ubuntu-latest
@@ -1040,7 +1039,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 9C && git push && git pull-request  || true
 
 
 
@@ -1075,7 +1074,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 10A  && git push && git pull-request  || true
 
 
 
@@ -1110,7 +1109,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 10B && git push && git pull-request  || true
 
   buildedc10:
     runs-on: ubuntu-latest
@@ -1143,7 +1142,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 10C && git push && git pull-request  || true
 
 
 
@@ -1178,7 +1177,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 11A  && git push && git pull-request  || true
 
 
 
@@ -1213,7 +1212,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 11B && git push && git pull-request  || true
 
   buildedc11:
     runs-on: ubuntu-latest
@@ -1246,7 +1245,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 11C && git push && git pull-request  || true
 
 
 
@@ -1281,7 +1280,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 12A  && git push && git pull-request  || true
 
 
 
@@ -1316,7 +1315,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 12B && git push && git pull-request  || true
 
   buildedc12:
     runs-on: ubuntu-latest
@@ -1349,7 +1348,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 12C && git push && git pull-request  || true
 
 
 
@@ -1384,7 +1383,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 13A  && git push && git pull-request  || true
 
 
 
@@ -1419,7 +1418,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 13B && git push && git pull-request  || true
 
   buildedc13:
     runs-on: ubuntu-latest
@@ -1452,7 +1451,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 13C && git push && git pull-request  || true
 
 
 
@@ -1487,7 +1486,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 14A  && git push && git pull-request  || true
 
 
 
@@ -1522,7 +1521,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 14B && git push && git pull-request  || true
 
   buildedc14:
     runs-on: ubuntu-latest
@@ -1555,7 +1554,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 14C && git push && git pull-request  || true
 
 
 
@@ -1590,7 +1589,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 15A  && git push && git pull-request  || true
 
 
 
@@ -1625,7 +1624,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 15B && git push && git pull-request  || true
 
   buildedc15:
     runs-on: ubuntu-latest
@@ -1658,7 +1657,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 15C && git push && git pull-request  || true
 
 
 
@@ -1693,7 +1692,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 16A  && git push && git pull-request  || true
 
 
 
@@ -1728,7 +1727,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 16B && git push && git pull-request  || true
 
   buildedc16:
     runs-on: ubuntu-latest
@@ -1761,7 +1760,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 16C && git push && git pull-request  || true
 
 
 
@@ -1796,7 +1795,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 17A  && git push && git pull-request  || true
 
 
 
@@ -1831,7 +1830,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 17B && git push && git pull-request  || true
 
   buildedc17:
     runs-on: ubuntu-latest
@@ -1864,7 +1863,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 17C && git push && git pull-request  || true
 
 
 
@@ -1899,7 +1898,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 18A  && git push && git pull-request  || true
 
 
 
@@ -1934,7 +1933,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 18B && git push && git pull-request  || true
 
   buildedc18:
     runs-on: ubuntu-latest
@@ -1967,7 +1966,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 18C && git push && git pull-request  || true
 
 
 
@@ -2002,7 +2001,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 19A  && git push && git pull-request  || true
 
 
 
@@ -2037,7 +2036,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 19B && git push && git pull-request  || true
 
   buildedc19:
     runs-on: ubuntu-latest
@@ -2070,7 +2069,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 19C && git push && git pull-request  || true
 
 
 
@@ -2105,7 +2104,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 20A  && git push && git pull-request  || true
 
 
 
@@ -2140,7 +2139,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 20B && git push && git pull-request  || true
 
   buildedc20:
     runs-on: ubuntu-latest
@@ -2173,7 +2172,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 20C && git push && git pull-request  || true
 
 
 
@@ -2208,7 +2207,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 21A  && git push && git pull-request  || true
 
 
 
@@ -2243,7 +2242,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 21B && git push && git pull-request  || true
 
   buildedc21:
     runs-on: ubuntu-latest
@@ -2276,7 +2275,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 21C && git push && git pull-request  || true
 
 
 
@@ -2311,7 +2310,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 22A  && git push && git pull-request  || true
 
 
 
@@ -2346,7 +2345,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 22B && git push && git pull-request  || true
 
   buildedc22:
     runs-on: ubuntu-latest
@@ -2379,7 +2378,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 22C && git push && git pull-request  || true
 
 
 
@@ -2414,7 +2413,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 23A  && git push && git pull-request  || true
 
 
 
@@ -2449,7 +2448,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 23B && git push && git pull-request  || true
 
   buildedc23:
     runs-on: ubuntu-latest
@@ -2482,7 +2481,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 23C && git push && git pull-request  || true
 
 
 
@@ -2517,7 +2516,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 24A  && git push && git pull-request  || true
 
 
 
@@ -2552,7 +2551,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 24B && git push && git pull-request  || true
 
   buildedc24:
     runs-on: ubuntu-latest
@@ -2585,7 +2584,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 24C && git push && git pull-request  || true
 
 
 
@@ -2620,7 +2619,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 25A  && git push && git pull-request  || true
 
 
 
@@ -2655,7 +2654,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 25B && git push && git pull-request  || true
 
   buildedc25:
     runs-on: ubuntu-latest
@@ -2688,7 +2687,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 25C && git push && git pull-request  || true
 
 
 
@@ -2723,7 +2722,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 26A  && git push && git pull-request  || true
 
 
 
@@ -2758,7 +2757,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 26B && git push && git pull-request  || true
 
   buildedc26:
     runs-on: ubuntu-latest
@@ -2791,7 +2790,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 26C && git push && git pull-request  || true
 
 
 
@@ -2826,7 +2825,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 27A  && git push && git pull-request  || true
 
 
 
@@ -2861,7 +2860,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 27B && git push && git pull-request  || true
 
   buildedc27:
     runs-on: ubuntu-latest
@@ -2894,7 +2893,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 27C && git push && git pull-request  || true
 
 
 
@@ -2929,7 +2928,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 28A  && git push && git pull-request  || true
 
 
 
@@ -2964,7 +2963,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 28B && git push && git pull-request  || true
 
   buildedc28:
     runs-on: ubuntu-latest
@@ -2997,7 +2996,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 28C && git push && git pull-request  || true
 
 
 
@@ -3032,7 +3031,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 29A  && git push && git pull-request  || true
 
 
 
@@ -3067,7 +3066,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 29B && git push && git pull-request  || true
 
   buildedc29:
     runs-on: ubuntu-latest
@@ -3100,7 +3099,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 29C && git push && git pull-request  || true
 
 
 
@@ -3135,7 +3134,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 30A  && git push && git pull-request  || true
 
 
 
@@ -3170,7 +3169,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 30B && git push && git pull-request  || true
 
   buildedc30:
     runs-on: ubuntu-latest
@@ -3203,7 +3202,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 30C && git push && git pull-request  || true
 
 
 
@@ -3238,7 +3237,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 31A  && git push && git pull-request  || true
 
 
 
@@ -3273,7 +3272,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 31B && git push && git pull-request  || true
 
   buildedc31:
     runs-on: ubuntu-latest
@@ -3306,7 +3305,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 31C && git push && git pull-request  || true
 
 
 
@@ -3341,7 +3340,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 32A  && git push && git pull-request  || true
 
 
 
@@ -3376,7 +3375,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 32B && git push && git pull-request  || true
 
   buildedc32:
     runs-on: ubuntu-latest
@@ -3409,7 +3408,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 32C && git push && git pull-request  || true
 
 
 
@@ -3444,7 +3443,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 33A  && git push && git pull-request  || true
 
 
 
@@ -3479,7 +3478,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 33B && git push && git pull-request  || true
 
   buildedc33:
     runs-on: ubuntu-latest
@@ -3512,7 +3511,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 33C && git push && git pull-request  || true
 
 
 
@@ -3547,7 +3546,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 34A  && git push && git pull-request  || true
 
 
 
@@ -3582,7 +3581,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 34B && git push && git pull-request  || true
 
   buildedc34:
     runs-on: ubuntu-latest
@@ -3615,7 +3614,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 34C && git push && git pull-request  || true
 
 
 
@@ -3650,7 +3649,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 35A  && git push && git pull-request  || true
 
 
 
@@ -3685,7 +3684,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 35B && git push && git pull-request  || true
 
   buildedc35:
     runs-on: ubuntu-latest
@@ -3718,7 +3717,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 35C && git push && git pull-request  || true
 
 
 
@@ -3753,7 +3752,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 36A  && git push && git pull-request  || true
 
 
 
@@ -3788,7 +3787,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 36B && git push && git pull-request  || true
 
   buildedc36:
     runs-on: ubuntu-latest
@@ -3821,7 +3820,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 36C && git push && git pull-request  || true
 
 
 
@@ -3856,7 +3855,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 37A  && git push && git pull-request  || true
 
 
 
@@ -3891,7 +3890,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 37B && git push && git pull-request  || true
 
   buildedc37:
     runs-on: ubuntu-latest
@@ -3924,7 +3923,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 37C && git push && git pull-request  || true
 
 
 
@@ -3959,7 +3958,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 38A  && git push && git pull-request  || true
 
 
 
@@ -3994,7 +3993,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 38B && git push && git pull-request  || true
 
   buildedc38:
     runs-on: ubuntu-latest
@@ -4027,7 +4026,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 38C && git push && git pull-request  || true
 
 
 
@@ -4062,7 +4061,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 39A  && git push && git pull-request  || true
 
 
 
@@ -4097,7 +4096,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 39B && git push && git pull-request  || true
 
   buildedc39:
     runs-on: ubuntu-latest
@@ -4130,7 +4129,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 39C && git push && git pull-request  || true
 
 
 
@@ -4165,7 +4164,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 40A  && git push && git pull-request  || true
 
 
 
@@ -4200,7 +4199,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 40B && git push && git pull-request  || true
 
   buildedc40:
     runs-on: ubuntu-latest
@@ -4233,7 +4232,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 40C && git push && git pull-request  || true
 
 
 
@@ -4268,7 +4267,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 41A  && git push && git pull-request  || true
 
 
 
@@ -4303,7 +4302,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 41B && git push && git pull-request  || true
 
   buildedc41:
     runs-on: ubuntu-latest
@@ -4336,7 +4335,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 41C && git push && git pull-request  || true
 
 
 
@@ -4371,7 +4370,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 42A  && git push && git pull-request  || true
 
 
 
@@ -4406,7 +4405,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 42B && git push && git pull-request  || true
 
   buildedc42:
     runs-on: ubuntu-latest
@@ -4439,7 +4438,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 42C && git push && git pull-request  || true
 
 
 
@@ -4474,7 +4473,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 43A  && git push && git pull-request  || true
 
 
 
@@ -4509,7 +4508,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 43B && git push && git pull-request  || true
 
   buildedc43:
     runs-on: ubuntu-latest
@@ -4542,7 +4541,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 43C && git push && git pull-request  || true
 
 
 
@@ -4577,7 +4576,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 44A  && git push && git pull-request  || true
 
 
 
@@ -4612,7 +4611,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 44B && git push && git pull-request  || true
 
   buildedc44:
     runs-on: ubuntu-latest
@@ -4645,7 +4644,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 44C && git push && git pull-request  || true
 
 
 
@@ -4680,7 +4679,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 45A  && git push && git pull-request  || true
 
 
 
@@ -4715,7 +4714,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 45B && git push && git pull-request  || true
 
   buildedc45:
     runs-on: ubuntu-latest
@@ -4748,7 +4747,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 45C && git push && git pull-request  || true
 
 
 
@@ -4783,7 +4782,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 46A  && git push && git pull-request  || true
 
 
 
@@ -4818,7 +4817,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 46B && git push && git pull-request  || true
 
   buildedc46:
     runs-on: ubuntu-latest
@@ -4851,7 +4850,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 46C && git push && git pull-request  || true
 
 
 
@@ -4886,7 +4885,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 47A  && git push && git pull-request  || true
 
 
 
@@ -4921,7 +4920,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 47B && git push && git pull-request  || true
 
   buildedc47:
     runs-on: ubuntu-latest
@@ -4954,7 +4953,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 47C && git push && git pull-request  || true
 
 
 
@@ -4989,7 +4988,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 48A  && git push && git pull-request  || true
 
 
 
@@ -5024,7 +5023,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 48B && git push && git pull-request  || true
 
   buildedc48:
     runs-on: ubuntu-latest
@@ -5057,7 +5056,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 48C && git push && git pull-request  || true
 
 
 
@@ -5092,7 +5091,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 49A  && git push && git pull-request  || true
 
 
 
@@ -5127,7 +5126,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 49B && git push && git pull-request  || true
 
   buildedc49:
     runs-on: ubuntu-latest
@@ -5160,7 +5159,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 49C && git push && git pull-request  || true
 
 
 
@@ -5195,7 +5194,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 50A  && git push && git pull-request  || true
 
 
 
@@ -5230,7 +5229,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 50B && git push && git pull-request  || true
 
   buildedc50:
     runs-on: ubuntu-latest
@@ -5263,7 +5262,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 50C && git push && git pull-request  || true
 
 
 
@@ -5298,7 +5297,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 51A  && git push && git pull-request  || true
 
 
 
@@ -5333,7 +5332,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 51B && git push && git pull-request  || true
 
   buildedc51:
     runs-on: ubuntu-latest
@@ -5366,7 +5365,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 51C && git push && git pull-request  || true
 
 
 
@@ -5401,7 +5400,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 52A  && git push && git pull-request  || true
 
 
 
@@ -5436,7 +5435,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 52B && git push && git pull-request  || true
 
   buildedc52:
     runs-on: ubuntu-latest
@@ -5469,7 +5468,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 52C && git push && git pull-request  || true
 
 
 
@@ -5504,7 +5503,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 53A  && git push && git pull-request  || true
 
 
 
@@ -5539,7 +5538,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 53B && git push && git pull-request  || true
 
   buildedc53:
     runs-on: ubuntu-latest
@@ -5572,7 +5571,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 53C && git push && git pull-request  || true
 
 
 
@@ -5607,7 +5606,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 54A  && git push && git pull-request  || true
 
 
 
@@ -5642,7 +5641,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 54B && git push && git pull-request  || true
 
   buildedc54:
     runs-on: ubuntu-latest
@@ -5675,7 +5674,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 54C && git push && git pull-request  || true
 
 
 
@@ -5710,7 +5709,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 55A  && git push && git pull-request  || true
 
 
 
@@ -5745,7 +5744,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 55B && git push && git pull-request  || true
 
   buildedc55:
     runs-on: ubuntu-latest
@@ -5778,7 +5777,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 55C && git push && git pull-request  || true
 
 
 
@@ -5813,7 +5812,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 56A  && git push && git pull-request  || true
 
 
 
@@ -5848,7 +5847,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 56B && git push && git pull-request  || true
 
   buildedc56:
     runs-on: ubuntu-latest
@@ -5881,7 +5880,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 56C && git push && git pull-request  || true
 
 
 
@@ -5916,7 +5915,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 57A  && git push && git pull-request  || true
 
 
 
@@ -5951,7 +5950,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 57B && git push && git pull-request  || true
 
   buildedc57:
     runs-on: ubuntu-latest
@@ -5984,7 +5983,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 57C && git push && git pull-request  || true
 
 
 
@@ -6019,7 +6018,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 58A  && git push && git pull-request  || true
 
 
 
@@ -6054,7 +6053,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 58B && git push && git pull-request  || true
 
   buildedc58:
     runs-on: ubuntu-latest
@@ -6087,7 +6086,7 @@ jobs:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git config pull.rebase false && git pull && git merge -XOurs&& git push origin main -f  || true
+          git commit -m "Commit Message" && git branch 58C && git push && git pull-request  || true
 
   deploy:
     runs-on: ubuntu-latest
