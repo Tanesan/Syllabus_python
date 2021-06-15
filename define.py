@@ -32,7 +32,7 @@ def act(m, a, b):
         select_object = Select(select_element)
         select_object.select_by_index(1)
         select_object.select_by_value(str(m))
-        driver.implicitly_wait(5)
+        driver.implicitly_wait(20)
         driver.find_element_by_name('ESearch').click()
         for a in range(int(i / 100)):
             sleep(1)
