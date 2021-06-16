@@ -12,7 +12,9 @@ searchingADJa = {}
 def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
+    options.add_argument('--no-sandbox'
+                         ''
+                         '')
     # driver = webdriver.Chrome(options=options)
     driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver', options=options)
     # print("A")
@@ -32,7 +34,7 @@ def act(m, a, b):
         select_object = Select(select_element)
         select_object.select_by_index(1)
         select_object.select_by_value(str(m))
-        driver.implicitly_wait(20)
+        driver.implicitly_wait(10)
         driver.find_element_by_name('ESearch').click()
         for a in range(int(i / 100)):
             sleep(1)
@@ -80,7 +82,9 @@ def act(m, a, b):
                 if len(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
                         'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('td')) == 1:
                     i = x
-                    if len(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
+                    if driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
+                            'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('th') is None\
+                            or len(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
                             'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('th')) == 0:
                         i = 0
                     # print(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
