@@ -73,7 +73,7 @@ builded""" + str(i) + """:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git branch """ + str(index) + """A  && git push && git pull-request  || true
+          git commit -m "Commit Message" && git push  || true
           """)
 
     print("""
@@ -109,7 +109,7 @@ buildedb""" + str(i) + """:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
            git add .
-           git commit -m "Commit Message" && git branch """ + str(index) + """B && git push && git pull-request  || true
+           git commit -m "Commit Message" &&git push || true
 
 buildedc""" + str(i) + """:
     runs-on: ubuntu-latest
@@ -142,6 +142,6 @@ buildedc""" + str(i) + """:
       - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git add .
-          git commit -m "Commit Message" && git branch """ + str(index) + """C && git push && git pull-request  || true
+          git commit -m "Commit Message" git push || true
           """)
     index += 1
