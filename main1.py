@@ -3,4 +3,4 @@ import os
 a = [22]
 
 for i in a:
-    act(i, 0, 550)
+    act(i, 0, 500)
