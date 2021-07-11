@@ -151,6 +151,8 @@ def act(m, a, b):
             json_open_all = open("docs/all.json", 'r')
             json_load_all = json.load(json_open_all)
             data_all.update(json_load_all)
+            with open("docs/all.json", 'w') as f:
+                json.dump(data_all, f, ensure_ascii=False)
     # if os.path.isfile("docs/" + str(m) + '.json') and os.stat("docs/" + str(m) + '.json').st_size > 0:
     #     json_open = open("docs/" + str(m) + '.json', 'r')
     #     json_load = json.load(json_open)
