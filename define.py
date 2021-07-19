@@ -24,7 +24,6 @@ def act(m, a, b):
 
     data = {}
     for i in range(a, b):
-        print(i)
         subject = {}
         fin = 0
         driver.get('https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree')
@@ -32,10 +31,9 @@ def act(m, a, b):
         select_object = Select(select_element)
         select_object.select_by_index(1)
         select_object.select_by_value(str(m))
-        driver.implicitly_wait(10)
+        # driver.implicitly_wait(2)
         driver.find_element_by_name('ESearch').click()
         for a in range(int(i / 100)):
-            # sleep(1)
             if len(driver.find_elements_by_name('ENext')) == 0:
                 if fin == 1:
                     break
@@ -46,7 +44,7 @@ def act(m, a, b):
             if int(driver.find_element_by_name('lstSlbinftJ016RList_st[' + str(len(driver.find_elements_by_name('ERefer')) - 1) +'].lblNo').get_attribute('value')) <= i:
                 break
         else:
-            sleep(2)
+            sleep(0.1)
         if len(driver.find_elements_by_name('ERefer')) == 0:
             break
         if fin == 1:
