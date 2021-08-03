@@ -3,11 +3,11 @@
 
 name: ActionsTest # GitHub Actionsにつける名前。任意で良い。
 
-# on:
-#   schedule:
-#     - cron: '0 3 * * *' # cronで定期実行
 on:
-  workflow_dispatch
+   schedule:
+     - cron: '0 8 */3 * *' # cronで定期実行
+# on:
+#   workflow_dispatch
 #on:
 #  push:
 #    branches:
