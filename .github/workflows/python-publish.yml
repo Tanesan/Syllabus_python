@@ -14,111 +14,8 @@ on:
 #      - main
 
 jobs:
-#  builded0:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python main0.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" && git push  || true
-#
-#
-#
-#  buildedb0:
-#    runs-on: ubuntu-latest
-#    needs: builded0
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainb0.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" &&git push || true
-#
-#  buildedc0:
-#    runs-on: ubuntu-latest
-#    needs: buildedb0
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-#      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
-#        uses: actions/setup-python@v2 # Pythonのセットアップ
-#        with:
-#          python-version: "3.x" # Pythonのバージョン指定
-#
-#      - name: Install dependencies # Pythonの依存環境のインストール
-#        run: | #このような書き方で複数行を一気に実行することができる。
-#          python -m pip install --upgrade pip
-#          pip install Flask
-#          pip install chromedriver-binary
-#          pip install selenium
-#
-#      - name: Run main.py # Pythonファイルの実行
-#        run: |
-#          python mainc0.py
-#
-#      - name: git setting
-#        run: |
-#          git config --local user.email "keito.12.10@icloud.com"
-#          git config --local user.name "Tanesan"
-#
-#      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
-#        run: |
-#          git add .
-#          git commit -m "Commit Message" git push || true
-#
-#
-
-  builded1:
+  builded0:
     runs-on: ubuntu-latest
-#    needs: buildedc0
     steps:
       - uses: actions/checkout@v2
         with:
@@ -131,7 +28,108 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main0.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git push  || true
+
+
+
+  buildedb0:
+    runs-on: ubuntu-latest
+    needs: builded0
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb0.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" &&git push || true
+
+  buildedc0:
+    runs-on: ubuntu-latest
+    needs: buildedb0
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc0.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" git push || true
+
+
+
+  builded1:
+    runs-on: ubuntu-latest
+    needs: buildedc0
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -166,7 +164,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -199,7 +197,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -234,7 +232,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -269,7 +267,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -302,7 +300,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -337,7 +335,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -372,7 +370,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -405,7 +403,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -440,7 +438,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -475,7 +473,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -508,7 +506,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -543,7 +541,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -578,7 +576,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -611,7 +609,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -646,7 +644,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -681,7 +679,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -714,7 +712,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -749,7 +747,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -784,7 +782,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -817,7 +815,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -852,7 +850,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -887,7 +885,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -920,7 +918,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -955,7 +953,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -990,7 +988,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1023,7 +1021,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1058,7 +1056,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1093,7 +1091,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1126,7 +1124,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1161,7 +1159,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1196,7 +1194,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1229,7 +1227,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1264,7 +1262,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1299,7 +1297,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1332,7 +1330,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1367,7 +1365,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1402,7 +1400,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1435,7 +1433,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1470,7 +1468,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1505,7 +1503,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1538,7 +1536,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1573,7 +1571,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1608,7 +1606,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1641,7 +1639,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1676,7 +1674,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1711,7 +1709,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1744,7 +1742,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1779,7 +1777,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1814,7 +1812,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1847,7 +1845,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1882,7 +1880,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1917,7 +1915,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1950,7 +1948,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -1985,7 +1983,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2020,7 +2018,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2053,7 +2051,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2088,7 +2086,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2123,7 +2121,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2156,7 +2154,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2191,7 +2189,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2226,7 +2224,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2259,7 +2257,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2294,7 +2292,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2329,7 +2327,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2362,7 +2360,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2397,7 +2395,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2432,7 +2430,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2465,7 +2463,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2500,7 +2498,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2535,7 +2533,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2568,7 +2566,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2603,7 +2601,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2638,7 +2636,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2671,7 +2669,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2706,7 +2704,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2741,7 +2739,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2774,7 +2772,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2809,7 +2807,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2844,7 +2842,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2877,7 +2875,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2912,7 +2910,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2947,7 +2945,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -2980,7 +2978,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3015,7 +3013,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3050,7 +3048,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3083,7 +3081,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3118,7 +3116,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3153,7 +3151,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3186,7 +3184,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3221,7 +3219,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3256,7 +3254,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3289,7 +3287,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3324,7 +3322,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3359,7 +3357,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3392,7 +3390,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3427,7 +3425,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3462,7 +3460,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3495,7 +3493,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3530,7 +3528,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3565,7 +3563,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3598,7 +3596,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3633,7 +3631,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3668,7 +3666,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3701,7 +3699,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3736,7 +3734,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3771,7 +3769,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3804,7 +3802,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3839,7 +3837,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3874,7 +3872,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3907,7 +3905,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3942,7 +3940,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -3977,7 +3975,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4010,7 +4008,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4045,7 +4043,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4080,7 +4078,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4113,7 +4111,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4148,7 +4146,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4183,7 +4181,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4216,7 +4214,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4251,7 +4249,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4286,7 +4284,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4319,7 +4317,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4354,7 +4352,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4389,7 +4387,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4422,7 +4420,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4457,7 +4455,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4492,7 +4490,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4525,7 +4523,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4560,7 +4558,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4595,7 +4593,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4628,7 +4626,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4663,7 +4661,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4698,7 +4696,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4731,7 +4729,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4766,7 +4764,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4801,7 +4799,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4834,7 +4832,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4869,7 +4867,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4904,7 +4902,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4937,7 +4935,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -4972,7 +4970,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5007,7 +5005,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5040,7 +5038,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5075,7 +5073,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5110,7 +5108,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5143,7 +5141,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5178,7 +5176,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5213,7 +5211,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5246,7 +5244,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5281,7 +5279,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5316,7 +5314,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5349,7 +5347,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5384,7 +5382,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5419,7 +5417,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5452,7 +5450,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5487,7 +5485,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5522,7 +5520,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5555,7 +5553,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5590,7 +5588,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5625,7 +5623,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5658,7 +5656,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5693,7 +5691,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5728,7 +5726,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5761,7 +5759,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5796,7 +5794,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5831,7 +5829,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5864,7 +5862,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5899,7 +5897,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5934,7 +5932,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -5967,7 +5965,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -6002,7 +6000,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -6037,7 +6035,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -6070,7 +6068,7 @@ jobs:
       - name: Install dependencies # Pythonの依存環境のインストール
         run: | #このような書き方で複数行を一気に実行することができる。
           python -m pip install --upgrade pip
-          pip install Flask
+
           pip install chromedriver-binary
           pip install selenium
 
@@ -6088,9 +6086,108 @@ jobs:
           git add .
           git commit -m "Commit Message" git push || true
 
-  deploy:
+
+ builded59:
     runs-on: ubuntu-latest
-    needs: [buildedc58]
+    needs: buildedc57
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python main58.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" && git push  || true
+
+ buildedb59:
+    runs-on: ubuntu-latest
+    needs: builded58
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainb59.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" &&git push || true
+ buildedc59:
+    runs-on: ubuntu-latest
+    needs: buildedb58
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python # ワークフローのセクションごとに設定する名前。特に設定する必要はないが、どこでエラーが起きているかを把握する為にも設定しておいた方が良い。
+        uses: actions/setup-python@v2 # Pythonのセットアップ
+        with:
+          python-version: "3.x" # Pythonのバージョン指定
+
+      - name: Install dependencies # Pythonの依存環境のインストール
+        run: | #このような書き方で複数行を一気に実行することができる。
+          python -m pip install --upgrade pip
+
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py # Pythonファイルの実行
+        run: |
+          python mainc59.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "keito.12.10@icloud.com"
+          git config --local user.name "Tanesan"
+
+      - name: Commit and Push # 実行した結果をプッシュして変更をレポジトリに反映
+        run: |
+          git add .
+          git commit -m "Commit Message" git push || true
+
+ deploy:
+    runs-on: ubuntu-latest
+    needs: [buildedc59]
     steps:
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
