@@ -6087,7 +6087,7 @@ jobs:
           git commit -m "Commit Message" git push || true
   builded59:
     runs-on: ubuntu-latest
-    needs: buildedc57
+    needs: buildedc58
     steps:
       - uses: actions/checkout@v2
         with:
@@ -6106,7 +6106,7 @@ jobs:
 
       - name: Run main.py # Pythonファイルの実行
         run: |
-          python main58.py
+          python main59.py
 
       - name: git setting
         run: |
@@ -6119,7 +6119,7 @@ jobs:
           git commit -m "Commit Message" && git push  || true
   buildedb59:
     runs-on: ubuntu-latest
-    needs: builded58
+    needs: builded59
     steps:
       - uses: actions/checkout@v2
         with:
@@ -6151,7 +6151,7 @@ jobs:
           git commit -m "Commit Message" &&git push || true
   buildedc59:
     runs-on: ubuntu-latest
-    needs: buildedb58
+    needs: buildedb59
     steps:
       - uses: actions/checkout@v2
         with:
