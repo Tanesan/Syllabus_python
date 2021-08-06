@@ -6085,9 +6085,7 @@ jobs:
         run: |
           git add .
           git commit -m "Commit Message" git push || true
-
-
- builded59:
+  builded59:
     runs-on: ubuntu-latest
     needs: buildedc57
     steps:
@@ -6119,8 +6117,7 @@ jobs:
         run: |
           git add .
           git commit -m "Commit Message" && git push  || true
-
- buildedb59:
+  buildedb59:
     runs-on: ubuntu-latest
     needs: builded58
     steps:
@@ -6152,7 +6149,7 @@ jobs:
         run: |
           git add .
           git commit -m "Commit Message" &&git push || true
- buildedc59:
+  buildedc59:
     runs-on: ubuntu-latest
     needs: buildedb58
     steps:
@@ -6185,7 +6182,7 @@ jobs:
           git add .
           git commit -m "Commit Message" git push || true
 
- deploy:
+  deploy:
     runs-on: ubuntu-latest
     needs: [buildedc59]
     steps:
