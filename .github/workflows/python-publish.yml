@@ -45,7 +45,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "神学部" && git push  || true
+          git commit -m "神学部" && git push -f  || true
 
   School-of-Humanities-1:
     runs-on: ubuntu-latest
@@ -78,7 +78,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "文学部1" && git push  || true
+          git commit -m "文学部1" && git push -f  || true
 
 
 
@@ -113,7 +113,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "文学部2" &&git push || true
+          git commit -m "文学部2" &&git push -f || true
 
 
   School-of-Sociology:
@@ -147,7 +147,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "社会学部" && git push  || true
+          git commit -m "社会学部" && git push -f  || true
 
 
 
@@ -182,7 +182,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "法学部" &&git push || true
+          git commit -m "法学部" &&git push -f || true
 
 
 
@@ -217,7 +217,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "経済学部" && git push  || true
+          git commit -m "経済学部" && git push -f  || true
 
 
 
@@ -252,7 +252,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "商学部" &&git push || true
+          git commit -m "商学部" &&git push -f || true
 
   School-of-Science-and-Technology:
     runs-on: ubuntu-latest
@@ -286,7 +286,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "理工学部" git push || true
+          git commit -m "理工学部" git push -f || true
 
   School-of-Policy-Studies:
     runs-on: ubuntu-latest
@@ -319,7 +319,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "総合政策学部" && git push  || true
+          git commit -m "総合政策学部" && git push -f  || true
 
   School-of-Human-Welfare-Studies:
     runs-on: ubuntu-latest
@@ -353,7 +353,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "人間福祉学部" && git push  || true
+          git commit -m "人間福祉学部" && git push -f  || true
 
 
   School-of-Education:
@@ -387,7 +387,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "教育学部" && git push  || true
+          git commit -m "教育学部" && git push -f  || true
 
 
 
@@ -422,7 +422,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "国際学部" &&git push || true
+          git commit -m "国際学部" &&git push -f || true
 
   School-of-Engineering:
     runs-on: ubuntu-latest
@@ -455,7 +455,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "工学部" git push || true
+          git commit -m "工学部" git push -f || true
 
 
   School-of-Biological-and-Environmental-Sciences:
@@ -489,7 +489,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "生命環境学部" &&git push || true
+          git commit -m "生命環境学部" &&git push -f || true
 
   School-of-Architecture:
     runs-on: ubuntu-latest
@@ -522,7 +522,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "建築学部" git push || true
+          git commit -m "建築学部" git push -f || true
 
 
 
@@ -557,7 +557,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "free" && git push  || true
+          git commit -m "free" && git push -f  || true
 
 
 
@@ -592,7 +592,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push || true
+          git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -f || true
 
   Center-for-Common-Educational-Programs:
     runs-on: ubuntu-latest
@@ -626,7 +626,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "共通教育センター" && git push
+          git commit -m "共通教育センター" && git push -f
 
 
 
@@ -662,7 +662,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "キャリアセンター" && git push
+          git commit -m "キャリアセンター" && git push -f
 
   Center-for-Common-Educational-Programs-Information-Science-Courses:
     runs-on: ubuntu-latest
@@ -696,7 +696,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "共通教育センター（情報科学科目）" && git push
+          git commit -m "共通教育センター（情報科学科目）" && git push -f
 
 
 
@@ -732,7 +732,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "言語教育研究センター" && git push
+          git commit -m "言語教育研究センター" && git push -f
 
 
 
@@ -768,7 +768,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push
+          git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -f
 
 
 
@@ -804,7 +804,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "教職教育研究センター（資格）" && git push
+          git commit -m "教職教育研究センター（資格）" && git push -f
 
 
 
@@ -840,7 +840,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "教職教育研究センター（教職専門）" && git push
+          git commit -m "教職教育研究センター（教職専門）" && git push -f
 
 
 
@@ -876,7 +876,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "国際教育・協力センター/CIEC" && git push
+          git commit -m "国際教育・協力センター/CIEC" && git push -f
 
 
 
@@ -912,7 +912,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "キリスト教と文化研究センター" && git push
+          git commit -m "キリスト教と文化研究センター" && git push -f
 
 
 
@@ -948,7 +948,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "日本語教育センター" && git push
+          git commit -m "日本語教育センター" && git push -f
 
 
 
@@ -984,7 +984,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "ハンズオン・ラーニングセンター" && git push
+          git commit -m "ハンズオン・ラーニングセンター" && git push -f
 
 
 
@@ -1020,7 +1020,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "国連・外交統括センター" && git push
+          git commit -m "国連・外交統括センター" && git push -f
 
 
 
@@ -1056,7 +1056,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "神学研究科前期" && git push
+          git commit -m "神学研究科前期" && git push -f
 
 
 
@@ -1092,7 +1092,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "文学研究科前期" && git push
+          git commit -m "文学研究科前期" && git push -f
 
 
 
@@ -1128,7 +1128,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "社会学研究科前期" && git push
+          git commit -m "社会学研究科前期" && git push -f
 
 
 
@@ -1164,7 +1164,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "法学研究科前期" && git push
+          git commit -m "法学研究科前期" && git push -f
 
 
 
@@ -1200,7 +1200,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "経済学研究科前期" && git push
+          git commit -m "経済学研究科前期" && git push -f
 
 
 
@@ -1236,7 +1236,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "商学研究科前期" && git push
+          git commit -m "商学研究科前期" && git push -f
 
 
 
@@ -1272,7 +1272,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "理工学研究科前期" && git push
+          git commit -m "理工学研究科前期" && git push -f
 
 
 
@@ -1308,7 +1308,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "総合政策研究科前期" && git push
+          git commit -m "総合政策研究科前期" && git push -f
 
 
 
@@ -1344,7 +1344,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "言語コミュニケーション前期" && git push
+          git commit -m "言語コミュニケーション前期" && git push -f
 
 
 
@@ -1380,7 +1380,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "人間福祉研究科前期" && git push
+          git commit -m "人間福祉研究科前期" && git push -f
 
 
 
@@ -1416,7 +1416,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "教育学研究科前期" && git push
+          git commit -m "教育学研究科前期" && git push -f
 
 
 
@@ -1452,7 +1452,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "理工学研究科修士" && git push
+          git commit -m "理工学研究科修士" && git push -f
 
 
 
@@ -1488,7 +1488,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "国際学研究科前期" && git push
+          git commit -m "国際学研究科前期" && git push -f
 
 
 
@@ -1524,7 +1524,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "大学院共通科目・認定科目前期" && git push
+          git commit -m "大学院共通科目・認定科目前期" && git push -f
 
 
 
@@ -1560,7 +1560,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "神学研究科後期" && git push
+          git commit -m "神学研究科後期" && git push -f
 
 
 
@@ -1596,7 +1596,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "文学研究科後期" && git push
+          git commit -m "文学研究科後期" && git push -f
 
 
 
@@ -1632,7 +1632,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "社会学研究科後期" && git push
+          git commit -m "社会学研究科後期" && git push -f
 
 
 
@@ -1668,7 +1668,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "法学研究科後期" && git push
+          git commit -m "法学研究科後期" && git push -f
 
 
 
@@ -1704,7 +1704,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "経済学研究科後期" && git push
+          git commit -m "経済学研究科後期" && git push -f
 
 
 
@@ -1740,7 +1740,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "商学研究科後期" && git push
+          git commit -m "商学研究科後期" && git push -f
 
 
 
@@ -1776,7 +1776,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "理工学研究科後期" && git push
+          git commit -m "理工学研究科後期" && git push -f
 
 
 
@@ -1812,7 +1812,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "総合政策研究科後期" && git push
+          git commit -m "総合政策研究科後期" && git push -f
 
 
 
@@ -1848,7 +1848,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "言語コミュニケーション後期" && git push
+          git commit -m "言語コミュニケーション後期" && git push -f
 
 
 
@@ -1884,7 +1884,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "人間福祉研究科後期" && git push
+          git commit -m "人間福祉研究科後期" && git push -f
 
 
 
@@ -1920,7 +1920,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "教育学研究科後期" && git push
+          git commit -m "教育学研究科後期" && git push -f
 
 
 
@@ -1956,7 +1956,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "経営戦略研究科後期" && git push
+          git commit -m "経営戦略研究科後期" && git push -f
 
 
 
@@ -1992,7 +1992,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "国際学研究科後期" && git push
+          git commit -m "国際学研究科後期" && git push -f
 
 
 
@@ -2028,7 +2028,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "大学院共通科目・認定科目後期" && git push
+          git commit -m "大学院共通科目・認定科目後期" && git push -f
 
 
 
@@ -2064,7 +2064,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "司法研究科" && git push
+          git commit -m "司法研究科" && git push -f
 
 
 
@@ -2100,7 +2100,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "経営戦略研究科/IBA" && git push
+          git commit -m "経営戦略研究科/IBA" && git push -f
 
 
 
@@ -2136,7 +2136,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push
+          git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -f
 
   School-of-Science:
     runs-on: ubuntu-latest
@@ -2170,7 +2170,7 @@ jobs:
         run: |
           git fetch
           git add .
-          git commit -m "fin" && git push
+          git commit -m "fin" && git push -f
 
   deploy:
     runs-on: ubuntu-latest
