@@ -1,6 +1,6 @@
 from define import act
-import os
-a = [21]
+
+a = [21] # 神学部
 
 for i in a:
-    act(i, 0, 550)
+    act(i, 0, 1500)
