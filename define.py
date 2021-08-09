@@ -1,6 +1,6 @@
 import json
 from time import sleep
-
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
@@ -14,7 +14,8 @@ def act(m, a, b):
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     driver = webdriver.Chrome(options=options)
-    #driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver2', options=options)
+    # driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver2', options=options)
+    # print("A")
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
     #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
