@@ -596,7 +596,7 @@ jobs:
 
   Center-for-Common-Educational-Programs:
     runs-on: ubuntu-latest
-    needs: free2
+    needs: Sports-and-Health-Sciences-Program-Office
     steps:
       - uses: actions/checkout@v2
         with:
