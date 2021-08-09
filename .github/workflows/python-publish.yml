@@ -2174,7 +2174,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: [buildedc59]
+    needs: [School-of-Science]
     steps:
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
