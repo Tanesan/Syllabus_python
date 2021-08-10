@@ -22,6 +22,8 @@ for url in urls:
     loc = ET.SubElement(url_element, 'loc')
     loc.text = url
     lastmod = ET.SubElement(url_element, 'lastmod')
-    lastmod.text = "2019-01-12"
+    lastmod.text = "2021-08-09T09:34:48+00:00"
+    priority = ET.SubElement(url_element, 'priority')
+    lastmod.text = "0.90"
 
 tree.write('sitemap.xml', encoding='utf-8', xml_declaration=True)
