@@ -268,150 +268,150 @@ jobs:
 #          git add .
 #         git add . && git commit -m "商学部" &&git push -u origin master  || true
 
-  School-of-Science-and-Technology1:
-    runs-on: ubuntu-latest
-#    needs: School-of-Business-Administration
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-      - name: Setup python 
-        uses: actions/setup-python@v2 
-        with:
-          python-version: "3.x" 
-
-      - name: Install dependencies 
-        run: | 
-          git fetch
-          git pull
-          git fetch
-          git pull
-          python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium
-
-      - name: Run main.py 
-        run: |
-          python main6.py
-
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
-      - name: Commit and Push 
-        run: |
-          
-         git add . && git commit -m "理工学部1" && git push -u origin master  || true
-
-  School-of-Science-and-Technology2:
-    runs-on: ubuntu-latest
-    needs: School-of-Science-and-Technology1
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-      - name: Setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.x"
-
-      - name: Install dependencies
-        run: |
-          git fetch
-          git pull
-          python -m pip install --upgrade pip
-
-          pip install chromedriver-binary
-          pip install selenium
-
-      - name: Run main.py
-        run: |
-          python main6b.py
-
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
-      - name: Commit and Push
-        run: |
-          
-         git add . && git commit -m "理工学部2" && git push -u origin master  || true
-
-  School-of-Policy-Studies:
-    runs-on: ubuntu-latest
-    needs: School-of-Science-and-Technology2
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-      - name: Setup python 
-        uses: actions/setup-python@v2 
-        with:
-          python-version: "3.x" 
-
-      - name: Install dependencies 
-        run: | 
-          git fetch
-          git pull
-          python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium
-
-      - name: Run main.py 
-        run: |
-          python main7.py
-
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
-      - name: Commit and Push 
-        run: |
-          
-         git add . && git commit -m "総合政策学部" && git push -u origin master   || true
-
-  School-of-Human-Welfare-Studies:
-    runs-on: ubuntu-latest
-    needs: School-of-Policy-Studies
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-      - name: Setup python 
-        uses: actions/setup-python@v2 
-        with:
-          python-version: "3.x" 
-
-      - name: Install dependencies 
-        run: | 
-          git fetch
-          git pull
-          python -m pip install --upgrade pip
-
-          pip install chromedriver-binary
-          pip install selenium
-
-      - name: Run main.py 
-        run: |
-          python main8.py
-
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
-      - name: Commit and Push 
-        run: |
-          
-         git add . && git commit -m "人間福祉学部" && git push -u origin master   || true
-
+#  School-of-Science-and-Technology1:
+#    runs-on: ubuntu-latest
+#     needs: School-of-Business-Administration
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python
+#        uses: actions/setup-python@v2
+#        with:
+#          python-version: "3.x"
+#
+#      - name: Install dependencies
+#        run: |
+#          git fetch
+#          git pull
+#          git fetch
+#          git pull
+#          python -m pip install --upgrade pip
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py
+#        run: |
+#          python main6.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push
+#        run: |
+#
+#         git add . && git commit -m "理工学部1" && git push -u origin master  || true
+#
+#  School-of-Science-and-Technology2:
+#    runs-on: ubuntu-latest
+#    needs: School-of-Science-and-Technology1
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python
+#        uses: actions/setup-python@v2
+#        with:
+#          python-version: "3.x"
+#
+#      - name: Install dependencies
+#        run: |
+#          git fetch
+#          git pull
+#          python -m pip install --upgrade pip
+#
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py
+#        run: |
+#          python main6b.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push
+#        run: |
+#
+#         git add . && git commit -m "理工学部2" && git push -u origin master  || true
+#
+#  School-of-Policy-Studies:
+#    runs-on: ubuntu-latest
+#    needs: School-of-Science-and-Technology2
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python
+#        uses: actions/setup-python@v2
+#        with:
+#          python-version: "3.x"
+#
+#      - name: Install dependencies
+#        run: |
+#          git fetch
+#          git pull
+#          python -m pip install --upgrade pip
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py
+#        run: |
+#          python main7.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push
+#        run: |
+#
+#         git add . && git commit -m "総合政策学部" && git push -u origin master   || true
+#
+#  School-of-Human-Welfare-Studies:
+#    runs-on: ubuntu-latest
+#    needs: School-of-Policy-Studies
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python
+#        uses: actions/setup-python@v2
+#        with:
+#          python-version: "3.x"
+#
+#      - name: Install dependencies
+#        run: |
+#          git fetch
+#          git pull
+#          python -m pip install --upgrade pip
+#
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py
+#        run: |
+#          python main8.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push
+#        run: |
+#
+#         git add . && git commit -m "人間福祉学部" && git push -u origin master   || true
+#
 
   School-of-Education:
     runs-on: ubuntu-latest
-    needs: School-of-Human-Welfare-Studies
+#    needs: School-of-Human-Welfare-Studies
     steps:
       - uses: actions/checkout@v2
         with:
