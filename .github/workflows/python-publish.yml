@@ -47,7 +47,7 @@ jobs:
 #        run: |
 #          git fetch
 #          git add .
-#         git add . && git commit -m "神学部" && git push -u origin master   || true
+#         git add . && git commit -m "神学部" && git push -u origin main   || true
 #
 #  School-of-Humanities-1:
 #    runs-on: ubuntu-latest
@@ -82,7 +82,7 @@ jobs:
 #        run: |
 #          git fetch
 #          git add .
-#         git add . && git commit -m "文学部1" && git push -u origin master   || true
+#         git add . && git commit -m "文学部1" && git push -u origin main   || true
 #
 #
 #
@@ -119,7 +119,7 @@ jobs:
 #        run: |
 #          git fetch
 #          git add .
-#         git add . && git commit -m "文学部2" &&git push -u origin master  || true
+#         git add . && git commit -m "文学部2" &&git push -u origin main  || true
 #
 #
 #  School-of-Sociology:
@@ -155,7 +155,7 @@ jobs:
 #        run: |
 #          git fetch
 #          git add .
-#         git add . && git commit -m "社会学部" && git push -u origin master   || true
+#         git add . && git commit -m "社会学部" && git push -u origin main   || true
 #
 #
 #
@@ -192,7 +192,7 @@ jobs:
 #        run: |
 #          git fetch
 #          git add .
-#         git add . && git commit -m "法学部" &&git push -u origin master  || true
+#         git add . && git commit -m "法学部" &&git push -u origin main  || true
 #
 #
 #
@@ -229,7 +229,7 @@ jobs:
 #        run: |
 #          git fetch
 #          git add .
-#         git add . && git commit -m "経済学部" && git push -u origin master   || true
+#         git add . && git commit -m "経済学部" && git push -u origin main   || true
 #
 #
 #
@@ -266,7 +266,7 @@ jobs:
 #        run: |
 #          git fetch
 #          git add .
-#         git add . && git commit -m "商学部" &&git push -u origin master  || true
+#         git add . && git commit -m "商学部" &&git push -u origin main  || true
 
 #  School-of-Science-and-Technology1:
 #    runs-on: ubuntu-latest
@@ -302,7 +302,7 @@ jobs:
 #      - name: Commit and Push
 #        run: |
 #
-#         git add . && git commit -m "理工学部1" && git push -u origin master  || true
+#         git add . && git commit -m "理工学部1" && git push -u origin main  || true
 #
 #  School-of-Science-and-Technology2:
 #    runs-on: ubuntu-latest
@@ -337,7 +337,7 @@ jobs:
 #      - name: Commit and Push
 #        run: |
 #
-#         git add . && git commit -m "理工学部2" && git push -u origin master  || true
+#         git add . && git commit -m "理工学部2" && git push -u origin main  || true
 #
 #  School-of-Policy-Studies:
 #    runs-on: ubuntu-latest
@@ -371,7 +371,7 @@ jobs:
 #      - name: Commit and Push
 #        run: |
 #
-#         git add . && git commit -m "総合政策学部" && git push -u origin master   || true
+#         git add . && git commit -m "総合政策学部" && git push -u origin main   || true
 #
 #  School-of-Human-Welfare-Studies:
 #    runs-on: ubuntu-latest
@@ -406,47 +406,47 @@ jobs:
 #      - name: Commit and Push
 #        run: |
 #
-#         git add . && git commit -m "人間福祉学部" && git push -u origin master   || true
+#         git add . && git commit -m "人間福祉学部" && git push -u origin main   || true
 #
 
-  School-of-Education:
-    runs-on: ubuntu-latest
+#  School-of-Education:
+#    runs-on: ubuntu-latest
 #    needs: School-of-Human-Welfare-Studies
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-      - name: Setup python 
-        uses: actions/setup-python@v2 
-        with:
-          python-version: "3.x" 
-
-      - name: Install dependencies 
-        run: | 
-          git fetch
-          git pull
-          python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium
-
-      - name: Run main.py 
-        run: |
-          python main9.py
-
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
-      - name: Commit and Push 
-        run: |
-         git add . && git commit -m "教育学部" && git push -u origin master   || true
-
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python
+#        uses: actions/setup-python@v2
+#        with:
+#          python-version: "3.x"
+#
+#      - name: Install dependencies
+#        run: |
+#          git fetch
+#          git pull
+#          python -m pip install --upgrade pip
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py
+#        run: |
+#          python main9.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push
+#        run: |
+#         git add . && git commit -m "教育学部" && git push -u origin main   || true
+#
 
 
   School-of-International-Studies:
     runs-on: ubuntu-latest
-    needs: School-of-Education
+#    needs: School-of-Education
     steps:
       - uses: actions/checkout@v2
         with:
@@ -475,7 +475,7 @@ jobs:
 
       - name: Commit and Push 
         run: |
-         git add . && git commit -m "国際学部" &&git push -u origin master  || true
+         git add . && git commit -m "国際学部" &&git push -u origin main  || true
 
   School-of-Engineering:
     runs-on: ubuntu-latest
@@ -508,7 +508,7 @@ jobs:
 
       - name: Commit and Push 
         run: |
-         git add . && git commit -m "工学部" && git push -u origin master  || true
+         git add . && git commit -m "工学部" && git push -u origin main  || true
 
 
   School-of-Biological-and-Environmental-Sciences:
@@ -542,7 +542,7 @@ jobs:
 
       - name: Commit and Push 
         run: |
-         git add . && git commit -m "生命環境学部" &&git push -u origin master  || true
+         git add . && git commit -m "生命環境学部" &&git push -u origin main  || true
 
   School-of-Architecture:
     runs-on: ubuntu-latest
@@ -575,7 +575,7 @@ jobs:
 
       - name: Commit and Push 
         run: |
-         git add . && git commit -m "建築学部" && git push -u origin master  || true
+         git add . && git commit -m "建築学部" && git push -u origin main  || true
 
 
 
@@ -610,7 +610,7 @@ jobs:
 
       - name: Commit and Push 
         run: |
-         git add . && git commit -m "free" && git push -u origin master   || true
+         git add . && git commit -m "free" && git push -u origin main   || true
 
 
 
@@ -645,7 +645,7 @@ jobs:
 
       - name: Commit and Push 
         run: |
-         git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin master  || true
+         git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin main  || true
 
   Center-for-Common-Educational-Programs:
     runs-on: ubuntu-latest
@@ -679,7 +679,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "共通教育センター" && git push -u origin master 
+         git add . && git commit -m "共通教育センター" && git push -u origin main 
 
 
 
@@ -715,7 +715,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "キャリアセンター" && git push -u origin master 
+         git add . && git commit -m "キャリアセンター" && git push -u origin main 
 
   Center-for-Common-Educational-Programs-Information-Science-Courses:
     runs-on: ubuntu-latest
@@ -749,7 +749,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin master 
+         git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin main 
 
 
 
@@ -785,7 +785,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "言語教育研究センター" && git push -u origin master 
+         git add . && git commit -m "言語教育研究センター" && git push -u origin main 
 
 
 
@@ -821,7 +821,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin master 
+         git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin main 
 
 
 
@@ -857,7 +857,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin master 
+         git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin main 
 
 
 
@@ -893,7 +893,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin master 
+         git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin main 
 
 
 
@@ -929,7 +929,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin master 
+         git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin main 
 
 
 
@@ -965,7 +965,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin master 
+         git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin main 
 
 
 
@@ -1001,7 +1001,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "日本語教育センター" && git push -u origin master 
+         git add . && git commit -m "日本語教育センター" && git push -u origin main 
 
 
 
@@ -1037,7 +1037,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin master 
+         git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin main 
 
 
 
@@ -1073,7 +1073,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "国連・外交統括センター" && git push -u origin master 
+         git add . && git commit -m "国連・外交統括センター" && git push -u origin main 
 
 
 
@@ -1109,7 +1109,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "神学研究科前期" && git push -u origin master 
+         git add . && git commit -m "神学研究科前期" && git push -u origin main 
 
 
 
@@ -1145,7 +1145,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "文学研究科前期" && git push -u origin master 
+         git add . && git commit -m "文学研究科前期" && git push -u origin main 
 
 
 
@@ -1181,7 +1181,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "社会学研究科前期" && git push -u origin master 
+         git add . && git commit -m "社会学研究科前期" && git push -u origin main 
 
 
 
@@ -1217,7 +1217,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "法学研究科前期" && git push -u origin master 
+         git add . && git commit -m "法学研究科前期" && git push -u origin main 
 
 
 
@@ -1253,7 +1253,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "経済学研究科前期" && git push -u origin master 
+         git add . && git commit -m "経済学研究科前期" && git push -u origin main 
 
 
 
@@ -1289,7 +1289,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "商学研究科前期" && git push -u origin master 
+         git add . && git commit -m "商学研究科前期" && git push -u origin main 
 
 
 
@@ -1325,7 +1325,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "理工学研究科前期" && git push -u origin master 
+         git add . && git commit -m "理工学研究科前期" && git push -u origin main 
 
 
 
@@ -1361,7 +1361,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "総合政策研究科前期" && git push -u origin master 
+         git add . && git commit -m "総合政策研究科前期" && git push -u origin main 
 
 
 
@@ -1397,7 +1397,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "言語コミュニケーション前期" && git push -u origin master 
+         git add . && git commit -m "言語コミュニケーション前期" && git push -u origin main 
 
 
 
@@ -1433,7 +1433,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "人間福祉研究科前期" && git push -u origin master 
+         git add . && git commit -m "人間福祉研究科前期" && git push -u origin main 
 
 
 
@@ -1469,7 +1469,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "教育学研究科前期" && git push -u origin master 
+         git add . && git commit -m "教育学研究科前期" && git push -u origin main 
 
 
 
@@ -1505,7 +1505,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "理工学研究科修士" && git push -u origin master 
+         git add . && git commit -m "理工学研究科修士" && git push -u origin main 
 
 
 
@@ -1541,7 +1541,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "国際学研究科前期" && git push -u origin master 
+         git add . && git commit -m "国際学研究科前期" && git push -u origin main 
 
 
 
@@ -1577,7 +1577,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin master 
+         git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin main 
 
 
 
@@ -1613,7 +1613,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "神学研究科後期" && git push -u origin master 
+         git add . && git commit -m "神学研究科後期" && git push -u origin main 
 
 
 
@@ -1649,7 +1649,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "文学研究科後期" && git push -u origin master 
+         git add . && git commit -m "文学研究科後期" && git push -u origin main 
 
 
 
@@ -1685,7 +1685,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "社会学研究科後期" && git push -u origin master 
+         git add . && git commit -m "社会学研究科後期" && git push -u origin main 
 
 
 
@@ -1721,7 +1721,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "法学研究科後期" && git push -u origin master 
+         git add . && git commit -m "法学研究科後期" && git push -u origin main 
 
 
 
@@ -1757,7 +1757,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "経済学研究科後期" && git push -u origin master 
+         git add . && git commit -m "経済学研究科後期" && git push -u origin main 
 
 
 
@@ -1793,7 +1793,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "商学研究科後期" && git push -u origin master 
+         git add . && git commit -m "商学研究科後期" && git push -u origin main 
 
 
 
@@ -1829,7 +1829,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "理工学研究科後期" && git push -u origin master 
+         git add . && git commit -m "理工学研究科後期" && git push -u origin main 
 
 
 
@@ -1865,7 +1865,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "総合政策研究科後期" && git push -u origin master 
+         git add . && git commit -m "総合政策研究科後期" && git push -u origin main 
 
 
 
@@ -1901,7 +1901,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "言語コミュニケーション後期" && git push -u origin master 
+         git add . && git commit -m "言語コミュニケーション後期" && git push -u origin main 
 
 
 
@@ -1937,7 +1937,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "人間福祉研究科後期" && git push -u origin master 
+         git add . && git commit -m "人間福祉研究科後期" && git push -u origin main 
 
 
 
@@ -1973,7 +1973,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "教育学研究科後期" && git push -u origin master 
+         git add . && git commit -m "教育学研究科後期" && git push -u origin main 
 
 
 
@@ -2009,7 +2009,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "経営戦略研究科後期" && git push -u origin master 
+         git add . && git commit -m "経営戦略研究科後期" && git push -u origin main 
 
 
 
@@ -2045,7 +2045,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "国際学研究科後期" && git push -u origin master 
+         git add . && git commit -m "国際学研究科後期" && git push -u origin main 
 
 
 
@@ -2081,7 +2081,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin master 
+         git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin main 
 
 
 
@@ -2117,7 +2117,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "司法研究科" && git push -u origin master 
+         git add . && git commit -m "司法研究科" && git push -u origin main 
 
 
 
@@ -2153,7 +2153,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin master 
+         git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin main 
 
 
 
@@ -2189,7 +2189,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin master 
+         git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin main 
 
   School-of-Science:
     runs-on: ubuntu-latest
@@ -2223,7 +2223,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-         git add . && git commit -m "fin" && git push -u origin master 
+         git add . && git commit -m "fin" && git push -u origin main 
 
   deploy:
     runs-on: ubuntu-latest
