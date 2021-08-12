@@ -46,7 +46,6 @@ jobs:
       - name: Commit and Push
         run: |
           git fetch
-          git add .
          git add . && git commit -m "神学部" && git push -u origin main || true
 
 #  School-of-Humanities-1:
@@ -229,7 +228,6 @@ jobs:
       - name: Commit and Push
         run: |
           git fetch
-          git add .
          git add . && git commit -m "経済学部" && git push -u origin main || true
 #
 #
