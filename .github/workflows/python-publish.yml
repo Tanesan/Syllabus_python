@@ -45,8 +45,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git fetch
-         git add . && git commit -m "神学部" && git push -u origin main || true
+          git fetch && git add . && git commit -m "神学部" && git push -u origin main || true
 
 #  School-of-Humanities-1:
 #    runs-on: ubuntu-latest
@@ -227,8 +226,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git fetch
-         git add . && git commit -m "経済学部" && git push -u origin main || true
+          git fetch && git add . && git commit -m "経済学部" && git push -u origin main || true
 #
 #
 #
