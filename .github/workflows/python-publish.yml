@@ -303,8 +303,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-
-         git add . && git commit -m "理工学部1" && git push -u origin main || true
+              git add . && git commit -m "理工学部1" && git push -u origin main || true
 
   School-of-Science-and-Technology2:
     runs-on: ubuntu-latest
@@ -322,9 +321,7 @@ jobs:
         run: |
           git fetch
           git pull
-          python -m pip install --upgrade pip
-
-          pip install chromedriver-binary
+          python -m pip install --upgrade pip || truepip install chromedriver-binary
           pip install selenium
 
       - name: Run main.py
@@ -338,8 +335,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-
-         git add . && git commit -m "理工学部2" && git push -u origin main || true
+              git add . && git commit -m "理工学部2" && git push -u origin main || true
 
   School-of-Policy-Studies:
     runs-on: ubuntu-latest
@@ -372,8 +368,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-
-         git add . && git commit -m "総合政策学部" && git push -u origin main || true
+              git add . && git commit -m "総合政策学部" && git push -u origin main || true
 
   School-of-Human-Welfare-Studies:
     runs-on: ubuntu-latest
@@ -392,7 +387,6 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-
           pip install chromedriver-binary
           pip install selenium
 
@@ -407,8 +401,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-
-         git add . && git commit -m "人間福祉学部" && git push -u origin main || true
+          git add . && git commit -m "人間福祉学部" && git push -u origin main || true
 
 
   School-of-Education:
