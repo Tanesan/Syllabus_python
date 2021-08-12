@@ -17,6 +17,10 @@ jobs:
   School-of-Theology:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+
       - name: Setup python
         uses: actions/setup-python@v2
         with:
@@ -29,10 +33,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install chromedriver-binary
           pip install selenium
-
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
 
       - name: Run main.py
         run: |
