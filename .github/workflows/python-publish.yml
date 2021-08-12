@@ -444,42 +444,42 @@ jobs:
 #
 
 
-  School-of-International-Studies:
-    runs-on: ubuntu-latest
+#  School-of-International-Studies:
+#    runs-on: ubuntu-latest
 #    needs: School-of-Education
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-      - name: Setup python 
-        uses: actions/setup-python@v2 
-        with:
-          python-version: "3.x" 
-
-      - name: Install dependencies 
-        run: | 
-          git fetch
-          git pull
-          python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium
-
-      - name: Run main.py 
-        run: |
-          python main10.py
-
-      - name: git setting
-        run: |
-          git config --local user.email "keito.12.10@icloud.com"
-          git config --local user.name "Tanesan"
-
-      - name: Commit and Push 
-        run: |
-         git add . && git commit -m "国際学部" &&git push -u origin main  || true
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#      - name: Setup python
+#        uses: actions/setup-python@v2
+#        with:
+#          python-version: "3.x"
+#
+#      - name: Install dependencies
+#        run: |
+#          git fetch
+#          git pull
+#          python -m pip install --upgrade pip
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py
+#        run: |
+#          python main10.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "keito.12.10@icloud.com"
+#          git config --local user.name "Tanesan"
+#
+#      - name: Commit and Push
+#        run: |
+#         git add . && git commit -m "国際学部" &&git push -u origin main  || true
 
   School-of-Engineering:
     runs-on: ubuntu-latest
-    needs: School-of-International-Studies
+#    needs: School-of-International-Studies
     steps:
       - uses: actions/checkout@v2
         with:
