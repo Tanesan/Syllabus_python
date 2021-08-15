@@ -74,7 +74,7 @@ jobs:
        run: |
          git fetch
          git add .
-        git add . && git commit -m "文学部1" && git push -u origin main || true
+         git add . && git commit -m "文学部1" && git push -u origin main || true
 
 
 
