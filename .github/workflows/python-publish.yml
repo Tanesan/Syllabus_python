@@ -41,7 +41,7 @@ jobs:
         run: |
           git fetch && git add . && git commit -m "神学部" && git push -u origin main || true
 
- School-of-Humanities-1:
+  School-of-Humanities-1:
    runs-on: ubuntu-latest
    needs: School-of-Theology
    steps:
@@ -78,7 +78,7 @@ jobs:
 
 
 
- School-of-Humanities-2:
+  School-of-Humanities-2:
    runs-on: ubuntu-latest
    needs: School-of-Humanities-1
    steps:
@@ -114,7 +114,7 @@ jobs:
         git add . && git commit -m "文学部2" &&git push -u origin main  || true
 
 
- School-of-Sociology:
+  School-of-Sociology:
    runs-on: ubuntu-latest
    needs: School-of-Humanities-2
    steps:
@@ -151,10 +151,10 @@ jobs:
 
 
 
- School-of-Law-and-Politics:
-   runs-on: ubuntu-latest
-   needs: School-of-Sociology
-   steps:
+  School-of-Law-and-Politics:
+    runs-on: ubuntu-latest
+    needs: School-of-Sociology
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -221,10 +221,10 @@ jobs:
         run: |
           git fetch && git add . && git commit -m "経済学部" && git push -u origin main || true
 
- School-of-Business-Administration:
-   runs-on: ubuntu-latest
-   needs: School-of-Economics
-   steps:
+  School-of-Business-Administration:
+    runs-on: ubuntu-latest
+    needs: School-of-Economics
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -425,10 +425,10 @@ jobs:
 
 
 
- School-of-International-Studies:
-   runs-on: ubuntu-latest
-   needs: School-of-Education
-   steps:
+  School-of-International-Studies:
+    runs-on: ubuntu-latest
+    needs: School-of-Education
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -458,10 +458,10 @@ jobs:
        run: |
         git add . && git commit -m "国際学部" &&git push -u origin main  || true
 
- School-of-Engineering:
-   runs-on: ubuntu-latest
-   needs: School-of-International-Studies
-   steps:
+  School-of-Engineering:
+    runs-on: ubuntu-latest
+    needs: School-of-International-Studies
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -492,10 +492,10 @@ jobs:
         git add . && git commit -m "工学部" && git push -u origin main || true
 
 
- School-of-Biological-and-Environmental-Sciences:
-   runs-on: ubuntu-latest
-   needs: School-of-Engineering
-   steps:
+  School-of-Biological-and-Environmental-Sciences:
+    runs-on: ubuntu-latest
+    needs: School-of-Engineering
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -525,10 +525,10 @@ jobs:
        run: |
         git add . && git commit -m "生命環境学部" &&git push -u origin main  || true
 
- School-of-Architecture:
-   runs-on: ubuntu-latest
-   needs: School-of-Biological-and-Environmental-Sciences
-   steps:
+  School-of-Architecture:
+    runs-on: ubuntu-latest
+    needs: School-of-Biological-and-Environmental-Sciences
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -560,10 +560,10 @@ jobs:
 
 
 
- free:
-   runs-on: ubuntu-latest
-   needs: School-of-Architecture
-   steps:
+  free:
+    runs-on: ubuntu-latest
+    needs: School-of-Architecture
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -595,10 +595,10 @@ jobs:
 
 
 
- Sports-and-Health-Sciences-Program-Office:
-   runs-on: ubuntu-latest
-   needs: free
-   steps:
+  Sports-and-Health-Sciences-Program-Office:
+    runs-on: ubuntu-latest
+    needs: free
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -628,10 +628,10 @@ jobs:
        run: |
         git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin main  || true
 
- Center-for-Common-Educational-Programs:
-   runs-on: ubuntu-latest
-   needs: Sports-and-Health-Sciences-Program-Office
-   steps:
+  Center-for-Common-Educational-Programs:
+    runs-on: ubuntu-latest
+    needs: Sports-and-Health-Sciences-Program-Office
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -664,10 +664,10 @@ jobs:
 
 
 
- Center-for-Career-Planning-and-Placement:
-   runs-on: ubuntu-latest
-   needs: Center-for-Common-Educational-Programs
-   steps:
+  Center-for-Career-Planning-and-Placement:
+    runs-on: ubuntu-latest
+    needs: Center-for-Common-Educational-Programs
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -698,10 +698,10 @@ jobs:
        run: |
         git add . && git commit -m "キャリアセンター" && git push -u origin main || true
 
- Center-for-Common-Educational-Programs-Information-Science-Courses:
-   runs-on: ubuntu-latest
-   needs: Center-for-Career-Planning-and-Placement
-   steps:
+  Center-for-Common-Educational-Programs-Information-Science-Courses:
+    runs-on: ubuntu-latest
+    needs: Center-for-Career-Planning-and-Placement
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -734,10 +734,10 @@ jobs:
 
 
 
- Language-Center:
-   runs-on: ubuntu-latest
-   needs: Center-for-Common-Educational-Programs-Information-Science-Courses
-   steps:
+  Language-Center:
+    runs-on: ubuntu-latest
+    needs: Center-for-Common-Educational-Programs-Information-Science-Courses
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -770,10 +770,10 @@ jobs:
 
 
 
- Center-for-International-Education-and-Cooperation-JEASP:
-   runs-on: ubuntu-latest
-   needs: Language-Center
-   steps:
+  Center-for-International-Education-and-Cooperation-JEASP:
+    runs-on: ubuntu-latest
+    needs: Language-Center
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -806,10 +806,10 @@ jobs:
 
 
 
- Research-Center-for-Teacher-Development-for-Certifications:
-   runs-on: ubuntu-latest
-   needs: Center-for-International-Education-and-Cooperation-JEASP
-   steps:
+  Research-Center-for-Teacher-Development-for-Certifications:
+    runs-on: ubuntu-latest
+    needs: Center-for-International-Education-and-Cooperation-JEASP
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -842,10 +842,10 @@ jobs:
 
 
 
- Research-Center-for-Teacher-Development-for-Special-Studies:
-   runs-on: ubuntu-latest
-   needs: Research-Center-for-Teacher-Development-for-Certifications
-   steps:
+  Research-Center-for-Teacher-Development-for-Special-Studies:
+    runs-on: ubuntu-latest
+    needs: Research-Center-for-Teacher-Development-for-Certifications
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -878,10 +878,10 @@ jobs:
 
 
 
- Center-for-International-Education-and-Cooperation:
-   runs-on: ubuntu-latest
-   needs: Research-Center-for-Teacher-Development-for-Special-Studies
-   steps:
+  Center-for-International-Education-and-Cooperation:
+    runs-on: ubuntu-latest
+    needs: Research-Center-for-Teacher-Development-for-Special-Studies
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -914,10 +914,10 @@ jobs:
 
 
 
- Research-Center-for-Christianity-and-Culture:
-   runs-on: ubuntu-latest
-   needs: Center-for-International-Education-and-Cooperation
-   steps:
+  Research-Center-for-Christianity-and-Culture:
+    runs-on: ubuntu-latest
+    needs: Center-for-International-Education-and-Cooperation
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -950,10 +950,10 @@ jobs:
 
 
 
- Center-for-Japanese-Language-Education:
-   runs-on: ubuntu-latest
-   needs: Research-Center-for-Christianity-and-Culture
-   steps:
+  Center-for-Japanese-Language-Education:
+    runs-on: ubuntu-latest
+    needs: Research-Center-for-Christianity-and-Culture
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -986,10 +986,10 @@ jobs:
 
 
 
- Center-for-Hands-on-Learning-Programs:
-   runs-on: ubuntu-latest
-   needs: Center-for-Japanese-Language-Education
-   steps:
+  Center-for-Hands-on-Learning-Programs:
+    runs-on: ubuntu-latest
+    needs: Center-for-Japanese-Language-Education
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -1022,10 +1022,10 @@ jobs:
 
 
 
- Integrated-Center-for-UN-and-Foreign-Affairs-Studies:
-   runs-on: ubuntu-latest
-   needs: Center-for-Hands-on-Learning-Programs
-   steps:
+  Integrated-Center-for-UN-and-Foreign-Affairs-Studies:
+    runs-on: ubuntu-latest
+    needs: Center-for-Hands-on-Learning-Programs
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -1058,10 +1058,10 @@ jobs:
 
 
 
- Graduate-School-of-Theology-Masters-Course:
-   runs-on: ubuntu-latest
-   needs: Integrated-Center-for-UN-and-Foreign-Affairs-Studies
-   steps:
+  Graduate-School-of-Theology-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Integrated-Center-for-UN-and-Foreign-Affairs-Studies
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -1094,10 +1094,10 @@ jobs:
 
 
 
- Graduate-School-of-Humanities-Masters-Course:
-   runs-on: ubuntu-latest
-   needs: Graduate-School-of-Theology-Masters-Course
-   steps:
+  Graduate-School-of-Humanities-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Theology-Masters-Course
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -1130,10 +1130,10 @@ jobs:
 
 
 
- Graduate-School-of-Sociology-Masters-Course:
-   runs-on: ubuntu-latest
-   needs: Graduate-School-of-Humanities-Masters-Course
-   steps:
+  Graduate-School-of-Sociology-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Humanities-Masters-Course
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
@@ -1166,10 +1166,10 @@ jobs:
 
 
 
- Graduate-School-of-Law-and-Politics-Masters-Course:
-   runs-on: ubuntu-latest
-   needs: Graduate-School-of-Sociology-Masters-Course
-   steps:
+  Graduate-School-of-Law-and-Politics-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Sociology-Masters-Course
+    steps:
      - uses: actions/checkout@v2
        with:
          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
