@@ -39,7 +39,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git add . && git commit -m "fin" && git push -u origin main || true
+          git add . && git commit -m "進学部" && git push -u origin main || true
 
   School-of-Humanities-1:
    runs-on: ubuntu-latest
@@ -72,7 +72,7 @@ jobs:
 
      - name: Commit and Push
        run: |
-         git add . && git commit -m "fin" && git push -u origin main || true
+         git add . && git commit -m "人間福祉学部1" && git push -u origin main || true
 
 
 
@@ -107,7 +107,7 @@ jobs:
 
      - name: Commit and Push
        run: |
-        git add . && git commit -m "fin" && git push -u origin main || true
+        git add . && git commit -m "人間福祉学部2" && git push -u origin main || true
 
 
   School-of-Sociology:
@@ -141,7 +141,7 @@ jobs:
 
      - name: Commit and Push
        run: |
-        git add . && git commit -m "fin" && git push -u origin main || true
+        git add . && git commit -m "社会学部" && git push -u origin main || true
 
 
 
@@ -176,7 +176,7 @@ jobs:
 
      - name: Commit and Push
        run: |
-         git add . && git commit -m "fin" && git push -u origin main || true
+         git add . && git commit -m "法学部" && git push -u origin main || true
 
 
 
@@ -211,7 +211,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git add . && git commit -m "fin" && git push -u origin main || true
+          git add . && git commit -m "経済学部" && git push -u origin main || true
 
   School-of-Business-Administration:
     runs-on: ubuntu-latest
@@ -244,7 +244,7 @@ jobs:
 
      - name: Commit and Push
        run: |
-         git add . && git commit -m "fin" && git push -u origin main || true
+         git add . && git commit -m "商学部" && git push -u origin main || true
 
   School-of-Science-and-Technology1:
     runs-on: ubuntu-latest
@@ -277,7 +277,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git add . && git commit -m "fin" && git push -u origin main || true
+          git add . && git commit -m "理工学部1" && git push -u origin main || true
 
   School-of-Science-and-Technology2:
     runs-on: ubuntu-latest
