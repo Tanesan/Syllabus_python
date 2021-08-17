@@ -21,7 +21,7 @@ url_element = ET.SubElement(urlset, 'url')
 loc = ET.SubElement(url_element, 'loc')
 loc.text = "https://univ-syllabus.web.app/"
 lastmod = ET.SubElement(url_element, 'lastmod')
-lastmod.text = "2021-08-17T09:34:48+00:00"
+lastmod.text = str(dt_now.isoformat())
 priority = ET.SubElement(url_element, 'priority')
 lastmod.text = "1.00"
 
@@ -30,7 +30,7 @@ for url in urls:
     loc = ET.SubElement(url_element, 'loc')
     loc.text = url
     lastmod = ET.SubElement(url_element, 'lastmod')
-    lastmod.text = dt_now.isoformat()
+    lastmod.text = str(dt_now.isoformat())
     priority = ET.SubElement(url_element, 'priority')
     lastmod.text = "0.80"
 
