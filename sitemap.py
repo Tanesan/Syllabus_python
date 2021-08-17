@@ -21,17 +21,17 @@ url_element = ET.SubElement(urlset, 'url')
 loc = ET.SubElement(url_element, 'loc')
 loc.text = "https://univ-syllabus.web.app/"
 lastmod = ET.SubElement(url_element, 'lastmod')
-lastmod.text = str(dt_now.isoformat())
+lastmod.text = dt_now.isoformat()
 priority = ET.SubElement(url_element, 'priority')
-lastmod.text = "1.00"
+priority.text = "1.00"
 
 for url in urls:
     url_element = ET.SubElement(urlset, 'url')
     loc = ET.SubElement(url_element, 'loc')
     loc.text = url
     lastmod = ET.SubElement(url_element, 'lastmod')
-    lastmod.text = str(dt_now.isoformat())
+    lastmod.text = dt_now.isoformat()
     priority = ET.SubElement(url_element, 'priority')
-    lastmod.text = "0.80"
+    priority.text = "0.80"
 
 tree.write('sitemap.xml', encoding='utf-8', xml_declaration=True)
