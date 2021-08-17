@@ -39,7 +39,7 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git add . && git commit -m "進学部" && git push -u origin main || true
+          git add . && git commit -m "神学部" && git push -u origin main || true
 
   School-of-Humanities-1:
    runs-on: ubuntu-latest
