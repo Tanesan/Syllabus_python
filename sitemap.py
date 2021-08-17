@@ -34,4 +34,4 @@ for url in urls:
     priority = ET.SubElement(url_element, 'priority')
     priority.text = "0.80"
 
-tree.write('sitemap.xml', encoding='utf-8', xml_declaration=True)
+tree.write('docs/sitemap/sitemap.xml', encoding='utf-8', xml_declaration=True)
