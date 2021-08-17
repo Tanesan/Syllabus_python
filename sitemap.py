@@ -4,6 +4,7 @@ import pandas
 import datetime
 
 dt_now = datetime.datetime.now()
+nt = dt_now.isoformat()
 json_open_all = open("docs/all.json", 'r')
 
 df = pandas.read_json(json_open_all)
@@ -21,7 +22,7 @@ url_element = ET.SubElement(urlset, 'url')
 loc = ET.SubElement(url_element, 'loc')
 loc.text = "https://univ-syllabus.web.app/"
 lastmod = ET.SubElement(url_element, 'lastmod')
-lastmod.text = dt_now.isoformat()
+lastmod.text = nt[:nt.find('.')]
 priority = ET.SubElement(url_element, 'priority')
 priority.text = "1.00"
 
@@ -30,7 +31,7 @@ for url in urls:
     loc = ET.SubElement(url_element, 'loc')
     loc.text = url
     lastmod = ET.SubElement(url_element, 'lastmod')
-    lastmod.text = dt_now.isoformat()
+    lastmod.text = nt[:nt.find('.')]
     priority = ET.SubElement(url_element, 'priority')
     priority.text = "0.80"
 
