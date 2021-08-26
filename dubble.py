@@ -1,11 +1,13 @@
+import json
+json_open_all = open("docs/all.json", 'r')
+json_load_all = json.load(json_open_all)
 
-
-my_dict = open("docs/all.json", 'r')
 seen = []
 result = dict()
-for key, val in my_dict.items():
+for key, val in json_load_all.items():
     if val not in seen:
         seen.append(val)
         result[key] = val
 
-print(f'Dict after removal: {result}')
+with open("docs/all.json", 'w') as f:
+    json.dump(result, f, ensure_ascii=False)
