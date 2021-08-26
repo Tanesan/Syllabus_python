@@ -4,9 +4,21 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
+# import firebase_admin
+# from firebase_admin import credentials
+# import pandas as pandas
+# from firebase_admin import db
 
 searchingADEn = {}
 searchingADJa = {}
+
+# cred = credentials.Certificate("univ-syllabus-firebase-adminsdk-nfe0l-f0a68c4baa.json")
+# # firebase_admin.initialize_app(cred)
+#
+# # Initialize the app with a service account, granting admin privileges
+# firebase_admin.initialize_app(cred, {
+#     'databaseURL': 'https://univ-syllabus-default-rtdb.firebaseio.com/'
+# })
 
 
 def act(m, a, b):
@@ -149,6 +161,15 @@ def act(m, a, b):
         data_all = {}
         data_all.update(data)
         json_open_all = open("docs/all.json", 'r')
+        # if name not in list(json_open_all.keys()):
+        #     db.reference('rate').set({
+        #         name: {
+        #             'average': '0',
+        #             'review': '',
+        #             'people': '0',
+        #             'userid': ''
+        #         }
+        #     })
         json_load_all = json.load(json_open_all)
         json_load_all.update(data_all)
         with open("docs/all.json", 'w') as f:
