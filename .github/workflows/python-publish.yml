@@ -2225,9 +2225,42 @@ jobs:
         run: |
          git add . && git commit -m "remove dubble" && git push -u origin main || true
 
-  deploy:
+  Sitemap:
     runs-on: ubuntu-latest
     needs: Remove-Dubble
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install pandas
+
+      - name: Run main.py
+        run: |
+          python sitemap.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add . && git commit -m "Sitemap" && git push -u origin main || true
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: Sitemap
     steps:
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
