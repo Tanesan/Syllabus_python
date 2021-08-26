@@ -26,6 +26,14 @@ lastmod.text = "2021-08-17"
 priority = ET.SubElement(url_element, 'priority')
 priority.text = "1.00"
 
+url_element = ET.SubElement(urlset, 'url')
+loc = ET.SubElement(url_element, 'loc')
+loc.text = "https://kgu-syllabus.com/search"
+lastmod = ET.SubElement(url_element, 'lastmod')
+lastmod.text = "2021-08-26"
+priority = ET.SubElement(url_element, 'priority')
+priority.text = "0.80"
+
 for url in urls:
     url_element = ET.SubElement(urlset, 'url')
     loc = ET.SubElement(url_element, 'loc')
