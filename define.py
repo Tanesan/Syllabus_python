@@ -35,6 +35,15 @@ def act(m, a, b):
     #     data = {}
 
     data = {}
+    r_all = open("docs/all.json", 'r')
+    json_r_all = json.load(r_all)
+    for key in json_r_all:
+        if key[0:1] == m:
+            del json_r_all[key]
+    with open("docs/all.json", 'w') as f:
+        json.dump(json_r_all, f, ensure_ascii=False)
+
+
     for i in range(a, b):
         subject = {}
         fin = 0
@@ -171,9 +180,6 @@ def act(m, a, b):
         #         }
         #     })
         json_load_all = json.load(json_open_all)
-        for n in range(len(json_load_all)):
-            if json_load_all[n]["管理部署"] == data_all[0]["管理部署"]:
-                del json_load_all[n]
         json_load_all.update(data_all)
         with open("docs/all.json", 'w') as f:
             json.dump(json_load_all, f, ensure_ascii=False)
