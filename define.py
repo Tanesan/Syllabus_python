@@ -25,8 +25,8 @@ def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
-    driver = webdriver.Chrome(options=options)
-    #driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver2', options=options)
+    # driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver2', options=options)
     # print("A")
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
@@ -37,11 +37,12 @@ def act(m, a, b):
     data = {}
     r_all = open("docs/all.json", 'r')
     json_r_all = json.load(r_all)
+    json_c_all = json_r_all.copy()
     for key in json_r_all:
-        if key[0:1] == m:
-            del json_r_all[key]
+        if key[0:2] == str(m):
+            del json_c_all[key]
     with open("docs/all.json", 'w') as f:
-        json.dump(json_r_all, f, ensure_ascii=False)
+        json.dump(json_c_all, f, ensure_ascii=False)
 
 
     for i in range(a, b):
@@ -146,6 +147,13 @@ def act(m, a, b):
                                        'value'))
         school_leassons.setdefault('使用開講期', driver.find_element_by_name(
             'lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_03').get_attribute('value'))
+        if len(driver.find_elements_by_name('lblVolCd2')) != 0:
+            school_leassons.setdefault('授業形態', driver.find_element_by_name('lblVolCd2').get_attribute('value'))
+        if len(driver.find_elements_by_name('lblVolCd3')) != 0:
+            school_leassons.setdefault('緊急授業形態', driver.find_element_by_name('lblVolCd3').get_attribute('value'))
+        if len(driver.find_elements_by_name('lblVolCd4')) != 0:
+            school_leassons.setdefault('オンライン授業形態', driver.find_element_by_name('lblVolCd4').get_attribute('value'))
+
         othersJa = {}
         risyuuki = driver.find_element_by_name('lblAc201ScrDispNm_01').get_attribute('value')
         othersJa.setdefault('履修期', risyuuki[0: risyuuki.find('／')])
