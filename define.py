@@ -21,12 +21,13 @@ searchingADJa = {}
 # })
 
 
+
 def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
-    driver = webdriver.Chrome(options=options)
-    # driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver2', options=options)
+    #driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver2', options=options)
     # print("A")
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
@@ -35,15 +36,14 @@ def act(m, a, b):
     #     data = {}
 
     data = {}
-    r_all = open("docs/all.json", 'r')
-    json_r_all = json.load(r_all)
-    json_c_all = json_r_all.copy()
-    for key in json_r_all:
-        if key[0:2] == str(m):
-            del json_c_all[key]
-    with open("docs/all.json", 'w') as f:
-        json.dump(json_c_all, f, ensure_ascii=False)
-
+    id_json_list = open("docs/id.json", 'r')
+    id_json_list = json.load(id_json_list)
+    id_json_c_list = id_json_list.copy()
+    for key in id_json_list:
+        if str(key[0:2]) == str(m):
+            del id_json_c_list[key]
+    with open("docs/id.json", 'w') as f:
+        json.dump(id_json_c_list, f, ensure_ascii=False)
 
     for i in range(a, b):
         subject = {}
@@ -199,6 +199,11 @@ def act(m, a, b):
         json_load_all.update(data_all)
         with open("docs/all.json", 'w') as f:
             json.dump(json_load_all, f, ensure_ascii=False)
+        id_json_list = open("docs/id.json", 'r')
+        id_json_list = json.load(id_json_list)
+        id_json_list.update({name: 0})
+        with open("docs/id.json", 'w') as f:
+            json.dump(id_json_list, f, ensure_ascii=False)
     # if os.path.isfile("docs/" + str(m) + '.json') and os.stat("docs/" + str(m) + '.json').st_size > 0:
     #     json_open = open("docs/" + str(m) + '.json', 'r')
     #     json_load = json.load(json_open)
