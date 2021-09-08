@@ -36,14 +36,6 @@ def act(m, a, b):
     #     data = {}
 
     data = {}
-    id_json_list = open("docs/id.json", 'r')
-    id_json_list = json.load(id_json_list)
-    id_json_c_list = id_json_list.copy()
-    for key in id_json_list:
-        if str(key[0:2]) == str(m):
-            del id_json_c_list[key]
-    with open("docs/id.json", 'w') as f:
-        json.dump(id_json_c_list, f, ensure_ascii=False)
 
     for i in range(a, b):
         subject = {}
