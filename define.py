@@ -81,6 +81,14 @@ def act(m, a, b):
         subject.setdefault('単位数', driver.find_element_by_name('lblSbjCrnum').get_attribute('value'))
         subject.setdefault('担当者', driver.find_element_by_name('lstChagTch_st[0].lblTchName').get_attribute('value'))
         subject.setdefault('履修基準年度', driver.find_element_by_name('lblCc004ScrDispNm').get_attribute('value'))
+
+        if len(driver.find_elements_by_name('lblVolCd2')) != 0:
+            subject.setdefault('授業形態', driver.find_element_by_name('lblVolCd2').get_attribute('value'))
+        if len(driver.find_elements_by_name('lblVolCd3')) != 0:
+            subject.setdefault('緊急授業形態', driver.find_element_by_name('lblVolCd3').get_attribute('value'))
+        if len(driver.find_elements_by_name('lblVolCd4')) != 0:
+            subject.setdefault('オンライン授業形態', driver.find_element_by_name('lblVolCd4').get_attribute('value'))
+
         # list
         topic = {}
         for x in range(40):
@@ -131,28 +139,28 @@ def act(m, a, b):
                             x)).replace("\n", ""),
                         num)
         # 教室情報
-        school_leassons = {}
-        school_leassons.setdefault('項番',
-                                   driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblNo').get_attribute(
-                                       'value'))
-        school_leassons.setdefault('履修年度',
-                                   driver.find_element_by_name(
-                                       'lstSlbtchinftJ002List_st[0].lblTacFcy').get_attribute(
-                                       'value'))
-        school_leassons.setdefault('開講期', driver.find_element_by_name(
-            'lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_02').get_attribute('value'))
-        school_leassons.setdefault('曜時',
-                                   driver.find_element_by_name(
-                                       'lstSlbtchinftJ002List_st[0].lblTmtxCd').get_attribute(
-                                       'value'))
-        school_leassons.setdefault('使用開講期', driver.find_element_by_name(
-            'lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_03').get_attribute('value'))
-        if len(driver.find_elements_by_name('lblVolCd2')) != 0:
-            school_leassons.setdefault('授業形態', driver.find_element_by_name('lblVolCd2').get_attribute('value'))
-        if len(driver.find_elements_by_name('lblVolCd3')) != 0:
-            school_leassons.setdefault('緊急授業形態', driver.find_element_by_name('lblVolCd3').get_attribute('value'))
-        if len(driver.find_elements_by_name('lblVolCd4')) != 0:
-            school_leassons.setdefault('オンライン授業形態', driver.find_element_by_name('lblVolCd4').get_attribute('value'))
+        # school_leassons = {}
+        # school_leassons.setdefault('項番',
+        #                            driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblNo').get_attribute(
+        #                                'value'))
+        # school_leassons.setdefault('履修年度',
+        #                            driver.find_element_by_name(
+        #                                'lstSlbtchinftJ002List_st[0].lblTacFcy').get_attribute(
+        #                                'value'))
+        # school_leassons.setdefault('開講期', driver.find_element_by_name(
+        #     'lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_02').get_attribute('value'))
+        # school_leassons.setdefault('曜時',
+        #                            driver.find_element_by_name(
+        #                                'lstSlbtchinftJ002List_st[0].lblTmtxCd').get_attribute(
+        #                                'value'))
+        # school_leassons.setdefault('使用開講期', driver.find_element_by_name(
+        #     'lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_03').get_attribute('value'))
+        # if len(driver.find_elements_by_name('lblVolCd2')) != 0:
+        #     school_leassons.setdefault('授業形態', driver.find_element_by_name('lblVolCd2').get_attribute('value'))
+        # if len(driver.find_elements_by_name('lblVolCd3')) != 0:
+        #     school_leassons.setdefault('緊急授業形態', driver.find_element_by_name('lblVolCd3').get_attribute('value'))
+        # if len(driver.find_elements_by_name('lblVolCd4')) != 0:
+        #     school_leassons.setdefault('オンライン授業形態', driver.find_element_by_name('lblVolCd4').get_attribute('value'))
 
         othersJa = {}
         risyuuki = driver.find_element_by_name('lblAc201ScrDispNm_01').get_attribute('value')
