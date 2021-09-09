@@ -43,81 +43,81 @@ jobs:
 #        run: |
 #          git add . && git commit -m "神学部" && git push -u origin main || true
 #
-  School-of-Sociology:
-   runs-on: ubuntu-latest
+#  School-of-Sociology:
+#   runs-on: ubuntu-latest
 #   needs: School-of-Humanities-2
-   steps:
-     - uses: actions/checkout@v2
-       with:
-         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-     - name: Setup python
-       uses: actions/setup-python@v2
-       with:
-         python-version: "3.x"
-
-     - name: Install dependencies
-       run: |
-         git fetch
-         git pull
-         python -m pip install --upgrade pip
-         pip install chromedriver-binary
-         pip install selenium
-
-     - name: Run main.py
-       run: |
-         python main2.py
-         python first.py
-
-     - name: git setting
-       run: |
-         git config --local user.email "action@github.com"
-         git config --local user.name "GitHub Action"
-
-     - name: Commit and Push
-       run: |
-        git add . && git commit -m "社会学部" && git push -u origin main || true
-
-
-
-  School-of-Law-and-Politics:
-    runs-on: ubuntu-latest
-    needs: School-of-Sociology
-    steps:
-     - uses: actions/checkout@v2
-       with:
-         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-     - name: Setup python
-       uses: actions/setup-python@v2
-       with:
-         python-version: "3.x"
-
-     - name: Install dependencies
-       run: |
-         git fetch
-         git pull
-         python -m pip install --upgrade pip
-         pip install chromedriver-binary
-         pip install selenium
-
-     - name: Run main.py
-       run: |
-         python main3.py
-         python first.py
-
-     - name: git setting
-       run: |
-         git config --local user.email "action@github.com"
-         git config --local user.name "GitHub Action"
-
-     - name: Commit and Push
-       run: |
-         git add . && git commit -m "法学部" && git push -u origin main || true
-
+#   steps:
+#     - uses: actions/checkout@v2
+#       with:
+#         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#     - name: Setup python
+#       uses: actions/setup-python@v2
+#       with:
+#         python-version: "3.x"
+#
+#     - name: Install dependencies
+#       run: |
+#         git fetch
+#         git pull
+#         python -m pip install --upgrade pip
+#         pip install chromedriver-binary
+#         pip install selenium
+#
+#     - name: Run main.py
+#       run: |
+#         python main2.py
+#         python first.py
+#
+#     - name: git setting
+#       run: |
+#         git config --local user.email "action@github.com"
+#         git config --local user.name "GitHub Action"
+#
+#     - name: Commit and Push
+#       run: |
+#        git add . && git commit -m "社会学部" && git push -u origin main || true
+#
+#
+#
+#  School-of-Law-and-Politics:
+#    runs-on: ubuntu-latest
+#    needs: School-of-Sociology
+#    steps:
+#     - uses: actions/checkout@v2
+#       with:
+#         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#     - name: Setup python
+#       uses: actions/setup-python@v2
+#       with:
+#         python-version: "3.x"
+#
+#     - name: Install dependencies
+#       run: |
+#         git fetch
+#         git pull
+#         python -m pip install --upgrade pip
+#         pip install chromedriver-binary
+#         pip install selenium
+#
+#     - name: Run main.py
+#       run: |
+#         python main3.py
+#         python first.py
+#
+#     - name: git setting
+#       run: |
+#         git config --local user.email "action@github.com"
+#         git config --local user.name "GitHub Action"
+#
+#     - name: Commit and Push
+#       run: |
+#         git add . && git commit -m "法学部" && git push -u origin main || true
+#
 
 
   School-of-Economics:
     runs-on: ubuntu-latest
-    needs: School-of-Law-and-Politics
+#    needs: School-of-Law-and-Politics
     steps:
       - uses: actions/checkout@v2
         with:
