@@ -1,0 +1,2260 @@
+# This workflow will upload a Python Package using Twine when a release is created
+# For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
+
+name: AllSubjectInstall
+
+# on:
+#   schedule:
+#     - cron: '0 1 */2 * *' # cronで定期実行
+on: workflow_dispatch
+
+jobs:
+#  School-of-Theology:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+#
+#      - name: Setup python
+#        uses: actions/setup-python@v2
+#        with:
+#          python-version: "3.x"
+#
+#      - name: Install dependencies
+#        run: |
+#          git fetch
+#          git pull
+#          python -m pip install --upgrade pip
+#          pip install chromedriver-binary
+#          pip install selenium
+#
+#      - name: Run main.py
+#        run: |
+#          python main0.py
+#          python first.py
+#
+#      - name: git setting
+#        run: |
+#          git config --local user.email "action@github.com"
+#          git config --local user.name "GitHub Action"
+#
+#      - name: Commit and Push
+#        run: |
+#          git add . && git commit -m "神学部" && git push -u origin main || true
+#
+  School-of-Sociology:
+   runs-on: ubuntu-latest
+#   needs: School-of-Humanities-2
+   steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main2.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "社会学部" && git push -u origin main || true
+
+
+
+  School-of-Law-and-Politics:
+    runs-on: ubuntu-latest
+    needs: School-of-Sociology
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main3.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+         git add . && git commit -m "法学部" && git push -u origin main || true
+
+
+
+  School-of-Economics:
+    runs-on: ubuntu-latest
+    needs: School-of-Law-and-Politics
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main4.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add . && git commit -m "経済学部" && git push -u origin main || true
+
+  School-of-Business-Administration:
+    runs-on: ubuntu-latest
+    needs: School-of-Economics
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main5.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+         git add . && git commit -m "商学部" && git push -u origin main || true
+
+  School-of-Science-and-Technology1:
+    runs-on: ubuntu-latest
+    needs: School-of-Business-Administration
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main6.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add . && git commit -m "理工学部1" && git push -u origin main || true
+
+  School-of-Science-and-Technology2:
+    runs-on: ubuntu-latest
+    needs: School-of-Science-and-Technology1
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip || truepip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main6b.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+              git add . && git commit -m "理工学部2" && git push -u origin main || true
+
+  School-of-Policy-Studies:
+    runs-on: ubuntu-latest
+    needs: School-of-Science-and-Technology2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main7.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+              git add . && git commit -m "総合政策学部" && git push -u origin main || true
+
+  School-of-Human-Welfare-Studies:
+    runs-on: ubuntu-latest
+    needs: School-of-Policy-Studies
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main8.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add . && git commit -m "人間福祉学部" && git push -u origin main || true
+
+
+  School-of-Education:
+    runs-on: ubuntu-latest
+    needs: School-of-Human-Welfare-Studies
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main9.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "教育学部" && git push -u origin main || true
+
+
+
+  School-of-International-Studies:
+    runs-on: ubuntu-latest
+    needs: School-of-Education
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main10.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "国際学部" &&git push -u origin main  || true
+
+  School-of-Engineering:
+    runs-on: ubuntu-latest
+    needs: School-of-International-Studies
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main11.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "工学部" && git push -u origin main || true
+
+
+  School-of-Biological-and-Environmental-Sciences:
+    runs-on: ubuntu-latest
+    needs: School-of-Engineering
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main12.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "生命環境学部" &&git push -u origin main  || true
+
+  School-of-Architecture:
+    runs-on: ubuntu-latest
+    needs: School-of-Biological-and-Environmental-Sciences
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main13.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "建築学部" && git push -u origin main || true
+
+
+
+  free:
+    runs-on: ubuntu-latest
+    needs: School-of-Architecture
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main14.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "free" && git push -u origin main || true
+
+
+
+  Sports-and-Health-Sciences-Program-Office:
+    runs-on: ubuntu-latest
+    needs: free
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main15.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin main  || true
+
+  Center-for-Common-Educational-Programs:
+    runs-on: ubuntu-latest
+    needs: Sports-and-Health-Sciences-Program-Office
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main16.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "共通教育センター" && git push -u origin main || true
+
+
+
+  Center-for-Career-Planning-and-Placement:
+    runs-on: ubuntu-latest
+    needs: Center-for-Common-Educational-Programs
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main17.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "キャリアセンター" && git push -u origin main || true
+
+  Center-for-Common-Educational-Programs-Information-Science-Courses:
+    runs-on: ubuntu-latest
+    needs: Center-for-Career-Planning-and-Placement
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main18.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin main || true
+
+
+
+  Language-Center:
+    runs-on: ubuntu-latest
+    needs: Center-for-Common-Educational-Programs-Information-Science-Courses
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main19.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "言語教育研究センター" && git push -u origin main || true
+
+
+
+  Center-for-International-Education-and-Cooperation-JEASP:
+    runs-on: ubuntu-latest
+    needs: Language-Center
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main20.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin main || true
+
+
+
+  Research-Center-for-Teacher-Development-for-Certifications:
+    runs-on: ubuntu-latest
+    needs: Center-for-International-Education-and-Cooperation-JEASP
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main21.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin main || true
+
+
+
+  Research-Center-for-Teacher-Development-for-Special-Studies:
+    runs-on: ubuntu-latest
+    needs: Research-Center-for-Teacher-Development-for-Certifications
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main22.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin main || true
+
+
+
+  Center-for-International-Education-and-Cooperation:
+    runs-on: ubuntu-latest
+    needs: Research-Center-for-Teacher-Development-for-Special-Studies
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main23.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin main || true
+
+
+
+  Research-Center-for-Christianity-and-Culture:
+    runs-on: ubuntu-latest
+    needs: Center-for-International-Education-and-Cooperation
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main24.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin main || true
+
+
+
+  Center-for-Japanese-Language-Education:
+    runs-on: ubuntu-latest
+    needs: Research-Center-for-Christianity-and-Culture
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main25.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "日本語教育センター" && git push -u origin main || true
+
+
+
+  Center-for-Hands-on-Learning-Programs:
+    runs-on: ubuntu-latest
+    needs: Center-for-Japanese-Language-Education
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main26.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin main || true
+
+
+
+  Integrated-Center-for-UN-and-Foreign-Affairs-Studies:
+    runs-on: ubuntu-latest
+    needs: Center-for-Hands-on-Learning-Programs
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main27.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "国連・外交統括センター" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Theology-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Integrated-Center-for-UN-and-Foreign-Affairs-Studies
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main28.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "神学研究科前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Humanities-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Theology-Masters-Course
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main29.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "文学研究科前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Sociology-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Humanities-Masters-Course
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main30.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "社会学研究科前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Law-and-Politics-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Sociology-Masters-Course
+    steps:
+     - uses: actions/checkout@v2
+       with:
+         token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+     - name: Setup python
+       uses: actions/setup-python@v2
+       with:
+         python-version: "3.x"
+
+     - name: Install dependencies
+       run: |
+         git fetch
+         git pull
+         python -m pip install --upgrade pip
+         pip install Flask
+         pip install chromedriver-binary
+         pip install selenium
+
+     - name: Run main.py
+       run: |
+         python main31.py
+         python first.py
+
+     - name: git setting
+       run: |
+         git config --local user.email "action@github.com"
+         git config --local user.name "GitHub Action"
+
+     - name: Commit and Push
+       run: |
+        git add . && git commit -m "法学研究科前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Economics-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Law-and-Politics-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main32.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "経済学研究科前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Business-Administration-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Economics-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main33.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "商学研究科前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Science-and-Technology-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Business-Administration-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main34.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "理工学研究科前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Policy-Studies-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Science-and-Technology-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main35.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "総合政策研究科前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Language-Communication-and-Culture-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Policy-Studies-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main36.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "言語コミュニケーション前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Human-Welfare-Studies-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Language-Communication-and-Culture-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main37.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "人間福祉研究科前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Education-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Human-Welfare-Studies-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main38.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "教育学研究科前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Science-and-Technology-Masters-Course2:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Education-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main39.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "理工学研究科修士" && git push -u origin main || true
+
+
+
+  Graduate-School-of-International-Studies-Masters-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Science-and-Technology-Masters-Course2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main40.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "国際学研究科前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Masters-Course-Certified:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-International-Studies-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main41.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Theology-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Masters-Course-Certified
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main42.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "神学研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Humanities-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Theology-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main43.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "文学研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Sociology-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Humanities-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main44.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "社会学研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Law-and-Politics-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Sociology-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main45.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "法学研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Economics-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Law-and-Politics-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main46.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "経済学研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Business-Administration-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Economics-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main47.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "商学研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Science-and-Technology-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Business-Administration-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main48.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "理工学研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Policy-Studies-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Science-and-Technology-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main49.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "総合政策研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Language-Communication-and-Culture-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Policy-Studies-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main50.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "言語コミュニケーション後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Human-Welfare-Studies-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Language-Communication-and-Culture-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main51.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "人間福祉研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Education-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Human-Welfare-Studies-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main52.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "教育学研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Institute-of-Business-and-Accounting-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Education-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main53.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "経営戦略研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-International-Studies-Doctoral-Course:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Institute-of-Business-and-Accounting-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main54.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "国際学研究科後期" && git push -u origin main || true
+
+
+
+  Graduate-School-of-Doctoral-Course-Certified:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-International-Studies-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main55.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin main || true
+
+
+
+  Law-School:
+    runs-on: ubuntu-latest
+    needs: Graduate-School-of-Doctoral-Course-Certified
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main56.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "司法研究科" && git push -u origin main || true
+
+
+
+  Institute-of-Business-and-Accounting:
+    runs-on: ubuntu-latest
+    needs: Law-School
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main57.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin main || true
+
+
+
+  free2:
+    runs-on: ubuntu-latest
+    needs: Institute-of-Business-and-Accounting
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main58.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin main || true
+
+  School-of-Science:
+    runs-on: ubuntu-latest
+    needs: free2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium
+
+      - name: Run main.py
+        run: |
+          python main59.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "fin" && git push -u origin main || true
+
+  Remove-Dubble:
+    runs-on: ubuntu-latest
+    needs: School-of-Science
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+
+      - name: Run main.py
+        run: |
+          python dubble.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+         git add . && git commit -m "remove dubble" && git push -u origin main || true
+
+  Sitemap:
+    runs-on: ubuntu-latest
+    needs: Remove-Dubble
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install pandas
+
+      - name: Run main.py
+        run: |
+          python sitemap.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add . && git commit -m "Sitemap" && git push -u origin main || true
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: Sitemap
+    steps:
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
