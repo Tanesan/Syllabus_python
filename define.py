@@ -136,7 +136,7 @@ day_data = [
     "土曜１時限／Saturday 1",
     "土曜２時限／Saturday 2",
     "土曜３時限／Saturday 3",
-    " 土曜４時限／Saturday 4",
+    "土曜４時限／Saturday 4",
     "土曜５時限／Saturday 5",
     "土曜６時限／Saturday 6",
     "土曜７時限／Saturday 7",
