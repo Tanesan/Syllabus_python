@@ -85,7 +85,8 @@ study = [
     "対面授業/Face to face format",
     "同時双方向型オンライン授業/Online format: Simultaneous and two-way",
     "オンデマンドＡ型オンライン授業(時間割あり)/On-demand A(with timetable)",
-    "オンデマンドＢ型オンライン授業(時間割なし)/On-demand B(w/o timetable)"
+    "オンデマンドＢ型オンライン授業(時間割なし)/On-demand B(w/o timetable)",
+    'オンライン受講不可/Online attendance is NOT permitted.',
 ]
 campas_data = [
     "西宮上ケ原キャンパス／Nishinomiya Uegahara Campus",
@@ -333,15 +334,6 @@ def act(m, a, b):
         data_all = {}
         data_all.update(data)
         json_open_all = open("docs/all.json", 'r')
-        # if name not in list(json_open_all.keys()):
-        #     db.reference('rate').set({
-        #         name: {
-        #             'average': '0',
-        #             'review': '',
-        #             'people': '0',
-        #             'userid': ''
-        #         }
-        #     })
         json_load_all = json.load(json_open_all)
         json_load_all.update(data_all)
         with open("docs/all.json", 'w') as f:
