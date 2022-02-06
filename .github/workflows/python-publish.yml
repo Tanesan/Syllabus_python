@@ -134,7 +134,7 @@ jobs:
           
   School-of-Sociology:
    runs-on: ubuntu-latest
-   needs: School-of-Humanities-2
+   needs: School-of-Humanities-3
    steps:
      - uses: actions/checkout@v2
        with:
