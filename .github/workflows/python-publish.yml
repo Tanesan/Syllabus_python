@@ -3,10 +3,10 @@
 
 name: AllSubjectInstall
 
-on:
-  schedule:
-    - cron: "0 22 */2 * *" # cronで定期実行
-#on: workflow_dispatch
+# on:
+#   schedule:
+#     - cron: "0 22 */2 * *" # cronで定期実行
+on: workflow_dispatch
 
 jobs:
   School-of-Theology:
