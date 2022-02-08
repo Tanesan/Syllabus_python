@@ -3,4 +3,4 @@ from define import act
 a = [24]
 
 for i in a:
-    act(i, 0, 600)
+    act(i, 600, 1500)
