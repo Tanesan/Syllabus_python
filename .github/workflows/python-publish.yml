@@ -271,7 +271,7 @@ jobs:
 
   School-of-Economics:
     runs-on: ubuntu-latest
-    needs: School-of-Law-and-Politics
+    needs: School-of-Law-and-Politics-2
     steps:
       - uses: actions/checkout@v2
         with:
