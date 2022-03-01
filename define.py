@@ -80,7 +80,7 @@ ad_data = [
     "司法研究科／Law School",
     "経営戦略研究科/IBA／Institute of Business and Accounting",
     "使用しない（カリキュラム設定用　非正規　大学院）",
-  ]
+]
 study = [
     "対面授業/Face to face format",
     "同時双方向型オンライン授業/Online format: Simultaneous and two-way",
@@ -97,7 +97,7 @@ campas_data = [
     "オンライン／Online",
     "東京丸の内キャンパス／Tokyo Marunouchi Campus",
     "西宮北口キャンパス／Nishinomiya Kitaguchi Campus",
-  ]
+]
 day_data = [
     "月曜１時限／Monday 1",
     "月曜２時限／Monday 2",
@@ -149,7 +149,7 @@ day_data = [
     "日曜６時限／Sunday 6",
     "‐／-",
     "集中・その他／Concentration/Other",
-  ]
+]
 term_data = [
     "通年／Year Round",
     "春学期／Spring",
@@ -165,7 +165,7 @@ term_data = [
     "春学期後半集中／Intensive (Spring 2nd Half)",
     "秋学期前半集中／Intensive (Fall 1st Half)",
     "秋学期後半集中／Intensive (Fall 2nd Half)",
-  ]
+]
 score = [
     "定期試験／Final Examination (01)",
     "定期試験に代わるリポート／Term paper to replace the final examination (02)",
@@ -173,12 +173,14 @@ score = [
     "平常リポート／Individual reports (04)",
     "その他／Others (99)"
 ]
+
+
 def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     driver = webdriver.Chrome(options=options)
-        # print("A")
+    # print("A")
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
     #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
@@ -210,7 +212,7 @@ def act(m, a, b):
             else:
                 driver.find_element_by_name('ENext').click()
         if len(driver.find_elements_by_name('ERefer')) != 0:
-            if int(driver.find_element_by_name('lstSlbinftJ016RList_st[' + str(len(driver.find_elements_by_name('ERefer')) - 1) +'].lblNo').get_attribute('value')) <= i:
+            if int(driver.find_element_by_name('lstSlbinftJ016RList_st[' + str(len(driver.find_elements_by_name('ERefer')) - 1) + '].lblNo').get_attribute('value')) <= i:
                 break
         else:
             sleep(0.1)
@@ -221,19 +223,28 @@ def act(m, a, b):
         driver.find_elements_by_name('ERefer')[i % 100].click()
         # あとで
         name = driver.find_element_by_name('lblLsnCd').get_attribute('value')
-        subject.setdefault('campas', campas_data.index(driver.find_element_by_name('lblCc019ScrDispNm').get_attribute('value')))
-        subject.setdefault('name', driver.find_element_by_name('lblRepSbjKnjNm').get_attribute('value'))
-        subject.setdefault('管理部署', ad_data.index(driver.find_element_by_name('lblAc119ScrDispNm').get_attribute('value')))
-        subject.setdefault('単位数', int(driver.find_element_by_name('lblSbjCrnum').get_attribute('value')))
-        subject.setdefault('担当者', driver.find_element_by_name('lstChagTch_st[0].lblTchName').get_attribute('value'))
-        subject.setdefault('履修基準年度', driver.find_element_by_name('lblCc004ScrDispNm').get_attribute('value'))
+        subject.setdefault('campas', campas_data.index(
+            driver.find_element_by_name('lblCc019ScrDispNm').get_attribute('value')))
+        subject.setdefault('name', driver.find_element_by_name(
+            'lblRepSbjKnjNm').get_attribute('value'))
+        subject.setdefault('管理部署', ad_data.index(
+            driver.find_element_by_name('lblAc119ScrDispNm').get_attribute('value')))
+        subject.setdefault('単位数', int(driver.find_element_by_name(
+            'lblSbjCrnum').get_attribute('value')))
+        subject.setdefault('担当者', driver.find_element_by_name(
+            'lstChagTch_st[0].lblTchName').get_attribute('value'))
+        subject.setdefault('履修基準年度', driver.find_element_by_name(
+            'lblCc004ScrDispNm').get_attribute('value'))
 
         if len(driver.find_elements_by_name('lblVolCd2')) != 0:
-            subject.setdefault('授業形態', study.index(driver.find_element_by_name('lblVolCd2').get_attribute('value')))
+            subject.setdefault('授業形態', study.index(
+                driver.find_element_by_name('lblVolCd2').get_attribute('value')))
         if len(driver.find_elements_by_name('lblVolCd3')) != 0:
-            subject.setdefault('緊急授業形態', study.index(driver.find_element_by_name('lblVolCd3').get_attribute('value')))
+            subject.setdefault('緊急授業形態', study.index(
+                driver.find_element_by_name('lblVolCd3').get_attribute('value')))
         if len(driver.find_elements_by_name('lblVolCd4')) != 0:
-            subject.setdefault('オンライン授業形態', study.index(driver.find_element_by_name('lblVolCd4').get_attribute('value')))
+            subject.setdefault('オンライン授業形態', study.index(
+                driver.find_element_by_name('lblVolCd4').get_attribute('value')))
 
         # list
         topic = {}
@@ -243,12 +254,14 @@ def act(m, a, b):
                                  [driver.find_element_by_name('lblVolItm' + str(x + 6)).get_attribute('value'),
                                   driver.find_element_by_name('lblVolItm' + str(46 + x)).get_attribute('value')])
             elif len(driver.find_elements_by_name('lblVolItm38')) > 0:
-                topic.setdefault('授業計画1', driver.find_element_by_name('lblVolItm38').get_attribute('value'))
+                topic.setdefault('授業計画1', driver.find_element_by_name(
+                    'lblVolItm38').get_attribute('value'))
                 break
             else:
                 break
         if len(driver.find_elements_by_name('lblVolItm5')) > 0:
-            topic.setdefault('授業外学習2', driver.find_element_by_name('lblVolItm5').get_attribute('value'))
+            topic.setdefault('授業外学習2', driver.find_element_by_name(
+                'lblVolItm5').get_attribute('value'))
         grading = {}
         for z in range(len(driver.find_elements_by_class_name('output')) - 2):
             # grading
@@ -267,7 +280,7 @@ def act(m, a, b):
                     grading.setdefault(
                         ((driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
                             'tbody').find_elements_by_tag_name('tr')[i].find_elements_by_tag_name('th')[
-                              0].text) + str(x)).replace("\n", ""),
+                            0].text) + str(x)).replace("\n", ""),
                         driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
                             'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('td')[
                             0].text)
@@ -281,7 +294,7 @@ def act(m, a, b):
                     grading.setdefault(
                         (driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
                             'tbody').find_elements_by_tag_name('tr')[0].find_elements_by_tag_name('th')[
-                             0].text + str(
+                            0].text + str(
                             x)).replace("\n", ""),
                         num)
         # 教室情報
@@ -309,29 +322,38 @@ def act(m, a, b):
         #     school_leassons.setdefault('オンライン授業形態', driver.find_element_by_name('lblVolCd4').get_attribute('value'))
 
         othersJa = {}
-        risyuuki = driver.find_element_by_name('lblAc201ScrDispNm_01').get_attribute('value')
+        risyuuki = driver.find_element_by_name(
+            'lblAc201ScrDispNm_01').get_attribute('value')
         othersJa.setdefault('履修期', risyuuki[0: risyuuki.find('／')])
         if len(driver.find_elements_by_name('lblVolCd1')) != 0:
-            language = driver.find_element_by_name('lblVolCd1').get_attribute('value')
+            language = driver.find_element_by_name(
+                'lblVolCd1').get_attribute('value')
             othersJa.setdefault('主な教授言語', language[0: language.find('／')])
-        othersJa.setdefault('授業目的', driver.find_element_by_name('lblVolItm2').get_attribute('value'))
-        othersJa.setdefault('到達目標', driver.find_element_by_name('lblVolItm3').get_attribute('value'))
+        othersJa.setdefault('授業目的', driver.find_element_by_name(
+            'lblVolItm2').get_attribute('value'))
+        othersJa.setdefault('到達目標', driver.find_element_by_name(
+            'lblVolItm3').get_attribute('value'))
 
-        othersJa.setdefault('特記事項', driver.find_element_by_name('lblVolItm1').get_attribute('value'))
-        othersJa.setdefault('関連科目', driver.find_element_by_name('lblVolItm4').get_attribute('value'))
+        othersJa.setdefault('特記事項', driver.find_element_by_name(
+            'lblVolItm1').get_attribute('value'))
+        othersJa.setdefault('関連科目', driver.find_element_by_name(
+            'lblVolItm4').get_attribute('value'))
 
-        othersJa.setdefault('授業方法', driver.find_element_by_name('lblVolItm43').get_attribute('value'))
+        othersJa.setdefault('授業方法', driver.find_element_by_name(
+            'lblVolItm43').get_attribute('value'))
         othersJa.setdefault('トピック', topic)
         othersJa.setdefault('評価', grading)
         i = 1
         while "項番No." + str(i) in grading:
-            subject.setdefault('時限' + str(i), day_data.index(grading["項番No." + str(i)][2]))
+            subject.setdefault(
+                '時限' + str(i), day_data.index(grading["項番No." + str(i)][2]))
             i += 1
         i = 1
         while "成績評価Grading" + str(i) in grading:
             if grading["成績評価Grading" + str(i)][0] == "備":
                 break
-            subject.setdefault('評価' + str(i), score.index(grading["成績評価Grading" + str(i)][0]))
+            subject.setdefault(
+                '評価' + str(i), score.index(grading["成績評価Grading" + str(i)][0]))
             i += 1
         subject.setdefault('開講期', term_data.index(grading["項番No.1"][1]))
         data.setdefault(name, subject)
