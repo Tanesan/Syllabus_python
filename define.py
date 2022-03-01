@@ -177,9 +177,8 @@ def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
-    # driver = webdriver.Chrome(options=options)
-    driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver3', options=options)
-    # print("A")
+    driver = webdriver.Chrome(options=options)
+        # print("A")
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
     #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
@@ -317,6 +316,10 @@ def act(m, a, b):
             othersJa.setdefault('主な教授言語', language[0: language.find('／')])
         othersJa.setdefault('授業目的', driver.find_element_by_name('lblVolItm2').get_attribute('value'))
         othersJa.setdefault('到達目標', driver.find_element_by_name('lblVolItm3').get_attribute('value'))
+
+        othersJa.setdefault('特記事項', driver.find_element_by_name('lblVolItm1').get_attribute('value'))
+        othersJa.setdefault('関連科目', driver.find_element_by_name('lblVolItm4').get_attribute('value'))
+
         othersJa.setdefault('授業方法', driver.find_element_by_name('lblVolItm43').get_attribute('value'))
         othersJa.setdefault('トピック', topic)
         othersJa.setdefault('評価', grading)
