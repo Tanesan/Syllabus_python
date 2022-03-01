@@ -177,8 +177,8 @@ def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
-    driver = webdriver.Chrome(options=options)
-    #driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver2', options=options)
+    # driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(executable_path='/Users/keitotanemura/Downloads/chromedriver3', options=options)
     # print("A")
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
@@ -197,6 +197,11 @@ def act(m, a, b):
         select_object.select_by_index(1)
         select_object.select_by_value(str(m))
         # driver.implicitly_wait(2)
+        # 年度設定
+        year_2022 = driver.find_element_by_id("txtLsnOpcFcy")
+        year_2022.clear()
+        year_2022.send_keys("2022")
+
         driver.find_element_by_name('ESearch').click()
         for a in range(int(i / 100)):
             if len(driver.find_elements_by_name('ENext')) == 0:
