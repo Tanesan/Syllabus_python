@@ -342,10 +342,10 @@ def act(m, a, b):
         data_all = {}
         data_all.update(data)
         json_open_all = open("docs/all.json", 'r')
-        json_load_all = json.load(json_open_all)
-        json_load_all.update(data_all)
+        json_load_all_files = json.load(json_open_all)
+        json_load_all_files.update(data_all)
         with open("docs/all.json", 'w') as f:
-            json.dump(json_load_all, f, ensure_ascii=False)
+            json.dump(json_load_all_files, f, ensure_ascii=False)
         id_json_list = open("docs/id.json", 'r')
         id_json_list = json.load(id_json_list)
         id_json_list.update({name: 0})
