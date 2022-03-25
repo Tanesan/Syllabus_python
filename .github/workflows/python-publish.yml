@@ -42,7 +42,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -79,7 +79,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -117,7 +117,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -156,7 +156,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -199,7 +199,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -241,7 +241,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -283,7 +283,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -325,7 +325,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -367,7 +367,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -409,7 +409,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -450,7 +450,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -491,7 +491,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -533,7 +533,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -575,7 +575,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -617,7 +617,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -659,7 +659,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -701,7 +701,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -743,7 +743,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -785,7 +785,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -827,7 +827,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -869,7 +869,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -912,7 +912,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -955,7 +955,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -998,7 +998,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1041,7 +1041,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1084,7 +1084,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1127,7 +1127,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1170,7 +1170,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1213,7 +1213,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1256,7 +1256,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1299,7 +1299,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1342,7 +1342,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1385,7 +1385,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1428,7 +1428,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1471,7 +1471,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1514,7 +1514,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1557,7 +1557,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1600,7 +1600,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1643,7 +1643,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1686,7 +1686,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1729,7 +1729,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1772,7 +1772,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1815,7 +1815,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1858,7 +1858,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1901,7 +1901,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1944,7 +1944,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -1987,7 +1987,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2030,7 +2030,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2073,7 +2073,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2116,7 +2116,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2159,7 +2159,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2202,7 +2202,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2245,7 +2245,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2288,7 +2288,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2331,7 +2331,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2374,7 +2374,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2417,7 +2417,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2460,7 +2460,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2503,7 +2503,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2546,7 +2546,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2589,7 +2589,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2632,7 +2632,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2675,7 +2675,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2718,7 +2718,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2761,7 +2761,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2800,7 +2800,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
@@ -2841,7 +2841,7 @@ jobs:
 
       - name: Count changes
         run: |
-          git add -N .
+          git add .
           echo "::set-output name=count::$(git diff --name-only | wc -l)"
 
       - name: Commit and Push
