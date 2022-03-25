@@ -42,7 +42,13 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git add . && git commit -m "神学部" && git push -u origin main
+          git add . && git commit -m "神学部" -a
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.MY_TOKEN }}
+          branch: ${{ github.ref }}
+
 
   School-of-Humanities-1:
     runs-on: ubuntu-latest
