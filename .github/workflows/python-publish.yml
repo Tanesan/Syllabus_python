@@ -40,15 +40,16 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
+      - name: Count changes
+        id: changes
+        run: |
+          git add -N .
+          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
       - name: Commit and Push
         run: |
-          git add . && git commit -m "神学部" -a
-      - name: GitHub Push
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.MY_TOKEN }}
-          branch: ${{ github.ref }}
-
+          git add . && git commit -m "神学部" && git push -u origin main
+        if: steps.changes.outputs.count > 0
 
   School-of-Humanities-1:
     runs-on: ubuntu-latest
