@@ -40,15 +40,12 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
         run: |
-          git add . && git commit -m "神学部" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "神学部" && git push -u origin main || true
+        
 
   School-of-Humanities-1:
     runs-on: ubuntu-latest
@@ -77,16 +74,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "文学部1" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "文学部1" && git push -u origin main || true
+        
 
   School-of-Humanities-2:
     runs-on: ubuntu-latest
@@ -115,17 +109,14 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
           git fetch
-          git add . && git commit -m "文学部2" &&git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "文学部2" &&git push -u origin main || true
+        
 
   School-of-Humanities-3:
     runs-on: ubuntu-latest
@@ -154,17 +145,14 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
           git fetch
-          git add . && git commit -m "文学部3" &&git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "文学部3" &&git push -u origin main || true
+        
 
   School-of-Sociology:
     runs-on: ubuntu-latest
@@ -197,16 +185,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "社会学部" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "社会学部" && git push -u origin main || true
+        
 
   School-of-Sociology2:
     runs-on: ubuntu-latest
@@ -239,16 +224,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "社会学部2" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "社会学部2" && git push -u origin main || true
+        
 
   School-of-Law-and-Politics:
     runs-on: ubuntu-latest
@@ -281,16 +263,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "法学部" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "法学部" && git push -u origin main || true
+        
 
   School-of-Law-and-Politics-2:
     runs-on: ubuntu-latest
@@ -323,16 +302,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "法学部" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "法学部" && git push -u origin main || true
+        
 
   School-of-Economics:
     runs-on: ubuntu-latest
@@ -365,16 +341,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "経済学部" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "経済学部" && git push -u origin main || true
+        
 
   School-of-Business-Administration:
     runs-on: ubuntu-latest
@@ -407,16 +380,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "商学部" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "商学部" && git push -u origin main || true
+        
 
   School-of-Science-and-Technology1:
     runs-on: ubuntu-latest
@@ -448,16 +418,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "理工学部1" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "理工学部1" && git push -u origin main || true
+        
 
   School-of-Science-and-Technology2:
     runs-on: ubuntu-latest
@@ -489,16 +456,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "理工学部2" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "理工学部2" && git push -u origin main || true
+        
 
   School-of-Policy-Studies:
     runs-on: ubuntu-latest
@@ -531,16 +495,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "総合政策学部" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "総合政策学部" && git push -u origin main || true
+        
 
   School-of-Human-Welfare-Studies:
     runs-on: ubuntu-latest
@@ -573,16 +534,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "人間福祉学部" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "人間福祉学部" && git push -u origin main || true
+        
 
   School-of-Education:
     runs-on: ubuntu-latest
@@ -615,16 +573,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "教育学部" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "教育学部" && git push -u origin main || true
+        
 
   School-of-International-Studies:
     runs-on: ubuntu-latest
@@ -657,16 +612,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "国際学部" &&git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "国際学部" &&git push -u origin main || true
+        
 
   School-of-Engineering:
     runs-on: ubuntu-latest
@@ -699,16 +651,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "工学部" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "工学部" && git push -u origin main || true
+        
 
   School-of-Biological-and-Environmental-Sciences:
     runs-on: ubuntu-latest
@@ -741,16 +690,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "生命環境学部" &&git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "生命環境学部" &&git push -u origin main || true
+        
 
   School-of-Architecture:
     runs-on: ubuntu-latest
@@ -783,16 +729,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "建築学部" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "建築学部" && git push -u origin main || true
+        
 
   free:
     runs-on: ubuntu-latest
@@ -825,16 +768,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "free" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "free" && git push -u origin main || true
+        
 
   Sports-and-Health-Sciences-Program-Office:
     runs-on: ubuntu-latest
@@ -867,16 +807,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin main || true
+        
 
   Center-for-Common-Educational-Programs:
     runs-on: ubuntu-latest
@@ -910,16 +847,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "共通教育センター" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "共通教育センター" && git push -u origin main || true
+        
 
   Center-for-Career-Planning-and-Placement:
     runs-on: ubuntu-latest
@@ -953,16 +887,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "キャリアセンター" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "キャリアセンター" && git push -u origin main || true
+        
 
   Center-for-Common-Educational-Programs-Information-Science-Courses:
     runs-on: ubuntu-latest
@@ -996,16 +927,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin main || true
+        
 
   Language-Center:
     runs-on: ubuntu-latest
@@ -1039,16 +967,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "言語教育研究センター" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "言語教育研究センター" && git push -u origin main || true
+        
 
   Center-for-International-Education-and-Cooperation-JEASP:
     runs-on: ubuntu-latest
@@ -1082,16 +1007,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin main || true
+        
 
   Research-Center-for-Teacher-Development-for-Certifications:
     runs-on: ubuntu-latest
@@ -1125,16 +1047,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin main || true
+        
 
   Research-Center-for-Teacher-Development-for-Special-Studies:
     runs-on: ubuntu-latest
@@ -1168,16 +1087,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin main || true
+        
 
   Center-for-International-Education-and-Cooperation:
     runs-on: ubuntu-latest
@@ -1211,16 +1127,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin main || true
+        
 
   Research-Center-for-Christianity-and-Culture:
     runs-on: ubuntu-latest
@@ -1254,16 +1167,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin main || true
+        
 
   Center-for-Japanese-Language-Education:
     runs-on: ubuntu-latest
@@ -1297,16 +1207,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "日本語教育センター" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "日本語教育センター" && git push -u origin main || true
+        
 
   Center-for-Hands-on-Learning-Programs:
     runs-on: ubuntu-latest
@@ -1340,16 +1247,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin main || true
+        
 
   Integrated-Center-for-UN-and-Foreign-Affairs-Studies:
     runs-on: ubuntu-latest
@@ -1383,16 +1287,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "国連・外交統括センター" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "国連・外交統括センター" && git push -u origin main || true
+        
 
   Graduate-School-of-Theology-Masters-Course:
     runs-on: ubuntu-latest
@@ -1426,16 +1327,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "神学研究科前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "神学研究科前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Humanities-Masters-Course:
     runs-on: ubuntu-latest
@@ -1469,16 +1367,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "文学研究科前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "文学研究科前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Sociology-Masters-Course:
     runs-on: ubuntu-latest
@@ -1512,16 +1407,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "社会学研究科前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "社会学研究科前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Law-and-Politics-Masters-Course:
     runs-on: ubuntu-latest
@@ -1555,16 +1447,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "法学研究科前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "法学研究科前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Economics-Masters-Course:
     runs-on: ubuntu-latest
@@ -1598,16 +1487,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "経済学研究科前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "経済学研究科前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Business-Administration-Masters-Course:
     runs-on: ubuntu-latest
@@ -1641,16 +1527,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "商学研究科前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "商学研究科前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Science-and-Technology-Masters-Course:
     runs-on: ubuntu-latest
@@ -1684,16 +1567,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "理工学研究科前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "理工学研究科前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Policy-Studies-Masters-Course:
     runs-on: ubuntu-latest
@@ -1727,16 +1607,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "総合政策研究科前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "総合政策研究科前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Language-Communication-and-Culture-Masters-Course:
     runs-on: ubuntu-latest
@@ -1770,16 +1647,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "言語コミュニケーション前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "言語コミュニケーション前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Human-Welfare-Studies-Masters-Course:
     runs-on: ubuntu-latest
@@ -1813,16 +1687,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "人間福祉研究科前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "人間福祉研究科前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Education-Masters-Course:
     runs-on: ubuntu-latest
@@ -1856,16 +1727,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "教育学研究科前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "教育学研究科前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Science-and-Technology-Masters-Course2:
     runs-on: ubuntu-latest
@@ -1899,16 +1767,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "理工学研究科修士" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "理工学研究科修士" && git push -u origin main || true
+        
 
   Graduate-School-of-International-Studies-Masters-Course:
     runs-on: ubuntu-latest
@@ -1942,16 +1807,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "国際学研究科前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "国際学研究科前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Masters-Course-Certified:
     runs-on: ubuntu-latest
@@ -1985,16 +1847,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin main || true
+        
 
   Graduate-School-of-Theology-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2028,16 +1887,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "神学研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "神学研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Humanities-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2071,16 +1927,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "文学研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "文学研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Sociology-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2114,16 +1967,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "社会学研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "社会学研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Law-and-Politics-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2157,16 +2007,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "法学研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "法学研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Economics-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2200,16 +2047,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "経済学研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "経済学研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Business-Administration-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2243,16 +2087,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "商学研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "商学研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Science-and-Technology-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2286,16 +2127,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "理工学研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "理工学研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Policy-Studies-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2329,16 +2167,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "総合政策研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "総合政策研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Language-Communication-and-Culture-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2372,16 +2207,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "言語コミュニケーション後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "言語コミュニケーション後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Human-Welfare-Studies-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2415,16 +2247,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "人間福祉研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "人間福祉研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Education-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2458,16 +2287,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "教育学研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "教育学研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Institute-of-Business-and-Accounting-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2501,16 +2327,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "経営戦略研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "経営戦略研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-International-Studies-Doctoral-Course:
     runs-on: ubuntu-latest
@@ -2544,16 +2367,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "国際学研究科後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "国際学研究科後期" && git push -u origin main || true
+        
 
   Graduate-School-of-Doctoral-Course-Certified:
     runs-on: ubuntu-latest
@@ -2587,16 +2407,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin main || true
+        
 
   Law-School:
     runs-on: ubuntu-latest
@@ -2630,16 +2447,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "司法研究科" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "司法研究科" && git push -u origin main || true
+        
 
   Institute-of-Business-and-Accounting:
     runs-on: ubuntu-latest
@@ -2673,16 +2487,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin main || true
+        
 
   free2:
     runs-on: ubuntu-latest
@@ -2716,16 +2527,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin main || true
+        
 
   School-of-Science:
     runs-on: ubuntu-latest
@@ -2759,16 +2567,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "fin" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "fin" && git push -u origin main || true
+        
 
   Remove-Dubble:
     runs-on: ubuntu-latest
@@ -2798,16 +2603,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "remove dubble" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "remove dubble" && git push -u origin main || true
+        
 
   Sitemap:
     runs-on: ubuntu-latest
@@ -2839,16 +2641,13 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      - name: Count changes
-        run: |
-          git add .
-          echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
 
       - name: Commit and Push
 
         run: |
-          git add . && git commit -m "Sitemap" && git push -u origin main
-        if: steps.changes.outputs.count > 0
+          git add . && git commit -m "Sitemap" && git push -u origin main || true
+        
 
   deploy:
     runs-on: ubuntu-latest
