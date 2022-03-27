@@ -44,8 +44,11 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git add . && git commit -m "神学部" && git push -u origin main || true
-        
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "神学部" && git push -u origin main
+          fi
 
   School-of-Humanities-1:
     runs-on: ubuntu-latest
@@ -77,10 +80,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "文学部1" && git push -u origin main || true
-        
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "文学部1" && git push -u origin main
+          fi
 
   School-of-Humanities-2:
     runs-on: ubuntu-latest
@@ -112,11 +117,13 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
           git fetch
-          git add . && git commit -m "文学部2" &&git push -u origin main || true
-        
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "文学部2" &&git push -u origin main
+          fi
 
   School-of-Humanities-3:
     runs-on: ubuntu-latest
@@ -148,10 +155,13 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
           git fetch
-          git add . && git commit -m "文学部3" &&git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "文学部3" &&git push -u origin main
+          fi
         
 
   School-of-Sociology:
@@ -188,9 +198,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "社会学部" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "社会学部" && git push -u origin main
+          fi
         
 
   School-of-Sociology2:
@@ -227,9 +240,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "社会学部2" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "社会学部2" && git push -u origin main
+          fi
         
 
   School-of-Law-and-Politics:
@@ -266,9 +282,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "法学部" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "法学部" && git push -u origin main
+          fi
         
 
   School-of-Law-and-Politics-2:
@@ -305,9 +324,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "法学部" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "法学部" && git push -u origin main
+          fi
         
 
   School-of-Economics:
@@ -344,9 +366,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "経済学部" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経済学部" && git push -u origin main
+          fi
         
 
   School-of-Business-Administration:
@@ -383,9 +408,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "商学部" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "商学部" && git push -u origin main
+          fi
         
 
   School-of-Science-and-Technology1:
@@ -421,9 +449,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "理工学部1" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "理工学部1" && git push -u origin main
+          fi
         
 
   School-of-Science-and-Technology2:
@@ -459,9 +490,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "理工学部2" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "理工学部2" && git push -u origin main
+          fi
         
 
   School-of-Policy-Studies:
@@ -498,9 +532,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "総合政策学部" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "総合政策学部" && git push -u origin main
+          fi
         
 
   School-of-Human-Welfare-Studies:
@@ -537,9 +574,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "人間福祉学部" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "人間福祉学部" && git push -u origin main
+          fi
         
 
   School-of-Education:
@@ -576,9 +616,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "教育学部" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "教育学部" && git push -u origin main
+          fi
         
 
   School-of-International-Studies:
@@ -615,9 +658,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "国際学部" &&git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国際学部" &&git push -u origin main
+          fi
         
 
   School-of-Engineering:
@@ -654,9 +700,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "工学部" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "工学部" && git push -u origin main
+          fi
         
 
   School-of-Biological-and-Environmental-Sciences:
@@ -693,9 +742,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "生命環境学部" &&git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "生命環境学部" &&git push -u origin main
+          fi
         
 
   School-of-Architecture:
@@ -732,9 +784,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "建築学部" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "建築学部" && git push -u origin main
+          fi
         
 
   free:
@@ -771,9 +826,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "free" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "free" && git push -u origin main
+          fi
         
 
   Sports-and-Health-Sciences-Program-Office:
@@ -810,9 +868,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin main
+          fi
         
 
   Center-for-Common-Educational-Programs:
@@ -850,9 +911,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "共通教育センター" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "共通教育センター" && git push -u origin main
+          fi
         
 
   Center-for-Career-Planning-and-Placement:
@@ -890,9 +954,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "キャリアセンター" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "キャリアセンター" && git push -u origin main
+          fi
         
 
   Center-for-Common-Educational-Programs-Information-Science-Courses:
@@ -930,9 +997,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin main
+          fi
         
 
   Language-Center:
@@ -970,9 +1040,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "言語教育研究センター" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "言語教育研究センター" && git push -u origin main
+          fi
         
 
   Center-for-International-Education-and-Cooperation-JEASP:
@@ -1010,9 +1083,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin main
+          fi
         
 
   Research-Center-for-Teacher-Development-for-Certifications:
@@ -1050,9 +1126,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin main
+          fi
         
 
   Research-Center-for-Teacher-Development-for-Special-Studies:
@@ -1090,9 +1169,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin main
+          fi
         
 
   Center-for-International-Education-and-Cooperation:
@@ -1130,9 +1212,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin main
+          fi
         
 
   Research-Center-for-Christianity-and-Culture:
@@ -1170,9 +1255,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin main
+          fi
         
 
   Center-for-Japanese-Language-Education:
@@ -1210,9 +1298,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "日本語教育センター" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "日本語教育センター" && git push -u origin main
+          fi
         
 
   Center-for-Hands-on-Learning-Programs:
@@ -1250,9 +1341,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin main
+          fi
         
 
   Integrated-Center-for-UN-and-Foreign-Affairs-Studies:
@@ -1290,9 +1384,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "国連・外交統括センター" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国連・外交統括センター" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Theology-Masters-Course:
@@ -1330,9 +1427,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "神学研究科前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "神学研究科前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Humanities-Masters-Course:
@@ -1370,9 +1470,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "文学研究科前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "文学研究科前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Sociology-Masters-Course:
@@ -1410,9 +1513,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "社会学研究科前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "社会学研究科前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Law-and-Politics-Masters-Course:
@@ -1450,9 +1556,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "法学研究科前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "法学研究科前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Economics-Masters-Course:
@@ -1490,9 +1599,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "経済学研究科前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経済学研究科前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Business-Administration-Masters-Course:
@@ -1530,9 +1642,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "商学研究科前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "商学研究科前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Science-and-Technology-Masters-Course:
@@ -1570,9 +1685,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "理工学研究科前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "理工学研究科前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Policy-Studies-Masters-Course:
@@ -1610,9 +1728,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "総合政策研究科前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "総合政策研究科前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Language-Communication-and-Culture-Masters-Course:
@@ -1650,9 +1771,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "言語コミュニケーション前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "言語コミュニケーション前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Human-Welfare-Studies-Masters-Course:
@@ -1690,9 +1814,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "人間福祉研究科前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "人間福祉研究科前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Education-Masters-Course:
@@ -1730,9 +1857,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "教育学研究科前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "教育学研究科前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Science-and-Technology-Masters-Course2:
@@ -1770,9 +1900,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "理工学研究科修士" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "理工学研究科修士" && git push -u origin main
+          fi
         
 
   Graduate-School-of-International-Studies-Masters-Course:
@@ -1810,9 +1943,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "国際学研究科前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国際学研究科前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Masters-Course-Certified:
@@ -1850,9 +1986,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Theology-Doctoral-Course:
@@ -1890,9 +2029,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "神学研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "神学研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Humanities-Doctoral-Course:
@@ -1930,9 +2072,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "文学研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "文学研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Sociology-Doctoral-Course:
@@ -1970,9 +2115,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "社会学研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "社会学研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Law-and-Politics-Doctoral-Course:
@@ -2010,9 +2158,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "法学研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "法学研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Economics-Doctoral-Course:
@@ -2050,9 +2201,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "経済学研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経済学研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Business-Administration-Doctoral-Course:
@@ -2090,9 +2244,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "商学研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "商学研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Science-and-Technology-Doctoral-Course:
@@ -2130,9 +2287,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "理工学研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "理工学研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Policy-Studies-Doctoral-Course:
@@ -2170,9 +2330,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "総合政策研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "総合政策研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Language-Communication-and-Culture-Doctoral-Course:
@@ -2210,9 +2373,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "言語コミュニケーション後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "言語コミュニケーション後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Human-Welfare-Studies-Doctoral-Course:
@@ -2250,9 +2416,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "人間福祉研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "人間福祉研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Education-Doctoral-Course:
@@ -2290,9 +2459,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "教育学研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "教育学研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Institute-of-Business-and-Accounting-Doctoral-Course:
@@ -2330,9 +2502,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "経営戦略研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経営戦略研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-International-Studies-Doctoral-Course:
@@ -2370,9 +2545,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "国際学研究科後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国際学研究科後期" && git push -u origin main
+          fi
         
 
   Graduate-School-of-Doctoral-Course-Certified:
@@ -2410,9 +2588,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin main
+          fi
         
 
   Law-School:
@@ -2450,9 +2631,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "司法研究科" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "司法研究科" && git push -u origin main
+          fi
         
 
   Institute-of-Business-and-Accounting:
@@ -2490,9 +2674,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin main
+          fi
         
 
   free2:
@@ -2530,9 +2717,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin main
+          fi
         
 
   School-of-Science:
@@ -2570,9 +2760,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "fin" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "fin" && git push -u origin main
+          fi
         
 
   Remove-Dubble:
@@ -2606,9 +2799,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "remove dubble" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "remove dubble" && git push -u origin main
+          fi
         
 
   Sitemap:
@@ -2644,9 +2840,12 @@ jobs:
 
 
       - name: Commit and Push
-
         run: |
-          git add . && git commit -m "Sitemap" && git push -u origin main || true
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "Sitemap" && git push -u origin main
+          fi
         
 
   deploy:
