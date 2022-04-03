@@ -186,9 +186,6 @@ def act(m, a, b):
     #     data = {}
 
     data = {}
-    a = 368
-    b = 370
-    m = 28
     for i in range(a, b):
         subject = {}
         fin = 0
