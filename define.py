@@ -178,7 +178,6 @@ def act(m, a, b):
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     driver = webdriver.Chrome(options=options)
-        # print("A")
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
     #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
@@ -308,7 +307,10 @@ def act(m, a, b):
                 break
             subject.setdefault('評価' + str(i), score.index(grading["成績評価Grading" + str(i)][0]))
             i += 1
-        subject.setdefault('開講期', term_data.index(grading["項番No.1"][1]))
+        if "項番No.1" in grading:
+            subject.setdefault('開講期', term_data.index(grading["項番No.1"][1]))
+        else:
+            subject.setdefault('開講期',"")
         data.setdefault(name, subject)
         searchingADJa = {**othersJa, **subject}
         with open('docs/all/' + str(name) + '.json', 'w') as f:
