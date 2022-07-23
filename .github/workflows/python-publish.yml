@@ -3,10 +3,10 @@
 
 name: AllSubjectInstall
 
-on:
-  schedule:
-    - cron: "0 22 */4 * *" # cronで定期実行
-# on: workflow_dispatch
+# on:
+  # schedule:
+    # - cron: "0 22 */4 * *" # cronで定期実行
+on: workflow_dispatch
 
 jobs:
   School-of-Theology:
@@ -332,7 +332,7 @@ jobs:
           fi
         
 
-  School-of-Economics:
+  School-of-Economics-1:
     runs-on: ubuntu-latest
     timeout-minutes: 720
     needs: School-of-Law-and-Politics-2
@@ -373,11 +373,93 @@ jobs:
             git add . && git commit -m "経済学部" && git push -u origin main
           fi
         
+    School-of-Economics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Law-and-Politics-2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run main.py
+        run: |
+          python main4.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経済学部" && git push -u origin main
+          fi
+        
+  School-of-Economics-2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Economics-1
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run main.py
+        run: |
+          python main4b.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経済学部2" && git push -u origin main
+          fi
+        
 
   School-of-Business-Administration:
     runs-on: ubuntu-latest
     timeout-minutes: 720
-    needs: School-of-Economics
+    needs: School-of-Economics-2
     steps:
       - uses: actions/checkout@v2
         with:
