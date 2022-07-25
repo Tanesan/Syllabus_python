@@ -396,7 +396,7 @@ jobs:
 
       - name: Run main.py
         run: |
-          python main4b.py
+          python mainb4.py
           python first.py
 
       - name: git setting
