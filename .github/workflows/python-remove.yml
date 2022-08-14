@@ -1,7 +1,7 @@
 # This workflow will upload a Python Package using Twine when a release is created
 # For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
 
-name: Remove_SubjectInstall
+name: mainInstall
 
 # on:
 #   schedule:
@@ -30,9 +30,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject0.py
+          python main0.py
           python first.py
 
       - name: git setting
@@ -69,9 +69,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install chromedriver-binary
           pip install selenium==4.2.0
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject1.py
+          python main1.py
       - name: git setting
         run: |
           git config --local user.email "action@github.com"
@@ -106,9 +106,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install chromedriver-binary
           pip install selenium==4.2.0
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subjectb1.py
+          python mainb1.py
       - name: git setting
         run: |
           git config --local user.email "action@github.com"
@@ -144,9 +144,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install chromedriver-binary
           pip install selenium==4.2.0
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subjectc1.py
+          python mainc1.py
       - name: git setting
         run: |
           git config --local user.email "action@github.com"
@@ -185,9 +185,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject2.py
+          python main2.py
           python first.py
 
       - name: git setting
@@ -227,9 +227,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subjectb2.py
+          python mainb2.py
           python first.py
 
       - name: git setting
@@ -269,9 +269,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject3.py
+          python main3.py
           python first.py
 
       - name: git setting
@@ -311,9 +311,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subjectb3.py
+          python mainb3.py
           python first.py
 
       - name: git setting
@@ -352,9 +352,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject4.py
+          python main4.py
           python first.py
 
       - name: git setting
@@ -393,9 +393,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subjectb4.py
+          python mainb4.py
           python first.py
 
       - name: git setting
@@ -435,9 +435,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject5.py
+          python main5.py
           python first.py
 
       - name: git setting
@@ -477,9 +477,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject6.py
+          python main6.py
           python first.py
 
       - name: git setting
@@ -518,9 +518,9 @@ jobs:
           python -m pip install --upgrade pippip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject6b.py
+          python main6b.py
           python first.py
 
       - name: git setting
@@ -559,9 +559,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject6c.py
+          python main6c.py
           python first.py
 
       - name: git setting
@@ -601,9 +601,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject7.py
+          python main7.py
           python first.py
 
       - name: git setting
@@ -643,9 +643,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject8.py
+          python main8.py
           python first.py
 
       - name: git setting
@@ -685,9 +685,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject9.py
+          python main9.py
           python first.py
 
       - name: git setting
@@ -724,9 +724,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subjectb9.py
+          python mainb9.py
           python first.py
 
       - name: git setting
@@ -764,9 +764,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject10.py
+          python main10.py
           python first.py
 
       - name: git setting
@@ -806,9 +806,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject11.py
+          python main11.py
           python first.py
 
       - name: git setting
@@ -848,9 +848,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject12.py
+          python main12.py
           python first.py
 
       - name: git setting
@@ -890,9 +890,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject13.py
+          python main13.py
           python first.py
 
       - name: git setting
@@ -932,9 +932,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject14.py
+          python main14.py
           python first.py
 
       - name: git setting
@@ -974,9 +974,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject15.py
+          python main15.py
           python first.py
 
       - name: git setting
@@ -1017,9 +1017,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject16.py
+          python main16.py
           python first.py
 
       - name: git setting
@@ -1060,9 +1060,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject17.py
+          python main17.py
           python first.py
 
       - name: git setting
@@ -1103,9 +1103,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject18.py
+          python main18.py
           python first.py
 
       - name: git setting
@@ -1146,9 +1146,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject19.py
+          python main19.py
           python first.py
 
       - name: git setting
@@ -1189,9 +1189,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject20.py
+          python main20.py
           python first.py
 
       - name: git setting
@@ -1232,9 +1232,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject21.py
+          python main21.py
           python first.py
 
       - name: git setting
@@ -1275,9 +1275,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject22.py
+          python main22.py
           python first.py
 
       - name: git setting
@@ -1318,9 +1318,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject23.py
+          python main23.py
           python first.py
 
       - name: git setting
@@ -1361,9 +1361,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject24.py
+          python main24.py
           python first.py
 
       - name: git setting
@@ -1404,9 +1404,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject25.py
+          python main25.py
           python first.py
 
       - name: git setting
@@ -1447,9 +1447,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject26.py
+          python main26.py
           python first.py
 
       - name: git setting
@@ -1490,9 +1490,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject27.py
+          python main27.py
           python first.py
 
       - name: git setting
@@ -1533,9 +1533,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject28.py
+          python main28.py
           python first.py
 
       - name: git setting
@@ -1576,9 +1576,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject29.py
+          python main29.py
           python first.py
 
       - name: git setting
@@ -1619,9 +1619,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject30.py
+          python main30.py
           python first.py
 
       - name: git setting
@@ -1662,9 +1662,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject31.py
+          python main31.py
           python first.py
 
       - name: git setting
@@ -1705,9 +1705,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject32.py
+          python main32.py
           python first.py
 
       - name: git setting
@@ -1748,9 +1748,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject33.py
+          python main33.py
           python first.py
 
       - name: git setting
@@ -1791,9 +1791,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject34.py
+          python main34.py
           python first.py
 
       - name: git setting
@@ -1834,9 +1834,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject35.py
+          python main35.py
           python first.py
 
       - name: git setting
@@ -1877,9 +1877,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject36.py
+          python main36.py
           python first.py
 
       - name: git setting
@@ -1920,9 +1920,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject37.py
+          python main37.py
           python first.py
 
       - name: git setting
@@ -1963,9 +1963,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject38.py
+          python main38.py
           python first.py
 
       - name: git setting
@@ -2006,9 +2006,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject39.py
+          python main39.py
           python first.py
 
       - name: git setting
@@ -2049,9 +2049,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject40.py
+          python main40.py
           python first.py
 
       - name: git setting
@@ -2092,9 +2092,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject41.py
+          python main41.py
           python first.py
 
       - name: git setting
@@ -2135,9 +2135,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject42.py
+          python main42.py
           python first.py
 
       - name: git setting
@@ -2178,9 +2178,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject43.py
+          python main43.py
           python first.py
 
       - name: git setting
@@ -2221,9 +2221,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject44.py
+          python main44.py
           python first.py
 
       - name: git setting
@@ -2264,9 +2264,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject45.py
+          python main45.py
           python first.py
 
       - name: git setting
@@ -2307,9 +2307,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject46.py
+          python main46.py
           python first.py
 
       - name: git setting
@@ -2350,9 +2350,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject47.py
+          python main47.py
           python first.py
 
       - name: git setting
@@ -2393,9 +2393,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject48.py
+          python main48.py
           python first.py
 
       - name: git setting
@@ -2436,9 +2436,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject49.py
+          python main49.py
           python first.py
 
       - name: git setting
@@ -2479,9 +2479,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject50.py
+          python main50.py
           python first.py
 
       - name: git setting
@@ -2522,9 +2522,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject51.py
+          python main51.py
           python first.py
 
       - name: git setting
@@ -2565,9 +2565,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject52.py
+          python main52.py
           python first.py
 
       - name: git setting
@@ -2608,9 +2608,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject53.py
+          python main53.py
           python first.py
 
       - name: git setting
@@ -2651,9 +2651,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject54.py
+          python main54.py
           python first.py
 
       - name: git setting
@@ -2694,9 +2694,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject55.py
+          python main55.py
           python first.py
 
       - name: git setting
@@ -2737,9 +2737,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject56.py
+          python main56.py
           python first.py
 
       - name: git setting
@@ -2780,9 +2780,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject57.py
+          python main57.py
           python first.py
 
       - name: git setting
@@ -2823,9 +2823,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject58.py
+          python main58.py
           python first.py
 
       - name: git setting
@@ -2866,9 +2866,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
-          python Remove_subject59.py
+          python main59.py
           python first.py
 
       - name: git setting
@@ -2906,7 +2906,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
           python dubble.py
 
@@ -2947,7 +2947,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas
 
-      - name: Run Remove_subject.py
+      - name: Run main.py
         run: |
           python sitemap.py
 
