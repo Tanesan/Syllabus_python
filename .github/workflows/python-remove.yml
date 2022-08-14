@@ -1,0 +1,2979 @@
+# This workflow will upload a Python Package using Twine when a release is created
+# For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
+
+name: Remove_SubjectInstall
+
+# on:
+#   schedule:
+#      - cron: "0 22 */4 * *" # cronで定期実行
+on: workflow_dispatch
+
+jobs:
+  School-of-Theology:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject0.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "神学部" && git push -u origin Remove_subject
+          fi
+
+  School-of-Humanities-1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Theology
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject1.py
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "文学部1" && git push -u origin Remove_subject
+          fi
+
+  School-of-Humanities-2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Humanities-1
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subjectb1.py
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git fetch
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "文学部2" &&git push -u origin Remove_subject
+          fi
+
+  School-of-Humanities-3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Humanities-2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subjectc1.py
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git fetch
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "文学部3" &&git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Sociology:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Humanities-3
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject2.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "社会学部" && git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Sociology2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Sociology
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subjectb2.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "社会学部2" && git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Law-and-Politics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Sociology2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject3.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "法学部" && git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Law-and-Politics-2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Law-and-Politics
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subjectb3.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "法学部" && git push -u origin Remove_subject
+          fi
+
+  School-of-Economics-1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Law-and-Politics-2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject4.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経済学部" && git push -u origin Remove_subject
+          fi
+
+  School-of-Economics-2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Economics-1
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subjectb4.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経済学部2" && git push -u origin Remove_subject
+          fi
+
+
+  School-of-Business-Administration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Economics-2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject5.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "商学部" && git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Science-and-Technology1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Business-Administration
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject6.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "理工学部1" && git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Science-and-Technology2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Science-and-Technology1
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pippip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject6b.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "理工学部2" && git push -u origin Remove_subject
+          fi
+        
+  School-of-Science-and-Technology3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Science-and-Technology2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject6c.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "理工学部3" && git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Policy-Studies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Science-and-Technology3
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject7.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "総合政策学部" && git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Human-Welfare-Studies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Policy-Studies
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject8.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "人間福祉学部" && git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Education:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Human-Welfare-Studies
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject9.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "教育学部" && git push -u origin Remove_subject
+          fi
+
+  School-of-Education2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Education
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subjectb9.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "教育学部2" && git push -u origin Remove_subject
+          fi
+
+
+  School-of-International-Studies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Education2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject10.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国際学部" &&git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Engineering:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-International-Studies
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject11.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "工学部" && git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Biological-and-Environmental-Sciences:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Engineering
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject12.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "生命環境学部" &&git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Architecture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Biological-and-Environmental-Sciences
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject13.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "建築学部" && git push -u origin Remove_subject
+          fi
+        
+
+  free:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Architecture
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject14.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "free" && git push -u origin Remove_subject
+          fi
+        
+
+  Sports-and-Health-Sciences-Program-Office:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: free
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject15.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin Remove_subject
+          fi
+        
+
+  Center-for-Common-Educational-Programs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Sports-and-Health-Sciences-Program-Office
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject16.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "共通教育センター" && git push -u origin Remove_subject
+          fi
+        
+
+  Center-for-Career-Planning-and-Placement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Center-for-Common-Educational-Programs
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject17.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "キャリアセンター" && git push -u origin Remove_subject
+          fi
+        
+
+  Center-for-Common-Educational-Programs-Information-Science-Courses:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Center-for-Career-Planning-and-Placement
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject18.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin Remove_subject
+          fi
+        
+
+  Language-Center:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Center-for-Common-Educational-Programs-Information-Science-Courses
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject19.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "言語教育研究センター" && git push -u origin Remove_subject
+          fi
+        
+
+  Center-for-International-Education-and-Cooperation-JEASP:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Language-Center
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject20.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin Remove_subject
+          fi
+        
+
+  Research-Center-for-Teacher-Development-for-Certifications:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Center-for-International-Education-and-Cooperation-JEASP
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject21.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin Remove_subject
+          fi
+        
+
+  Research-Center-for-Teacher-Development-for-Special-Studies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Research-Center-for-Teacher-Development-for-Certifications
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject22.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin Remove_subject
+          fi
+        
+
+  Center-for-International-Education-and-Cooperation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Research-Center-for-Teacher-Development-for-Special-Studies
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject23.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin Remove_subject
+          fi
+        
+
+  Research-Center-for-Christianity-and-Culture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Center-for-International-Education-and-Cooperation
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject24.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin Remove_subject
+          fi
+        
+
+  Center-for-Japanese-Language-Education:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Research-Center-for-Christianity-and-Culture
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject25.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "日本語教育センター" && git push -u origin Remove_subject
+          fi
+        
+
+  Center-for-Hands-on-Learning-Programs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Center-for-Japanese-Language-Education
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject26.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin Remove_subject
+          fi
+        
+
+  Integrated-Center-for-UN-and-Foreign-Affairs-Studies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Center-for-Hands-on-Learning-Programs
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject27.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国連・外交統括センター" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Theology-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Integrated-Center-for-UN-and-Foreign-Affairs-Studies
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject28.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "神学研究科前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Humanities-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Theology-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject29.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "文学研究科前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Sociology-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Humanities-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject30.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "社会学研究科前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Law-and-Politics-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Sociology-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject31.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "法学研究科前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Economics-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Law-and-Politics-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject32.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経済学研究科前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Business-Administration-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Economics-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject33.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "商学研究科前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Science-and-Technology-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Business-Administration-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject34.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "理工学研究科前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Policy-Studies-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Science-and-Technology-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject35.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "総合政策研究科前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Language-Communication-and-Culture-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Policy-Studies-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject36.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "言語コミュニケーション前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Human-Welfare-Studies-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Language-Communication-and-Culture-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject37.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "人間福祉研究科前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Education-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Human-Welfare-Studies-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject38.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "教育学研究科前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Science-and-Technology-Masters-Course2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Education-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject39.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "理工学研究科修士" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-International-Studies-Masters-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Science-and-Technology-Masters-Course2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject40.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国際学研究科前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Masters-Course-Certified:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-International-Studies-Masters-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject41.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Theology-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Masters-Course-Certified
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject42.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "神学研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Humanities-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Theology-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject43.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "文学研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Sociology-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Humanities-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject44.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "社会学研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Law-and-Politics-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Sociology-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject45.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "法学研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Economics-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Law-and-Politics-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject46.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経済学研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Business-Administration-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Economics-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject47.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "商学研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Science-and-Technology-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Business-Administration-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject48.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "理工学研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Policy-Studies-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Science-and-Technology-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject49.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "総合政策研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Language-Communication-and-Culture-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Policy-Studies-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject50.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "言語コミュニケーション後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Human-Welfare-Studies-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Language-Communication-and-Culture-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject51.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "人間福祉研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Education-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Human-Welfare-Studies-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject52.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "教育学研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Institute-of-Business-and-Accounting-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Education-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject53.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経営戦略研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-International-Studies-Doctoral-Course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Institute-of-Business-and-Accounting-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject54.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "国際学研究科後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Graduate-School-of-Doctoral-Course-Certified:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-International-Studies-Doctoral-Course
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject55.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin Remove_subject
+          fi
+        
+
+  Law-School:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Graduate-School-of-Doctoral-Course-Certified
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject56.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "司法研究科" && git push -u origin Remove_subject
+          fi
+        
+
+  Institute-of-Business-and-Accounting:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Law-School
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject57.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin Remove_subject
+          fi
+        
+
+  free2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Institute-of-Business-and-Accounting
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject58.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin Remove_subject
+          fi
+        
+
+  School-of-Science:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: free2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install Flask
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run Remove_subject.py
+        run: |
+          python Remove_subject59.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "fin" && git push -u origin Remove_subject
+          fi
+        
+
+  Remove-Dubble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Science
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+
+      - name: Run Remove_subject.py
+        run: |
+          python dubble.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "remove dubble" && git push -u origin Remove_subject
+          fi
+        
+
+  Sitemap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Remove-Dubble
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install pandas
+
+      - name: Run Remove_subject.py
+        run: |
+          python sitemap.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "Sitemap" && git push -u origin Remove_subject
+          fi
+        
+
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: Sitemap
+    steps:
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
