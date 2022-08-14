@@ -47,7 +47,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "神学部" && git push -u origin Remove_subject
+            git add . && git commit -m "神学部" && git push -u origin HEAD:Remove_subject
           fi
 
   School-of-Humanities-1:
@@ -84,7 +84,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "文学部1" && git push -u origin Remove_subject
+            git add . && git commit -m "文学部1" && git push -u origin HEAD:Remove_subject
           fi
 
   School-of-Humanities-2:
@@ -122,7 +122,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "文学部2" &&git push -u origin Remove_subject
+            git add . && git commit -m "文学部2" &&git push -u origin HEAD:Remove_subject
           fi
 
   School-of-Humanities-3:
@@ -160,7 +160,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "文学部3" &&git push -u origin Remove_subject
+            git add . && git commit -m "文学部3" &&git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -202,7 +202,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "社会学部" && git push -u origin Remove_subject
+            git add . && git commit -m "社会学部" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -244,7 +244,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "社会学部2" && git push -u origin Remove_subject
+            git add . && git commit -m "社会学部2" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -286,7 +286,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "法学部" && git push -u origin Remove_subject
+            git add . && git commit -m "法学部" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -328,7 +328,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "法学部" && git push -u origin Remove_subject
+            git add . && git commit -m "法学部" && git push -u origin HEAD:Remove_subject
           fi
 
   School-of-Economics-1:
@@ -369,7 +369,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経済学部" && git push -u origin Remove_subject
+            git add . && git commit -m "経済学部" && git push -u origin HEAD:Remove_subject
           fi
 
   School-of-Economics-2:
@@ -410,7 +410,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経済学部2" && git push -u origin Remove_subject
+            git add . && git commit -m "経済学部2" && git push -u origin HEAD:Remove_subject
           fi
 
 
@@ -452,7 +452,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "商学部" && git push -u origin Remove_subject
+            git add . && git commit -m "商学部" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -494,7 +494,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学部1" && git push -u origin Remove_subject
+            git add . && git commit -m "理工学部1" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -535,7 +535,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学部2" && git push -u origin Remove_subject
+            git add . && git commit -m "理工学部2" && git push -u origin HEAD:Remove_subject
           fi
         
   School-of-Science-and-Technology3:
@@ -576,7 +576,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学部3" && git push -u origin Remove_subject
+            git add . && git commit -m "理工学部3" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -618,7 +618,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "総合政策学部" && git push -u origin Remove_subject
+            git add . && git commit -m "総合政策学部" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -660,7 +660,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "人間福祉学部" && git push -u origin Remove_subject
+            git add . && git commit -m "人間福祉学部" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -700,7 +700,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教育学部" && git push -u origin Remove_subject
+            git add . && git commit -m "教育学部" && git push -u origin HEAD:Remove_subject
           fi
 
   School-of-Education2:
@@ -739,7 +739,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教育学部2" && git push -u origin Remove_subject
+            git add . && git commit -m "教育学部2" && git push -u origin HEAD:Remove_subject
           fi
 
 
@@ -781,7 +781,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国際学部" &&git push -u origin Remove_subject
+            git add . && git commit -m "国際学部" &&git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -823,7 +823,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "工学部" && git push -u origin Remove_subject
+            git add . && git commit -m "工学部" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -865,7 +865,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "生命環境学部" &&git push -u origin Remove_subject
+            git add . && git commit -m "生命環境学部" &&git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -907,7 +907,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "建築学部" && git push -u origin Remove_subject
+            git add . && git commit -m "建築学部" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -949,7 +949,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "free" && git push -u origin Remove_subject
+            git add . && git commit -m "free" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -991,7 +991,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin Remove_subject
+            git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1034,7 +1034,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "共通教育センター" && git push -u origin Remove_subject
+            git add . && git commit -m "共通教育センター" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1077,7 +1077,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "キャリアセンター" && git push -u origin Remove_subject
+            git add . && git commit -m "キャリアセンター" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1120,7 +1120,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin Remove_subject
+            git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1163,7 +1163,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "言語教育研究センター" && git push -u origin Remove_subject
+            git add . && git commit -m "言語教育研究センター" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1206,7 +1206,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin Remove_subject
+            git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1249,7 +1249,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin Remove_subject
+            git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1292,7 +1292,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin Remove_subject
+            git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1335,7 +1335,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin Remove_subject
+            git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1378,7 +1378,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin Remove_subject
+            git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1421,7 +1421,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "日本語教育センター" && git push -u origin Remove_subject
+            git add . && git commit -m "日本語教育センター" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1464,7 +1464,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin Remove_subject
+            git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1507,7 +1507,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国連・外交統括センター" && git push -u origin Remove_subject
+            git add . && git commit -m "国連・外交統括センター" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1550,7 +1550,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "神学研究科前期" && git push -u origin Remove_subject
+            git add . && git commit -m "神学研究科前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1593,7 +1593,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "文学研究科前期" && git push -u origin Remove_subject
+            git add . && git commit -m "文学研究科前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1636,7 +1636,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "社会学研究科前期" && git push -u origin Remove_subject
+            git add . && git commit -m "社会学研究科前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1679,7 +1679,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "法学研究科前期" && git push -u origin Remove_subject
+            git add . && git commit -m "法学研究科前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1722,7 +1722,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経済学研究科前期" && git push -u origin Remove_subject
+            git add . && git commit -m "経済学研究科前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1765,7 +1765,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "商学研究科前期" && git push -u origin Remove_subject
+            git add . && git commit -m "商学研究科前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1808,7 +1808,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学研究科前期" && git push -u origin Remove_subject
+            git add . && git commit -m "理工学研究科前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1851,7 +1851,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "総合政策研究科前期" && git push -u origin Remove_subject
+            git add . && git commit -m "総合政策研究科前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1894,7 +1894,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "言語コミュニケーション前期" && git push -u origin Remove_subject
+            git add . && git commit -m "言語コミュニケーション前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1937,7 +1937,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "人間福祉研究科前期" && git push -u origin Remove_subject
+            git add . && git commit -m "人間福祉研究科前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -1980,7 +1980,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教育学研究科前期" && git push -u origin Remove_subject
+            git add . && git commit -m "教育学研究科前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2023,7 +2023,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学研究科修士" && git push -u origin Remove_subject
+            git add . && git commit -m "理工学研究科修士" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2066,7 +2066,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国際学研究科前期" && git push -u origin Remove_subject
+            git add . && git commit -m "国際学研究科前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2109,7 +2109,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin Remove_subject
+            git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2152,7 +2152,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "神学研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "神学研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2195,7 +2195,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "文学研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "文学研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2238,7 +2238,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "社会学研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "社会学研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2281,7 +2281,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "法学研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "法学研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2324,7 +2324,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経済学研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "経済学研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2367,7 +2367,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "商学研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "商学研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2410,7 +2410,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "理工学研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2453,7 +2453,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "総合政策研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "総合政策研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2496,7 +2496,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "言語コミュニケーション後期" && git push -u origin Remove_subject
+            git add . && git commit -m "言語コミュニケーション後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2539,7 +2539,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "人間福祉研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "人間福祉研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2582,7 +2582,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教育学研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "教育学研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2625,7 +2625,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経営戦略研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "経営戦略研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2668,7 +2668,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国際学研究科後期" && git push -u origin Remove_subject
+            git add . && git commit -m "国際学研究科後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2711,7 +2711,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin Remove_subject
+            git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2754,7 +2754,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "司法研究科" && git push -u origin Remove_subject
+            git add . && git commit -m "司法研究科" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2797,7 +2797,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin Remove_subject
+            git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2840,7 +2840,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin Remove_subject
+            git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2883,7 +2883,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "fin" && git push -u origin Remove_subject
+            git add . && git commit -m "fin" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2922,7 +2922,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "remove dubble" && git push -u origin Remove_subject
+            git add . && git commit -m "remove dubble" && git push -u origin HEAD:Remove_subject
           fi
         
 
@@ -2963,7 +2963,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "Sitemap" && git push -u origin Remove_subject
+            git add . && git commit -m "Sitemap" && git push -u origin HEAD:Remove_subject
           fi
         
 
