@@ -30,9 +30,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main0.py
+          python Remove_subject0.py
           python first.py
 
       - name: git setting
@@ -47,7 +47,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "神学部" && git push -u origin main
+            git add . && git commit -m "神学部" && git push -u origin Remove_subject
           fi
 
   School-of-Humanities-1:
@@ -69,9 +69,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install chromedriver-binary
           pip install selenium==4.2.0
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main1.py
+          python Remove_subject1.py
       - name: git setting
         run: |
           git config --local user.email "action@github.com"
@@ -84,7 +84,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "文学部1" && git push -u origin main
+            git add . && git commit -m "文学部1" && git push -u origin Remove_subject
           fi
 
   School-of-Humanities-2:
@@ -106,9 +106,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install chromedriver-binary
           pip install selenium==4.2.0
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python mainb1.py
+          python Remove_subjectb1.py
       - name: git setting
         run: |
           git config --local user.email "action@github.com"
@@ -122,7 +122,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "文学部2" &&git push -u origin main
+            git add . && git commit -m "文学部2" &&git push -u origin Remove_subject
           fi
 
   School-of-Humanities-3:
@@ -144,9 +144,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install chromedriver-binary
           pip install selenium==4.2.0
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python mainc1.py
+          python Remove_subjectc1.py
       - name: git setting
         run: |
           git config --local user.email "action@github.com"
@@ -160,7 +160,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "文学部3" &&git push -u origin main
+            git add . && git commit -m "文学部3" &&git push -u origin Remove_subject
           fi
         
 
@@ -185,9 +185,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main2.py
+          python Remove_subject2.py
           python first.py
 
       - name: git setting
@@ -202,7 +202,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "社会学部" && git push -u origin main
+            git add . && git commit -m "社会学部" && git push -u origin Remove_subject
           fi
         
 
@@ -227,9 +227,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python mainb2.py
+          python Remove_subjectb2.py
           python first.py
 
       - name: git setting
@@ -244,7 +244,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "社会学部2" && git push -u origin main
+            git add . && git commit -m "社会学部2" && git push -u origin Remove_subject
           fi
         
 
@@ -269,9 +269,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main3.py
+          python Remove_subject3.py
           python first.py
 
       - name: git setting
@@ -286,7 +286,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "法学部" && git push -u origin main
+            git add . && git commit -m "法学部" && git push -u origin Remove_subject
           fi
         
 
@@ -311,9 +311,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python mainb3.py
+          python Remove_subjectb3.py
           python first.py
 
       - name: git setting
@@ -328,7 +328,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "法学部" && git push -u origin main
+            git add . && git commit -m "法学部" && git push -u origin Remove_subject
           fi
 
   School-of-Economics-1:
@@ -352,9 +352,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main4.py
+          python Remove_subject4.py
           python first.py
 
       - name: git setting
@@ -369,7 +369,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経済学部" && git push -u origin main
+            git add . && git commit -m "経済学部" && git push -u origin Remove_subject
           fi
 
   School-of-Economics-2:
@@ -393,9 +393,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python mainb4.py
+          python Remove_subjectb4.py
           python first.py
 
       - name: git setting
@@ -410,7 +410,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経済学部2" && git push -u origin main
+            git add . && git commit -m "経済学部2" && git push -u origin Remove_subject
           fi
 
 
@@ -435,9 +435,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main5.py
+          python Remove_subject5.py
           python first.py
 
       - name: git setting
@@ -452,7 +452,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "商学部" && git push -u origin main
+            git add . && git commit -m "商学部" && git push -u origin Remove_subject
           fi
         
 
@@ -477,9 +477,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main6.py
+          python Remove_subject6.py
           python first.py
 
       - name: git setting
@@ -494,7 +494,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学部1" && git push -u origin main
+            git add . && git commit -m "理工学部1" && git push -u origin Remove_subject
           fi
         
 
@@ -518,9 +518,9 @@ jobs:
           python -m pip install --upgrade pippip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main6b.py
+          python Remove_subject6b.py
           python first.py
 
       - name: git setting
@@ -535,7 +535,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学部2" && git push -u origin main
+            git add . && git commit -m "理工学部2" && git push -u origin Remove_subject
           fi
         
   School-of-Science-and-Technology3:
@@ -559,9 +559,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main6c.py
+          python Remove_subject6c.py
           python first.py
 
       - name: git setting
@@ -576,7 +576,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学部3" && git push -u origin main
+            git add . && git commit -m "理工学部3" && git push -u origin Remove_subject
           fi
         
 
@@ -601,9 +601,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main7.py
+          python Remove_subject7.py
           python first.py
 
       - name: git setting
@@ -618,7 +618,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "総合政策学部" && git push -u origin main
+            git add . && git commit -m "総合政策学部" && git push -u origin Remove_subject
           fi
         
 
@@ -643,9 +643,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main8.py
+          python Remove_subject8.py
           python first.py
 
       - name: git setting
@@ -660,7 +660,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "人間福祉学部" && git push -u origin main
+            git add . && git commit -m "人間福祉学部" && git push -u origin Remove_subject
           fi
         
 
@@ -685,9 +685,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main9.py
+          python Remove_subject9.py
           python first.py
 
       - name: git setting
@@ -700,7 +700,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教育学部" && git push -u origin main
+            git add . && git commit -m "教育学部" && git push -u origin Remove_subject
           fi
 
   School-of-Education2:
@@ -724,9 +724,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python mainb9.py
+          python Remove_subjectb9.py
           python first.py
 
       - name: git setting
@@ -739,7 +739,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教育学部2" && git push -u origin main
+            git add . && git commit -m "教育学部2" && git push -u origin Remove_subject
           fi
 
 
@@ -764,9 +764,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main10.py
+          python Remove_subject10.py
           python first.py
 
       - name: git setting
@@ -781,7 +781,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国際学部" &&git push -u origin main
+            git add . && git commit -m "国際学部" &&git push -u origin Remove_subject
           fi
         
 
@@ -806,9 +806,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main11.py
+          python Remove_subject11.py
           python first.py
 
       - name: git setting
@@ -823,7 +823,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "工学部" && git push -u origin main
+            git add . && git commit -m "工学部" && git push -u origin Remove_subject
           fi
         
 
@@ -848,9 +848,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main12.py
+          python Remove_subject12.py
           python first.py
 
       - name: git setting
@@ -865,7 +865,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "生命環境学部" &&git push -u origin main
+            git add . && git commit -m "生命環境学部" &&git push -u origin Remove_subject
           fi
         
 
@@ -890,9 +890,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main13.py
+          python Remove_subject13.py
           python first.py
 
       - name: git setting
@@ -907,7 +907,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "建築学部" && git push -u origin main
+            git add . && git commit -m "建築学部" && git push -u origin Remove_subject
           fi
         
 
@@ -932,9 +932,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main14.py
+          python Remove_subject14.py
           python first.py
 
       - name: git setting
@@ -949,7 +949,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "free" && git push -u origin main
+            git add . && git commit -m "free" && git push -u origin Remove_subject
           fi
         
 
@@ -974,9 +974,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main15.py
+          python Remove_subject15.py
           python first.py
 
       - name: git setting
@@ -991,7 +991,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin main
+            git add . && git commit -m "スポーツ科学・健康科学教育プログラム室" &&git push -u origin Remove_subject
           fi
         
 
@@ -1017,9 +1017,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main16.py
+          python Remove_subject16.py
           python first.py
 
       - name: git setting
@@ -1034,7 +1034,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "共通教育センター" && git push -u origin main
+            git add . && git commit -m "共通教育センター" && git push -u origin Remove_subject
           fi
         
 
@@ -1060,9 +1060,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main17.py
+          python Remove_subject17.py
           python first.py
 
       - name: git setting
@@ -1077,7 +1077,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "キャリアセンター" && git push -u origin main
+            git add . && git commit -m "キャリアセンター" && git push -u origin Remove_subject
           fi
         
 
@@ -1103,9 +1103,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main18.py
+          python Remove_subject18.py
           python first.py
 
       - name: git setting
@@ -1120,7 +1120,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin main
+            git add . && git commit -m "共通教育センター（情報科学科目）" && git push -u origin Remove_subject
           fi
         
 
@@ -1146,9 +1146,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main19.py
+          python Remove_subject19.py
           python first.py
 
       - name: git setting
@@ -1163,7 +1163,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "言語教育研究センター" && git push -u origin main
+            git add . && git commit -m "言語教育研究センター" && git push -u origin Remove_subject
           fi
         
 
@@ -1189,9 +1189,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main20.py
+          python Remove_subject20.py
           python first.py
 
       - name: git setting
@@ -1206,7 +1206,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin main
+            git add . && git commit -m "国際教育・協力センター（CIEC　JEASP）" && git push -u origin Remove_subject
           fi
         
 
@@ -1232,9 +1232,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main21.py
+          python Remove_subject21.py
           python first.py
 
       - name: git setting
@@ -1249,7 +1249,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin main
+            git add . && git commit -m "教職教育研究センター（資格）" && git push -u origin Remove_subject
           fi
         
 
@@ -1275,9 +1275,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main22.py
+          python Remove_subject22.py
           python first.py
 
       - name: git setting
@@ -1292,7 +1292,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin main
+            git add . && git commit -m "教職教育研究センター（教職専門）" && git push -u origin Remove_subject
           fi
         
 
@@ -1318,9 +1318,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main23.py
+          python Remove_subject23.py
           python first.py
 
       - name: git setting
@@ -1335,7 +1335,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin main
+            git add . && git commit -m "国際教育・協力センター/CIEC" && git push -u origin Remove_subject
           fi
         
 
@@ -1361,9 +1361,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main24.py
+          python Remove_subject24.py
           python first.py
 
       - name: git setting
@@ -1378,7 +1378,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin main
+            git add . && git commit -m "キリスト教と文化研究センター" && git push -u origin Remove_subject
           fi
         
 
@@ -1404,9 +1404,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main25.py
+          python Remove_subject25.py
           python first.py
 
       - name: git setting
@@ -1421,7 +1421,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "日本語教育センター" && git push -u origin main
+            git add . && git commit -m "日本語教育センター" && git push -u origin Remove_subject
           fi
         
 
@@ -1447,9 +1447,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main26.py
+          python Remove_subject26.py
           python first.py
 
       - name: git setting
@@ -1464,7 +1464,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin main
+            git add . && git commit -m "ハンズオン・ラーニングセンター" && git push -u origin Remove_subject
           fi
         
 
@@ -1490,9 +1490,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main27.py
+          python Remove_subject27.py
           python first.py
 
       - name: git setting
@@ -1507,7 +1507,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国連・外交統括センター" && git push -u origin main
+            git add . && git commit -m "国連・外交統括センター" && git push -u origin Remove_subject
           fi
         
 
@@ -1533,9 +1533,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main28.py
+          python Remove_subject28.py
           python first.py
 
       - name: git setting
@@ -1550,7 +1550,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "神学研究科前期" && git push -u origin main
+            git add . && git commit -m "神学研究科前期" && git push -u origin Remove_subject
           fi
         
 
@@ -1576,9 +1576,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main29.py
+          python Remove_subject29.py
           python first.py
 
       - name: git setting
@@ -1593,7 +1593,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "文学研究科前期" && git push -u origin main
+            git add . && git commit -m "文学研究科前期" && git push -u origin Remove_subject
           fi
         
 
@@ -1619,9 +1619,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main30.py
+          python Remove_subject30.py
           python first.py
 
       - name: git setting
@@ -1636,7 +1636,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "社会学研究科前期" && git push -u origin main
+            git add . && git commit -m "社会学研究科前期" && git push -u origin Remove_subject
           fi
         
 
@@ -1662,9 +1662,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main31.py
+          python Remove_subject31.py
           python first.py
 
       - name: git setting
@@ -1679,7 +1679,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "法学研究科前期" && git push -u origin main
+            git add . && git commit -m "法学研究科前期" && git push -u origin Remove_subject
           fi
         
 
@@ -1705,9 +1705,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main32.py
+          python Remove_subject32.py
           python first.py
 
       - name: git setting
@@ -1722,7 +1722,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経済学研究科前期" && git push -u origin main
+            git add . && git commit -m "経済学研究科前期" && git push -u origin Remove_subject
           fi
         
 
@@ -1748,9 +1748,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main33.py
+          python Remove_subject33.py
           python first.py
 
       - name: git setting
@@ -1765,7 +1765,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "商学研究科前期" && git push -u origin main
+            git add . && git commit -m "商学研究科前期" && git push -u origin Remove_subject
           fi
         
 
@@ -1791,9 +1791,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main34.py
+          python Remove_subject34.py
           python first.py
 
       - name: git setting
@@ -1808,7 +1808,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学研究科前期" && git push -u origin main
+            git add . && git commit -m "理工学研究科前期" && git push -u origin Remove_subject
           fi
         
 
@@ -1834,9 +1834,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main35.py
+          python Remove_subject35.py
           python first.py
 
       - name: git setting
@@ -1851,7 +1851,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "総合政策研究科前期" && git push -u origin main
+            git add . && git commit -m "総合政策研究科前期" && git push -u origin Remove_subject
           fi
         
 
@@ -1877,9 +1877,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main36.py
+          python Remove_subject36.py
           python first.py
 
       - name: git setting
@@ -1894,7 +1894,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "言語コミュニケーション前期" && git push -u origin main
+            git add . && git commit -m "言語コミュニケーション前期" && git push -u origin Remove_subject
           fi
         
 
@@ -1920,9 +1920,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main37.py
+          python Remove_subject37.py
           python first.py
 
       - name: git setting
@@ -1937,7 +1937,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "人間福祉研究科前期" && git push -u origin main
+            git add . && git commit -m "人間福祉研究科前期" && git push -u origin Remove_subject
           fi
         
 
@@ -1963,9 +1963,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main38.py
+          python Remove_subject38.py
           python first.py
 
       - name: git setting
@@ -1980,7 +1980,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教育学研究科前期" && git push -u origin main
+            git add . && git commit -m "教育学研究科前期" && git push -u origin Remove_subject
           fi
         
 
@@ -2006,9 +2006,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main39.py
+          python Remove_subject39.py
           python first.py
 
       - name: git setting
@@ -2023,7 +2023,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学研究科修士" && git push -u origin main
+            git add . && git commit -m "理工学研究科修士" && git push -u origin Remove_subject
           fi
         
 
@@ -2049,9 +2049,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main40.py
+          python Remove_subject40.py
           python first.py
 
       - name: git setting
@@ -2066,7 +2066,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国際学研究科前期" && git push -u origin main
+            git add . && git commit -m "国際学研究科前期" && git push -u origin Remove_subject
           fi
         
 
@@ -2092,9 +2092,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main41.py
+          python Remove_subject41.py
           python first.py
 
       - name: git setting
@@ -2109,7 +2109,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin main
+            git add . && git commit -m "大学院共通科目・認定科目前期" && git push -u origin Remove_subject
           fi
         
 
@@ -2135,9 +2135,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main42.py
+          python Remove_subject42.py
           python first.py
 
       - name: git setting
@@ -2152,7 +2152,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "神学研究科後期" && git push -u origin main
+            git add . && git commit -m "神学研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2178,9 +2178,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main43.py
+          python Remove_subject43.py
           python first.py
 
       - name: git setting
@@ -2195,7 +2195,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "文学研究科後期" && git push -u origin main
+            git add . && git commit -m "文学研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2221,9 +2221,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main44.py
+          python Remove_subject44.py
           python first.py
 
       - name: git setting
@@ -2238,7 +2238,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "社会学研究科後期" && git push -u origin main
+            git add . && git commit -m "社会学研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2264,9 +2264,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main45.py
+          python Remove_subject45.py
           python first.py
 
       - name: git setting
@@ -2281,7 +2281,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "法学研究科後期" && git push -u origin main
+            git add . && git commit -m "法学研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2307,9 +2307,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main46.py
+          python Remove_subject46.py
           python first.py
 
       - name: git setting
@@ -2324,7 +2324,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経済学研究科後期" && git push -u origin main
+            git add . && git commit -m "経済学研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2350,9 +2350,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main47.py
+          python Remove_subject47.py
           python first.py
 
       - name: git setting
@@ -2367,7 +2367,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "商学研究科後期" && git push -u origin main
+            git add . && git commit -m "商学研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2393,9 +2393,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main48.py
+          python Remove_subject48.py
           python first.py
 
       - name: git setting
@@ -2410,7 +2410,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "理工学研究科後期" && git push -u origin main
+            git add . && git commit -m "理工学研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2436,9 +2436,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main49.py
+          python Remove_subject49.py
           python first.py
 
       - name: git setting
@@ -2453,7 +2453,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "総合政策研究科後期" && git push -u origin main
+            git add . && git commit -m "総合政策研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2479,9 +2479,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main50.py
+          python Remove_subject50.py
           python first.py
 
       - name: git setting
@@ -2496,7 +2496,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "言語コミュニケーション後期" && git push -u origin main
+            git add . && git commit -m "言語コミュニケーション後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2522,9 +2522,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main51.py
+          python Remove_subject51.py
           python first.py
 
       - name: git setting
@@ -2539,7 +2539,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "人間福祉研究科後期" && git push -u origin main
+            git add . && git commit -m "人間福祉研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2565,9 +2565,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main52.py
+          python Remove_subject52.py
           python first.py
 
       - name: git setting
@@ -2582,7 +2582,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "教育学研究科後期" && git push -u origin main
+            git add . && git commit -m "教育学研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2608,9 +2608,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main53.py
+          python Remove_subject53.py
           python first.py
 
       - name: git setting
@@ -2625,7 +2625,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経営戦略研究科後期" && git push -u origin main
+            git add . && git commit -m "経営戦略研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2651,9 +2651,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main54.py
+          python Remove_subject54.py
           python first.py
 
       - name: git setting
@@ -2668,7 +2668,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "国際学研究科後期" && git push -u origin main
+            git add . && git commit -m "国際学研究科後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2694,9 +2694,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main55.py
+          python Remove_subject55.py
           python first.py
 
       - name: git setting
@@ -2711,7 +2711,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin main
+            git add . && git commit -m "大学院共通科目・認定科目後期" && git push -u origin Remove_subject
           fi
         
 
@@ -2737,9 +2737,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main56.py
+          python Remove_subject56.py
           python first.py
 
       - name: git setting
@@ -2754,7 +2754,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "司法研究科" && git push -u origin main
+            git add . && git commit -m "司法研究科" && git push -u origin Remove_subject
           fi
         
 
@@ -2780,9 +2780,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main57.py
+          python Remove_subject57.py
           python first.py
 
       - name: git setting
@@ -2797,7 +2797,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin main
+            git add . && git commit -m "経営戦略研究科/IBA" && git push -u origin Remove_subject
           fi
         
 
@@ -2823,9 +2823,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main58.py
+          python Remove_subject58.py
           python first.py
 
       - name: git setting
@@ -2840,7 +2840,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin main
+            git add . && git commit -m "使用しない（カリキュラム設定用　非正規　大学院）" && git push -u origin Remove_subject
           fi
         
 
@@ -2866,9 +2866,9 @@ jobs:
           pip install chromedriver-binary
           pip install selenium==4.2.0
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
-          python main59.py
+          python Remove_subject59.py
           python first.py
 
       - name: git setting
@@ -2883,7 +2883,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "fin" && git push -u origin main
+            git add . && git commit -m "fin" && git push -u origin Remove_subject
           fi
         
 
@@ -2906,7 +2906,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
           python dubble.py
 
@@ -2922,7 +2922,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "remove dubble" && git push -u origin main
+            git add . && git commit -m "remove dubble" && git push -u origin Remove_subject
           fi
         
 
@@ -2947,7 +2947,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas
 
-      - name: Run main.py
+      - name: Run Remove_subject.py
         run: |
           python sitemap.py
 
@@ -2963,7 +2963,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add . && git commit -m "Sitemap" && git push -u origin main
+            git add . && git commit -m "Sitemap" && git push -u origin Remove_subject
           fi
         
 
