@@ -80,16 +80,8 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "20 %",
-      ""
-    ],
-    "成績評価Grading2": [
-      "平常リポート／Individual reports (04)",
-      "80 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "20 %", ""],
+    "成績評価Grading2": ["平常リポート／Individual reports (04)", "80 %", ""],
     "成績評価Grading3": "備考　Note\n授業中試験(Test conducted in class)/平常リポート(Ordinary paper)，出席，レポート提出，試験等により採点を行う．下記が合格の必要条件である．\n- 欠席が3回未満であること (遅刻・早退は30分単位で欠席1/6回として扱う).\n- 課題 B1〜B9 について, 最終提出期限までに, オプション課題以外のプログラムを完成させてレポートを提出すること.\n- 中間試験 (実技試験) T1, T2 の両方に合格すること.",
     "更新日時/Date of Update0": "2022年08月18日 14時36分59秒",
     "項番No.0": [],

@@ -60,10 +60,7 @@
       "復習セッション<BR/>Review Session",
       "期末試験に向け，全体的な講義内容の復習をする．<BR/>Review the entire materials for the final exam."
     ],
-    "第14回": [
-      "期末試験<BR/>Final Exam",
-      ""
-    ]
+    "第14回": ["期末試験<BR/>Final Exam", ""]
   },
   "評価": {
     "参考書/Reference books0": [
@@ -87,11 +84,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "定期試験／Final Examination (01)",
-      "100 %",
-      ""
-    ],
+    "成績評価Grading1": ["定期試験／Final Examination (01)", "100 %", ""],
     "更新日時/Date of Update0": "2022年08月11日 15時17分49秒",
     "項番No.0": [],
     "項番No.1": [

@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "１４回すべて対面授業を実施する。",
   "トピック": {
-    "第1回": [
-      "9月22日 初回オリエンテーション、デモンストレーション",
-      ""
-    ],
-    "第2回": [
-      "9月29日 Ch.1:The American West: Myth and Reality",
-      ""
-    ],
-    "第3回": [
-      "10月6日 Ch.2: Race and Class in America",
-      ""
-    ],
-    "第4回": [
-      "10月13日 Ch.3: Interracial Love and Marriage",
-      ""
-    ],
-    "第5回": [
-      "10月20日 Ch.4: Religion: America&#39;s Double Vision",
-      ""
-    ],
-    "第6回": [
-      "10月27日 Ch.5: The Jury System",
-      ""
-    ],
-    "第7回": [
-      "11月3日 Ch.6: Hate Crime",
-      ""
-    ],
-    "第8回": [
-      "11月10日 授業中試験１",
-      ""
-    ],
-    "第9回": [
-      "11月17日 Ch.7: Guns and Media",
-      ""
-    ],
-    "第10回": [
-      "11月24日  Ch.8: Heroes: Legends and Lies",
-      ""
-    ],
-    "第11回": [
-      "12月1日 Ch.9: War and Media: The First Casuality",
-      ""
-    ],
-    "第12回": [
-      "12月8日  Ch.10: Sports and Media",
-      ""
-    ],
-    "第13回": [
-      "12月15日 Ch.11: Health and Diet",
-      ""
-    ],
-    "第14回": [
-      "12月22日 授業中試験２",
-      ""
-    ],
+    "第1回": ["9月22日 初回オリエンテーション、デモンストレーション", ""],
+    "第2回": ["9月29日 Ch.1:The American West: Myth and Reality", ""],
+    "第3回": ["10月6日 Ch.2: Race and Class in America", ""],
+    "第4回": ["10月13日 Ch.3: Interracial Love and Marriage", ""],
+    "第5回": ["10月20日 Ch.4: Religion: America&#39;s Double Vision", ""],
+    "第6回": ["10月27日 Ch.5: The Jury System", ""],
+    "第7回": ["11月3日 Ch.6: Hate Crime", ""],
+    "第8回": ["11月10日 授業中試験１", ""],
+    "第9回": ["11月17日 Ch.7: Guns and Media", ""],
+    "第10回": ["11月24日  Ch.8: Heroes: Legends and Lies", ""],
+    "第11回": ["12月1日 Ch.9: War and Media: The First Casuality", ""],
+    "第12回": ["12月8日  Ch.10: Sports and Media", ""],
+    "第13回": ["12月15日 Ch.11: Health and Diet", ""],
+    "第14回": ["12月22日 授業中試験２", ""],
     "授業計画1": "毎回１章ずつ進む予定。ただし、テクスト内容の理解促進のため、補足映像資料の視聴をすることがある。",
     "授業外学習2": "・新たな語彙は確実に習得し、使用語化することが求められる。<BR/>・テクストで取り上げられている映画については、出来るだけ実際に観てみることが推奨される。テクストに出てくる映画のいくつかについては当方で保有しているので、入手できない場合には貸し出す予定。"
   },
