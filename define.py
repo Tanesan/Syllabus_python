@@ -326,6 +326,9 @@ def act(m, a, b):
         id_json_list = open("docs/id.json", 'r')
         id_json_list = json.load(id_json_list)
         id_json_list.update({name: 0})
+        with open('docs/all_version.txt', 'a') as f:
+               file.write(int(f.read()) + 1)
+        file.close()
         with open("docs/id.json", 'w') as f:
             json.dump(id_json_list, f, ensure_ascii=False)
     # if os.path.isfile("docs/" + str(m) + '.json') and os.stat("docs/" + str(m) + '.json').st_size > 0:
