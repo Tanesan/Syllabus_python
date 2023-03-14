@@ -197,7 +197,7 @@ def act(m, a, b):
         # 年度設定
         year_2022 = driver.find_element_by_id("txtLsnOpcFcy")
         year_2022.clear()
-        year_2022.send_keys("2022")
+        year_2022.send_keys("2023")
 
         driver.find_element_by_name('ESearch').click()
         for a in range(int(i / 100)):
