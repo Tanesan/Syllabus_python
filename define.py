@@ -313,7 +313,7 @@ def act(m, a, b):
             subject.setdefault('開講期',"")
         data.setdefault(name, subject)
         searchingADJa = {**othersJa, **subject}
-        with open('docs/all/' + str(name) + '.json', 'w') as f:
+        with open('docs/all/' + str(name) + '.json', 'w+') as f:
             json.dump(searchingADJa, f, ensure_ascii=False)
         sleep(1)
         data_all = {}
