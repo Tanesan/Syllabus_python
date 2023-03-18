@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "1回目以降「Zoomによる同時双方向」で配信予定。授業開始5分前までにZoomへ入っておくこと。（ZoomのミーティングID: 297 962 2408，パスコード: 2pqQgi）",
   "トピック": {
-    "第1回": [
-      "導入",
-      ""
-    ],
-    "第2回": [
-      "Unit 1 Pro Gaming",
-      ""
-    ],
-    "第3回": [
-      "Unit 2 The Blogosphere",
-      ""
-    ],
-    "第4回": [
-      "Unit 3 Organic Food",
-      ""
-    ],
-    "第5回": [
-      "Unit 4 Franchises",
-      ""
-    ],
-    "第6回": [
-      "Unit 5 Character Culture",
-      ""
-    ],
-    "第7回": [
-      "Unit 6 Language Change",
-      ""
-    ],
-    "第8回": [
-      "Unit 7 Unlocking Motivation",
-      ""
-    ],
-    "第9回": [
-      "Unit 8 Yellow Dust Storms",
-      ""
-    ],
-    "第10回": [
-      "Unit 9 The End of Privacy",
-      ""
-    ],
-    "第11回": [
-      "Unit 10 Going Carbon Neutral",
-      ""
-    ],
-    "第12回": [
-      "Unit 11 Retro Style",
-      ""
-    ],
-    "第13回": [
-      "Unit 12 It pays to be the CEO.",
-      ""
-    ],
-    "第14回": [
-      "総まとめ",
-      ""
-    ],
+    "第1回": ["導入", ""],
+    "第2回": ["Unit 1 Pro Gaming", ""],
+    "第3回": ["Unit 2 The Blogosphere", ""],
+    "第4回": ["Unit 3 Organic Food", ""],
+    "第5回": ["Unit 4 Franchises", ""],
+    "第6回": ["Unit 5 Character Culture", ""],
+    "第7回": ["Unit 6 Language Change", ""],
+    "第8回": ["Unit 7 Unlocking Motivation", ""],
+    "第9回": ["Unit 8 Yellow Dust Storms", ""],
+    "第10回": ["Unit 9 The End of Privacy", ""],
+    "第11回": ["Unit 10 Going Carbon Neutral", ""],
+    "第12回": ["Unit 11 Retro Style", ""],
+    "第13回": ["Unit 12 It pays to be the CEO.", ""],
+    "第14回": ["総まとめ", ""],
     "授業外学習2": "必ず辞書を使って、前もって英文を読んでおくこと。"
   },
   "評価": {

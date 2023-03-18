@@ -8,10 +8,7 @@
   "授業の概要・背景": "",
   "授業方法": "学生が主体となり、グループ内でディスカッションし、文章にまとめ、発表する準備をともに行う協働学習（アクティブラーニング）",
   "トピック": {
-    "第1回": [
-      "オリエンテーション<BR/>Course requirements",
-      ""
-    ],
+    "第1回": ["オリエンテーション<BR/>Course requirements", ""],
     "第2回": [
       "Unit 8 &quot;Older Drivers&quot;",
       "分からない単語を調べておく。本文を読み内容を把握しておく。練習問題を解いておく（１～２時間）<BR/>Students will be required to read the passage and complete exercises before class."
@@ -60,10 +57,7 @@
       "Unit 14 &quot;AI&quot;",
       "小テストの準備。問題解決に向けた資料集めと下調べ。<BR/>Students should prepare for the quiz. Also expected to do preliminary research and gather materials for problem solving."
     ],
-    "第14回": [
-      "まとめ",
-      ""
-    ],
+    "第14回": ["まとめ", ""],
     "授業外学習2": "小テストのための準備、資料集め、本文の内容理解、練習問題などの課題に取り組むことが必要である。課題などのフィードバックは授業中に行う。"
   },
   "評価": {

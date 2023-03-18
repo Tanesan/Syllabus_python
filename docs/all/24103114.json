@@ -12,58 +12,25 @@
       "１４回全て対面授業実施予定。<BR/>オリエンテーション<BR/>授業概要、評価基準などを説明後、ウォームアップアクティビティを行います。",
       ""
     ],
-    "第2回": [
-      "Unit 1　Pandemic and People&#39;s Lifestyle",
-      ""
-    ],
-    "第3回": [
-      "Unit 1　Pandemic and People&#39;s Lifestyle",
-      ""
-    ],
-    "第4回": [
-      "Unit 2 The Circular Economy",
-      ""
-    ],
-    "第5回": [
-      "Unit 2 The Circular Economy",
-      ""
-    ],
-    "第6回": [
-      "Unit 3 Road to Decarbonization",
-      ""
-    ],
-    "第7回": [
-      "Unit 3 Road to Decarbonization",
-      ""
-    ],
+    "第2回": ["Unit 1　Pandemic and People&#39;s Lifestyle", ""],
+    "第3回": ["Unit 1　Pandemic and People&#39;s Lifestyle", ""],
+    "第4回": ["Unit 2 The Circular Economy", ""],
+    "第5回": ["Unit 2 The Circular Economy", ""],
+    "第6回": ["Unit 3 Road to Decarbonization", ""],
+    "第7回": ["Unit 3 Road to Decarbonization", ""],
     "第8回": [
       "Review Unit 1~3<BR/>Review Test and Discussion and Writing Activities to review Unit 1～3",
       ""
     ],
-    "第9回": [
-      "Unit 4 Online Learning and Social LIfe",
-      ""
-    ],
-    "第10回": [
-      "Unit 4 Online Learning and Social LIfe",
-      ""
-    ],
-    "第11回": [
-      "Unit 5 Delivery Robots",
-      ""
-    ],
-    "第12回": [
-      "Unit 5 Delivery Robots",
-      ""
-    ],
+    "第9回": ["Unit 4 Online Learning and Social LIfe", ""],
+    "第10回": ["Unit 4 Online Learning and Social LIfe", ""],
+    "第11回": ["Unit 5 Delivery Robots", ""],
+    "第12回": ["Unit 5 Delivery Robots", ""],
     "第13回": [
       "Review Unit 4~5<BR/>Discussion and Writing Activities to review Unit 4 and 5",
       ""
     ],
-    "第14回": [
-      "Final Review Test",
-      ""
-    ],
+    "第14回": ["Final Review Test", ""],
     "授業外学習2": "毎回の授業の前に、テキストの該当箇所を読み、必要に応じ語彙の意味を確認すること（20分）<BR/>毎回の授業の後に、授業で学習した内容を復習し、不明な点は翌回の授業で質問する準備をすること。（30分）<BR/>出題されたライティング課題に取り組むこと（１時間）<BR/>提出された課題は添削後返却し、総評、評価基準を伝える。<BR/>小テストは翌回の授業で返却し、注意ポイントを確認する。（テスト解答は返却後LUNAに掲載する）"
   },
   "評価": {

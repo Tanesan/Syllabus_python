@@ -16,26 +16,14 @@
       "Textbook Unit 1:She Gets a Royal Welcome<BR/>TOEIC向け単語テスト（　指定範囲）開始",
       "オンライン受講学生のみ2回目以降、「Zoom による同時双方向」で配信予定。授業開始 5 分前までに Zoom へ入ってお く。（LUNAへの課題提出も適宜あるので指示に従う）"
     ],
-    "第3回": [
-      "Textbook Unit 2: Where do you live?",
-      ""
-    ],
-    "第4回": [
-      "Textbook Unit 3: Is this the elevator?",
-      ""
-    ],
-    "第5回": [
-      "Textbook Unit 4: Is this the princess?",
-      ""
-    ],
+    "第3回": ["Textbook Unit 2: Where do you live?", ""],
+    "第4回": ["Textbook Unit 3: Is this the elevator?", ""],
+    "第5回": ["Textbook Unit 4: Is this the princess?", ""],
     "第6回": [
       "Textbook Unit 5:  So I&#39;ve spent the night here with you?",
       ""
     ],
-    "第7回": [
-      "Textbook Unit 6: It&#39;s just what I wanted",
-      ""
-    ],
+    "第7回": ["Textbook Unit 6: It&#39;s just what I wanted", ""],
     "第8回": [
       "Mid-term exam: Speaking test (映画スクリプト音読) /  Writing assignment （与えられたトピックに関して英語で意見を述べる小レポート）",
       ""
@@ -48,22 +36,10 @@
       "Textbook Unit 9: Hit him again, Smitty<BR/> Textbook Unit 10: I don&#39;t know how to say goodbye",
       ""
     ],
-    "第11回": [
-      "Textbook Unit 11: Is that a shot, Joe?",
-      ""
-    ],
-    "第12回": [
-      "Unit 12: By all means, Rome",
-      ""
-    ],
-    "第13回": [
-      "Review<BR/>映画全体の振り返り",
-      ""
-    ],
-    "第14回": [
-      "Final Exam<BR/>まとめと質問",
-      ""
-    ],
+    "第11回": ["Textbook Unit 11: Is that a shot, Joe?", ""],
+    "第12回": ["Unit 12: By all means, Rome", ""],
+    "第13回": ["Review<BR/>映画全体の振り返り", ""],
+    "第14回": ["Final Exam<BR/>まとめと質問", ""],
     "授業外学習2": "授業前には単語テストのための予習、授業後には内容確認、次回の予習にそれぞれ60分程度が望ましい。試験前には120分以上の準備が必要である。"
   },
   "評価": {

@@ -8,10 +8,7 @@
   "授業の概要・背景": "",
   "授業方法": "There will be individual, pair and group work as well as lectures. Students will participate in a variety of tasks including reading, listening, discussion and writing.",
   "トピック": {
-    "第1回": [
-      "Introduction",
-      "Preparation for next class"
-    ],
+    "第1回": ["Introduction", "Preparation for next class"],
     "第2回": [
       "Unit 7: Medical Frontiers (Lesson A, B, C)<BR/>        Talking about medical technologies<BR/>        Grammar: modals of probability",
       "Preparation for next class"
@@ -60,10 +57,7 @@
       "Unit 12: Dare to disagree (TED Talk)",
       "Preparation for presentation and review quiz"
     ],
-    "第14回": [
-      "Presentation and Review quiz",
-      ""
-    ],
+    "第14回": ["Presentation and Review quiz", ""],
     "授業外学習2": "Reading and listening assignments will be given regularly. Students are expected to prepare for each class."
   },
   "評価": {
@@ -91,11 +85,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "50 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "50 %", ""],
     "成績評価Grading2": [
       "その他／Others (99)",
       "50 %",

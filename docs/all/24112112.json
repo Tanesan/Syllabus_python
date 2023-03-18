@@ -8,10 +8,7 @@
   "授業の概要・背景": "",
   "授業方法": "身近な時事問題についての情報を記事や図表を読むことでインプットを得た上で、ディスカッション/ディベートをする。また、簡単な調査をもとに、プレゼンテーションも行う。",
   "トピック": {
-    "第1回": [
-      "Orientation",
-      "Luna参照(2 hours)"
-    ],
+    "第1回": ["Orientation", "Luna参照(2 hours)"],
     "第2回": [
       "Unit 1 Artificial Intelligence: How Will Humans Live with AI?",
       "Preview and review (3 hours)"
@@ -44,26 +41,11 @@
       "Unit 5 The Japanese Mentality: Do They Have Good Manners?",
       "Preview and review (3 hours)"
     ],
-    "第10回": [
-      "Exam",
-      "Preview and review (3 hours)"
-    ],
-    "第11回": [
-      "Preparing for Presentation",
-      "Preview and review (3 hours)"
-    ],
-    "第12回": [
-      "Preparing for Presentation",
-      "Preview and review (3 hours)"
-    ],
-    "第13回": [
-      "Presentation, Evaluation",
-      "Preview and review (3 hours)"
-    ],
-    "第14回": [
-      "Presentation, Evaluation, Review",
-      ""
-    ]
+    "第10回": ["Exam", "Preview and review (3 hours)"],
+    "第11回": ["Preparing for Presentation", "Preview and review (3 hours)"],
+    "第12回": ["Preparing for Presentation", "Preview and review (3 hours)"],
+    "第13回": ["Presentation, Evaluation", "Preview and review (3 hours)"],
+    "第14回": ["Presentation, Evaluation, Review", ""]
   },
   "評価": {
     "教科書/Required texts0": [
@@ -89,11 +71,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "30 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "30 %", ""],
     "成績評価Grading2": [
       "その他／Others (99)",
       "70 %",

@@ -8,10 +8,7 @@
   "授業の概要・背景": "",
   "授業方法": "受講生が興味をもてる映画The Truman Showを教材に用い、口語体のこなれた英語に慣れ親しむとともに、映画の台詞を読み取り、学んだ表現を積極的に用いて、英語で自然な発話や作文ができるよう、集中的な訓練を行う。さらに、社会的・文化的な文脈を特に意識しつつ、広い視野から文化や文学的想像力について考察を深める。",
   "トピック": {
-    "第1回": [
-      "Introduction",
-      ""
-    ],
+    "第1回": ["Introduction", ""],
     "第2回": [
       "Unit 1: Meeting Truman<BR/>Previewing (Vocabulary Warm-Up, Phrases, Chunk Check), First Viewing (True-False Questions, Who said it?, Comprehension/Discussion Questions), Viewing &amp; Listening, Pronunciation Check, Script Reading.",
       ""
@@ -32,10 +29,7 @@
       "Unit 5: Truman Tries to Leave<BR/>Previewing (Vocabulary Warm-Up, Phrases, Chunk Check), First Viewing (True-False Questions, Who said it?, Comprehension/Discussion Questions), Viewing &amp; Listening, Pronunciation Check, Script Reading.",
       ""
     ],
-    "第7回": [
-      "Review 1: Q&amp;A",
-      ""
-    ],
+    "第7回": ["Review 1: Q&amp;A", ""],
     "第8回": [
       "Unit 6: Truman and Meryl Go for a Ride<BR/>Previewing (Vocabulary Warm-Up, Phrases, Chunk Check), First Viewing (True-False Questions, Who said it?, Comprehension/Discussion Questions), Viewing &amp; Listening, Pronunciation Check, Script Reading.",
       ""
@@ -60,14 +54,8 @@
       "Unit 10:  Truman Finds Out<BR/>Previewing (Vocabulary Warm-Up, Phrases, Chunk Check), First Viewing (True-False Questions, Who said it?, Comprehension/Discussion Questions), Viewing &amp; Listening, Pronunciation Check, Script Reading.",
       ""
     ],
-    "第14回": [
-      "Review 2: Q&amp;A",
-      ""
-    ],
-    "第15回": [
-      "学力の総括とまとめ",
-      ""
-    ],
+    "第14回": ["Review 2: Q&amp;A", ""],
+    "第15回": ["学力の総括とまとめ", ""],
     "授業外学習2": "受講生には、割り当てられたテクストの読解を予め授業外にこなし、質問やコメントを相当数、用意して授業に臨むことが求められる。"
   },
   "評価": {

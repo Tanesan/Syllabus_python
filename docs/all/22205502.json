@@ -90,16 +90,8 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "50 %",
-      ""
-    ],
-    "成績評価Grading2": [
-      "その他／Others (99)",
-      "50 %",
-      "小テストと平常点"
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "50 %", ""],
+    "成績評価Grading2": ["その他／Others (99)", "50 %", "小テストと平常点"],
     "備考Note0": "日本語を3割、英語を7割で授業を行います。",
     "更新日時/Date of Update1": "2023年01月15日 19時08分48秒",
     "項番No.0": [],

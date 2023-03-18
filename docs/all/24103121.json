@@ -8,10 +8,7 @@
   "授業の概要・背景": "",
   "授業方法": "日本文化について英語で学習をしながらlistening, reading, speaking, writingの４技能を向上させつつ、readingからはacademic writingの構造を学び、listeningからはsound sysmtemの理解を促す。<BR/>inputからoutputの流れの中で言語産出活動を行い、自国文化の魅力を英語で発信できるための英語力を鍛える。",
   "トピック": {
-    "第1回": [
-      "Orientation and Writing",
-      "Preparation for the textbook"
-    ],
+    "第1回": ["Orientation and Writing", "Preparation for the textbook"],
     "第2回": [
       "Unit 9 Anime: A Japanese Soft Power　日本のソフトパワーとなったアニメ",
       "Preparation for the textbook"
@@ -20,10 +17,7 @@
       "Unit 10 Hot Springs: Let&#39;s become healthy and beautiful!　温泉で美人に ！",
       "Preparation for the textbook<BR/>Writing"
     ],
-    "第4回": [
-      "Review and Writing",
-      "Preparation for the textbook"
-    ],
+    "第4回": ["Review and Writing", "Preparation for the textbook"],
     "第5回": [
       "Unit 11 Video Games for Everyone",
       "Preparation for the textbook"
@@ -32,22 +26,13 @@
       "Unit 12 Tranquility and Dynamism in Competitive Calligraphy",
       "Preparation for the textbook<BR/>Writing"
     ],
-    "第7回": [
-      "Review and Writing",
-      "Preparation for the textbook"
-    ],
-    "第8回": [
-      "Unit 13 Kawaii Going Global",
-      "Preparation for the textbook"
-    ],
+    "第7回": ["Review and Writing", "Preparation for the textbook"],
+    "第8回": ["Unit 13 Kawaii Going Global", "Preparation for the textbook"],
     "第9回": [
       "Unit 14 Japanese Ceramics in Europe: Originality in Traditional Beauty",
       "Preparation for the textbook<BR/>Writing"
     ],
-    "第10回": [
-      "Review and Writing",
-      "Preparation for the textbook"
-    ],
+    "第10回": ["Review and Writing", "Preparation for the textbook"],
     "第11回": [
       "Unit 15 Shinto&#39;s Encounter with Buddhism in Nara 神様と仏様の出会い",
       "Preparation for the textbook"
@@ -56,14 +41,8 @@
       "Extra Speaking Activity",
       "Preparation for the textbook<BR/>Research and Writing"
     ],
-    "第13回": [
-      "Review and Presentation",
-      "Review"
-    ],
-    "第14回": [
-      "Final Exam",
-      "Review"
-    ]
+    "第13回": ["Review and Presentation", "Review"],
+    "第14回": ["Final Exam", "Review"]
   },
   "評価": {
     "教科書/Required texts0": [

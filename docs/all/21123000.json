@@ -12,58 +12,22 @@
       "オリエンテーション、アルファベット\tOrientation, Alphabet",
       "予習3hrs"
     ],
-    "第2回": [
-      "動詞　　Verbs",
-      "予習1.5hrs<BR/>復習1.5hrs"
-    ],
-    "第3回": [
-      "名詞1\t\tNouns1",
-      "予習1.5hrs<BR/>復習1.5hrs"
-    ],
-    "第4回": [
-      "名詞2\t\tNouns 2",
-      "予習1.5hrs<BR/>復習1.5hrs"
-    ],
-    "第5回": [
-      "動詞の過去時制\t\tPast Tenses",
-      "予習1.5hrs<BR/>復習1.5hrs"
-    ],
-    "第6回": [
-      "代名詞\t\tPronouns",
-      "予習1.5hrs<BR/>復習1.5hrs"
-    ],
-    "第7回": [
-      "前置詞\t\tPrepositions",
-      "予習1.5hrs<BR/>復習1.5hrs"
-    ],
-    "第8回": [
-      "形容詞\t\tAdjuctives",
-      "予習1.5hrs<BR/>復習1.5hrs"
-    ],
-    "第9回": [
-      "異態動詞\t\tDeponent Verbs",
-      "予習1.5hrs<BR/>復習1.5hrs"
-    ],
-    "第10回": [
-      "自習の日",
-      "予習1.5hrs<BR/>復習1.5hrs"
-    ],
-    "第11回": [
-      "受動態\t\tPassive Voice",
-      "予習1.5hrs<BR/>復習1.5hrs"
-    ],
+    "第2回": ["動詞　　Verbs", "予習1.5hrs<BR/>復習1.5hrs"],
+    "第3回": ["名詞1\t\tNouns1", "予習1.5hrs<BR/>復習1.5hrs"],
+    "第4回": ["名詞2\t\tNouns 2", "予習1.5hrs<BR/>復習1.5hrs"],
+    "第5回": ["動詞の過去時制\t\tPast Tenses", "予習1.5hrs<BR/>復習1.5hrs"],
+    "第6回": ["代名詞\t\tPronouns", "予習1.5hrs<BR/>復習1.5hrs"],
+    "第7回": ["前置詞\t\tPrepositions", "予習1.5hrs<BR/>復習1.5hrs"],
+    "第8回": ["形容詞\t\tAdjuctives", "予習1.5hrs<BR/>復習1.5hrs"],
+    "第9回": ["異態動詞\t\tDeponent Verbs", "予習1.5hrs<BR/>復習1.5hrs"],
+    "第10回": ["自習の日", "予習1.5hrs<BR/>復習1.5hrs"],
+    "第11回": ["受動態\t\tPassive Voice", "予習1.5hrs<BR/>復習1.5hrs"],
     "第12回": [
       "命令法と不定法\tImperative and Infinitive",
       "予習1.5hrs<BR/>復習1.5hrs"
     ],
-    "第13回": [
-      "アクセント\t\tAccents",
-      "復習1.5hrs<BR/>試験準備1.5hrs"
-    ],
-    "第14回": [
-      "修了試験\t\tFinal Exam",
-      "試験準備3hrs"
-    ]
+    "第13回": ["アクセント\t\tAccents", "復習1.5hrs<BR/>試験準備1.5hrs"],
+    "第14回": ["修了試験\t\tFinal Exam", "試験準備3hrs"]
   },
   "評価": {
     "教科書Required texts0": "講師による講義ノート（LUNAよりダウンロード）",
@@ -84,11 +48,7 @@
       "30 %",
       "作文のことです"
     ],
-    "成績評価Grading3": [
-      "その他／Others (99)",
-      "40 %",
-      "修了試験のことです"
-    ],
+    "成績評価Grading3": ["その他／Others (99)", "40 %", "修了試験のことです"],
     "更新日時/Date of Update0": "2023年01月12日 11時16分49秒",
     "項番No.0": [],
     "項番No.1": [

@@ -12,58 +12,19 @@
       "（授業計画は、授業の進み具合によって変更する可能性があります。）<BR/><BR/>ガイダンス／Introduction",
       ""
     ],
-    "第2回": [
-      "Unit 1: Travel",
-      ""
-    ],
-    "第3回": [
-      "Unit 2: Dining Out",
-      ""
-    ],
-    "第4回": [
-      "Unit 3: Media",
-      ""
-    ],
-    "第5回": [
-      "Unit 4: Entertainment",
-      ""
-    ],
-    "第6回": [
-      "Unit 5: Purchasing",
-      ""
-    ],
-    "第7回": [
-      "Unit 6: Clients",
-      ""
-    ],
-    "第8回": [
-      "Unit 7: Recruiting",
-      ""
-    ],
-    "第9回": [
-      "Unit 8: Personnel",
-      ""
-    ],
-    "第10回": [
-      "Unit9: Advertising",
-      ""
-    ],
-    "第11回": [
-      "Unit 10: Meetings",
-      ""
-    ],
-    "第12回": [
-      "Unit 11: Finance",
-      ""
-    ],
-    "第13回": [
-      "Unit 12: Offices",
-      ""
-    ],
-    "第14回": [
-      "授業中試験",
-      ""
-    ],
+    "第2回": ["Unit 1: Travel", ""],
+    "第3回": ["Unit 2: Dining Out", ""],
+    "第4回": ["Unit 3: Media", ""],
+    "第5回": ["Unit 4: Entertainment", ""],
+    "第6回": ["Unit 5: Purchasing", ""],
+    "第7回": ["Unit 6: Clients", ""],
+    "第8回": ["Unit 7: Recruiting", ""],
+    "第9回": ["Unit 8: Personnel", ""],
+    "第10回": ["Unit9: Advertising", ""],
+    "第11回": ["Unit 10: Meetings", ""],
+    "第12回": ["Unit 11: Finance", ""],
+    "第13回": ["Unit 12: Offices", ""],
+    "第14回": ["授業中試験", ""],
     "授業外学習2": "授業の予習・復習をすること。"
   },
   "評価": {

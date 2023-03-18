@@ -12,50 +12,17 @@
       "Introduction to the course and the text.",
       "Secure 2-3 hours for preparation for and review of class: Read the assigned chapters and complete the worksheet.<BR/>予習と復習にも2-3時間の学習時間を確保すること。所定の箇所をあらかじめ読み、ワークシートを完成させること。"
     ],
-    "第2回": [
-      "Reading and discussing  Chapter 1",
-      "同上The same as above"
-    ],
-    "第3回": [
-      "Reading and discussing   Chapter 2",
-      "The same as above"
-    ],
-    "第4回": [
-      "Reading and discussing  Chapter 3",
-      "The same as above"
-    ],
-    "第5回": [
-      "Reading and discussing  Chapter 4",
-      "The same as above"
-    ],
-    "第6回": [
-      "Reading and discussing  Chapter 5",
-      "The same as above"
-    ],
-    "第7回": [
-      "Reading and discussing  Chapter 6",
-      "The same as above"
-    ],
-    "第8回": [
-      "Reading and discussing  Chapter 7",
-      "The same as above"
-    ],
-    "第9回": [
-      "Reading and discussing  Chapter 8",
-      "The same as above"
-    ],
-    "第10回": [
-      "Reading and discussing  Chapter 9",
-      "The same as above"
-    ],
-    "第11回": [
-      "Reading and discussing  Chapter 10",
-      "The same as above"
-    ],
-    "第12回": [
-      "Review",
-      "The same as above"
-    ],
+    "第2回": ["Reading and discussing  Chapter 1", "同上The same as above"],
+    "第3回": ["Reading and discussing   Chapter 2", "The same as above"],
+    "第4回": ["Reading and discussing  Chapter 3", "The same as above"],
+    "第5回": ["Reading and discussing  Chapter 4", "The same as above"],
+    "第6回": ["Reading and discussing  Chapter 5", "The same as above"],
+    "第7回": ["Reading and discussing  Chapter 6", "The same as above"],
+    "第8回": ["Reading and discussing  Chapter 7", "The same as above"],
+    "第9回": ["Reading and discussing  Chapter 8", "The same as above"],
+    "第10回": ["Reading and discussing  Chapter 9", "The same as above"],
+    "第11回": ["Reading and discussing  Chapter 10", "The same as above"],
+    "第12回": ["Review", "The same as above"],
     "第13回": [
       "watching Battleship Potemkin or the film version of Animal Farm",
       ""

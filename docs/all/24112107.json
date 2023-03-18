@@ -8,62 +8,20 @@
   "授業の概要・背景": "テキストのリーディング部分は昔のオーセンティックな文学作品そのままで、少し難しいかもしれません。内容がミステリーなので楽しみながら読んでいきます。各ユニットの後半では英文を書く際に必要となるレトリックの基本を学び、英文ライティングを試みます。",
   "授業方法": "授業の始めの15分程を使って、プリント教材を用いてリーディングの練習を行う。次にテキストを用いて授業を進める。1レッスンを授業2回を使って進む予定である。リーディングもライティングも量をこなす。12月には4月に実施したのと同様の小テスト (2)を実施し、4月からの学習の成果を測る。オンライン受講許可学生に対してはLUNAから資料、課題等を授業日に配信します。",
   "トピック": {
-    "第1回": [
-      "The Case of the Hero Dog 1",
-      ""
-    ],
-    "第2回": [
-      "The Case of the Hero Dog 2",
-      ""
-    ],
-    "第3回": [
-      "The Case of the Million-to-One Shot 1",
-      ""
-    ],
-    "第4回": [
-      "The Case of the  Million-to-One Shot 2",
-      ""
-    ],
-    "第5回": [
-      "The Case of the Missing Button 1",
-      ""
-    ],
-    "第6回": [
-      "The Case of the Missing Button 2",
-      ""
-    ],
-    "第7回": [
-      "The Case of the Gold Brick 1",
-      ""
-    ],
-    "第8回": [
-      "中間のまとめ",
-      ""
-    ],
-    "第9回": [
-      "The Case of the Dying Brazilian 1",
-      ""
-    ],
-    "第10回": [
-      "The Case of the Dying Brazilian 2",
-      ""
-    ],
-    "第11回": [
-      "The Case of the Stranded Blonde 1",
-      ""
-    ],
-    "第12回": [
-      "The Case of the Stranded Blonde 2",
-      ""
-    ],
-    "第13回": [
-      "小テスト (2)",
-      ""
-    ],
-    "第14回": [
-      "前期のまとめ",
-      ""
-    ],
+    "第1回": ["The Case of the Hero Dog 1", ""],
+    "第2回": ["The Case of the Hero Dog 2", ""],
+    "第3回": ["The Case of the Million-to-One Shot 1", ""],
+    "第4回": ["The Case of the  Million-to-One Shot 2", ""],
+    "第5回": ["The Case of the Missing Button 1", ""],
+    "第6回": ["The Case of the Missing Button 2", ""],
+    "第7回": ["The Case of the Gold Brick 1", ""],
+    "第8回": ["中間のまとめ", ""],
+    "第9回": ["The Case of the Dying Brazilian 1", ""],
+    "第10回": ["The Case of the Dying Brazilian 2", ""],
+    "第11回": ["The Case of the Stranded Blonde 1", ""],
+    "第12回": ["The Case of the Stranded Blonde 2", ""],
+    "第13回": ["小テスト (2)", ""],
+    "第14回": ["前期のまとめ", ""],
     "授業外学習2": "予習（30分）をして授業に臨んで下さい。リーディング部分は単語が難しいので、調べておくと理解が進むと思います。提出課題のフィードバックは添削の上、返却します。"
   },
   "評価": {
@@ -101,11 +59,7 @@
       "40 %",
       "ユニットの英文エッセイ課題を提出。"
     ],
-    "成績評価Grading3": [
-      "その他／Others (99)",
-      "20 %",
-      "発表、授業参加度"
-    ],
+    "成績評価Grading3": ["その他／Others (99)", "20 %", "発表、授業参加度"],
     "更新日時/Date of Update0": "2023年01月18日 15時47分54秒",
     "項番No.0": [],
     "項番No.1": [

@@ -75,11 +75,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "定期試験／Final Examination (01)",
-      "80 %",
-      ""
-    ],
+    "成績評価Grading1": ["定期試験／Final Examination (01)", "80 %", ""],
     "成績評価Grading2": [
       "その他／Others (99)",
       "20 %",

@@ -8,10 +8,7 @@
   "授業の概要・背景": "",
   "授業方法": "各回のトピックに応じて、英文記事の読解、動画や音声を使った活動、学習内容に関する議論、受講者によるプレゼンテーションなどを行う。",
   "トピック": {
-    "第1回": [
-      "1.Introduction",
-      ""
-    ],
+    "第1回": ["1.Introduction", ""],
     "第2回": [
       "2.Developing an ELF mindset 1: Who is a &#39;native speaker&#39;? Why is English a global language?, Linguistic Imperialism",
       ""
@@ -36,18 +33,12 @@
       "7.Developing an ELF skill set 2: Pronunciation (Identifying your weaknesses, Accommodating to the listener)",
       ""
     ],
-    "第8回": [
-      "8.Developing an ELF skill set 3: Grammar",
-      ""
-    ],
+    "第8回": ["8.Developing an ELF skill set 3: Grammar", ""],
     "第9回": [
       "9.Developing an ELF skill set 4: Lexis (Legitimate varieties, idiomatic expressions)",
       ""
     ],
-    "第10回": [
-      "10.PRESENTATION on different varieties of English",
-      ""
-    ],
+    "第10回": ["10.PRESENTATION on different varieties of English", ""],
     "第11回": [
       "11.Developing an ELF skill set 5: Intercultural competence (diversity in all its forms, mini presentations, media cultures and stereotypes)",
       ""

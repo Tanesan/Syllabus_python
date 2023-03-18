@@ -60,10 +60,7 @@
       "Koenig Drosselbart つぐみ髭の王様",
       "予習・復習<BR/>小テストの準備"
     ],
-    "第14回": [
-      "Koenig Drosselbart つぐみ髭の王様",
-      ""
-    ]
+    "第14回": ["Koenig Drosselbart つぐみ髭の王様", ""]
   },
   "評価": {
     "教科書/Required texts0": [
@@ -104,11 +101,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "定期試験／Final Examination (01)",
-      "50 %",
-      ""
-    ],
+    "成績評価Grading1": ["定期試験／Final Examination (01)", "50 %", ""],
     "成績評価Grading2": [
       "平常リポート／Individual reports (04)",
       "50 %",

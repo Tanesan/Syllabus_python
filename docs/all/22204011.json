@@ -12,38 +12,17 @@
       "course introduction: readings in the liberal arts and humanities",
       ""
     ],
-    "第2回": [
-      "reading and exercises on language (pp. 8-15 of coursebook)",
-      ""
-    ],
-    "第3回": [
-      "reading and exercises on social psychology (pp. 16-23)",
-      ""
-    ],
-    "第4回": [
-      "reading and exercises on higher education (pp. 24-31)",
-      ""
-    ],
-    "第5回": [
-      "reading and exercises on musical theatre (pp. 32-9)",
-      ""
-    ],
-    "第6回": [
-      "reading and exercises on the environment (pp. 40-7)",
-      ""
-    ],
+    "第2回": ["reading and exercises on language (pp. 8-15 of coursebook)", ""],
+    "第3回": ["reading and exercises on social psychology (pp. 16-23)", ""],
+    "第4回": ["reading and exercises on higher education (pp. 24-31)", ""],
+    "第5回": ["reading and exercises on musical theatre (pp. 32-9)", ""],
+    "第6回": ["reading and exercises on the environment (pp. 40-7)", ""],
     "第7回": [
       "reading and exercises on anthropology/paleontology (pp. 48-55)",
       ""
     ],
-    "第8回": [
-      "reading and exercises on mapping the brain (pp. 56-63)",
-      ""
-    ],
-    "第9回": [
-      "reading and exercises on military history (pp. 64-71)",
-      ""
-    ],
+    "第8回": ["reading and exercises on mapping the brain (pp. 56-63)", ""],
+    "第9回": ["reading and exercises on military history (pp. 64-71)", ""],
     "第10回": [
       "reading and exercises on the reality of virtual reality (pp. 72-9)",
       ""
@@ -52,18 +31,9 @@
       "reading and exercises on the man who “re-invented” Christmas (pp. 80-7)",
       ""
     ],
-    "第12回": [
-      "reading and exercises on art appreciation (pp. 88-95)",
-      ""
-    ],
-    "第13回": [
-      "reading and exercises on cybercrime (pp. 96-103)",
-      ""
-    ],
-    "第14回": [
-      "closing: course examination",
-      ""
-    ],
+    "第12回": ["reading and exercises on art appreciation (pp. 88-95)", ""],
+    "第13回": ["reading and exercises on cybercrime (pp. 96-103)", ""],
+    "第14回": ["closing: course examination", ""],
     "授業外学習2": "Students are expected to revise material covered in each unit."
   },
   "評価": {
@@ -89,16 +59,8 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "90 %",
-      ""
-    ],
-    "成績評価Grading2": [
-      "その他／Others (99)",
-      "10 %",
-      "出席状況"
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "90 %", ""],
+    "成績評価Grading2": ["その他／Others (99)", "10 %", "出席状況"],
     "更新日時/Date of Update0": "2023年01月13日 12時16分55秒",
     "項番No.0": [],
     "項番No.1": [

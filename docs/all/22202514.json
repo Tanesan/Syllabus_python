@@ -21,16 +21,8 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "50 %",
-      ""
-    ],
-    "成績評価Grading2": [
-      "その他／Others (99)",
-      "50 %",
-      "平常点"
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "50 %", ""],
+    "成績評価Grading2": ["その他／Others (99)", "50 %", "平常点"],
     "更新日時/Date of Update0": "2023年01月09日 13時53分11秒",
     "項番No.0": [],
     "項番No.1": [

@@ -16,34 +16,13 @@
       "9月28日　<BR/>Unit 1 Ukraine’s Comedian-turned-president",
       "LUNA上予習テスト"
     ],
-    "第3回": [
-      "10月5日<BR/>Unit 2　Four-Footed Refugees",
-      "LUNA上予習テスト"
-    ],
-    "第4回": [
-      "10月12日<BR/>Unit 3　 Noble Journalism",
-      "LUNA上予習テスト"
-    ],
-    "第5回": [
-      "10月19日<BR/>Unit 4　No Mere Fill-In",
-      "LUNA上予習テスト"
-    ],
-    "第6回": [
-      "10月26日<BR/>Unit 5　Look but Don’t Speak",
-      "LUNA上予習テスト"
-    ],
-    "第7回": [
-      "11月2日<BR/>Unit 6  Chips in Short Supply",
-      "LUNA上予習テスト"
-    ],
-    "第8回": [
-      "11月9日<BR/>Unit 7  More Than More Pandas",
-      "LUNA上予習テスト"
-    ],
-    "第9回": [
-      "11月16日<BR/>Unit 8  Trash Transformation",
-      "LUNA上予習テスト"
-    ],
+    "第3回": ["10月5日<BR/>Unit 2　Four-Footed Refugees", "LUNA上予習テスト"],
+    "第4回": ["10月12日<BR/>Unit 3　 Noble Journalism", "LUNA上予習テスト"],
+    "第5回": ["10月19日<BR/>Unit 4　No Mere Fill-In", "LUNA上予習テスト"],
+    "第6回": ["10月26日<BR/>Unit 5　Look but Don’t Speak", "LUNA上予習テスト"],
+    "第7回": ["11月2日<BR/>Unit 6  Chips in Short Supply", "LUNA上予習テスト"],
+    "第8回": ["11月9日<BR/>Unit 7  More Than More Pandas", "LUNA上予習テスト"],
+    "第9回": ["11月16日<BR/>Unit 8  Trash Transformation", "LUNA上予習テスト"],
     "第10回": [
       "11月30日<BR/>Unit 9  Allies Against Authoritarianism",
       "LUNA上予習テスト"
@@ -56,14 +35,8 @@
       "12月14日<BR/>Unit 11 Travel Boom in the Offing",
       "LUNA上予習テスト"
     ],
-    "第13回": [
-      "12月21日<BR/>Unit 12  Miraculous Footwork",
-      "LUNA上予習テスト"
-    ],
-    "第14回": [
-      "1月11日<BR/>授業内試験",
-      ""
-    ],
+    "第13回": ["12月21日<BR/>Unit 12  Miraculous Footwork", "LUNA上予習テスト"],
+    "第14回": ["1月11日<BR/>授業内試験", ""],
     "授業外学習2": "ストリーミング配信の音声を聞いて、Words and PhrasesとFill in the blanks を中心とした予習テストをLUNAでやっておく。<BR/>加えて担当の予習を前日20時までに提出する事。"
   },
   "評価": {
@@ -89,11 +62,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "30 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "30 %", ""],
     "成績評価Grading2": [
       "平常リポート／Individual reports (04)",
       "40 %",

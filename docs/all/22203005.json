@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "各ユニットの内容に沿った英文の読解を中心に、適宜ペアワークやグループワーク等を実施する。",
   "トピック": {
-    "第1回": [
-      "イントロダクション",
-      ""
-    ],
-    "第2回": [
-      "Unit 1\t​A Snowman That Neither Melted Nor Stuck",
-      ""
-    ],
-    "第3回": [
-      "Unit 2\t​The Secret Test Pilot",
-      ""
-    ],
-    "第4回": [
-      "Unit 3\t​The Pub, an Endangered British Species",
-      ""
-    ],
-    "第5回": [
-      "Unit 4​\tSleep Habits in the Mammal Kingdom",
-      ""
-    ],
-    "第6回": [
-      "Unit 5​\tThe Secret Behind the Image",
-      ""
-    ],
-    "第7回": [
-      "Unit 6​\tThe Periodic Cicada, an Amazing Survivor",
-      ""
-    ],
-    "第8回": [
-      "Unit 7\t​The Story Behind a Modern Wonder Drug",
-      ""
-    ],
-    "第9回": [
-      "Unit 8\t​Black Friday",
-      ""
-    ],
-    "第10回": [
-      "Unit 9​\tGetting High on Gardening",
-      ""
-    ],
-    "第11回": [
-      "Unit10​\tThe Throw-Away Café!",
-      ""
-    ],
-    "第12回": [
-      "Unit11​\tLost in Translation?",
-      ""
-    ],
-    "第13回": [
-      "Unit12\t​The Very Fortunate Four",
-      ""
-    ],
-    "第14回": [
-      "授業のまとめと学習到達度確認の授業内試験",
-      ""
-    ],
+    "第1回": ["イントロダクション", ""],
+    "第2回": ["Unit 1\t​A Snowman That Neither Melted Nor Stuck", ""],
+    "第3回": ["Unit 2\t​The Secret Test Pilot", ""],
+    "第4回": ["Unit 3\t​The Pub, an Endangered British Species", ""],
+    "第5回": ["Unit 4​\tSleep Habits in the Mammal Kingdom", ""],
+    "第6回": ["Unit 5​\tThe Secret Behind the Image", ""],
+    "第7回": ["Unit 6​\tThe Periodic Cicada, an Amazing Survivor", ""],
+    "第8回": ["Unit 7\t​The Story Behind a Modern Wonder Drug", ""],
+    "第9回": ["Unit 8\t​Black Friday", ""],
+    "第10回": ["Unit 9​\tGetting High on Gardening", ""],
+    "第11回": ["Unit10​\tThe Throw-Away Café!", ""],
+    "第12回": ["Unit11​\tLost in Translation?", ""],
+    "第13回": ["Unit12\t​The Very Fortunate Four", ""],
+    "第14回": ["授業のまとめと学習到達度確認の授業内試験", ""],
     "授業外学習2": "毎回の授業内で指示する範囲の予習を行うこと。"
   },
   "評価": {
@@ -89,11 +47,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "50 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "50 %", ""],
     "成績評価Grading2": [
       "その他／Others (99)",
       "50 %",

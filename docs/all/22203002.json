@@ -8,18 +8,12 @@
   "授業の概要・背景": "",
   "授業方法": "演習問題を解く。グループで長い英文の内容を要約し発表してもらう。",
   "トピック": {
-    "第1回": [
-      "Orientation&amp;Pre-test",
-      "Preparation for next class."
-    ],
+    "第1回": ["Orientation&amp;Pre-test", "Preparation for next class."],
     "第2回": [
       "Unit 1   Racial Discrimination Problem",
       "Preparation for next class."
     ],
-    "第3回": [
-      "Unit 2   Short Conversation",
-      "Preparation for next class."
-    ],
+    "第3回": ["Unit 2   Short Conversation", "Preparation for next class."],
     "第4回": [
       "Unit 3   The Discovery of a New Medicine",
       "Preparation for next class."
@@ -36,34 +30,16 @@
       "Unit 6    Instructions on Class by a Professor",
       "Preparation for next class."
     ],
-    "第8回": [
-      "Unit 7    Financial Crisis",
-      "Preparation for next class."
-    ],
+    "第8回": ["Unit 7    Financial Crisis", "Preparation for next class."],
     "第9回": [
       "Unit 8    Conversation between a Professor and a Student",
       "Preparation for next class."
     ],
-    "第10回": [
-      "Unit 9   Native American",
-      "Preparation for next class."
-    ],
-    "第11回": [
-      "Unit 10  The Civil War",
-      "Preparation for next class."
-    ],
-    "第12回": [
-      "Unit 11 Environmental Problem",
-      "Preparation for next class."
-    ],
-    "第13回": [
-      "Unit 12 Astronomy",
-      "Preparation for next class."
-    ],
-    "第14回": [
-      "Post-test",
-      ""
-    ]
+    "第10回": ["Unit 9   Native American", "Preparation for next class."],
+    "第11回": ["Unit 10  The Civil War", "Preparation for next class."],
+    "第12回": ["Unit 11 Environmental Problem", "Preparation for next class."],
+    "第13回": ["Unit 12 Astronomy", "Preparation for next class."],
+    "第14回": ["Post-test", ""]
   },
   "評価": {
     "教科書/Required texts0": [
@@ -89,16 +65,8 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "80 %",
-      ""
-    ],
-    "成績評価Grading2": [
-      "その他／Others (99)",
-      "20 %",
-      "課題、発表"
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "80 %", ""],
+    "成績評価Grading2": ["その他／Others (99)", "20 %", "課題、発表"],
     "更新日時/Date of Update0": "2023年01月12日 14時22分21秒",
     "項番No.0": [],
     "項番No.1": [

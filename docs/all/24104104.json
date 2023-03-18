@@ -16,26 +16,11 @@
       "Textbook Unit 1: Roberta<BR/>単語テスト（指定範囲）開始。",
       "オンライン受講生のみ、2回目の授業前にzoomの入室アクセスコートを送信するので、5分前には入室しておく。"
     ],
-    "第3回": [
-      "Textbook Unit 2: Violin Class",
-      ""
-    ],
-    "第4回": [
-      "Textbook Unit 3: A Problem",
-      ""
-    ],
-    "第5回": [
-      "Textbook Unit 4: Divorce?",
-      ""
-    ],
-    "第6回": [
-      "Textbook Unit 5: Naeem has come back.",
-      ""
-    ],
-    "第7回": [
-      "Textbook Unit 6: Christmas and a new life",
-      ""
-    ],
+    "第3回": ["Textbook Unit 2: Violin Class", ""],
+    "第4回": ["Textbook Unit 3: A Problem", ""],
+    "第5回": ["Textbook Unit 4: Divorce?", ""],
+    "第6回": ["Textbook Unit 5: Naeem has come back.", ""],
+    "第7回": ["Textbook Unit 6: Christmas and a new life", ""],
     "第8回": [
       "Mid-term exam: spoken test (映画スクリプト音読) /  writing assignment （与えられたトピックに関して英語で意見を述べる小レポート）",
       ""
@@ -48,22 +33,10 @@
       "Textbook Unit 9:A New Encounter<BR/>Textbook Unit 10: Spring Concert",
       ""
     ],
-    "第11回": [
-      "Textbook Unit 11: 6 Weeks to Go",
-      ""
-    ],
-    "第12回": [
-      "Textbook Unit 12: Fiddlefest Concert",
-      ""
-    ],
-    "第13回": [
-      "Review<BR/>映画全体の振り返り",
-      ""
-    ],
-    "第14回": [
-      "Final exam<BR/>まとめと質問",
-      ""
-    ],
+    "第11回": ["Textbook Unit 11: 6 Weeks to Go", ""],
+    "第12回": ["Textbook Unit 12: Fiddlefest Concert", ""],
+    "第13回": ["Review<BR/>映画全体の振り返り", ""],
+    "第14回": ["Final exam<BR/>まとめと質問", ""],
     "授業外学習2": "授業前には単語テストのための予習、授業後には内容確認、次回の予習にそれぞれ60分程度が望ましい。試験前には120分以上の準備が必要である。"
   },
   "評価": {

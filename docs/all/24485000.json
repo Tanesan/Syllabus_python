@@ -115,16 +115,8 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "50 %",
-      ""
-    ],
-    "成績評価Grading2": [
-      "平常リポート／Individual reports (04)",
-      "50 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "50 %", ""],
+    "成績評価Grading2": ["平常リポート／Individual reports (04)", "50 %", ""],
     "成績評価Grading3": "備考　Note\n平常リポート（50点）は12月上旬提出締切とし、授業中試験（50点）は1月上旬に実施する。\n授業中の発言1回につき2点を追加する。",
     "更新日時/Date of Update0": "2023年01月09日 15時08分24秒",
     "項番No.0": [],

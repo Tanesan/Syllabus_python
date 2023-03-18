@@ -113,16 +113,8 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "定期試験／Final Examination (01)",
-      "60 %",
-      ""
-    ],
-    "成績評価Grading2": [
-      "授業中試験／In-class examination (03)",
-      "40 %",
-      ""
-    ],
+    "成績評価Grading1": ["定期試験／Final Examination (01)", "60 %", ""],
+    "成績評価Grading2": ["授業中試験／In-class examination (03)", "40 %", ""],
     "更新日時/Date of Update0": "2023年01月04日 14時11分51秒",
     "項番No.0": [],
     "項番No.1": [

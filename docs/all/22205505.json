@@ -8,62 +8,23 @@
   "授業の概要・背景": "",
   "授業方法": "There will be individual, pair and group work as well as lectures. Students will participate in a variety of tasks including reading, listening, discussion and writing.",
   "トピック": {
-    "第1回": [
-      "Orientation",
-      "Preparation for next class."
-    ],
-    "第2回": [
-      "Unit 1 Food and Culture",
-      "Preparation for next class."
-    ],
-    "第3回": [
-      "Unit 4 Identity Theft",
-      "Preparation for next class."
-    ],
-    "第4回": [
-      "Unit 5 Digital Learing",
-      "Preparation for next class."
-    ],
-    "第5回": [
-      "Unit 6 Artificial Intelligence",
-      "Preparation for next class."
-    ],
-    "第6回": [
-      "Unit 9 Cheating",
-      "Preparation for next class."
-    ],
-    "第7回": [
-      "Unit 10 Attitude",
-      "Preparation for next class."
-    ],
-    "第8回": [
-      "Unit 11 Communication",
-      "Preparation for next class."
-    ],
-    "第9回": [
-      "Unit 12 Time",
-      "Preparation for next class."
-    ],
-    "第10回": [
-      "Unit 13 Education",
-      "Preparation for next class."
-    ],
-    "第11回": [
-      "Unit 14 Immigration",
-      "Preparation for next class."
-    ],
+    "第1回": ["Orientation", "Preparation for next class."],
+    "第2回": ["Unit 1 Food and Culture", "Preparation for next class."],
+    "第3回": ["Unit 4 Identity Theft", "Preparation for next class."],
+    "第4回": ["Unit 5 Digital Learing", "Preparation for next class."],
+    "第5回": ["Unit 6 Artificial Intelligence", "Preparation for next class."],
+    "第6回": ["Unit 9 Cheating", "Preparation for next class."],
+    "第7回": ["Unit 10 Attitude", "Preparation for next class."],
+    "第8回": ["Unit 11 Communication", "Preparation for next class."],
+    "第9回": ["Unit 12 Time", "Preparation for next class."],
+    "第10回": ["Unit 13 Education", "Preparation for next class."],
+    "第11回": ["Unit 14 Immigration", "Preparation for next class."],
     "第12回": [
       "Unit 15 Gender Differences",
       "Preparation for the presentation."
     ],
-    "第13回": [
-      "Presentation",
-      "Preparation for the examination."
-    ],
-    "第14回": [
-      "Final Examination",
-      ""
-    ]
+    "第13回": ["Presentation", "Preparation for the examination."],
+    "第14回": ["Final Examination", ""]
   },
   "評価": {
     "教科書/Required texts0": [
@@ -89,11 +50,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "50 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "50 %", ""],
     "成績評価Grading2": [
       "その他／Others (99)",
       "50 %",

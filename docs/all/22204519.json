@@ -8,30 +8,12 @@
   "授業の概要・背景": "",
   "授業方法": "・授業方法の詳細は第１回Introduction（LUNA）で提示します。<BR/>・第１回～第7回はLUNAによるオンライン授業を実施しますので、毎週の授業実施日にLUNAの本科目のページにアクセスして指示に従ってください。<BR/>・第8から第14回は対面授業を実施します。<BR/>・授業開始日までに必ずテキストを用意してください。<BR/>・対面授業の時は辞書（電子辞書可）を毎回持参すること。<BR/>・【オンライン受講許可学生対象】第8回以降「オンデマンド」で配信予定。LUNAで詳細を確認すること。",
   "トピック": {
-    "第1回": [
-      "Introduction: What is a Presentation?",
-      ""
-    ],
-    "第2回": [
-      "Chapter 1 : テーマの選択とリサーチメソッド",
-      ""
-    ],
-    "第3回": [
-      "Chapter 2 : データの収集",
-      ""
-    ],
-    "第4回": [
-      "Chapter 3 : タイトルと要旨",
-      ""
-    ],
-    "第5回": [
-      "Chapter 4 : タイプとフォーマット",
-      ""
-    ],
-    "第6回": [
-      "Chapter 5 : プレゼンテーションの構成",
-      ""
-    ],
+    "第1回": ["Introduction: What is a Presentation?", ""],
+    "第2回": ["Chapter 1 : テーマの選択とリサーチメソッド", ""],
+    "第3回": ["Chapter 2 : データの収集", ""],
+    "第4回": ["Chapter 3 : タイトルと要旨", ""],
+    "第5回": ["Chapter 4 : タイプとフォーマット", ""],
+    "第6回": ["Chapter 5 : プレゼンテーションの構成", ""],
     "第7回": [
       "Chapter 6 : データの視覚資料化(1)＜数量データ＞<BR/>Chapter 7 : データの視覚資料化(2)＜文字データ＞<BR/>Chapter 8 : PowerPointスライドの作成",
       ""
@@ -40,30 +22,15 @@
       "Chapter 9 : Expressions for Script (1)<BR/>Chapter 10 :　Expressions for Script (2) <BR/>Chapter 11:　英文校閲法、自己点検法など",
       ""
     ],
-    "第9回": [
-      "Chapter 12 : Oral &amp;  Physical Aspects",
-      ""
-    ],
-    "第10回": [
-      "Chapter 13 : Delivery &amp; Troubleshooting",
-      ""
-    ],
+    "第9回": ["Chapter 12 : Oral &amp;  Physical Aspects", ""],
+    "第10回": ["Chapter 13 : Delivery &amp; Troubleshooting", ""],
     "第11回": [
       "Chapter 14 : 直前チェックとリハーサル　<BR/>Chapter 15 : 質疑応答表現",
       ""
     ],
-    "第12回": [
-      "Presentation (1)",
-      ""
-    ],
-    "第13回": [
-      "Presentation (2)",
-      ""
-    ],
-    "第14回": [
-      "Presentation (3)",
-      ""
-    ],
+    "第12回": ["Presentation (1)", ""],
+    "第13回": ["Presentation (2)", ""],
+    "第14回": ["Presentation (3)", ""],
     "授業外学習2": "・事前にテキストの予習をしておくこと。<BR/>・授業中に行う課題の中で、理解が不足していた部分を各自復習しておくこと。"
   },
   "評価": {

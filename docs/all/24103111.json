@@ -8,26 +8,14 @@
   "授業の概要・背景": "",
   "授業方法": "本授業では、様々な英語表現に関して教員が紹介・説明をするが、それ以外は学生が主体となって練習問題に取り組む。",
   "トピック": {
-    "第1回": [
-      "イントロダクション",
-      "Lesson 1 の予習"
-    ],
-    "第2回": [
-      "Lesson 1 感情 (feelings) にまつわる表現",
-      "Lesson 2 の予習"
-    ],
-    "第3回": [
-      "Lesson 2 身体 (body) にまつわる表現",
-      "Lesson 3 の予習"
-    ],
+    "第1回": ["イントロダクション", "Lesson 1 の予習"],
+    "第2回": ["Lesson 1 感情 (feelings) にまつわる表現", "Lesson 2 の予習"],
+    "第3回": ["Lesson 2 身体 (body) にまつわる表現", "Lesson 3 の予習"],
     "第4回": [
       "Lesson 3 旅行・観光 (travel and tourism) にまつわる表現",
       "Lesson 4 の予習"
     ],
-    "第5回": [
-      "Lesson 4 比較 (comparison) を表す表現",
-      "Lesson 5 の予習"
-    ],
+    "第5回": ["Lesson 4 比較 (comparison) を表す表現", "Lesson 5 の予習"],
     "第6回": [
       "Lesson 5 成功と失敗 (success and failure) にまつわる表現",
       "Lesson 6 の予習"
@@ -36,22 +24,13 @@
       "Lesson 6 好き嫌い (like or dislike) の表現",
       "Lesson 1 から 6 までの復習"
     ],
-    "第8回": [
-      "中間試験",
-      "Lesson 7 の予習"
-    ],
+    "第8回": ["中間試験", "Lesson 7 の予習"],
     "第9回": [
       "Lesson 7 飲食 (eating and drinking) にまつわる表現",
       "Lesson 8 の予習"
     ],
-    "第10回": [
-      "Lesson 8 時間 (time) にまつわる表現",
-      "Lesson 9 の予習"
-    ],
-    "第11回": [
-      "Lesson 9 反復表現 (idioms of repetition)",
-      "Lesson 10 の予習"
-    ],
+    "第10回": ["Lesson 8 時間 (time) にまつわる表現", "Lesson 9 の予習"],
+    "第11回": ["Lesson 9 反復表現 (idioms of repetition)", "Lesson 10 の予習"],
     "第12回": [
       "Lesson 10 大学・教育 (university・education) にまつわる表現",
       "Lesson 11 の予習"
@@ -60,10 +39,7 @@
       "Lesson 11 関係 (relationship) にまつわる表現",
       "Lesson 7 から 11 までの復習"
     ],
-    "第14回": [
-      "期末試験",
-      ""
-    ]
+    "第14回": ["期末試験", ""]
   },
   "評価": {
     "教科書Required texts0": "Communicative English for listening and speaking コミュニカティブ・イングリッシュ２８章　友繁義典＆ロビン・イブ　英宝社　２０１８年　ISBN978-4-269-44021-0 C1082",

@@ -12,58 +12,19 @@
       "授業の進め方、評価についての説明<BR/><BR/>Guidance of this course. Characteristics of media English.",
       ""
     ],
-    "第2回": [
-      "Unit 1  Don&#39;t Sneeze on Me!",
-      "オンライン予習テスト"
-    ],
-    "第3回": [
-      "Unit 2  Hard-Working Dads",
-      "オンライン予習テスト"
-    ],
-    "第4回": [
-      "Unit 3  Life with Spice!",
-      "オンライン予習テスト"
-    ],
-    "第5回": [
-      "Unit 4  The Importance of Insects",
-      "オンライン予習テスト"
-    ],
-    "第6回": [
-      "Unit 5  Suits for Discovery",
-      "オンライン予習テスト"
-    ],
-    "第7回": [
-      "Unit 6  Changing Bodies",
-      "オンライン予習テスト"
-    ],
-    "第8回": [
-      "Unit 7  A Cold Thought",
-      "オンライン予習テスト"
-    ],
-    "第9回": [
-      "Unit 8  No Space for Wisdom",
-      "オンライン予習テスト"
-    ],
-    "第10回": [
-      "Unit 9  Sounds from Plastic",
-      "オンライン予習テスト"
-    ],
-    "第11回": [
-      "Unit 10  Forward vs. Backward",
-      "オンライン予習テスト"
-    ],
-    "第12回": [
-      "Unit 11  Silence Is Golden!",
-      "オンライン予習テスト"
-    ],
-    "第13回": [
-      "Unit 12 What is Your Type?",
-      "オンライン予習テスト"
-    ],
-    "第14回": [
-      "授業中試験",
-      ""
-    ],
+    "第2回": ["Unit 1  Don&#39;t Sneeze on Me!", "オンライン予習テスト"],
+    "第3回": ["Unit 2  Hard-Working Dads", "オンライン予習テスト"],
+    "第4回": ["Unit 3  Life with Spice!", "オンライン予習テスト"],
+    "第5回": ["Unit 4  The Importance of Insects", "オンライン予習テスト"],
+    "第6回": ["Unit 5  Suits for Discovery", "オンライン予習テスト"],
+    "第7回": ["Unit 6  Changing Bodies", "オンライン予習テスト"],
+    "第8回": ["Unit 7  A Cold Thought", "オンライン予習テスト"],
+    "第9回": ["Unit 8  No Space for Wisdom", "オンライン予習テスト"],
+    "第10回": ["Unit 9  Sounds from Plastic", "オンライン予習テスト"],
+    "第11回": ["Unit 10  Forward vs. Backward", "オンライン予習テスト"],
+    "第12回": ["Unit 11  Silence Is Golden!", "オンライン予習テスト"],
+    "第13回": ["Unit 12 What is Your Type?", "オンライン予習テスト"],
+    "第14回": ["授業中試験", ""],
     "授業計画1": "毎回、リーディング部分を読みLUNAの予習テストを受ける。担当予習に当たっている場合は、単語リスト、問題解答のいずれかを提出する。授業内では、英語で答えたり、グループワークをする。",
     "授業外学習2": "リーディング部分を読み、必ず予習しておくこと。ABCやCNN,Newsyなどのオンラインサイトで、メディア英語をなるべく頻繁に視聴すること。担当予習は忘れないようにして下さい。"
   },
@@ -90,11 +51,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "30 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "30 %", ""],
     "成績評価Grading2": [
       "平常リポート／Individual reports (04)",
       "40 %",

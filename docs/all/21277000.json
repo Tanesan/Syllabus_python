@@ -8,22 +8,10 @@
   "授業の概要・背景": "",
   "授業方法": "授業に先立ってあらかじめ、教科書の指定箇所を読んで授業動画を視聴し、その中で指示されている楽曲を聴く。<BR/>授業時間には、質疑応答やディスカッションを行う。",
   "トピック": {
-    "第1回": [
-      "キリスト教〈と〉音楽<BR/>Christianity AND the music",
-      ""
-    ],
-    "第2回": [
-      "ミサ（１）通常文<BR/>Mass (1): Ordinary",
-      "教科書第３章"
-    ],
-    "第3回": [
-      "ミサ（２）固有文<BR/>Mass (2): Proper",
-      "教科書第２・７章"
-    ],
-    "第4回": [
-      "ミサ（３）ミサを見る<BR/>Mass (3): An example",
-      ""
-    ],
+    "第1回": ["キリスト教〈と〉音楽<BR/>Christianity AND the music", ""],
+    "第2回": ["ミサ（１）通常文<BR/>Mass (1): Ordinary", "教科書第３章"],
+    "第3回": ["ミサ（２）固有文<BR/>Mass (2): Proper", "教科書第２・７章"],
+    "第4回": ["ミサ（３）ミサを見る<BR/>Mass (3): An example", ""],
     "第5回": [
       "ミサ（４）レクイエム（死者のためのミサ）<BR/>Mass (4): Requiem",
       "教科書第８章"
@@ -44,18 +32,9 @@
       "ルター派の「ミサ」と「主要音楽」<BR/>Lutheran Mass and the &quot;Hauptmusik&quot;",
       ""
     ],
-    "第10回": [
-      "オラトリオ<BR/>Oratorio",
-      "教科書第10章"
-    ],
-    "第11回": [
-      "受難曲<BR/>Passion",
-      "教科書第６章"
-    ],
-    "第12回": [
-      "東方教会<BR/>Orthodox liturgy and music",
-      ""
-    ],
+    "第10回": ["オラトリオ<BR/>Oratorio", "教科書第10章"],
+    "第11回": ["受難曲<BR/>Passion", "教科書第６章"],
+    "第12回": ["東方教会<BR/>Orthodox liturgy and music", ""],
     "第13回": [
       "アジア、アフリカ、ラテン・アメリカ<BR/>Music from Asia, Africa, and Latin America",
       ""
@@ -154,11 +133,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "定期試験／Final Examination (01)",
-      "40 %",
-      ""
-    ],
+    "成績評価Grading1": ["定期試験／Final Examination (01)", "40 %", ""],
     "成績評価Grading2": [
       "平常リポート／Individual reports (04)",
       "40 %",

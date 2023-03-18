@@ -76,16 +76,8 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "定期試験／Final Examination (01)",
-      "70 %",
-      ""
-    ],
-    "成績評価Grading2": [
-      "その他／Others (99)",
-      "30 %",
-      "毎回のコメント"
-    ],
+    "成績評価Grading1": ["定期試験／Final Examination (01)", "70 %", ""],
+    "成績評価Grading2": ["その他／Others (99)", "30 %", "毎回のコメント"],
     "成績評価Grading3": "備考　Note\n定期試験(final examination)\nコメント30％、試験70％により総合的に評価する。",
     "更新日時/Date of Update0": "2023年02月20日 15時58分17秒",
     "項番No.0": [],

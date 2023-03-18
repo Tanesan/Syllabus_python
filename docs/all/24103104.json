@@ -16,54 +16,21 @@
       "Textbook Unit 1:William&#39;s Notting Hill <BR/>単語テスト開始（指定箇所)",
       "【オンライン受講許可学生のみ】第2回目以降の授業で、授業をzoomにて配信。各自の関学メール宛にzoomの入室用パスコードを送るので確認しておくこと。"
     ],
-    "第3回": [
-      "Textbook Unit 2: Surreal, But Nice",
-      ""
-    ],
-    "第4回": [
-      "Textbook Unit 3: A Goddess is a Movie Star",
-      ""
-    ],
-    "第5回": [
-      "Textbook Unit 4: Birthday Party",
-      ""
-    ],
-    "第6回": [
-      "Textbook Unit 5: A Date with Anna",
-      ""
-    ],
-    "第7回": [
-      "Textbook Unit 6: She&#39;s Gone",
-      ""
-    ],
+    "第3回": ["Textbook Unit 2: Surreal, But Nice", ""],
+    "第4回": ["Textbook Unit 3: A Goddess is a Movie Star", ""],
+    "第5回": ["Textbook Unit 4: Birthday Party", ""],
+    "第6回": ["Textbook Unit 5: A Date with Anna", ""],
+    "第7回": ["Textbook Unit 6: She&#39;s Gone", ""],
     "第8回": [
       "Mid-term Test: Speaking Test (映画スクリプトのペア音読、小レポートの提出）",
       ""
     ],
-    "第9回": [
-      "Textbook Unit 7 She&#39;s Back",
-      ""
-    ],
-    "第10回": [
-      "Textbook Unit 8: Rude Awakening",
-      ""
-    ],
-    "第11回": [
-      "Textbook Unit 9: Like Me Again",
-      ""
-    ],
-    "第12回": [
-      "Textbook Unit 10: The Right Decision",
-      ""
-    ],
-    "第13回": [
-      "Review for the semester<BR/>映画全体の振り返り",
-      ""
-    ],
-    "第14回": [
-      "Final exam <BR/>まとめ",
-      ""
-    ],
+    "第9回": ["Textbook Unit 7 She&#39;s Back", ""],
+    "第10回": ["Textbook Unit 8: Rude Awakening", ""],
+    "第11回": ["Textbook Unit 9: Like Me Again", ""],
+    "第12回": ["Textbook Unit 10: The Right Decision", ""],
+    "第13回": ["Review for the semester<BR/>映画全体の振り返り", ""],
+    "第14回": ["Final exam <BR/>まとめ", ""],
     "授業外学習2": "授業前には単語テストのための予習、授業後には内容確認、次回の予習にそれぞれ60分程度が望ましい。試験のための準備には120分以上の準備が必要となる。"
   },
   "評価": {

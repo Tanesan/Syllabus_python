@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "「対面授業」。 講義と練習。1回の授業中に何度も指名されることになるので、絶えず緊張すること。第１回授業までに教科書を必ず手に入れること。出席に際しては辞書必携。辞書については第1回の授業で説明します。毎回何らかの課題を出すので、必ず準備してくること。質問はLUNAの「お知らせ」に掲示のメールアドレスへ「学生番号」「氏名」「授業名」を明記したうえで送信すること。",
   "トピック": {
-    "第1回": [
-      "Lektion0　綴りと発音1",
-      "発音復習、練習"
-    ],
-    "第2回": [
-      "Lektion0　綴りと発音2、数詞",
-      "発音復習"
-    ],
-    "第3回": [
-      "Lektion1　規則動詞",
-      "練習、Übung、Kommunikation"
-    ],
-    "第4回": [
-      "Lektion2　動詞の位置",
-      "練習"
-    ],
-    "第5回": [
-      "Lektion2　名詞",
-      "Übung、Kommunikation"
-    ],
-    "第6回": [
-      "Lektion3　名詞と冠詞",
-      "練習"
-    ],
-    "第7回": [
-      "Lektion3　複数形",
-      "Übung、Kommunikation"
-    ],
-    "第8回": [
-      "Lektion4　不規則動詞と命令",
-      "練習、Übung、Kommunikation"
-    ],
-    "第9回": [
-      "Lektion5　冠詞類1",
-      "練習"
-    ],
-    "第10回": [
-      "Lektion5　冠詞類2",
-      "Übung、Kommunikation"
-    ],
-    "第11回": [
-      "Lektion6　代名詞",
-      "練習"
-    ],
-    "第12回": [
-      "Lektion6　前置詞",
-      "Übung、Kommunikation"
-    ],
-    "第13回": [
-      "Lektion7　助動詞",
-      "練習、Übung、Kommunikation"
-    ],
-    "第14回": [
-      "Lektion7　未来形　と最終授業試験",
-      ""
-    ]
+    "第1回": ["Lektion0　綴りと発音1", "発音復習、練習"],
+    "第2回": ["Lektion0　綴りと発音2、数詞", "発音復習"],
+    "第3回": ["Lektion1　規則動詞", "練習、Übung、Kommunikation"],
+    "第4回": ["Lektion2　動詞の位置", "練習"],
+    "第5回": ["Lektion2　名詞", "Übung、Kommunikation"],
+    "第6回": ["Lektion3　名詞と冠詞", "練習"],
+    "第7回": ["Lektion3　複数形", "Übung、Kommunikation"],
+    "第8回": ["Lektion4　不規則動詞と命令", "練習、Übung、Kommunikation"],
+    "第9回": ["Lektion5　冠詞類1", "練習"],
+    "第10回": ["Lektion5　冠詞類2", "Übung、Kommunikation"],
+    "第11回": ["Lektion6　代名詞", "練習"],
+    "第12回": ["Lektion6　前置詞", "Übung、Kommunikation"],
+    "第13回": ["Lektion7　助動詞", "練習、Übung、Kommunikation"],
+    "第14回": ["Lektion7　未来形　と最終授業試験", ""]
   },
   "評価": {
     "教科書/Required texts0": [

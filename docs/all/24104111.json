@@ -12,14 +12,8 @@
       "Lesson 12 健康と病 (health and illness) にまつわる表現",
       "Lesson 13 の予習"
     ],
-    "第2回": [
-      "Lesson 13 怒り (anger)  にまつわる表現",
-      "Lesson 14 の予習"
-    ],
-    "第3回": [
-      "Lesson 14 スポーツ (sports) にまつわる表現",
-      "Lesson 15 の予習"
-    ],
+    "第2回": ["Lesson 13 怒り (anger)  にまつわる表現", "Lesson 14 の予習"],
+    "第3回": ["Lesson 14 スポーツ (sports) にまつわる表現", "Lesson 15 の予習"],
     "第4回": [
       "Lesson 15 コンピュータ (computer) にまつわる表現",
       "Lesson 16 の予習"
@@ -32,14 +26,8 @@
       "Lesson 17 人 (people) にまつわる表現",
       "Lesson 12 から 17 までの復習"
     ],
-    "第7回": [
-      "中間試験",
-      "Lesson 18 の予習"
-    ],
-    "第8回": [
-      "Lesson 18 金銭 (money) にまつわる表現",
-      "Lesson 19 の予習"
-    ],
+    "第7回": ["中間試験", "Lesson 18 の予習"],
+    "第8回": ["Lesson 18 金銭 (money) にまつわる表現", "Lesson 19 の予習"],
     "第9回": [
       "Lesson 19 「as 形容詞 as 名詞」型の決まり文句",
       "Lesson 20 の予習"
@@ -60,10 +48,7 @@
       "Lesson 23 音楽 (music) にまつわる表現",
       "Lesson 18 から 23 までの復習"
     ],
-    "第14回": [
-      "期末試験",
-      ""
-    ]
+    "第14回": ["期末試験", ""]
   },
   "評価": {
     "教科書Required texts0": "Communicative English for listening and speaking コミュニカティブ・イングリッシュ２８章　友繁義典＆ロビン・イブ　英宝社　2018年 ISBN978-4-269-44021-0 C1082",

@@ -8,50 +8,29 @@
   "授業の概要・背景": "",
   "授業方法": "演習<BR/>【オンライン受講許可学生には毎回オンデマンドで資料・課題を提示する】",
   "トピック": {
-    "第1回": [
-      "授業のガイダンス（授業方針、成績評価等）",
-      ""
-    ],
+    "第1回": ["授業のガイダンス（授業方針、成績評価等）", ""],
     "第2回": [
       "教科書　Introduction　①<BR/>What is Environmental Communication?",
       "指定した箇所の翻訳"
     ],
-    "第3回": [
-      "Introduction ②",
-      "Exercises"
-    ],
+    "第3回": ["Introduction ②", "Exercises"],
     "第4回": [
       "Chapter 1　①<BR/>Tap Water or Bottled Water",
       "指定した箇所の翻訳"
     ],
-    "第5回": [
-      "Chapter 1 ②",
-      "Exercises・発表"
-    ],
-    "第6回": [
-      "Chapter 2 ①<BR/>Childhood and Nature",
-      "指定した箇所の翻訳"
-    ],
-    "第7回": [
-      "Chapter 2 ②",
-      "Exercises・発表"
-    ],
+    "第5回": ["Chapter 1 ②", "Exercises・発表"],
+    "第6回": ["Chapter 2 ①<BR/>Childhood and Nature", "指定した箇所の翻訳"],
+    "第7回": ["Chapter 2 ②", "Exercises・発表"],
     "第8回": [
       "Chapter 3 ①<BR/>work and Consumer Culture",
       "指定した箇所の翻訳"
     ],
-    "第9回": [
-      "Chapter 3 ②",
-      "Exercises・発表"
-    ],
+    "第9回": ["Chapter 3 ②", "Exercises・発表"],
     "第10回": [
       "Chapter 4 ①<BR/>Tourism as Modern Pilgrimage",
       "指定した箇所の翻訳"
     ],
-    "第11回": [
-      "Chapter 4 ②",
-      "Exercises・発表"
-    ],
+    "第11回": ["Chapter 4 ②", "Exercises・発表"],
     "第12回": [
       "Chapter 5<BR/>Mass Media Messages and Animals",
       "指定した箇所の翻訳、Exercises"
@@ -60,10 +39,7 @@
       "Conclusion: A New Vision for Environmental Communication<BR/>全体のまとめ",
       "指定した箇所の翻訳、Exercises"
     ],
-    "第14回": [
-      "授業内試験",
-      "授業内試験"
-    ],
+    "第14回": ["授業内試験", "授業内試験"],
     "授業外学習2": "毎回教科書の英文本文を十分に予習し、未知の単語を事前に調べておくこと。また、適宜紹介または配布する参考資料を積極的に読むこと。"
   },
   "評価": {
@@ -105,11 +81,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "50 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "50 %", ""],
     "成績評価Grading2": [
       "その他／Others (99)",
       "50 %",

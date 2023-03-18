@@ -12,38 +12,17 @@
       "１４回全て対面授業実施予定。<BR/>オリエンテーション<BR/>授業概要、評価基準などを説明後、ウォームアップアクティビティを行います。",
       ""
     ],
-    "第2回": [
-      "Unit 6 Discrimination against Asian Americans",
-      ""
-    ],
-    "第3回": [
-      "Unit 6 Discrimination against Asian Americans",
-      ""
-    ],
-    "第4回": [
-      "Unit 7 Gendered Division of Housework",
-      ""
-    ],
-    "第5回": [
-      "Unit 7 Gendered Division of Housework",
-      ""
-    ],
-    "第6回": [
-      "Unit 9 Ukraine and Afghanistan",
-      ""
-    ],
-    "第7回": [
-      "Unit 9 Ukraine and Afghanistan",
-      ""
-    ],
+    "第2回": ["Unit 6 Discrimination against Asian Americans", ""],
+    "第3回": ["Unit 6 Discrimination against Asian Americans", ""],
+    "第4回": ["Unit 7 Gendered Division of Housework", ""],
+    "第5回": ["Unit 7 Gendered Division of Housework", ""],
+    "第6回": ["Unit 9 Ukraine and Afghanistan", ""],
+    "第7回": ["Unit 9 Ukraine and Afghanistan", ""],
     "第8回": [
       "Review on Unit 6,7,9<BR/>Review Test and Discussion and Writing Activities",
       ""
     ],
-    "第9回": [
-      "Unit 10 Digital Society",
-      ""
-    ],
+    "第9回": ["Unit 10 Digital Society", ""],
     "第10回": [
       "Unit 10 Digital Society<BR/>Work on Research Report (Planning)",
       ""
@@ -56,14 +35,8 @@
       "Unit 12 Overtourism and Undertourism<BR/>Work on Research Report(Writing the final draft)",
       ""
     ],
-    "第13回": [
-      "General Review<BR/>(Submission of Research Report)",
-      ""
-    ],
-    "第14回": [
-      "Final Review Test",
-      ""
-    ],
+    "第13回": ["General Review<BR/>(Submission of Research Report)", ""],
+    "第14回": ["Final Review Test", ""],
     "授業外学習2": "毎回の授業の前に、テキストの該当箇所を読み、必要に応じ語彙の意味を確認すること（20分）<BR/>毎回の授業の後に、授業で学習した内容を復習し、不明な点は翌回の授業で質問する準備をすること。（30分）<BR/>出題されたライティング課題に取り組むこと（１時間）<BR/>提出された課題は添削後返却し、総評、評価基準を伝える。<BR/>小テストは翌回の授業で返却し、注意ポイントを確認する。（テスト解答は返却後LUNAに掲載する）"
   },
   "評価": {

@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "1. This course will be conducted in English only and English will be the means of communication between the students and the instructor.  (Students will also be expected to communicate with one another in English.)<BR/>2.  Students are encouraged to actively participate in class discussions, both independently and collaboratively, in order to enhance their competence and confidence in English and also to create a better learning environment for all.",
   "トピック": {
-    "第1回": [
-      "Course Description &amp; Introduction",
-      ""
-    ],
-    "第2回": [
-      "Unit 1",
-      ""
-    ],
-    "第3回": [
-      "Unit 2",
-      ""
-    ],
-    "第4回": [
-      "Unit 3",
-      ""
-    ],
-    "第5回": [
-      "Review",
-      ""
-    ],
-    "第6回": [
-      "Unit 4",
-      ""
-    ],
-    "第7回": [
-      "Unit 5",
-      ""
-    ],
-    "第8回": [
-      "Unit 6",
-      ""
-    ],
-    "第9回": [
-      "Review",
-      ""
-    ],
-    "第10回": [
-      "Unit 7",
-      ""
-    ],
-    "第11回": [
-      "Unit 8",
-      ""
-    ],
-    "第12回": [
-      "Unit 9",
-      ""
-    ],
-    "第13回": [
-      "Review",
-      ""
-    ],
-    "第14回": [
-      "Course Review and Reflection",
-      ""
-    ],
+    "第1回": ["Course Description &amp; Introduction", ""],
+    "第2回": ["Unit 1", ""],
+    "第3回": ["Unit 2", ""],
+    "第4回": ["Unit 3", ""],
+    "第5回": ["Review", ""],
+    "第6回": ["Unit 4", ""],
+    "第7回": ["Unit 5", ""],
+    "第8回": ["Unit 6", ""],
+    "第9回": ["Review", ""],
+    "第10回": ["Unit 7", ""],
+    "第11回": ["Unit 8", ""],
+    "第12回": ["Unit 9", ""],
+    "第13回": ["Review", ""],
+    "第14回": ["Course Review and Reflection", ""],
     "授業計画1": "One to two hours of homework can be expected each week.",
     "授業外学習2": "One to two hours of homework can be expected each week."
   },

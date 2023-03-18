@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": " 演習形式。内容の理解とディスカッションからなる。具体的には、各パラグラフの意味を正確に理解した後、そのパラグラフを英語でsummmarize, paraphrase, comment する。さらに、エッセイ全体を読み終えたのち、内容について summary &amp; discussionを行う。<BR/>　2~3つのエッセイを読了後、そのエッセイに関する、summary and commentsを提出する。<BR/>　授業には、毎回、English-English dictionary　（できればcollocations dictionaryとthesaurusも；またはこれらの入った電子辞書）と専用ノートを持参すること。<BR/>Method: This course focuses on understanding English essays and discussions about related matters. Specifically, students are expected to evaluate the meaning of each paragraph and summarize or paraphrase. After finishing reading each essay, students are encouraged to express their opinions in English verbally and participate in class discussions. Finally, students should submit their paper which contains their own summary and comments about each essay.",
   "トピック": {
-    "第1回": [
-      "A fortunate accident(1)",
-      ""
-    ],
-    "第2回": [
-      "A fortunate accident(2)",
-      ""
-    ],
-    "第3回": [
-      "Britain&#39;s best ride (1)",
-      ""
-    ],
-    "第4回": [
-      "Britain&#39;s best ride (2)",
-      ""
-    ],
-    "第5回": [
-      "The meaning of Bond (1)",
-      ""
-    ],
-    "第6回": [
-      "The meaning of Bond (2)",
-      ""
-    ],
-    "第7回": [
-      "The changing high street (1)",
-      ""
-    ],
-    "第8回": [
-      "The changing high street (2)",
-      ""
-    ],
-    "第9回": [
-      "Mild and cloudy with a chance of rain (1)",
-      ""
-    ],
-    "第10回": [
-      "Mild and cloudy with a chance of rain (2)",
-      ""
-    ],
-    "第11回": [
-      "Expressive expressions (1)",
-      ""
-    ],
-    "第12回": [
-      "Expressive expressions (2)",
-      ""
-    ],
-    "第13回": [
-      "A woman of some importance",
-      ""
-    ],
-    "第14回": [
-      "Review test",
-      ""
-    ],
+    "第1回": ["A fortunate accident(1)", ""],
+    "第2回": ["A fortunate accident(2)", ""],
+    "第3回": ["Britain&#39;s best ride (1)", ""],
+    "第4回": ["Britain&#39;s best ride (2)", ""],
+    "第5回": ["The meaning of Bond (1)", ""],
+    "第6回": ["The meaning of Bond (2)", ""],
+    "第7回": ["The changing high street (1)", ""],
+    "第8回": ["The changing high street (2)", ""],
+    "第9回": ["Mild and cloudy with a chance of rain (1)", ""],
+    "第10回": ["Mild and cloudy with a chance of rain (2)", ""],
+    "第11回": ["Expressive expressions (1)", ""],
+    "第12回": ["Expressive expressions (2)", ""],
+    "第13回": ["A woman of some importance", ""],
+    "第14回": ["Review test", ""],
     "授業外学習2": "該当エッセイを予習し（内容の理解と、英語での paraphrase）、随時サマリーとコメントを準備しておくこと。提出された英文エッセイは、添削して、翌週返却する。"
   },
   "評価": {

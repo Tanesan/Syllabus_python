@@ -8,62 +8,29 @@
   "授業の概要・背景": "",
   "授業方法": "教科書で扱われているリーディング教材、及びリスニング教材を用いて講義と演習、ペアワークやグループワークを組み合わせてReading中心の授業とAudio-Visual Learning中心の授業を隔週で行います。関連した他のメディア資料を適宜組み入れるため、授業計画は進度状況によって変更の可能性があります。",
   "トピック": {
-    "第1回": [
-      "オリエンテーション　<BR/>Unit 1",
-      ""
-    ],
-    "第2回": [
-      "Story 1  Job Hunting<BR/>Unit 2  Reading",
-      ""
-    ],
-    "第3回": [
-      "Unit 3  Audio-visual Learning<BR/>小テスト",
-      ""
-    ],
-    "第4回": [
-      "Story 2  Discovery<BR/>Unit 4  Reading<BR/>小テスト",
-      ""
-    ],
-    "第5回": [
-      "Unit 5  Audio-visual Learning<BR/>小テスト",
-      ""
-    ],
+    "第1回": ["オリエンテーション　<BR/>Unit 1", ""],
+    "第2回": ["Story 1  Job Hunting<BR/>Unit 2  Reading", ""],
+    "第3回": ["Unit 3  Audio-visual Learning<BR/>小テスト", ""],
+    "第4回": ["Story 2  Discovery<BR/>Unit 4  Reading<BR/>小テスト", ""],
+    "第5回": ["Unit 5  Audio-visual Learning<BR/>小テスト", ""],
     "第6回": [
       "Story 3  Getting Ready for the Suit  <BR/>Unit 6  Reading<BR/>小テスト",
       ""
     ],
-    "第7回": [
-      "Unit 7  Audio-visual Learning<BR/>小テスト",
-      ""
-    ],
+    "第7回": ["Unit 7  Audio-visual Learning<BR/>小テスト", ""],
     "第8回": [
       "Story 4  Four-hundred-or so Plaintiffs<BR/>Unit 8  Reading<BR/>小テスト",
       ""
     ],
-    "第9回": [
-      "Unit 9  Audio-visual Learning<BR/>小テスト",
-      ""
-    ],
+    "第9回": ["Unit 9  Audio-visual Learning<BR/>小テスト", ""],
     "第10回": [
       "Story 5  Binding Arbitration  <BR/>Unit 10  Reading<BR/>小テスト",
       ""
     ],
-    "第11回": [
-      "Unit 11  Audio-visual Learning<BR/>小テスト",
-      ""
-    ],
-    "第12回": [
-      "Story 6  Settlement<BR/>Unit 12  Reading<BR/>小テスト",
-      ""
-    ],
-    "第13回": [
-      "Unit 13  Audio-visual Learning<BR/>小テスト",
-      ""
-    ],
-    "第14回": [
-      "総括<BR/>授業内試験",
-      ""
-    ],
+    "第11回": ["Unit 11  Audio-visual Learning<BR/>小テスト", ""],
+    "第12回": ["Story 6  Settlement<BR/>Unit 12  Reading<BR/>小テスト", ""],
+    "第13回": ["Unit 13  Audio-visual Learning<BR/>小テスト", ""],
+    "第14回": ["総括<BR/>授業内試験", ""],
     "授業外学習2": "毎回予習・復習をする。（1時間〜）<BR/>・指定されたUnitの英文を確認する。（単語・熟語）<BR/>・キーワードについてレポートの作成をする。<BR/>・小テスト、クイズの準備をする。"
   },
   "評価": {

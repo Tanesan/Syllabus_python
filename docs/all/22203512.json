@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "受講生が興味をもてるTed Talkを教材に用い、口語体のこなれた英語に慣れ親しむとともに、プレゼンテーションの台詞を読み取り、聞き取るのみならず、学んだ表現を積極的に用いて、英語で自然な発話や作文ができるよう、集中的な訓練を行う。さらに、社会的・文化的な文脈を特に意識しつつ、広い視野から文化について考察を深める。",
   "トピック": {
-    "第1回": [
-      "Introduction",
-      ""
-    ],
-    "第2回": [
-      "Unit 1: Starting Up",
-      ""
-    ],
-    "第3回": [
-      "Unit 2: Fragile Forests",
-      ""
-    ],
-    "第4回": [
-      "Unit 3: Bright Ideas",
-      ""
-    ],
-    "第5回": [
-      "Unit 4: Game Changers",
-      ""
-    ],
-    "第6回": [
-      "Unit 5: Lessons in Learning",
-      ""
-    ],
-    "第7回": [
-      "Unit 6: Food for Life",
-      ""
-    ],
-    "第8回": [
-      "Unit 7: Body Signs",
-      ""
-    ],
-    "第9回": [
-      "Unit 8: Energy Builders",
-      ""
-    ],
-    "第10回": [
-      "Unit 9: Changing Perspectives",
-      ""
-    ],
-    "第11回": [
-      "Unit 10: Data Detectives",
-      ""
-    ],
-    "第12回": [
-      "Review 1",
-      ""
-    ],
-    "第13回": [
-      "Review 2",
-      ""
-    ],
-    "第14回": [
-      "学力の総括",
-      ""
-    ],
+    "第1回": ["Introduction", ""],
+    "第2回": ["Unit 1: Starting Up", ""],
+    "第3回": ["Unit 2: Fragile Forests", ""],
+    "第4回": ["Unit 3: Bright Ideas", ""],
+    "第5回": ["Unit 4: Game Changers", ""],
+    "第6回": ["Unit 5: Lessons in Learning", ""],
+    "第7回": ["Unit 6: Food for Life", ""],
+    "第8回": ["Unit 7: Body Signs", ""],
+    "第9回": ["Unit 8: Energy Builders", ""],
+    "第10回": ["Unit 9: Changing Perspectives", ""],
+    "第11回": ["Unit 10: Data Detectives", ""],
+    "第12回": ["Review 1", ""],
+    "第13回": ["Review 2", ""],
+    "第14回": ["学力の総括", ""],
     "授業外学習2": "受講生には、割り当てられたテクストの読解を予め授業外にこなし、質問やコメントを相当数、用意して授業に臨むことが求められる。"
   },
   "評価": {

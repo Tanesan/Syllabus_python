@@ -28,14 +28,7 @@
       "ISBN",
       "ボタン\nButton"
     ],
-    "教科書/Required texts1": [
-      "西田隆雄",
-      "自作教材（LUNA)",
-      "",
-      "",
-      "",
-      ""
-    ],
+    "教科書/Required texts1": ["西田隆雄", "自作教材（LUNA)", "", "", "", ""],
     "教科書Required texts0": "自作教材。LUNAにアップロードする。",
     "参考書/Reference books0": [
       "著者名\nAuthor",

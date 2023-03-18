@@ -89,16 +89,8 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "80 %",
-      ""
-    ],
-    "成績評価Grading2": [
-      "その他／Others (99)",
-      "20 %",
-      "授業内での発言・発表"
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "80 %", ""],
+    "成績評価Grading2": ["その他／Others (99)", "20 %", "授業内での発言・発表"],
     "備考Note0": "必ず予習して臨むこと。必ず毎回、辞書を持参すること。",
     "更新日時/Date of Update1": "2023年01月13日 11時07分57秒",
     "項番No.0": [],

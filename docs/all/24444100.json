@@ -88,11 +88,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "定期試験／Final Examination (01)",
-      "100 %",
-      ""
-    ],
+    "成績評価Grading1": ["定期試験／Final Examination (01)", "100 %", ""],
     "成績評価Grading2": "備考　Note\n【オンライン受講許可学生対象】\nオンラインでの授業中試験によって評価する(割合100%)",
     "更新日時/Date of Update0": "2022年12月20日 14時42分04秒",
     "項番No.0": [],

@@ -24,46 +24,25 @@
       "2. Experiencing, Analysing and Appreciating Art<BR/>英語文の観察と分析",
       ""
     ],
-    "第5回": [
-      "事実を書くこと、分析を記述すること、視点・見解を書くこと",
-      ""
-    ],
-    "第6回": [
-      "3. Materials and Techniques<BR/>引用その他の問題",
-      ""
-    ],
-    "第7回": [
-      "書物の構成を読み取り評価する術<BR/>書物の個性を割り出す",
-      ""
-    ],
+    "第5回": ["事実を書くこと、分析を記述すること、視点・見解を書くこと", ""],
+    "第6回": ["3. Materials and Techniques<BR/>引用その他の問題", ""],
+    "第7回": ["書物の構成を読み取り評価する術<BR/>書物の個性を割り出す", ""],
     "第8回": [
       "4. But What Does It Mean?<BR/>アートの理論の歴史: 形態論と意味論",
       ""
     ],
-    "第9回": [
-      "大学での英語文法と様々な言語学・記号学・情報環境",
-      ""
-    ],
+    "第9回": ["大学での英語文法と様々な言語学・記号学・情報環境", ""],
     "第10回": [
       "5. Six Special Artists: Leonardo da Vinci, Rembrandt van Rijn, Vincent van Gogh, Frida Kahlo, Pablo Picasso and Andy Warhol<BR/>様式・歴史・現代アート",
       ""
     ],
-    "第11回": [
-      "理論的批評・主題主義・実践批評<BR/>双対言語翻訳から学ぶ",
-      ""
-    ],
+    "第11回": ["理論的批評・主題主義・実践批評<BR/>双対言語翻訳から学ぶ", ""],
     "第12回": [
       "ディスカッションペイパーの準備<BR/>会議の形式(ロバーツ・ルールほか)と議論の形式",
       ""
     ],
-    "第13回": [
-      "リポートの下書き",
-      ""
-    ],
-    "第14回": [
-      "まとめと筆記試験",
-      ""
-    ]
+    "第13回": ["リポートの下書き", ""],
+    "第14回": ["まとめと筆記試験", ""]
   },
   "評価": {
     "教科書Required texts0": "Janetta Rebold Benton, How to Understand Art(Art Essentials)Thames and Hudson, 2021",
@@ -80,21 +59,9 @@
       "30 %",
       ""
     ],
-    "成績評価Grading2": [
-      "授業中試験／In-class examination (03)",
-      "30 %",
-      ""
-    ],
-    "成績評価Grading3": [
-      "平常リポート／Individual reports (04)",
-      "20 %",
-      ""
-    ],
-    "成績評価Grading4": [
-      "その他／Others (99)",
-      "20 %",
-      "学修報告課題"
-    ],
+    "成績評価Grading2": ["授業中試験／In-class examination (03)", "30 %", ""],
+    "成績評価Grading3": ["平常リポート／Individual reports (04)", "20 %", ""],
+    "成績評価Grading4": ["その他／Others (99)", "20 %", "学修報告課題"],
     "更新日時/Date of Update0": "2023年03月02日 17時45分30秒",
     "項番No.0": [],
     "項番No.1": [

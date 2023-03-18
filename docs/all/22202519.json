@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "本授業ではグループワーク型を中心とする。<BR/><BR/>【オンライン受講許可学生対象】<BR/>「オンデマンド」で配信予定。各授業回（授業日）までに、LUNA へ授業データ（音声付きパワーポイント等）を掲載するので確認すること。",
   "トピック": {
-    "第1回": [
-      "Introduction",
-      ""
-    ],
-    "第2回": [
-      "Lesson 1: The Friendlier the Better",
-      ""
-    ],
-    "第3回": [
-      "Lesson 2: Single at Last",
-      ""
-    ],
-    "第4回": [
-      "Lesson 3: Kids Will Be Kids",
-      ""
-    ],
-    "第5回": [
-      "Lesson 4: School Days",
-      ""
-    ],
-    "第6回": [
-      "Lesson 5: Growing, Growing",
-      ""
-    ],
-    "第7回": [
-      "Lesson 6: Vital Signs",
-      ""
-    ],
-    "第8回": [
-      "Lesson 7: I Protest!",
-      ""
-    ],
-    "第9回": [
-      "Lesson 8: Good Job 1",
-      ""
-    ],
-    "第10回": [
-      "Lesson 9: Good Job 2",
-      ""
-    ],
-    "第11回": [
-      "Lesson 10: A Matter of Class",
-      ""
-    ],
-    "第12回": [
-      "Lesson 11: The Text Is the Message",
-      ""
-    ],
-    "第13回": [
-      "Lesson 12: Crime Doesn&#39;t Pay",
-      ""
-    ],
-    "第14回": [
-      "Review: Lesson 1-12",
-      ""
-    ],
+    "第1回": ["Introduction", ""],
+    "第2回": ["Lesson 1: The Friendlier the Better", ""],
+    "第3回": ["Lesson 2: Single at Last", ""],
+    "第4回": ["Lesson 3: Kids Will Be Kids", ""],
+    "第5回": ["Lesson 4: School Days", ""],
+    "第6回": ["Lesson 5: Growing, Growing", ""],
+    "第7回": ["Lesson 6: Vital Signs", ""],
+    "第8回": ["Lesson 7: I Protest!", ""],
+    "第9回": ["Lesson 8: Good Job 1", ""],
+    "第10回": ["Lesson 9: Good Job 2", ""],
+    "第11回": ["Lesson 10: A Matter of Class", ""],
+    "第12回": ["Lesson 11: The Text Is the Message", ""],
+    "第13回": ["Lesson 12: Crime Doesn&#39;t Pay", ""],
+    "第14回": ["Review: Lesson 1-12", ""],
     "授業外学習2": "原則として授業時間の２倍の時間を予習復習を含む自習活動に充てることが望まれる。"
   },
   "評価": {

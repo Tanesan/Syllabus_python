@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "Zoomを使ったオンライン授業を4月16日から行う。<BR/>ミーティングIDとパスコードは次の通り。<BR/>ミーティングID: 297 962 2408<BR/>パスコード: 2pqQgi",
   "トピック": {
-    "第1回": [
-      "導入",
-      ""
-    ],
-    "第2回": [
-      "Unit 1 Restaurant",
-      ""
-    ],
-    "第3回": [
-      "Unit　2 Entertainment",
-      ""
-    ],
-    "第4回": [
-      "Unit　3 Business",
-      ""
-    ],
-    "第5回": [
-      "Unit　4 Office",
-      ""
-    ],
-    "第6回": [
-      "Unit　5 Telephone",
-      ""
-    ],
-    "第7回": [
-      "Unit　6 Letter &amp; E-mail",
-      ""
-    ],
-    "第8回": [
-      "Unit　7 Health",
-      ""
-    ],
-    "第9回": [
-      "Unit　8 Bank &amp; Post Office",
-      ""
-    ],
-    "第10回": [
-      "Unit　9 New Products",
-      ""
-    ],
-    "第11回": [
-      "Unit　10 Travel①",
-      ""
-    ],
-    "第12回": [
-      "Unit　11 Travel②",
-      ""
-    ],
-    "第13回": [
-      "Unit　12 Job Applications",
-      ""
-    ],
-    "第14回": [
-      "総まとめ",
-      ""
-    ],
+    "第1回": ["導入", ""],
+    "第2回": ["Unit 1 Restaurant", ""],
+    "第3回": ["Unit　2 Entertainment", ""],
+    "第4回": ["Unit　3 Business", ""],
+    "第5回": ["Unit　4 Office", ""],
+    "第6回": ["Unit　5 Telephone", ""],
+    "第7回": ["Unit　6 Letter &amp; E-mail", ""],
+    "第8回": ["Unit　7 Health", ""],
+    "第9回": ["Unit　8 Bank &amp; Post Office", ""],
+    "第10回": ["Unit　9 New Products", ""],
+    "第11回": ["Unit　10 Travel①", ""],
+    "第12回": ["Unit　11 Travel②", ""],
+    "第13回": ["Unit　12 Job Applications", ""],
+    "第14回": ["総まとめ", ""],
     "授業外学習2": "毎回、必ず予習をしてくること。"
   },
   "評価": {
@@ -89,21 +47,13 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "40 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "40 %", ""],
     "成績評価Grading2": [
       "平常リポート／Individual reports (04)",
       "10 %",
       "毎回の課題レポート"
     ],
-    "成績評価Grading3": [
-      "その他／Others (99)",
-      "50 %",
-      "欠席による減点，発表"
-    ],
+    "成績評価Grading3": ["その他／Others (99)", "50 %", "欠席による減点，発表"],
     "更新日時/Date of Update0": "2023年01月14日 20時26分30秒",
     "項番No.0": [],
     "項番No.1": [

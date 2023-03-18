@@ -8,10 +8,7 @@
   "授業の概要・背景": "",
   "授業方法": "日本文化について英語で学習をしながらlistening, reading, speaking, writingの４技能を向上させつつ、readingからはacademic writingの構造を学び、listeningからはsound sysmtemの理解を促す。<BR/>inputからoutputの流れの中で言語産出活動を行い、自国の文化の魅力を英語で発信できるための英語力を鍛える。",
   "トピック": {
-    "第1回": [
-      "Orientation",
-      "Preparation for the textbook"
-    ],
+    "第1回": ["Orientation", "Preparation for the textbook"],
     "第2回": [
       "Unit 1 The Spirit of Japanese Hospitality　おもてなしの心",
       "Preparation for the textbook"
@@ -20,10 +17,7 @@
       "Unit 2 Superb! TOKYO SKYTREE　東京スカイツリーの秘密",
       "Preparation for the textbook<BR/>Writing"
     ],
-    "第4回": [
-      "Review and Writing",
-      "Preparation for the textbook"
-    ],
+    "第4回": ["Review and Writing", "Preparation for the textbook"],
     "第5回": [
       "Unit 3 Japanese Seasonable Charms: The Bewitching Beauty of Kimono　日本の風物詩：着物の魅力",
       "Preparation for the textbook"
@@ -32,10 +26,7 @@
       "Unit 4 Japanese High－Quality Technology　高品質の日本テクノロジー",
       "Preparation for the textbook<BR/>Writing"
     ],
-    "第7回": [
-      "Review and Writing",
-      "Preparation for the textbook"
-    ],
+    "第7回": ["Review and Writing", "Preparation for the textbook"],
     "第8回": [
       "Unit 5 Healthy and Colorful Japanese Cuisine　健康にいい、色彩鮮やかな日本食",
       "Preparation for the textbook"
@@ -44,10 +35,7 @@
       "Unit 6 Destruction and Creation: Japanese Stage Art　破壊と創造：日本舞台芸術",
       "Preparation for the textbook<BR/>Writing"
     ],
-    "第10回": [
-      "Review and Writing",
-      "Preparation for the textbook"
-    ],
+    "第10回": ["Review and Writing", "Preparation for the textbook"],
     "第11回": [
       "Unit 7 Hospitality and Peace in Japanese Robots　平和とおもてなしの日本ロボット",
       "Preparation for the textbook"
@@ -56,14 +44,8 @@
       "Unit 8 Samurai Spirit　サムライ",
       "Preparation for the textbook<BR/>Research and Writing"
     ],
-    "第13回": [
-      "Review and Writing<BR/>and Presentation",
-      "Review"
-    ],
-    "第14回": [
-      "Final Exam",
-      "Review"
-    ]
+    "第13回": ["Review and Writing<BR/>and Presentation", "Review"],
+    "第14回": ["Final Exam", "Review"]
   },
   "評価": {
     "教科書/Required texts0": [

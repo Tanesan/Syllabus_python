@@ -24,26 +24,11 @@
       "Chapter 3. Ernest Hemingway, &quot;The Short Happy Life of Francis Macomber&quot;",
       ""
     ],
-    "第5回": [
-      "Chapter 4. Ernest Hemingway, The Old Man and the Sea",
-      ""
-    ],
-    "第6回": [
-      "Chapter 5. John Steinbeck, Of Mice and Men (1)",
-      ""
-    ],
-    "第7回": [
-      "Chapter 6. John Steinbeck, Of Mice and Men (2)",
-      ""
-    ],
-    "第8回": [
-      "Chapter 7. Saul Bellow, Seize the Day (1)",
-      ""
-    ],
-    "第9回": [
-      "Chapter 8. Saul Bellow, Seize the Day (2)",
-      ""
-    ],
+    "第5回": ["Chapter 4. Ernest Hemingway, The Old Man and the Sea", ""],
+    "第6回": ["Chapter 5. John Steinbeck, Of Mice and Men (1)", ""],
+    "第7回": ["Chapter 6. John Steinbeck, Of Mice and Men (2)", ""],
+    "第8回": ["Chapter 7. Saul Bellow, Seize the Day (1)", ""],
+    "第9回": ["Chapter 8. Saul Bellow, Seize the Day (2)", ""],
     "第10回": [
       "Chapter 9. Hisae Yamamoto, &quot;Seventeen Syllables&quot; (1)",
       ""
@@ -52,18 +37,9 @@
       "Chapter 10. Hisae Yamamoto, &quot;Seventeen Syllables&quot; (2)",
       ""
     ],
-    "第12回": [
-      "Chapter 11. Leslie Marmon Silko, Ceremony (1)",
-      ""
-    ],
-    "第13回": [
-      "Chapter 12. Leslie Marmon Silko, Ceremony (2)",
-      ""
-    ],
-    "第14回": [
-      "授業内試験、振り返り",
-      ""
-    ],
+    "第12回": ["Chapter 11. Leslie Marmon Silko, Ceremony (1)", ""],
+    "第13回": ["Chapter 12. Leslie Marmon Silko, Ceremony (2)", ""],
+    "第14回": ["授業内試験、振り返り", ""],
     "授業外学習2": "予習としてvocabulary checkを行い、reading passage を十分予習すること。また、授業中に配布する資料を熟読すること。（各回 1時間程度）"
   },
   "評価": {
@@ -106,11 +82,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "50 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "50 %", ""],
     "成績評価Grading2": [
       "その他／Others (99)",
       "50 %",

@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "教室では英文和訳を中心に行う。オンライン受講生には、授業日の木曜日に課題を出して、期限までに提出してもらう。",
   "トピック": {
-    "第1回": [
-      "Christmas Is a Sad Season for the Poor",
-      ""
-    ],
-    "第2回": [
-      "Christmas Is a Sad Season for the Poor",
-      ""
-    ],
-    "第3回": [
-      "Christmas Is a Sad Season for the Poor",
-      ""
-    ],
-    "第4回": [
-      "The Season of Divorce",
-      ""
-    ],
-    "第5回": [
-      "The Season of Divorce",
-      ""
-    ],
-    "第6回": [
-      "The Season of Divorce",
-      ""
-    ],
-    "第7回": [
-      "The Country Husband",
-      ""
-    ],
-    "第8回": [
-      "The Country Husband",
-      ""
-    ],
-    "第9回": [
-      "The Country Husband",
-      ""
-    ],
-    "第10回": [
-      "The Country Husband",
-      ""
-    ],
-    "第11回": [
-      "The Country Husband",
-      ""
-    ],
-    "第12回": [
-      "The Country Husband",
-      ""
-    ],
-    "第13回": [
-      "The Country Husband",
-      ""
-    ],
-    "第14回": [
-      "授業中試験",
-      ""
-    ],
+    "第1回": ["Christmas Is a Sad Season for the Poor", ""],
+    "第2回": ["Christmas Is a Sad Season for the Poor", ""],
+    "第3回": ["Christmas Is a Sad Season for the Poor", ""],
+    "第4回": ["The Season of Divorce", ""],
+    "第5回": ["The Season of Divorce", ""],
+    "第6回": ["The Season of Divorce", ""],
+    "第7回": ["The Country Husband", ""],
+    "第8回": ["The Country Husband", ""],
+    "第9回": ["The Country Husband", ""],
+    "第10回": ["The Country Husband", ""],
+    "第11回": ["The Country Husband", ""],
+    "第12回": ["The Country Husband", ""],
+    "第13回": ["The Country Husband", ""],
+    "第14回": ["授業中試験", ""],
     "授業外学習2": "授業中に指名されたときに即答できるように、テキストの和訳をあらかじめよく考えておくこと。"
   },
   "評価": {
@@ -89,11 +47,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "70 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "70 %", ""],
     "成績評価Grading2": [
       "その他／Others (99)",
       "30 %",

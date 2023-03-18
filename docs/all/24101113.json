@@ -16,10 +16,7 @@
       "LESSON 2 Zero Hunger<BR/>Avoid throwing away food",
       "Linga Porta<BR/>Preparation"
     ],
-    "第3回": [
-      "Review (1)",
-      "Recording<BR/>Preparation"
-    ],
+    "第3回": ["Review (1)", "Recording<BR/>Preparation"],
     "第4回": [
       "LESSON 3 Good Health &amp; Well-being<BR/>Vaccinate your family to protect them and improve public health",
       "Linga Porta<BR/>Preparation"
@@ -28,10 +25,7 @@
       "LESSON 4 Quality Education<BR/>Help the children in your community to read",
       "Linga Porta<BR/>Preparation"
     ],
-    "第6回": [
-      "Review (2)",
-      "Recording<BR/>Preparation"
-    ],
+    "第6回": ["Review (2)", "Recording<BR/>Preparation"],
     "第7回": [
       "LESSON 5 Gender Equality<BR/>Call out sexist language and behavior",
       "Linga Porta<BR/>Preparation"
@@ -40,10 +34,7 @@
       "LESSON 6 Clean Water &amp; Sanitation<BR/>Avoid wasting water",
       "Linga Porta<BR/>Preparation"
     ],
-    "第9回": [
-      "Review (3)",
-      "Recording<BR/>Preparation"
-    ],
+    "第9回": ["Review (3)", "Recording<BR/>Preparation"],
     "第10回": [
       "LESSON 7 Affordable &amp; Clean Energy<BR/>Use only energy efficient appliances and light bulbs",
       "Linga Porta<BR/>Preparation"
@@ -52,18 +43,9 @@
       "LESSON 8 Decent Work &amp; Economic Growth<BR/>Buy from green companies",
       "Linga Porta<BR/>Recording<BR/>Preparation"
     ],
-    "第12回": [
-      "Review (4)",
-      "Linga Porta<BR/>Recording<BR/>Preparation"
-    ],
-    "第13回": [
-      "Exam",
-      "Linga Porta"
-    ],
-    "第14回": [
-      "Group presentation and Peer evaluation",
-      "Review"
-    ]
+    "第12回": ["Review (4)", "Linga Porta<BR/>Recording<BR/>Preparation"],
+    "第13回": ["Exam", "Linga Porta"],
+    "第14回": ["Group presentation and Peer evaluation", "Review"]
   },
   "評価": {
     "教科書/Required texts0": [

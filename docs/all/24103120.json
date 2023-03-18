@@ -12,58 +12,25 @@
       "オリエンテーションおよび Unit 1. Paragraph の構造<BR/>※14回全て対面授業で実施する。<BR/>※進度や扱うユニットを調整することがある。",
       ""
     ],
-    "第2回": [
-      "Unit 2. Topic Sentence",
-      ""
-    ],
-    "第3回": [
-      "Unit 3. Supporting Sentences",
-      ""
-    ],
-    "第4回": [
-      "Unit 4. Concluding Sentence",
-      ""
-    ],
-    "第5回": [
-      "Unit 5. AIの長所・短所について書いてみよう (Listing)",
-      ""
-    ],
-    "第6回": [
-      "Unit 6. 人の伝記を書いてみよう (Chronological Order)",
-      ""
-    ],
-    "第7回": [
-      "Unit 7. 様々なものを分類してみよう (Classification)",
-      ""
-    ],
+    "第2回": ["Unit 2. Topic Sentence", ""],
+    "第3回": ["Unit 3. Supporting Sentences", ""],
+    "第4回": ["Unit 4. Concluding Sentence", ""],
+    "第5回": ["Unit 5. AIの長所・短所について書いてみよう (Listing)", ""],
+    "第6回": ["Unit 6. 人の伝記を書いてみよう (Chronological Order)", ""],
+    "第7回": ["Unit 7. 様々なものを分類してみよう (Classification)", ""],
     "第8回": [
       "Unit 8. デジタルとアナログを比較してみよう (Comparison and Contrast)",
       ""
     ],
-    "第9回": [
-      "Unit 9. 原因と結果を明らかにしよう (Cause and Effect)",
-      ""
-    ],
+    "第9回": ["Unit 9. 原因と結果を明らかにしよう (Cause and Effect)", ""],
     "第10回": [
       "Unit 10. 問題に対する解決策を考えてみよう (Problem-Solution)",
       ""
     ],
-    "第11回": [
-      "Unit 11. Paragraph to Presentation (Introduction)",
-      ""
-    ],
-    "第12回": [
-      "Unit 12. Paragraph to Presentation (Body)",
-      ""
-    ],
-    "第13回": [
-      "Unit 13. Paragraph to Presentation (Conclusion)",
-      ""
-    ],
-    "第14回": [
-      "Unit 14. Evaluation",
-      ""
-    ],
+    "第11回": ["Unit 11. Paragraph to Presentation (Introduction)", ""],
+    "第12回": ["Unit 12. Paragraph to Presentation (Body)", ""],
+    "第13回": ["Unit 13. Paragraph to Presentation (Conclusion)", ""],
+    "第14回": ["Unit 14. Evaluation", ""],
     "授業外学習2": "【予習】次回扱う範囲について、語句などを調べるとともに、わからない箇所を明確にすること。（20分）<BR/>【復習】前回扱った範囲について、提出物を完成させるとともに、語句などを覚えること。（40分）<BR/>【フィードバック】課題や試験については、授業中またはオンラインで採点結果やコメントを返却する。"
   },
   "評価": {

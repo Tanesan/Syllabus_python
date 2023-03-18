@@ -8,62 +8,23 @@
   "授業の概要・背景": "",
   "授業方法": "各章の内容に沿った英文の読解を中心に、適宜ペアワークやグループワーク等を実施する。",
   "トピック": {
-    "第1回": [
-      "イントロダクション",
-      ""
-    ],
-    "第2回": [
-      "Chapter 1\tThe Country of Diversity",
-      ""
-    ],
-    "第3回": [
-      "Chapter 2\tEngland, Wales, Scotland, and Northern Ireland",
-      ""
-    ],
-    "第4回": [
-      "Chapter 3\tThe Power of the Commonwealth",
-      ""
-    ],
-    "第5回": [
-      "Chapter 4\tThe Birth of Cultural Studies in the UK",
-      ""
-    ],
-    "第6回": [
-      "Chapter 5\tThe Languages of the UK",
-      ""
-    ],
-    "第7回": [
-      "Chapter 6\tThe Development of Journalism in the UK",
-      ""
-    ],
-    "第8回": [
-      "Chapter 7\tThe Vessel of Worldwide Art and Culture",
-      ""
-    ],
-    "第9回": [
-      "Chapter 8\tThe Relationship between Japan and the UK",
-      ""
-    ],
-    "第10回": [
-      "Chapter 9\tThe History of British Democracy",
-      ""
-    ],
-    "第11回": [
-      "Chapter 10\tThe British Debate about the Economy",
-      ""
-    ],
+    "第1回": ["イントロダクション", ""],
+    "第2回": ["Chapter 1\tThe Country of Diversity", ""],
+    "第3回": ["Chapter 2\tEngland, Wales, Scotland, and Northern Ireland", ""],
+    "第4回": ["Chapter 3\tThe Power of the Commonwealth", ""],
+    "第5回": ["Chapter 4\tThe Birth of Cultural Studies in the UK", ""],
+    "第6回": ["Chapter 5\tThe Languages of the UK", ""],
+    "第7回": ["Chapter 6\tThe Development of Journalism in the UK", ""],
+    "第8回": ["Chapter 7\tThe Vessel of Worldwide Art and Culture", ""],
+    "第9回": ["Chapter 8\tThe Relationship between Japan and the UK", ""],
+    "第10回": ["Chapter 9\tThe History of British Democracy", ""],
+    "第11回": ["Chapter 10\tThe British Debate about the Economy", ""],
     "第12回": [
       "Chapter 11\tWith or Without God: The Development of the Natural Sciences",
       ""
     ],
-    "第13回": [
-      "Chapter 12\tThe Country of Satire",
-      ""
-    ],
-    "第14回": [
-      "授業のまとめと学習到達度確認の授業内試験",
-      ""
-    ],
+    "第13回": ["Chapter 12\tThe Country of Satire", ""],
+    "第14回": ["授業のまとめと学習到達度確認の授業内試験", ""],
     "授業外学習2": "毎回の授業内で指示する範囲の予習を行うこと。"
   },
   "評価": {
@@ -89,11 +50,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "50 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "50 %", ""],
     "成績評価Grading2": [
       "その他／Others (99)",
       "50 %",

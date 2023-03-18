@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "本授業ではグループワーク型を中心とする。<BR/><BR/>【オンライン受講許可学生対象】<BR/>「オンデマンド」で配信予定。各授業回（授業日）までに、LUNA へ授業データ（音声付きパワーポイント等）を掲載するので確認すること。",
   "トピック": {
-    "第1回": [
-      "Introduction",
-      ""
-    ],
-    "第2回": [
-      "Lesson 1: Everyday Education, 1",
-      ""
-    ],
-    "第3回": [
-      "Lesson 2: Everyday Travel",
-      ""
-    ],
-    "第4回": [
-      "Lesson 3: Everyday Food",
-      ""
-    ],
-    "第5回": [
-      "Lesson 4: Everyday Sociology, 1",
-      ""
-    ],
-    "第6回": [
-      "Lesson 5: Everyday Education, 2",
-      ""
-    ],
-    "第7回": [
-      "Lesson 6: Everyday Technology",
-      ""
-    ],
-    "第8回": [
-      "Lesson 7: Everyday Sociology, 2",
-      ""
-    ],
-    "第9回": [
-      "Lesson 8: Everyday Fashion",
-      ""
-    ],
-    "第10回": [
-      "Lesson 9: Everyday History",
-      ""
-    ],
-    "第11回": [
-      "Lesson 10: Everyday Ecology",
-      ""
-    ],
-    "第12回": [
-      "Lesson 11: Everyday Gaming",
-      ""
-    ],
-    "第13回": [
-      "Lesson 12: Everyday Parenting",
-      ""
-    ],
-    "第14回": [
-      "Review: Lesson 1-12",
-      ""
-    ],
+    "第1回": ["Introduction", ""],
+    "第2回": ["Lesson 1: Everyday Education, 1", ""],
+    "第3回": ["Lesson 2: Everyday Travel", ""],
+    "第4回": ["Lesson 3: Everyday Food", ""],
+    "第5回": ["Lesson 4: Everyday Sociology, 1", ""],
+    "第6回": ["Lesson 5: Everyday Education, 2", ""],
+    "第7回": ["Lesson 6: Everyday Technology", ""],
+    "第8回": ["Lesson 7: Everyday Sociology, 2", ""],
+    "第9回": ["Lesson 8: Everyday Fashion", ""],
+    "第10回": ["Lesson 9: Everyday History", ""],
+    "第11回": ["Lesson 10: Everyday Ecology", ""],
+    "第12回": ["Lesson 11: Everyday Gaming", ""],
+    "第13回": ["Lesson 12: Everyday Parenting", ""],
+    "第14回": ["Review: Lesson 1-12", ""],
     "授業外学習2": "原則として授業時間の２倍の時間を予習復習を含む自習活動に充てることが望まれる。"
   },
   "評価": {

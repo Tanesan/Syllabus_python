@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "教員と学生による問答を中心に進める。オンライン受講生には、毎週木曜の授業日に課題を出して、期限までに提出してもらう。",
   "トピック": {
-    "第1回": [
-      "Unit 1 Dining Out",
-      ""
-    ],
-    "第2回": [
-      "Unit 2 Offices",
-      ""
-    ],
-    "第3回": [
-      "Unit 3 General Business",
-      ""
-    ],
-    "第4回": [
-      "Unit 4 Manufacturing",
-      ""
-    ],
-    "第5回": [
-      "Unit 5 Communication",
-      ""
-    ],
-    "第6回": [
-      "Unit 6 Health",
-      ""
-    ],
-    "第7回": [
-      "Unit 7 Finance and Budgeting",
-      ""
-    ],
-    "第8回": [
-      "Unit 8 Entertainment",
-      ""
-    ],
-    "第9回": [
-      "Unit 9 Purchasing",
-      ""
-    ],
-    "第10回": [
-      "Unit 10 Corporate Development",
-      ""
-    ],
-    "第11回": [
-      "Unit 11 Technical Areas",
-      ""
-    ],
-    "第12回": [
-      "Unit 12 Travel",
-      ""
-    ],
-    "第13回": [
-      "Unit 13 Housing/Corporate Property",
-      ""
-    ],
-    "第14回": [
-      "授業中試験",
-      ""
-    ],
+    "第1回": ["Unit 1 Dining Out", ""],
+    "第2回": ["Unit 2 Offices", ""],
+    "第3回": ["Unit 3 General Business", ""],
+    "第4回": ["Unit 4 Manufacturing", ""],
+    "第5回": ["Unit 5 Communication", ""],
+    "第6回": ["Unit 6 Health", ""],
+    "第7回": ["Unit 7 Finance and Budgeting", ""],
+    "第8回": ["Unit 8 Entertainment", ""],
+    "第9回": ["Unit 9 Purchasing", ""],
+    "第10回": ["Unit 10 Corporate Development", ""],
+    "第11回": ["Unit 11 Technical Areas", ""],
+    "第12回": ["Unit 12 Travel", ""],
+    "第13回": ["Unit 13 Housing/Corporate Property", ""],
+    "第14回": ["授業中試験", ""],
     "授業外学習2": "テキストの各章のPart５～Part７の問題を予習としてあらかじめ解いておくこと。問題を解いて出来上がった文章とそれ以外の箇所の和訳も考えておくこと。テキストの各章のPart１～Part４のリスニングの部分の復習をしておくこと。"
   },
   "評価": {
@@ -89,11 +47,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "70 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "70 %", ""],
     "成績評価Grading2": [
       "その他／Others (99)",
       "30 %",

@@ -60,10 +60,7 @@
       "Unit 19: Sound travels faster in water than in air.<BR/>Unit 20: Maybe you shouldn&#39;t try to eat peanut butter and chew bubble gum at the same time.",
       ""
     ],
-    "第14回": [
-      "Review&amp;Quiz",
-      ""
-    ]
+    "第14回": ["Review&amp;Quiz", ""]
   },
   "評価": {
     "教科書/Required texts0": [
@@ -89,11 +86,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "授業中試験／In-class examination (03)",
-      "60 %",
-      ""
-    ],
+    "成績評価Grading1": ["授業中試験／In-class examination (03)", "60 %", ""],
     "成績評価Grading2": [
       "その他／Others (99)",
       "40 %",

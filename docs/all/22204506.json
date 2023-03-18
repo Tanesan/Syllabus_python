@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "本授業ではグループワーク型を中心とする。<BR/><BR/>【オンライン受講許可学生対象】<BR/>「オンデマンド」で配信予定。各授業回（授業日）までに、LUNA へ授業データ（音声<BR/>付きパワーポイント等）を掲載するので確認すること。",
   "トピック": {
-    "第1回": [
-      "Introduction",
-      ""
-    ],
-    "第2回": [
-      "Unit 1​​\tAcademic Research",
-      ""
-    ],
-    "第3回": [
-      "Unit 2​​\tSocial Issues in Japan",
-      ""
-    ],
-    "第4回": [
-      "Unit 3​\t​Personal Safety",
-      ""
-    ],
-    "第5回": [
-      "Unit 4​\t​Gender",
-      ""
-    ],
-    "第6回": [
-      "Unit 5​\t​Religion",
-      ""
-    ],
-    "第7回": [
-      "Unit 6​\t​Business",
-      ""
-    ],
-    "第8回": [
-      "​Unit 7​\t​Career",
-      ""
-    ],
-    "第9回": [
-      "Unit 8​\t​Japanese Culture",
-      ""
-    ],
-    "第10回": [
-      "Unit 9​\t​Law and Peace",
-      ""
-    ],
-    "第11回": [
-      "Unit 10​​\tEthnicity",
-      ""
-    ],
-    "第12回": [
-      "Unit 11​​\tScience and Scientists",
-      ""
-    ],
-    "第13回": [
-      "Unit 12​\tStyles of Writing",
-      ""
-    ],
-    "第14回": [
-      "Review: Unit 1-12",
-      ""
-    ],
+    "第1回": ["Introduction", ""],
+    "第2回": ["Unit 1​​\tAcademic Research", ""],
+    "第3回": ["Unit 2​​\tSocial Issues in Japan", ""],
+    "第4回": ["Unit 3​\t​Personal Safety", ""],
+    "第5回": ["Unit 4​\t​Gender", ""],
+    "第6回": ["Unit 5​\t​Religion", ""],
+    "第7回": ["Unit 6​\t​Business", ""],
+    "第8回": ["​Unit 7​\t​Career", ""],
+    "第9回": ["Unit 8​\t​Japanese Culture", ""],
+    "第10回": ["Unit 9​\t​Law and Peace", ""],
+    "第11回": ["Unit 10​​\tEthnicity", ""],
+    "第12回": ["Unit 11​​\tScience and Scientists", ""],
+    "第13回": ["Unit 12​\tStyles of Writing", ""],
+    "第14回": ["Review: Unit 1-12", ""],
     "授業外学習2": "原則として授業時間の２倍の時間を予習復習を含む自習活動に充てることが望まれる。"
   },
   "評価": {

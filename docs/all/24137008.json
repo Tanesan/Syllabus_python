@@ -8,62 +8,20 @@
   "授業の概要・背景": "",
   "授業方法": "「対面授業」。 講義と練習。1回の授業中に何度も指名されることになるので、絶えず緊張すること。第１回授業までに教科書を必ず手に入れること。出席に際しては辞書必携。辞書については第1回の授業で説明します。毎回何らかの課題を出すので、必ず準備してくること。質問はLUNAの「お知らせ」に掲示のメールアドレスへ「学生番号」「氏名」「授業名」を明記したうえで送信すること。",
   "トピック": {
-    "第1回": [
-      "Lektion8　助動詞1",
-      "Warm-up、Dialog"
-    ],
-    "第2回": [
-      "Lektion8　助動詞2",
-      "Übung"
-    ],
-    "第3回": [
-      "Lektion9　分離動詞",
-      "Warm-up、Dialog"
-    ],
-    "第4回": [
-      "Lektion9　副文",
-      "Übung"
-    ],
-    "第5回": [
-      "Lektion10　zu不定詞",
-      "Warm-up、Dialog"
-    ],
-    "第6回": [
-      "Lektion10　再帰",
-      "Übung"
-    ],
-    "第7回": [
-      "Lektion11　3基本形",
-      "Warm-up、Dialog"
-    ],
-    "第8回": [
-      "Lektion11　過去形",
-      "Übung"
-    ],
-    "第9回": [
-      "Lektion12　現在完了",
-      "Warm-up、Dialog"
-    ],
-    "第10回": [
-      "Lektion12　非人称",
-      "Übung"
-    ],
-    "第11回": [
-      "Lektion13　受動",
-      "Warm-up、Dialog"
-    ],
-    "第12回": [
-      "Lektion13　比較",
-      "Übung"
-    ],
-    "第13回": [
-      "Lektion14　関係代名詞",
-      "Warm-up、Dialog、Übung"
-    ],
-    "第14回": [
-      "Lektion14　関係副詞と最終授業試験",
-      ""
-    ]
+    "第1回": ["Lektion8　助動詞1", "Warm-up、Dialog"],
+    "第2回": ["Lektion8　助動詞2", "Übung"],
+    "第3回": ["Lektion9　分離動詞", "Warm-up、Dialog"],
+    "第4回": ["Lektion9　副文", "Übung"],
+    "第5回": ["Lektion10　zu不定詞", "Warm-up、Dialog"],
+    "第6回": ["Lektion10　再帰", "Übung"],
+    "第7回": ["Lektion11　3基本形", "Warm-up、Dialog"],
+    "第8回": ["Lektion11　過去形", "Übung"],
+    "第9回": ["Lektion12　現在完了", "Warm-up、Dialog"],
+    "第10回": ["Lektion12　非人称", "Übung"],
+    "第11回": ["Lektion13　受動", "Warm-up、Dialog"],
+    "第12回": ["Lektion13　比較", "Übung"],
+    "第13回": ["Lektion14　関係代名詞", "Warm-up、Dialog、Übung"],
+    "第14回": ["Lektion14　関係副詞と最終授業試験", ""]
   },
   "評価": {
     "教科書/Required texts0": [

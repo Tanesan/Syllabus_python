@@ -8,42 +8,18 @@
   "授業の概要・背景": "",
   "授業方法": "・授業方法の詳細は第１回 Introduction (LUNA)で提示します。<BR/>・第１回～第7回はLUNAによるオンライン授業を実施しますので、毎週の授業実施日にLUNAの本科目のページにアクセスして指示 <BR/>  に従ってください。<BR/>・第8から第14回は対面授業を実施します。<BR/>・授業開始日までに必ずテキストを用意してください。<BR/>・対面授業の時は辞書（電子辞書可）を毎回持参すること。<BR/>・【オンライン受講許可学生対象】第8回以降「オンデマンド」で配信予定。LUNAで詳細を確認すること。",
   "トピック": {
-    "第1回": [
-      "Introduction",
-      ""
-    ],
-    "第2回": [
-      "Chapter 1  My English, Your English, Our English",
-      ""
-    ],
-    "第3回": [
-      "Chapter 2  A Short History of the Miniskirt",
-      ""
-    ],
-    "第4回": [
-      "Chapter 3  The Cutest Car Ever Made-The Mini",
-      ""
-    ],
-    "第5回": [
-      "Chapter 4  Always in Fashion-The Suit",
-      ""
-    ],
+    "第1回": ["Introduction", ""],
+    "第2回": ["Chapter 1  My English, Your English, Our English", ""],
+    "第3回": ["Chapter 2  A Short History of the Miniskirt", ""],
+    "第4回": ["Chapter 3  The Cutest Car Ever Made-The Mini", ""],
+    "第5回": ["Chapter 4  Always in Fashion-The Suit", ""],
     "第6回": [
       "Chapter 5  The English Gentleman-Does He Really Exist Anymore?",
       ""
     ],
-    "第7回": [
-      "Chapter 6  Thinking Machines-The Story of the Computer",
-      ""
-    ],
-    "第8回": [
-      "Review (フィードバック）",
-      ""
-    ],
-    "第9回": [
-      "Chapter 7  I Get Around-Transport",
-      ""
-    ],
+    "第7回": ["Chapter 6  Thinking Machines-The Story of the Computer", ""],
+    "第8回": ["Review (フィードバック）", ""],
+    "第9回": ["Chapter 7  I Get Around-Transport", ""],
     "第10回": [
       "Chapter 8  London-How the Centre of the Financial World Started",
       ""
@@ -60,10 +36,7 @@
       "Chapter 11  The British and their Food-Fish and Chips, Roast Beef and Curry",
       ""
     ],
-    "第14回": [
-      "Chapter 12  A Nice Cup of Tea",
-      ""
-    ],
+    "第14回": ["Chapter 12  A Nice Cup of Tea", ""],
     "授業外学習2": "・事前にテキストの予習をしておくこと。<BR/>・授業中に行う課題の中で、理解が不足していた部分を各自復習しておくこと。"
   },
   "評価": {

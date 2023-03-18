@@ -48,10 +48,7 @@
       "｢申命記改革｣と申命記・申命記的歴史：単立王国時代<BR/>The Deuteronomistic reform--Deuteronomy and the Deuteronomistic history: The sole kingdom",
       ""
     ],
-    "第11回": [
-      "文書作成の時代：捕囚期<BR/>Time of composition: The Exile",
-      ""
-    ],
+    "第11回": ["文書作成の時代：捕囚期<BR/>Time of composition: The Exile", ""],
     "第12回": [
       "トーラーの決定と七十人訳：ペルシャ時代<BR/>Making of the Torah and the Septuagint: The Persian period",
       ""
@@ -60,10 +57,7 @@
       "中間時代：ヘレニズム時代<BR/>The inter-testamental period: The Hellenistic period",
       ""
     ],
-    "第14回": [
-      "まとめ",
-      ""
-    ],
+    "第14回": ["まとめ", ""],
     "授業外学習2": "担当者の指示に従って、参考文献を読み、準備しておくこと。<BR/>内容はノートにまとめて、授業のノートと共に次の時間に提出（最後のノートは、定期試験時）。<BR/>この授業については、予習・復習に3時間程度の時間を割くこと。"
   },
   "評価": {
@@ -155,11 +149,7 @@
       "割合　Percentage",
       "評価基準等　Grading Criteria etc."
     ],
-    "成績評価Grading1": [
-      "定期試験／Final Examination (01)",
-      "40 %",
-      ""
-    ],
+    "成績評価Grading1": ["定期試験／Final Examination (01)", "40 %", ""],
     "成績評価Grading2": [
       "平常リポート／Individual reports (04)",
       "40 %",

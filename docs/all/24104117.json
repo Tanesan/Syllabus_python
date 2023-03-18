@@ -52,18 +52,12 @@
       "Review (3) and Writing　テキスト既出単語及びTOEICテスト",
       "English Central (Ⅲ, Ⅳ)"
     ],
-    "第12回": [
-      "Final Exam",
-      "English Central (Ⅲ, Ⅳ)"
-    ],
+    "第12回": ["Final Exam", "English Central (Ⅲ, Ⅳ)"],
     "第13回": [
       "Pair Conversation and Peer Evaluation",
       "English Central (Ⅲ, Ⅳ)"
     ],
-    "第14回": [
-      "Review",
-      "Review"
-    ]
+    "第14回": ["Review", "Review"]
   },
   "評価": {
     "教科書/Required texts0": [
