@@ -1,6 +1,7 @@
 import json
-from time import sleep
 import os
+from time import sleep
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
