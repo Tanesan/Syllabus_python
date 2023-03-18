@@ -1,1 +1,121 @@
-{"履修期": "春学期", "主な教授言語": "日本語", "授業目的": "英語の文章を正確に読む能力を養う。", "到達目標": "英語の文章を速く正確に読む能力を鍛える。", "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.", "関連科目": "", "授業の概要・背景": "", "授業方法": "授業は対面で行なう。ショートテストと訳読、解説の形式で授業を進める。必要に応じて、TOEICの模擬試験も使用する。", "トピック": {"第1回": ["授業の進め方、テキスト”World Adventure”についての説明。", "テキストを十分に予習、復習すること。"], "第2回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第3回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第4回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第5回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第6回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第7回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第8回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第9回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第10回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第11回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第12回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第13回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第14回": ["”World Adventure,”Chapter 1 の課題を行なう。", "テキストを十分に予習、復習すること。"], "第15回": ["Review Tests　を行なう。", "テキストを十分に予習、復習すること。"]}, "評価": {"教科書/Required texts0": ["著者名\nAuthor", "タイトル\nTitle", "発行所\nPublisher", "出版年\nYear of Publication", "ISBN", "ボタン\nButton"], "教科書/Required texts1": ["Scott Berlin, 小林めぐみ", "World Adventure", "金星堂", "2015 年", "978-4-7647-3991-8 C1082", ""], "学位授与の方針との関連Relationship to Diploma Policy0": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）", "成績評価Grading0": ["種別　Type備考　Note", "割合　Percentage", "評価基準等　Grading Criteria etc."], "成績評価Grading1": ["授業中試験／In-class examination (03)", "100 %", "出席30%、授業への貢献度30%、学期末筆記試験40%"], "更新日時/Date of Update0": "2023年02月01日 17時47分03秒", "項番No.0": [], "項番No.1": ["2023年度", "春学期／Spring", "金曜４時限／Friday 4", "春学期／Spring", "Ｆ－３０４"]}, "campas": 0, "name": "【100】英語ＡI　４／English AI", "管理部署": 1, "単位数": 1, "担当者": "水野　尚之（MIZUNO NAOYUKI） ", "履修基準年度": "１年", "緊急授業形態": 0, "オンライン授業形態": 3, "時限1": 31, "評価1": 2, "開講期": 1}
+{
+  "履修期": "春学期",
+  "主な教授言語": "日本語",
+  "授業目的": "英語の文章を正確に読む能力を養う。",
+  "到達目標": "英語の文章を速く正確に読む能力を鍛える。",
+  "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.",
+  "関連科目": "",
+  "授業の概要・背景": "",
+  "授業方法": "授業は対面で行なう。ショートテストと訳読、解説の形式で授業を進める。必要に応じて、TOEICの模擬試験も使用する。",
+  "トピック": {
+    "第1回": [
+      "授業の進め方、テキスト”World Adventure”についての説明。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第2回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第3回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第4回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第5回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第6回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第7回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第8回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第9回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第10回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第11回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第12回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第13回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第14回": [
+      "”World Adventure,”Chapter 1 の課題を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ],
+    "第15回": [
+      "Review Tests　を行なう。",
+      "テキストを十分に予習、復習すること。"
+    ]
+  },
+  "評価": {
+    "教科書/Required texts0": [
+      "著者名\nAuthor",
+      "タイトル\nTitle",
+      "発行所\nPublisher",
+      "出版年\nYear of Publication",
+      "ISBN",
+      "ボタン\nButton"
+    ],
+    "教科書/Required texts1": [
+      "Scott Berlin, 小林めぐみ",
+      "World Adventure",
+      "金星堂",
+      "2015 年",
+      "978-4-7647-3991-8 C1082",
+      ""
+    ],
+    "学位授与の方針との関連Relationship to Diploma Policy0": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）",
+    "成績評価Grading0": [
+      "種別　Type備考　Note",
+      "割合　Percentage",
+      "評価基準等　Grading Criteria etc."
+    ],
+    "成績評価Grading1": [
+      "授業中試験／In-class examination (03)",
+      "100 %",
+      "出席30%、授業への貢献度30%、学期末筆記試験40%"
+    ],
+    "更新日時/Date of Update0": "2023年02月01日 17時47分03秒",
+    "項番No.0": [],
+    "項番No.1": [
+      "2023年度",
+      "春学期／Spring",
+      "金曜４時限／Friday 4",
+      "春学期／Spring",
+      "Ｆ－３０４"
+    ]
+  },
+  "campas": 0,
+  "name": "【100】英語ＡI　４／English AI",
+  "管理部署": 1,
+  "単位数": 1,
+  "担当者": "水野　尚之（MIZUNO NAOYUKI） ",
+  "履修基準年度": "１年",
+  "緊急授業形態": 0,
+  "オンライン授業形態": 3,
+  "時限1": 31,
+  "評価1": 2,
+  "開講期": 1
+}

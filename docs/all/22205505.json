@@ -1,1 +1,125 @@
-{"履修期": "春学期", "主な教授言語": "英語", "授業目的": "ボーダレス社会に必要な知識を身につけてコミュニケーション能力を高める。", "到達目標": "4技能を身につけ、英語で自由に表現する能力を獲得する。", "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.", "関連科目": "", "授業の概要・背景": "", "授業方法": "There will be individual, pair and group work as well as lectures. Students will participate in a variety of tasks including reading, listening, discussion and writing.", "トピック": {"第1回": ["Orientation", "Preparation for next class."], "第2回": ["Unit 1 Food and Culture", "Preparation for next class."], "第3回": ["Unit 4 Identity Theft", "Preparation for next class."], "第4回": ["Unit 5 Digital Learing", "Preparation for next class."], "第5回": ["Unit 6 Artificial Intelligence", "Preparation for next class."], "第6回": ["Unit 9 Cheating", "Preparation for next class."], "第7回": ["Unit 10 Attitude", "Preparation for next class."], "第8回": ["Unit 11 Communication", "Preparation for next class."], "第9回": ["Unit 12 Time", "Preparation for next class."], "第10回": ["Unit 13 Education", "Preparation for next class."], "第11回": ["Unit 14 Immigration", "Preparation for next class."], "第12回": ["Unit 15 Gender Differences", "Preparation for the presentation."], "第13回": ["Presentation", "Preparation for the examination."], "第14回": ["Final Examination", ""]}, "評価": {"教科書/Required texts0": ["著者名\nAuthor", "タイトル\nTitle", "発行所\nPublisher", "出版年\nYear of Publication", "ISBN", "ボタン\nButton"], "教科書/Required texts1": ["Eric Hirata", "Vantage Point", "National Geographic Learning", "2023 年", "9784863124035", ""], "教科書Required texts0": "Title; Vantage Point\nAuthor: Eric Hirata\nPublisher: National Geographic Learning\nYear of Publication: 2023\nISBN: 9784863124035", "学位授与の方針との関連Relationship to Diploma Policy0": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）", "成績評価Grading0": ["種別　Type備考　Note", "割合　Percentage", "評価基準等　Grading Criteria etc."], "成績評価Grading1": ["授業中試験／In-class examination (03)", "50 %", ""], "成績評価Grading2": ["その他／Others (99)", "50 %", "グループワーク・課題・プレゼンテーション"], "成績評価Grading3": "備考　Note\nAttitude and participation in class: 20%\nPresentation 30%\nTest conducted in class: 50%", "更新日時/Date of Update0": "2023年01月12日 14時08分59秒", "項番No.0": [], "項番No.1": ["2023年度", "春学期／Spring", "木曜３時限／Thursday 3", "春学期／Spring", "５別－３０７"]}, "campas": 0, "name": "【200】英語ＢIII　５／English BIII", "管理部署": 1, "単位数": 1, "担当者": "徳久　久美子（TOKUHISA KUMIKO） ", "履修基準年度": "２年", "緊急授業形態": 0, "オンライン授業形態": 3, "時限1": 23, "評価1": 2, "評価2": 4, "開講期": 1}
+{
+  "履修期": "春学期",
+  "主な教授言語": "英語",
+  "授業目的": "ボーダレス社会に必要な知識を身につけてコミュニケーション能力を高める。",
+  "到達目標": "4技能を身につけ、英語で自由に表現する能力を獲得する。",
+  "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.",
+  "関連科目": "",
+  "授業の概要・背景": "",
+  "授業方法": "There will be individual, pair and group work as well as lectures. Students will participate in a variety of tasks including reading, listening, discussion and writing.",
+  "トピック": {
+    "第1回": [
+      "Orientation",
+      "Preparation for next class."
+    ],
+    "第2回": [
+      "Unit 1 Food and Culture",
+      "Preparation for next class."
+    ],
+    "第3回": [
+      "Unit 4 Identity Theft",
+      "Preparation for next class."
+    ],
+    "第4回": [
+      "Unit 5 Digital Learing",
+      "Preparation for next class."
+    ],
+    "第5回": [
+      "Unit 6 Artificial Intelligence",
+      "Preparation for next class."
+    ],
+    "第6回": [
+      "Unit 9 Cheating",
+      "Preparation for next class."
+    ],
+    "第7回": [
+      "Unit 10 Attitude",
+      "Preparation for next class."
+    ],
+    "第8回": [
+      "Unit 11 Communication",
+      "Preparation for next class."
+    ],
+    "第9回": [
+      "Unit 12 Time",
+      "Preparation for next class."
+    ],
+    "第10回": [
+      "Unit 13 Education",
+      "Preparation for next class."
+    ],
+    "第11回": [
+      "Unit 14 Immigration",
+      "Preparation for next class."
+    ],
+    "第12回": [
+      "Unit 15 Gender Differences",
+      "Preparation for the presentation."
+    ],
+    "第13回": [
+      "Presentation",
+      "Preparation for the examination."
+    ],
+    "第14回": [
+      "Final Examination",
+      ""
+    ]
+  },
+  "評価": {
+    "教科書/Required texts0": [
+      "著者名\nAuthor",
+      "タイトル\nTitle",
+      "発行所\nPublisher",
+      "出版年\nYear of Publication",
+      "ISBN",
+      "ボタン\nButton"
+    ],
+    "教科書/Required texts1": [
+      "Eric Hirata",
+      "Vantage Point",
+      "National Geographic Learning",
+      "2023 年",
+      "9784863124035",
+      ""
+    ],
+    "教科書Required texts0": "Title; Vantage Point\nAuthor: Eric Hirata\nPublisher: National Geographic Learning\nYear of Publication: 2023\nISBN: 9784863124035",
+    "学位授与の方針との関連Relationship to Diploma Policy0": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）",
+    "成績評価Grading0": [
+      "種別　Type備考　Note",
+      "割合　Percentage",
+      "評価基準等　Grading Criteria etc."
+    ],
+    "成績評価Grading1": [
+      "授業中試験／In-class examination (03)",
+      "50 %",
+      ""
+    ],
+    "成績評価Grading2": [
+      "その他／Others (99)",
+      "50 %",
+      "グループワーク・課題・プレゼンテーション"
+    ],
+    "成績評価Grading3": "備考　Note\nAttitude and participation in class: 20%\nPresentation 30%\nTest conducted in class: 50%",
+    "更新日時/Date of Update0": "2023年01月12日 14時08分59秒",
+    "項番No.0": [],
+    "項番No.1": [
+      "2023年度",
+      "春学期／Spring",
+      "木曜３時限／Thursday 3",
+      "春学期／Spring",
+      "５別－３０７"
+    ]
+  },
+  "campas": 0,
+  "name": "【200】英語ＢIII　５／English BIII",
+  "管理部署": 1,
+  "単位数": 1,
+  "担当者": "徳久　久美子（TOKUHISA KUMIKO） ",
+  "履修基準年度": "２年",
+  "緊急授業形態": 0,
+  "オンライン授業形態": 3,
+  "時限1": 23,
+  "評価1": 2,
+  "評価2": 4,
+  "開講期": 1
+}

@@ -1,1 +1,110 @@
-{"履修期": "秋学期", "主な教授言語": "日本語", "授業目的": "受講生が、聖書の思想を論じた英語文献資料を読み解く力を身につけるようになること", "到達目標": "１．受講生が聖書に関連する英語表現に馴染むようになること。<BR/>２．受講生が古典としての聖書、及び、聖典としての聖書に関する理解をさらに深めるようになること。<BR/>３．受講生が聖書のいろいろな読み方に関わる下記の諸概念を知るようになること:<BR/>geschichtlice und historisch(historic and historical),historicity and myth,the historical Jesus and Kerygmatic Christ,history and just plain history.<BR/>4．受講生が、歴史から物語への転換—物語としての聖書、物語としての神学への転換が起きていることを知るようになること。", "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.", "関連科目": "", "授業の概要・背景": "", "授業方法": "電子辞書ではなく英和辞書と聖書を駆使しながら、日本語に忠実に訳す作業を共同で行う。英和辞典と新共同訳聖書必携", "トピック": {"第1回": ["授業ガイダンス：取り上げる英語論文資料配布、授業方針の説明、授業の進め方の確認などを行う。<BR/>資料名：Krister Stendahl,&quot;Judgment and Mercy,&quot; in Paul Among Jews and Gentiles, Fortress Press, 1976, pp. 97-108.", "『イザヤ書』40章1-8節をあらかじめ読んでおくこと。"], "第2回": ["公民権運動", "資料97頁を読んで訳しておくこと。"], "第3回": ["「神の裁き」と「神の憐れみ」という組み合わせ、「神の名」の種類", "資料98頁を読んで訳しておくこと。"], "第4回": ["『イザヤ書』40章1-8節", "資料99頁を読んで訳しておくこと。"], "第5回": ["justice, righteousness, justitia, krisis, salvation, liberation, docetic, Jude, Judas,Jacob James", "資料100頁を読んで訳しておくこと。"], "第6回": ["the Sunday of Doom, Thanksgiving Day, Pentecost, Advent, Marana tha", "資料101頁を読んで訳しておくこと。"], "第7回": ["The Last Judgment(1)", "資料102頁を読んで訳しておくこと。"], "第8回": ["The Last Judgment(2)", "資料102頁を読んで訳しておくこと。"], "第9回": ["freedom, metanoia", "資料103頁を読んで訳しておくこと。"], "第10回": ["repentance, Yom Kippur", "資料104頁を読んで訳しておくこと。"], "第11回": ["Mercy is the opportunity for repentance.", "資料105頁を読んで訳しておくこと。"], "第12回": ["Jesus did say, &quot;Man does not live by bread alone,&quot; but he never said that to a hungry person,", "資料106頁を読んで訳しておくこと。"], "第13回": ["Dr.Martin Luther King,Jr. Malcom X, Sojourner Truth", "資料107-8頁を読んで訳しておくこと。"], "第14回": ["（ユダ教ラビ）アブラハム・ヨシュア・ヘシェルの倫理的演説（１）", "日本語訳と英文テクストを事前に配布します。"], "第15回": ["（ユダ教ラビ）アブラハム・ヨシュア・ヘシェルの倫理的演説（2）", "日本語訳と英文テクストを読んでおくこと。"], "第16回": ["総括と全体議論", ""]}, "評価": {"教科書Required texts0": "授業で使用する英文資料は第1回目の授業で配布します。", "学位授与の方針との関連Relationship to Diploma Policy0": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）", "成績評価Grading0": ["種別　Type備考　Note", "割合　Percentage", "評価基準等　Grading Criteria etc."], "成績評価Grading1": ["その他／Others (99)", "100 %", "平常点15点、発表点35点、レポート50点、計100点"], "更新日時/Date of Update0": "2023年03月02日 13時19分31秒", "項番No.0": [], "項番No.1": ["2023年度", "秋学期／Fall", "水曜３時限／Wednesday 3", "秋学期／Fall", "神－２"]}, "campas": 0, "name": "【300】英語専門書講読Ｂ／Readings in Foreign Language (English) B", "管理部署": 0, "単位数": 2, "担当者": "新免　貢（SHINMEN MITSUGU） ", "履修基準年度": "２年", "緊急授業形態": 0, "オンライン授業形態": 4, "時限1": 16, "評価1": 4, "開講期": 2}
+{
+  "履修期": "秋学期",
+  "主な教授言語": "日本語",
+  "授業目的": "受講生が、聖書の思想を論じた英語文献資料を読み解く力を身につけるようになること",
+  "到達目標": "１．受講生が聖書に関連する英語表現に馴染むようになること。<BR/>２．受講生が古典としての聖書、及び、聖典としての聖書に関する理解をさらに深めるようになること。<BR/>３．受講生が聖書のいろいろな読み方に関わる下記の諸概念を知るようになること:<BR/>geschichtlice und historisch(historic and historical),historicity and myth,the historical Jesus and Kerygmatic Christ,history and just plain history.<BR/>4．受講生が、歴史から物語への転換—物語としての聖書、物語としての神学への転換が起きていることを知るようになること。",
+  "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.",
+  "関連科目": "",
+  "授業の概要・背景": "",
+  "授業方法": "電子辞書ではなく英和辞書と聖書を駆使しながら、日本語に忠実に訳す作業を共同で行う。英和辞典と新共同訳聖書必携",
+  "トピック": {
+    "第1回": [
+      "授業ガイダンス：取り上げる英語論文資料配布、授業方針の説明、授業の進め方の確認などを行う。<BR/>資料名：Krister Stendahl,&quot;Judgment and Mercy,&quot; in Paul Among Jews and Gentiles, Fortress Press, 1976, pp. 97-108.",
+      "『イザヤ書』40章1-8節をあらかじめ読んでおくこと。"
+    ],
+    "第2回": [
+      "公民権運動",
+      "資料97頁を読んで訳しておくこと。"
+    ],
+    "第3回": [
+      "「神の裁き」と「神の憐れみ」という組み合わせ、「神の名」の種類",
+      "資料98頁を読んで訳しておくこと。"
+    ],
+    "第4回": [
+      "『イザヤ書』40章1-8節",
+      "資料99頁を読んで訳しておくこと。"
+    ],
+    "第5回": [
+      "justice, righteousness, justitia, krisis, salvation, liberation, docetic, Jude, Judas,Jacob James",
+      "資料100頁を読んで訳しておくこと。"
+    ],
+    "第6回": [
+      "the Sunday of Doom, Thanksgiving Day, Pentecost, Advent, Marana tha",
+      "資料101頁を読んで訳しておくこと。"
+    ],
+    "第7回": [
+      "The Last Judgment(1)",
+      "資料102頁を読んで訳しておくこと。"
+    ],
+    "第8回": [
+      "The Last Judgment(2)",
+      "資料102頁を読んで訳しておくこと。"
+    ],
+    "第9回": [
+      "freedom, metanoia",
+      "資料103頁を読んで訳しておくこと。"
+    ],
+    "第10回": [
+      "repentance, Yom Kippur",
+      "資料104頁を読んで訳しておくこと。"
+    ],
+    "第11回": [
+      "Mercy is the opportunity for repentance.",
+      "資料105頁を読んで訳しておくこと。"
+    ],
+    "第12回": [
+      "Jesus did say, &quot;Man does not live by bread alone,&quot; but he never said that to a hungry person,",
+      "資料106頁を読んで訳しておくこと。"
+    ],
+    "第13回": [
+      "Dr.Martin Luther King,Jr. Malcom X, Sojourner Truth",
+      "資料107-8頁を読んで訳しておくこと。"
+    ],
+    "第14回": [
+      "（ユダ教ラビ）アブラハム・ヨシュア・ヘシェルの倫理的演説（１）",
+      "日本語訳と英文テクストを事前に配布します。"
+    ],
+    "第15回": [
+      "（ユダ教ラビ）アブラハム・ヨシュア・ヘシェルの倫理的演説（2）",
+      "日本語訳と英文テクストを読んでおくこと。"
+    ],
+    "第16回": [
+      "総括と全体議論",
+      ""
+    ]
+  },
+  "評価": {
+    "教科書Required texts0": "授業で使用する英文資料は第1回目の授業で配布します。",
+    "学位授与の方針との関連Relationship to Diploma Policy0": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）",
+    "成績評価Grading0": [
+      "種別　Type備考　Note",
+      "割合　Percentage",
+      "評価基準等　Grading Criteria etc."
+    ],
+    "成績評価Grading1": [
+      "その他／Others (99)",
+      "100 %",
+      "平常点15点、発表点35点、レポート50点、計100点"
+    ],
+    "更新日時/Date of Update0": "2023年03月02日 13時19分31秒",
+    "項番No.0": [],
+    "項番No.1": [
+      "2023年度",
+      "秋学期／Fall",
+      "水曜３時限／Wednesday 3",
+      "秋学期／Fall",
+      "神－２"
+    ]
+  },
+  "campas": 0,
+  "name": "【300】英語専門書講読Ｂ／Readings in Foreign Language (English) B",
+  "管理部署": 0,
+  "単位数": 2,
+  "担当者": "新免　貢（SHINMEN MITSUGU） ",
+  "履修基準年度": "２年",
+  "緊急授業形態": 0,
+  "オンライン授業形態": 4,
+  "時限1": 16,
+  "評価1": 4,
+  "開講期": 2
+}

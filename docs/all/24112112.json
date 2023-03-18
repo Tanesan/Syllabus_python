@@ -1,1 +1,124 @@
-{"履修期": "春学期", "主な教授言語": "日本語", "授業目的": "本授業では、学生が自分の考えや意見を論理的に表現する能力を培い、英語にて「話し合う」、「書く」、「発表する」スキルを伸ばすことを目的とする。", "到達目標": "以下の４点を授業の目標とする。<BR/>ⅰ）身近な時事問題に関する語彙、表現をリーディングを通して身に着ける<BR/>ⅱ）自分の考えを論理的に組み立て、英語で表現する力を培う<BR/>ⅲ）他者の考えを聞き、自分の考えと照らして、互いに問題の解決策を話し合いを通して考える", "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.", "関連科目": "", "授業の概要・背景": "", "授業方法": "身近な時事問題についての情報を記事や図表を読むことでインプットを得た上で、ディスカッション/ディベートをする。また、簡単な調査をもとに、プレゼンテーションも行う。", "トピック": {"第1回": ["Orientation", "Luna参照(2 hours)"], "第2回": ["Unit 1 Artificial Intelligence: How Will Humans Live with AI?", "Preview and review (3 hours)"], "第3回": ["Unit 1 Artificial Intelligence: How Will Humans Live with AI?", "Preview and review (3 hours)"], "第4回": ["Unit 2: Business: The Sahring Economy", "Preview and review (3 hours)"], "第5回": ["Unit 2: Business: The Sahring Economy", "Preview and review (3 hours)"], "第6回": ["Unit 4 Environmental Problems: Plastic Waste", "Preview and review (3 hours)"], "第7回": ["Unit 4 Environmental Problems: Plastic Waste", "Preview and review (3 hours)"], "第8回": ["Unit 5 The Japanese Mentality: Do They Have Good Manners?", "Preview and review (3 hours)"], "第9回": ["Unit 5 The Japanese Mentality: Do They Have Good Manners?", "Preview and review (3 hours)"], "第10回": ["Exam", "Preview and review (3 hours)"], "第11回": ["Preparing for Presentation", "Preview and review (3 hours)"], "第12回": ["Preparing for Presentation", "Preview and review (3 hours)"], "第13回": ["Presentation, Evaluation", "Preview and review (3 hours)"], "第14回": ["Presentation, Evaluation, Review", ""]}, "評価": {"教科書/Required texts0": ["著者名\nAuthor", "タイトル\nTitle", "発行所\nPublisher", "出版年\nYear of Publication", "ISBN", "ボタン\nButton"], "教科書/Required texts1": ["油木田美由紀, 山崎勝, Chad Godfery", "CLIL: Discuss the Changing World", "Seibido", "2020 年", "978-4-7919-7208-1", ""], "学生による授業評価の方法Course Evaluation by Students0": "授業内アンケート", "学位授与の方針との関連Relationship to Diploma Policy1": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）", "成績評価Grading0": ["種別　Type備考　Note", "割合　Percentage", "評価基準等　Grading Criteria etc."], "成績評価Grading1": ["授業中試験／In-class examination (03)", "30 %", ""], "成績評価Grading2": ["その他／Others (99)", "70 %", "Writing課題 30%, プレゼンテーション 30％, 積極的授業参加 10%"], "更新日時/Date of Update0": "2023年01月12日 17時22分27秒", "項番No.0": [], "項番No.1": ["2023年度", "春学期／Spring", "木曜３時限／Thursday 3", "春学期／Spring", "Ａ－２０１"]}, "campas": 0, "name": "【200】英語IIＢ（SW）　１２／English II B(Speaking & Writing) ", "管理部署": 3, "単位数": 1, "担当者": "植野　智子（UENO TOMOKO） ", "履修基準年度": "２年", "緊急授業形態": 0, "オンライン授業形態": 1, "時限1": 23, "評価1": 2, "評価2": 4, "開講期": 1}
+{
+  "履修期": "春学期",
+  "主な教授言語": "日本語",
+  "授業目的": "本授業では、学生が自分の考えや意見を論理的に表現する能力を培い、英語にて「話し合う」、「書く」、「発表する」スキルを伸ばすことを目的とする。",
+  "到達目標": "以下の４点を授業の目標とする。<BR/>ⅰ）身近な時事問題に関する語彙、表現をリーディングを通して身に着ける<BR/>ⅱ）自分の考えを論理的に組み立て、英語で表現する力を培う<BR/>ⅲ）他者の考えを聞き、自分の考えと照らして、互いに問題の解決策を話し合いを通して考える",
+  "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.",
+  "関連科目": "",
+  "授業の概要・背景": "",
+  "授業方法": "身近な時事問題についての情報を記事や図表を読むことでインプットを得た上で、ディスカッション/ディベートをする。また、簡単な調査をもとに、プレゼンテーションも行う。",
+  "トピック": {
+    "第1回": [
+      "Orientation",
+      "Luna参照(2 hours)"
+    ],
+    "第2回": [
+      "Unit 1 Artificial Intelligence: How Will Humans Live with AI?",
+      "Preview and review (3 hours)"
+    ],
+    "第3回": [
+      "Unit 1 Artificial Intelligence: How Will Humans Live with AI?",
+      "Preview and review (3 hours)"
+    ],
+    "第4回": [
+      "Unit 2: Business: The Sahring Economy",
+      "Preview and review (3 hours)"
+    ],
+    "第5回": [
+      "Unit 2: Business: The Sahring Economy",
+      "Preview and review (3 hours)"
+    ],
+    "第6回": [
+      "Unit 4 Environmental Problems: Plastic Waste",
+      "Preview and review (3 hours)"
+    ],
+    "第7回": [
+      "Unit 4 Environmental Problems: Plastic Waste",
+      "Preview and review (3 hours)"
+    ],
+    "第8回": [
+      "Unit 5 The Japanese Mentality: Do They Have Good Manners?",
+      "Preview and review (3 hours)"
+    ],
+    "第9回": [
+      "Unit 5 The Japanese Mentality: Do They Have Good Manners?",
+      "Preview and review (3 hours)"
+    ],
+    "第10回": [
+      "Exam",
+      "Preview and review (3 hours)"
+    ],
+    "第11回": [
+      "Preparing for Presentation",
+      "Preview and review (3 hours)"
+    ],
+    "第12回": [
+      "Preparing for Presentation",
+      "Preview and review (3 hours)"
+    ],
+    "第13回": [
+      "Presentation, Evaluation",
+      "Preview and review (3 hours)"
+    ],
+    "第14回": [
+      "Presentation, Evaluation, Review",
+      ""
+    ]
+  },
+  "評価": {
+    "教科書/Required texts0": [
+      "著者名\nAuthor",
+      "タイトル\nTitle",
+      "発行所\nPublisher",
+      "出版年\nYear of Publication",
+      "ISBN",
+      "ボタン\nButton"
+    ],
+    "教科書/Required texts1": [
+      "油木田美由紀, 山崎勝, Chad Godfery",
+      "CLIL: Discuss the Changing World",
+      "Seibido",
+      "2020 年",
+      "978-4-7919-7208-1",
+      ""
+    ],
+    "学生による授業評価の方法Course Evaluation by Students0": "授業内アンケート",
+    "学位授与の方針との関連Relationship to Diploma Policy1": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）",
+    "成績評価Grading0": [
+      "種別　Type備考　Note",
+      "割合　Percentage",
+      "評価基準等　Grading Criteria etc."
+    ],
+    "成績評価Grading1": [
+      "授業中試験／In-class examination (03)",
+      "30 %",
+      ""
+    ],
+    "成績評価Grading2": [
+      "その他／Others (99)",
+      "70 %",
+      "Writing課題 30%, プレゼンテーション 30％, 積極的授業参加 10%"
+    ],
+    "更新日時/Date of Update0": "2023年01月12日 17時22分27秒",
+    "項番No.0": [],
+    "項番No.1": [
+      "2023年度",
+      "春学期／Spring",
+      "木曜３時限／Thursday 3",
+      "春学期／Spring",
+      "Ａ－２０１"
+    ]
+  },
+  "campas": 0,
+  "name": "【200】英語IIＢ（SW）　１２／English II B(Speaking & Writing) ",
+  "管理部署": 3,
+  "単位数": 1,
+  "担当者": "植野　智子（UENO TOMOKO） ",
+  "履修基準年度": "２年",
+  "緊急授業形態": 0,
+  "オンライン授業形態": 1,
+  "時限1": 23,
+  "評価1": 2,
+  "評価2": 4,
+  "開講期": 1
+}

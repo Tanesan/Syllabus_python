@@ -1,1 +1,118 @@
-{"履修期": "秋学期", "主な教授言語": "日本語", "授業目的": "ニュースの英語を読み、それに関して自らの意見を英語で発表する。", "到達目標": "本講義の到達目的は、ニュース英語の特徴を知り、内容を聞いたり、また読んで理解できることである。", "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.", "関連科目": "", "授業の概要・背景": "", "授業方法": "ニュース英語を読み、その内容をもとに自分の意見をアカデミック・ライティングの手法で書くことができるための講義する。またテキスト内の練習問題を解く。学期の後半にグループによるプレゼンテーションを実施する。なお自宅での課題として、トピックのシャドーイングと空所補充などListening問題を解く。", "トピック": {"第1回": ["オリエンターション<BR/>（講義の進め方、評価方法、レポート提出の仕方等の説明とグループ分け）", ""], "第2回": ["Unit 9 (Help Mark)<BR/>Production (Writing Ex., Group Summary)", "Listening Ex. (Opinions Differ about Bed-sharing with Babies)"], "第3回": ["Unit 10 (Debate Sparked Over Same Surnames for Married Couples)<BR/>Production (Writing Ex., Group Summary)", "Listening Ex.( &quot;Ladies and Gentleman&quot; Disappearing)"], "第4回": ["Unit 11 (Video Translation)<BR/>Production (Writing Ex., Group Summary)", "Listening Ex. (AI Simulates What Fugitives Look Like Now)"], "第5回": ["Unit 12 (Opinions Divided on Vaccine passports)<BR/>Production (Writing Ex., Group Summary)", "Listening Ex.(Expectations for Human Hibernations )"], "第6回": ["中間テストとGroup work", ""], "第7回": ["Unit 13 (Problems with Japan&#39;s Technical Intern Training Program)<BR/>Production (Writing Ex., Group Summary)", "Listening Ex.(Gig Economy)"], "第8回": ["Unit 14 Young Carers<BR/>Production (Writing Ex., Group Summary)", "Listening Ex.(English Becomes Official Subject in Japanese Elementary Schools)"], "第9回": ["Unit 15 Genetically Modified Mosquito Project Given Green Light in Florida)<BR/>Production (Writing Ex., Group Summary)", "Listening Ex.(Matsutake Mushrooms Added to Red List)"], "第10回": ["秋学期まとめテスト", "プレゼンの準備"], "第11回": ["グループワーク：プレゼンテーションのためのグループワーク<BR/>　　（パワーポイントや英文等の最終確認）", "プレゼンの準備"], "第12回": ["グループによるプレゼンテーション　前半<BR/>１グループ (  1人[330 words〜350 words]X人数）", "特になし"], "第13回": ["グループによるプレゼンテーション　後半<BR/>１グループ ( 1人[330 words〜350 words]X人数）", "特になし"], "第14回": ["秋学期まとめテストとフィードバック", "特になし"]}, "評価": {"教科書/Required texts0": ["著者名\nAuthor", "タイトル\nTitle", "発行所\nPublisher", "出版年\nYear of Publication", "ISBN", "ボタン\nButton"], "教科書/Required texts1": ["Kayoko Ito, David Lees", "Practical Practice", "開文社", "2023 年", "978-4-87571-175-9", ""], "参考文献・資料Reference books0": "講義中に適宜紹介する", "学位授与の方針との関連Relationship to Diploma Policy0": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）", "成績評価Grading0": ["種別　Type備考　Note", "割合　Percentage", "評価基準等　Grading Criteria etc."], "成績評価Grading1": ["その他／Others (99)", "100 %", "レゼンテーション：20%、平常点（リスニング課題、講義中の発表、コメントシート、グループワーク）：50%、まとめテスト30%"], "更新日時/Date of Update0": "2023年03月10日 21時07分09秒", "項番No.0": [], "項番No.1": ["2023年度", "秋学期／Fall", "金曜４時限／Friday 4", "秋学期／Fall", "Ａ－３０２"]}, "campas": 0, "name": "【200】英語IIＢ（LR）　９／English II B(Listening & Reading) ", "管理部署": 3, "単位数": 1, "担当者": "伊藤　佳世子（ITO KAYOKO） ", "履修基準年度": "２年", "緊急授業形態": 0, "オンライン授業形態": 1, "時限1": 31, "評価1": 4, "開講期": 2}
+{
+  "履修期": "秋学期",
+  "主な教授言語": "日本語",
+  "授業目的": "ニュースの英語を読み、それに関して自らの意見を英語で発表する。",
+  "到達目標": "本講義の到達目的は、ニュース英語の特徴を知り、内容を聞いたり、また読んで理解できることである。",
+  "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.",
+  "関連科目": "",
+  "授業の概要・背景": "",
+  "授業方法": "ニュース英語を読み、その内容をもとに自分の意見をアカデミック・ライティングの手法で書くことができるための講義する。またテキスト内の練習問題を解く。学期の後半にグループによるプレゼンテーションを実施する。なお自宅での課題として、トピックのシャドーイングと空所補充などListening問題を解く。",
+  "トピック": {
+    "第1回": [
+      "オリエンターション<BR/>（講義の進め方、評価方法、レポート提出の仕方等の説明とグループ分け）",
+      ""
+    ],
+    "第2回": [
+      "Unit 9 (Help Mark)<BR/>Production (Writing Ex., Group Summary)",
+      "Listening Ex. (Opinions Differ about Bed-sharing with Babies)"
+    ],
+    "第3回": [
+      "Unit 10 (Debate Sparked Over Same Surnames for Married Couples)<BR/>Production (Writing Ex., Group Summary)",
+      "Listening Ex.( &quot;Ladies and Gentleman&quot; Disappearing)"
+    ],
+    "第4回": [
+      "Unit 11 (Video Translation)<BR/>Production (Writing Ex., Group Summary)",
+      "Listening Ex. (AI Simulates What Fugitives Look Like Now)"
+    ],
+    "第5回": [
+      "Unit 12 (Opinions Divided on Vaccine passports)<BR/>Production (Writing Ex., Group Summary)",
+      "Listening Ex.(Expectations for Human Hibernations )"
+    ],
+    "第6回": [
+      "中間テストとGroup work",
+      ""
+    ],
+    "第7回": [
+      "Unit 13 (Problems with Japan&#39;s Technical Intern Training Program)<BR/>Production (Writing Ex., Group Summary)",
+      "Listening Ex.(Gig Economy)"
+    ],
+    "第8回": [
+      "Unit 14 Young Carers<BR/>Production (Writing Ex., Group Summary)",
+      "Listening Ex.(English Becomes Official Subject in Japanese Elementary Schools)"
+    ],
+    "第9回": [
+      "Unit 15 Genetically Modified Mosquito Project Given Green Light in Florida)<BR/>Production (Writing Ex., Group Summary)",
+      "Listening Ex.(Matsutake Mushrooms Added to Red List)"
+    ],
+    "第10回": [
+      "秋学期まとめテスト",
+      "プレゼンの準備"
+    ],
+    "第11回": [
+      "グループワーク：プレゼンテーションのためのグループワーク<BR/>　　（パワーポイントや英文等の最終確認）",
+      "プレゼンの準備"
+    ],
+    "第12回": [
+      "グループによるプレゼンテーション　前半<BR/>１グループ (  1人[330 words〜350 words]X人数）",
+      "特になし"
+    ],
+    "第13回": [
+      "グループによるプレゼンテーション　後半<BR/>１グループ ( 1人[330 words〜350 words]X人数）",
+      "特になし"
+    ],
+    "第14回": [
+      "秋学期まとめテストとフィードバック",
+      "特になし"
+    ]
+  },
+  "評価": {
+    "教科書/Required texts0": [
+      "著者名\nAuthor",
+      "タイトル\nTitle",
+      "発行所\nPublisher",
+      "出版年\nYear of Publication",
+      "ISBN",
+      "ボタン\nButton"
+    ],
+    "教科書/Required texts1": [
+      "Kayoko Ito, David Lees",
+      "Practical Practice",
+      "開文社",
+      "2023 年",
+      "978-4-87571-175-9",
+      ""
+    ],
+    "参考文献・資料Reference books0": "講義中に適宜紹介する",
+    "学位授与の方針との関連Relationship to Diploma Policy0": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）",
+    "成績評価Grading0": [
+      "種別　Type備考　Note",
+      "割合　Percentage",
+      "評価基準等　Grading Criteria etc."
+    ],
+    "成績評価Grading1": [
+      "その他／Others (99)",
+      "100 %",
+      "レゼンテーション：20%、平常点（リスニング課題、講義中の発表、コメントシート、グループワーク）：50%、まとめテスト30%"
+    ],
+    "更新日時/Date of Update0": "2023年03月10日 21時07分09秒",
+    "項番No.0": [],
+    "項番No.1": [
+      "2023年度",
+      "秋学期／Fall",
+      "金曜４時限／Friday 4",
+      "秋学期／Fall",
+      "Ａ－３０２"
+    ]
+  },
+  "campas": 0,
+  "name": "【200】英語IIＢ（LR）　９／English II B(Listening & Reading) ",
+  "管理部署": 3,
+  "単位数": 1,
+  "担当者": "伊藤　佳世子（ITO KAYOKO） ",
+  "履修基準年度": "２年",
+  "緊急授業形態": 0,
+  "オンライン授業形態": 1,
+  "時限1": 31,
+  "評価1": 4,
+  "開講期": 2
+}

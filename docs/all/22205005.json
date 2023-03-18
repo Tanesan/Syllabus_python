@@ -1,1 +1,127 @@
-{"履修期": "秋学期", "主な教授言語": "英語", "授業目的": "熱意にあふれ説得力があるTED Talksに触れ、自信をもって力強く流暢に英語を使うスキルを習得する。<BR/>また、TED Talksの生きたスピーチから刺激を受け、自らの生き方を見つめ、生き方を変える力、世界を深く理解する力を育む。", "到達目標": "4技能を身につけ、英語で自由に表現する能力を獲得する。", "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.", "関連科目": "", "授業の概要・背景": "", "授業方法": "There will be individual, pair and group work as well as lectures. Students will participate in a variety of tasks including reading, listening, discussion and writing.", "トピック": {"第1回": ["Introduction", "Preparation for next class"], "第2回": ["Unit 7: Medical Frontiers (Lesson A, B, C)<BR/>        Talking about medical technologies<BR/>        Grammar: modals of probability", "Preparation for next class"], "第3回": ["Unit 7: The sore problem of prosthetic limbs (TED Talk)", "Preparation for speech"], "第4回": ["Unit 8: Life Decisions (Lesson A, B, C)<BR/>        Talking about aspirations<BR/>        Grammar: future perfect and future perfect progressive", "Preparation for next class"], "第5回": ["Unit 8: Why 30 is not the new 20 (TED Talk)", "Preparation for speech"], "第6回": ["Unit 9: Technology and Innovation (Lesson A, B, C)<BR/>        Talking about new technologies such as drones, robots, and driverless cars<BR/>        Grammar: first conditional and second conditional", "Preparation for next class"], "第7回": ["Unit 9: Robots that fly . . . and cooperate (TED Talk)", "Preparation for speech"], "第8回": ["Unit 10: Connections (Lesson A, B, C)<BR/>         Talking about listening skills<BR/>         Grammar: reported speech", "Preparation for next class"], "第9回": ["Unit 10: Five ways to listen better(TED Talk)", "Preparation for speech"], "第10回": ["Unit 11: Life in the Slow Lane (Lesson A, B, C)<BR/>         Talking about brain<BR/>         Grammar: articles and quantifiers", "Preparation for next class"], "第11回": ["Unit 11: Cloudy with a chance of joy (TED Talk)", "Preparation for speech"], "第12回": ["Unit 12: Make Yourself Heard (Lesson A, B, C)<BR/>         Talking about expressing yourself", "Preparation for next class"], "第13回": ["Unit 12: Dare to disagree (TED Talk)", "Preparation for presentation and review quiz"], "第14回": ["Presentation and Review quiz", ""], "授業外学習2": "Reading and listening assignments will be given regularly. Students are expected to prepare for each class."}, "評価": {"教科書/Required texts0": ["著者名\nAuthor", "タイトル\nTitle", "発行所\nPublisher", "出版年\nYear of Publication", "ISBN", "ボタン\nButton"], "教科書/Required texts1": ["Helen Stephenson", "Keynote Level 4: Combo Split 4B with My Keynote Online", "National Geographic Learining (Cengage Learning)", "2017 年", "978-1-337-10899-7", ""], "教科書Required texts0": "Title: Keynote Level 4: Combo Split 4B with My Keynote Online\nAuthor: Helen Stephenson\nPublisher: National Geographic Learning (Cengage Learning)\nISBN: 978-1-337-10899-7", "学生による授業評価の方法Course Evaluation by Students0": "全学統一方式における評価", "学位授与の方針との関連Relationship to Diploma Policy1": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）", "成績評価Grading0": ["種別　Type備考　Note", "割合　Percentage", "評価基準等　Grading Criteria etc."], "成績評価Grading1": ["授業中試験／In-class examination (03)", "50 %", ""], "成績評価Grading2": ["その他／Others (99)", "50 %", "授業態度（授業参加度）20%プレゼンテーション30％"], "成績評価Grading3": "備考　Note\nAttitude and participation in class: 20%\nPresentation 30%\nTest conducted in class: 50%", "更新日時/Date of Update0": "2023年01月12日 14時45分18秒", "項番No.0": [], "項番No.1": ["2023年度", "秋学期／Fall", "金曜４時限／Friday 4", "秋学期／Fall", "Ｆ－１０２"]}, "campas": 0, "name": "【100】英語ＢII（コミュニケーション）　５／English (for Communication) BII", "管理部署": 1, "単位数": 1, "担当者": "徳久　久美子（TOKUHISA KUMIKO） ", "履修基準年度": "１年", "緊急授業形態": 0, "オンライン授業形態": 3, "時限1": 31, "評価1": 2, "評価2": 4, "開講期": 2}
+{
+  "履修期": "秋学期",
+  "主な教授言語": "英語",
+  "授業目的": "熱意にあふれ説得力があるTED Talksに触れ、自信をもって力強く流暢に英語を使うスキルを習得する。<BR/>また、TED Talksの生きたスピーチから刺激を受け、自らの生き方を見つめ、生き方を変える力、世界を深く理解する力を育む。",
+  "到達目標": "4技能を身につけ、英語で自由に表現する能力を獲得する。",
+  "特記事項": "本授業科目は、“オンライン授業60単位制限対象科目”ではありません。 The course is not subject to the 60-credit limit for online courses.",
+  "関連科目": "",
+  "授業の概要・背景": "",
+  "授業方法": "There will be individual, pair and group work as well as lectures. Students will participate in a variety of tasks including reading, listening, discussion and writing.",
+  "トピック": {
+    "第1回": [
+      "Introduction",
+      "Preparation for next class"
+    ],
+    "第2回": [
+      "Unit 7: Medical Frontiers (Lesson A, B, C)<BR/>        Talking about medical technologies<BR/>        Grammar: modals of probability",
+      "Preparation for next class"
+    ],
+    "第3回": [
+      "Unit 7: The sore problem of prosthetic limbs (TED Talk)",
+      "Preparation for speech"
+    ],
+    "第4回": [
+      "Unit 8: Life Decisions (Lesson A, B, C)<BR/>        Talking about aspirations<BR/>        Grammar: future perfect and future perfect progressive",
+      "Preparation for next class"
+    ],
+    "第5回": [
+      "Unit 8: Why 30 is not the new 20 (TED Talk)",
+      "Preparation for speech"
+    ],
+    "第6回": [
+      "Unit 9: Technology and Innovation (Lesson A, B, C)<BR/>        Talking about new technologies such as drones, robots, and driverless cars<BR/>        Grammar: first conditional and second conditional",
+      "Preparation for next class"
+    ],
+    "第7回": [
+      "Unit 9: Robots that fly . . . and cooperate (TED Talk)",
+      "Preparation for speech"
+    ],
+    "第8回": [
+      "Unit 10: Connections (Lesson A, B, C)<BR/>         Talking about listening skills<BR/>         Grammar: reported speech",
+      "Preparation for next class"
+    ],
+    "第9回": [
+      "Unit 10: Five ways to listen better(TED Talk)",
+      "Preparation for speech"
+    ],
+    "第10回": [
+      "Unit 11: Life in the Slow Lane (Lesson A, B, C)<BR/>         Talking about brain<BR/>         Grammar: articles and quantifiers",
+      "Preparation for next class"
+    ],
+    "第11回": [
+      "Unit 11: Cloudy with a chance of joy (TED Talk)",
+      "Preparation for speech"
+    ],
+    "第12回": [
+      "Unit 12: Make Yourself Heard (Lesson A, B, C)<BR/>         Talking about expressing yourself",
+      "Preparation for next class"
+    ],
+    "第13回": [
+      "Unit 12: Dare to disagree (TED Talk)",
+      "Preparation for presentation and review quiz"
+    ],
+    "第14回": [
+      "Presentation and Review quiz",
+      ""
+    ],
+    "授業外学習2": "Reading and listening assignments will be given regularly. Students are expected to prepare for each class."
+  },
+  "評価": {
+    "教科書/Required texts0": [
+      "著者名\nAuthor",
+      "タイトル\nTitle",
+      "発行所\nPublisher",
+      "出版年\nYear of Publication",
+      "ISBN",
+      "ボタン\nButton"
+    ],
+    "教科書/Required texts1": [
+      "Helen Stephenson",
+      "Keynote Level 4: Combo Split 4B with My Keynote Online",
+      "National Geographic Learining (Cengage Learning)",
+      "2017 年",
+      "978-1-337-10899-7",
+      ""
+    ],
+    "教科書Required texts0": "Title: Keynote Level 4: Combo Split 4B with My Keynote Online\nAuthor: Helen Stephenson\nPublisher: National Geographic Learning (Cengage Learning)\nISBN: 978-1-337-10899-7",
+    "学生による授業評価の方法Course Evaluation by Students0": "全学統一方式における評価",
+    "学位授与の方針との関連Relationship to Diploma Policy1": "各授業科目は、各学部・研究科の定めるディプロマ・ポリシー（DP）・カリキュラム・ポリシー（CP）に基づき、カリキュラム上に配置されています。\nDP・CPを意識して本授業科目の学修を進めることで、各学部・研究科の期待する能力が養成されます。\n各学部・研究科のDP、CPや教育課程表（授業科目一覧等）は、下記リンクこちらに掲載していますので学修計画の参考にしてください。\nhttps://kwic.kwansei.ac.jp/cabinet/reference?typeCd=0&cabinetId=557&directLink=1\n※kwicへのリンクとなります（在学生のみ閲覧可）",
+    "成績評価Grading0": [
+      "種別　Type備考　Note",
+      "割合　Percentage",
+      "評価基準等　Grading Criteria etc."
+    ],
+    "成績評価Grading1": [
+      "授業中試験／In-class examination (03)",
+      "50 %",
+      ""
+    ],
+    "成績評価Grading2": [
+      "その他／Others (99)",
+      "50 %",
+      "授業態度（授業参加度）20%プレゼンテーション30％"
+    ],
+    "成績評価Grading3": "備考　Note\nAttitude and participation in class: 20%\nPresentation 30%\nTest conducted in class: 50%",
+    "更新日時/Date of Update0": "2023年01月12日 14時45分18秒",
+    "項番No.0": [],
+    "項番No.1": [
+      "2023年度",
+      "秋学期／Fall",
+      "金曜４時限／Friday 4",
+      "秋学期／Fall",
+      "Ｆ－１０２"
+    ]
+  },
+  "campas": 0,
+  "name": "【100】英語ＢII（コミュニケーション）　５／English (for Communication) BII",
+  "管理部署": 1,
+  "単位数": 1,
+  "担当者": "徳久　久美子（TOKUHISA KUMIKO） ",
+  "履修基準年度": "１年",
+  "緊急授業形態": 0,
+  "オンライン授業形態": 3,
+  "時限1": 31,
+  "評価1": 2,
+  "評価2": 4,
+  "開講期": 2
+}
