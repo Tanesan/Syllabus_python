@@ -10,9 +10,7 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        run: |
-          git checkout main
+      - uses: actions/checkout@v3
        
       - name: Fetch
         run: |
