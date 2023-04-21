@@ -16,11 +16,7 @@ jobs:
       - name: Extract file names
         run: |
           git fetch
-          if git rev-parse --verify HEAD >/dev/null 2>&1; then
-            files=$(git diff --name-only HEAD HEAD^ -- 'docs/all/*.json' | cut -d/ -f3 | cut -d. -f1)
-          else
-            files=$(git ls-files --others --exclude-standard -- 'docs/all/*.json' | cut -d/ -f3 | cut -d. -f1)
-          fi
+          files=$(git diff --name-only HEAD^ HEAD | grep 'docs/.*\.json' | cut -d/ -f2 | cut -d. -f1)
           echo "::set-output name=files::$files"
         id: extract
       
