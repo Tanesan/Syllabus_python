@@ -12,10 +12,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+       
+      - name: Fetch
+        run: |
+          git fetch origin main
       
       - name: Extract file names
         run: |
-          git fetch
           files=$(git diff --name-only HEAD~ | grep 'docs/all/.*\.json' | cut -d/ -f2 | cut -d. -f1)
           echo "::set-output name=files::$files"
         id: extract
