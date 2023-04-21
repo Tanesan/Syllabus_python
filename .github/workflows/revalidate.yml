@@ -19,9 +19,7 @@ jobs:
       
       - name: Extract file names
         run: |
-          files=$(git diff --name-only HEAD main | grep 'docs/all/.*\.json' | cut -d/ -f2 | cut -d. -f1)
-          echo "A"
-          echo "$(git diff --name-only HEAD main | grep 'docs/all/.*\.json' | cut -d/ -f2 | cut -d. -f1)"
+          files=$(git diff --name-only HEAD^ | grep 'docs/all/.*\.json' | cut -d/ -f3 | cut -d/ -f2 | cut -d. -f1)
           echo "::set-output name=files::$files"
         id: extract
       
