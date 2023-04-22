@@ -18,7 +18,7 @@ jobs:
         env:
           API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
       - run: |
-          echo ${{ env.GIT_DIFF }}  | cut -d. -f1
-          curl -X POST -H "Content-Type: application/json" -d "{\"id\": \"${{ env.GIT_DIFF }} | cut -d. -f1\"}" https://subject.kgu-syllabus.com/?secret=${{ env.API_SECRET_KEY }}  | jq .jobs
+          echo "[$(echo ${{ env.GIT_DIFF }} | cut -d. -f1 | sed 's/\n/","/g')]"
+          curl -X POST -H "Content-Type: application/json" -d "{\"id\": \"echo "[$(echo ${{ env.GIT_DIFF }} | cut -d. -f1 | sed 's/\n/","/g')]" | cut -d. -f1\"}" https://subject.kgu-syllabus.com/?secret=${{ env.API_SECRET_KEY }}  | jq .jobs
         id: extract
       
