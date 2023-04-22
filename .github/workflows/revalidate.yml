@@ -15,9 +15,7 @@ jobs:
         with:
           PATTERNS: '*.json'
           RELATIVE: 'docs/all'
-        env:
-          API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
       - run: |
-          curl -X POST -H "Content-Type: application/json" -d "{\"id\": $(echo \""[$(echo ${{ env.GIT_DIFF }} | cut -d. -f1 | tr '\n' ',' | sed 's/,$//')]"\")}" https://subject.kgu-syllabus.com/api/revalidate?secret=${{ env.API_SECRET_KEY }}  | jq .jobs
+          curl -X POST -H "Content-Type: application/json" -d "{\"id\": $(echo \""[$(echo ${{ env.GIT_DIFF }} | cut -d. -f1 | tr '\n' ',' | sed 's/,$//')]"\")}" https://subject.kgu-syllabus.com/api/revalidate?secret=${{ secrets.API_SECRET_KEY }}  | jq .jobs
         id: extract
       
