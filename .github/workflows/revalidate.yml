@@ -15,15 +15,14 @@ jobs:
         with:
           PATTERNS: '*.json'
           RELATIVE: 'docs/all'
-      - run: echo ${{ env.GIT_DIFF }}
-
-      
-      - name: Extract file names
-        run: |
-          files=$(env.GIT_DIFF | grep 'docs/all/.*\.json' | cut -d/ -f3 | cut -d/ -f2 | cut -d. -f1)
+      - run: |
+          echo ${{ env.GIT_DIFF }}
+          files=$(env.GIT_DIFF | cut -d. -f1)
           echo "::set-output name=files::$files"
+          echo ${{ files }}
         id: extract
-      
+          
+
       - name: Post to Next
         if: ${{ steps.extract.outputs.files != '' }}
         env:
