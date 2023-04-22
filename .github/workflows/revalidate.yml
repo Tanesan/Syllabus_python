@@ -15,20 +15,10 @@ jobs:
         with:
           PATTERNS: '*.json'
           RELATIVE: 'docs/all'
-      - run: |
-          echo ${{ env.GIT_DIFF }}
-          files=$(env.GIT_DIFF | cut -d. -f1)
-          echo "::set-output name=files::$files"
-          echo ${{ files }}
-        id: extract
-          
-
-      - name: Post to Next
-        if: ${{ steps.extract.outputs.files != '' }}
         env:
           API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
-        run: |
-          files=${{ steps.extract.outputs.files }}
-          curl -X POST -H "Content-Type: application/json" -d "{\"id\": \"$files\"}" https://subject.kgu-syllabus.com/?secret=$API_SECRET_KEY
-
-
+      - run: |
+          echo ${{ env.GIT_DIFF | cut -d. -f1 }}
+          curl -X POST -H "Content-Type: application/json" -d "{\"id\": \"$env.GIT_DIFF| cut -d. -f1\"}" https://subject.kgu-syllabus.com/?secret=$API_SECRET_KEY
+        id: extract
+      
