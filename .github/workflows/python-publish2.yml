@@ -1,12 +1,10 @@
 # This workflow will upload a Python Package using Twine when a release is created
 # For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
 
-name: AllSubjectInstall
+name: AllSubjectInstall_manual
 
-on:
-   schedule:
-    - cron: "0 22 */4 * *" # cronで定期実行
-# on: workflow_dispatch
+
+on: workflow_dispatch
 
 jobs:
   School-of-Theology:
