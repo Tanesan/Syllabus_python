@@ -171,6 +171,7 @@ score = [
     "定期試験に代わるリポート／Term paper to replace the final examination (02)",
     "授業中試験／In-class examination (03)",
     "平常リポート／Individual reports (04)",
+    "授業への参加度（自発性、積極性、主体性、等）／In-class participation,contribution (09)",
     "その他／Others (99)"
 ]
 def act(m, a, b):
