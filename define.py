@@ -187,6 +187,7 @@ def act(m, a, b):
 
     data = {}
     for i in range(a, b):
+        print(i)
         subject = {}
         fin = 0
         driver.get('https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree')
@@ -226,6 +227,7 @@ def act(m, a, b):
         subject.setdefault('単位数', int(driver.find_element_by_name('lblSbjCrnum').get_attribute('value')))
         subject.setdefault('担当者', driver.find_element_by_name('lstChagTch_st[0].lblTchName').get_attribute('value'))
         subject.setdefault('履修基準年度', driver.find_element_by_name('lblCc004ScrDispNm').get_attribute('value'))
+        subject.setdefault('履修登録方法', driver.find_element_by_name('lblTacRgMthCd').get_attribute('value'))
 
         if len(driver.find_elements_by_name('lblVolCd2')) != 0:
             subject.setdefault('授業形態', study.index(driver.find_element_by_name('lblVolCd2').get_attribute('value')))
