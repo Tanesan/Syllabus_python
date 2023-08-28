@@ -186,6 +186,7 @@ def act(m, a, b):
     options.add_argument("--disable-browser-side-navigation")
     options.add_argument("--disable-gpu")
     options.add_argument('--ignore-certificate-errors')
+    options.add_argument('--disable-blink-features=AutomationControlled')
     options.add_argument('--ignore-ssl-errors')
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     options.add_experimental_option("prefs",prefs)
