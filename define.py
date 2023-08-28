@@ -190,7 +190,8 @@ def act(m, a, b):
     options.add_argument('--ignore-ssl-errors')
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     options.add_experimental_option("prefs",prefs)
-    with  webdriver.Chrome("/home/c0665544/work_local/chromedriver", options=options) as driver:
+    # "/home/c0665544/work_local/chromedriver",
+    with  webdriver.Chrome(options=options) as driver:
         # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
         #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
         #           92, 93, 94, 95, 96, 97, 98]:
