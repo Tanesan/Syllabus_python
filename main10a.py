@@ -1,6 +1,5 @@
 from define import act
 
-a = [28]
-
+a = [34]
 for i in a:
-    act(i, 0, 500)
+    act(i, 500, 800)
