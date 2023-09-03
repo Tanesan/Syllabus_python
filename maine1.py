@@ -1,5 +1,5 @@
 from define import act
 a = [22]
 for i in a:
-        act(i, 1000, 1100)
+        act(i, 1100, 1400)
 print("A")
