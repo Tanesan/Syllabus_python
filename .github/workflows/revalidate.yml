@@ -3,9 +3,9 @@ name: Post to Next
 
 on:
   push:
-    paths:
-      - 'docs/all/*.json'
-      - '.github/*'
+  branches:
+      - main
+
 
 jobs:
   Remove-Dubble:
