@@ -173,7 +173,8 @@ score = [
     "平常リポート／Individual reports (04)",
     "プレゼンテーション・発表／Presentation (07)",
     "授業への参加度（自発性、積極性、主体性、等）／In-class participation,contribution (09)",
-    "その他／Others (99)"
+    "その他／Others (99)",
+    "授業外学修課題／Assignment, homework required outside class (06)",
 ]
 def act(m, a, b):
     options = webdriver.ChromeOptions()
