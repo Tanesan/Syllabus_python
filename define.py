@@ -266,40 +266,25 @@ def act(m, a, b):
         if len(driver.find_elements_by_name('lblVolItm5')) > 0:
             topic.setdefault('授業外学習2', driver.find_element_by_name('lblVolItm5').get_attribute('value'))
         grading = {}
-        for z in range(len(driver.find_elements_by_class_name('output')) - 2):
-            # grading
-            for x in range(len(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                    'tbody').find_elements_by_tag_name('tr'))):
-                if len(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                        'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('td')) == 1:
+        outputs = driver.find_elements_by_class_name('output')
+        for z in range(len(outputs) - 2):
+            output = outputs[z + 2]
+            rows = output.find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')
+
+            for x, row in enumerate(rows):
+                tds = row.find_elements_by_tag_name('td')
+                ths = row.find_elements_by_tag_name('th')
+
+                if len(tds) == 1:
                     i = x
-                    if driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                            'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('th') is None\
-                            or len(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                            'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('th')) == 0:
+                    if not ths or len(ths) == 0:
                         i = 0
-                    # print(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                    #     'tbody').find_elements_by_tag_name('tr')[i].find_elements_by_tag_name('th')[0].text)
-                    grading.setdefault(
-                        ((driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                            'tbody').find_elements_by_tag_name('tr')[i].find_elements_by_tag_name('th')[
-                              0].text) + str(x)).replace("\n", ""),
-                        driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                            'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('td')[
-                            0].text)
+                    key = (rows[i].find_elements_by_tag_name('th')[0].text + str(x)).replace("\n", "")
+                    grading.setdefault(key, tds[0].text)
                 else:
-                    num = []
-                    for y in range(len(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                            'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name('td'))):
-                        num.append(driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                            'tbody').find_elements_by_tag_name('tr')[x].find_elements_by_tag_name(
-                            'td')[y].text)
-                    grading.setdefault(
-                        (driver.find_elements_by_class_name('output')[z + 2].find_element_by_tag_name(
-                            'tbody').find_elements_by_tag_name('tr')[0].find_elements_by_tag_name('th')[
-                             0].text + str(
-                            x)).replace("\n", ""),
-                        num)
+                    num = [td.text for td in tds]
+                    key = (rows[0].find_elements_by_tag_name('th')[0].text + str(x)).replace("\n", "")
+                    grading.setdefault(key, num)
         othersJa = {}
         risyuuki = driver.find_element_by_name('lblAc201ScrDispNm_01').get_attribute('value')
         othersJa.setdefault('履修期', risyuuki[0: risyuuki.find('／')])
