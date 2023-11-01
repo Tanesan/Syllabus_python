@@ -175,6 +175,7 @@ score = [
     "授業への参加度（自発性、積極性、主体性、等）／In-class participation,contribution (09)",
     "その他／Others (99)",
     "授業外学修課題／Assignment, homework required outside class (06)",
+    "論文／Thesis, paper (05)",
 ]
 def act(m, a, b):
     options = webdriver.ChromeOptions()
@@ -279,8 +280,9 @@ def act(m, a, b):
                     i = x
                     if not ths or len(ths) == 0:
                         i = 0
-                    key = (rows[i].find_elements_by_tag_name('th')[0].text + str(x)).replace("\n", "")
-                    grading.setdefault(key, tds[0].text)
+                    if len(rows) <= i and len(rows[i].find_elements_by_tag_name('th')) != 0:
+                        key = (rows[i].find_elements_by_tag_name('th')[0].text + str(x)).replace("\n", "")
+                        grading.setdefault(key, tds[0].text)
                 else:
                     num = [td.text for td in tds]
                     key = (rows[0].find_elements_by_tag_name('th')[0].text + str(x)).replace("\n", "")
