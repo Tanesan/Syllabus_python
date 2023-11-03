@@ -176,6 +176,7 @@ score = [
     "その他／Others (99)",
     "授業外学修課題／Assignment, homework required outside class (06)",
     "論文／Thesis, paper (05)",
+    "実技、実験／Practical skill / Lab work (08)"
 ]
 def act(m, a, b):
     options = webdriver.ChromeOptions()
