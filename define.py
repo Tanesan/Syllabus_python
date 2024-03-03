@@ -311,7 +311,8 @@ def act(m, a, b):
         while "成績評価Grading" + str(i) in grading:
             if grading["成績評価Grading" + str(i)][0] == "備":
                 break
-            subject.setdefault('評価' + str(i), score.index(grading["成績評価Grading" + str(i)][0]))
+            if grading["成績評価Grading" + str(i)][0] in score:
+                subject.setdefault('評価' + str(i), score.index(grading["成績評価Grading" + str(i)][0]))
             i += 1
         if "項番No.1" in grading:
             subject.setdefault('開講期', term_data.index(grading["項番No.1"][1]))
