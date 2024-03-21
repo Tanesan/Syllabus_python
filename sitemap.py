@@ -2,6 +2,15 @@ import xml.etree.ElementTree as ET
 
 import pandas
 import datetime
+import requests
+
+def access_url(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # ステータスコードが200系以外は例外を発生させる
+        return response.text  # レスポンスの内容をテキスト形式で返す
+    except requests.exceptions.RequestException as e:
+        return f'エラーが発生しました: {e}'
 
 dt_now = datetime.datetime.now()
 nt = dt_now.isoformat()
@@ -22,7 +31,7 @@ url_element = ET.SubElement(urlset, 'url')
 loc = ET.SubElement(url_element, 'loc')
 loc.text = "https://kgu-syllabus.com/"
 lastmod = ET.SubElement(url_element, 'lastmod')
-lastmod.text = "2021-08-17"
+lastmod.text = "2024-03-20"
 priority = ET.SubElement(url_element, 'priority')
 priority.text = "1.00"
 
@@ -30,7 +39,7 @@ url_element = ET.SubElement(urlset, 'url')
 loc = ET.SubElement(url_element, 'loc')
 loc.text = "https://kgu-syllabus.com/search"
 lastmod = ET.SubElement(url_element, 'lastmod')
-lastmod.text = "2021-08-26"
+lastmod.text = "2024-03-20"
 priority = ET.SubElement(url_element, 'priority')
 priority.text = "0.80"
 
@@ -39,8 +48,10 @@ for url in urls:
     loc = ET.SubElement(url_element, 'loc')
     loc.text = url
     lastmod = ET.SubElement(url_element, 'lastmod')
-    lastmod.text = "2021-08-17"
+    lastmod.text = "2024-03-20"
     priority = ET.SubElement(url_element, 'priority')
     priority.text = "0.80"
 
 tree.write('docs/sitemap.xml', encoding='utf-8', xml_declaration=True)
+url = os.getenv('TARGET_URL')
+result = access_url(url)
