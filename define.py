@@ -322,7 +322,7 @@ def act(m, a, b):
 
         if len(remark_sections) > 0:
             for remark_section in remark_sections:
-                subject.setdefault('成績評価備考',remark_section)
+                subject.setdefault('成績評価備考',remark_section.text)
         data.setdefault(name, subject)
         searchingADJa = {**othersJa, **subject}
         with open('docs/all/' + str(name) + '.json', 'w+') as f:
