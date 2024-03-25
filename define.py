@@ -252,7 +252,8 @@ def act(m, a, b):
             subject.setdefault('緊急授業形態', study.index(driver.find_element_by_name('lblVolCd3').get_attribute('value')))
         if len(driver.find_elements_by_name('lblVolCd4')) != 0:
             subject.setdefault('オンライン授業形態', study.index(driver.find_element_by_name('lblVolCd4').get_attribute('value')))
-
+        
+        driver.execute_script('document.querySelector("#slideBox3").style.display="block";')
         # list
         topic = {}
         for x in range(40):
@@ -281,7 +282,7 @@ def act(m, a, b):
                     i = x
                     if not ths or len(ths) == 0:
                         i = 0
-                    if len(rows) <= i and len(rows[i].find_elements_by_tag_name('th')) != 0:
+                    if len(rows[i].find_elements_by_tag_name('th')) != 0:
                         key = (rows[i].find_elements_by_tag_name('th')[0].text + str(x)).replace("\n", "")
                         grading.setdefault(key, tds[0].text)
                 else:
@@ -318,10 +319,11 @@ def act(m, a, b):
             subject.setdefault('開講期', term_data.index(grading["項番No.1"][1]))
         else:
             subject.setdefault('開講期',"")
-        remark_sections = driver.find_elements(By.XPATH, "//th[contains(text(), '成績評価')]/ancestor::tbody//tr[td[@colspan='4']]")
+        remark_sections = driver.find_elements(By.XPATH, "//th[contains(text(), '成績評価')]/following-sibling::td[contains(text(), '備考')]/following-sibling::td")
 
-        if remark_sections and len(remark_sections) > 0:
-            subject.setdefault('成績評価備考',remark_sections[0].text)
+        if len(remark_sections) > 0:
+            for remark_section in remark_sections:
+                subject.setdefault('成績評価備考',remark_section)
         data.setdefault(name, subject)
         searchingADJa = {**othersJa, **subject}
         with open('docs/all/' + str(name) + '.json', 'w+') as f:
