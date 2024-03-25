@@ -318,10 +318,10 @@ def act(m, a, b):
             subject.setdefault('開講期', term_data.index(grading["項番No.1"][1]))
         else:
             subject.setdefault('開講期',"")
-        remark_section = driver.find_element(By.XPATH, "//th[contains(text(), '成績評価')]/ancestor::tbody//tr[td[@colspan='4']]")
+        remark_sections = driver.find_elements(By.XPATH, "//th[contains(text(), '成績評価')]/ancestor::tbody//tr[td[@colspan='4']]")
 
-        if remark_section:
-                subject.setdefault('成績評価備考',remark_section.text)
+        if remark_sections and len(remark_sections) > 0:
+            subject.setdefault('成績評価備考',remark_sections[0].text)
         data.setdefault(name, subject)
         searchingADJa = {**othersJa, **subject}
         with open('docs/all/' + str(name) + '.json', 'w+') as f:
