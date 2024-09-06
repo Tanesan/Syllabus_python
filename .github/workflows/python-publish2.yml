@@ -718,7 +718,7 @@ jobs:
         run: |
           git fetch
           git pull
-          python -m pip install --upgrade pippip install chromedriver-binary
+          python -m pip install --upgrade pip install chromedriver-binary
           pip install selenium==4.2.0
 
       - name: Run main.py
