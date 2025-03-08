@@ -287,8 +287,12 @@ def act(m, a, b):
                         grading.setdefault(key, tds[0].text)
                 else:
                     num = [td.text for td in tds]
-                    key = (rows[0].find_elements_by_tag_name('th')[0].text + str(x)).replace("\n", "")
-                    grading.setdefault(key, num)
+                    rows = driver.find_elements(By.TAG_NAME, 'tr')
+                    if rows:
+                        th_elements = rows[0].find_elements(By.TAG_NAME, 'th')
+                        if th_elements:
+                            key = (th_elements[0].text + str(x)).replace("\n", "")
+                            grading.setdefault(key, num)
         othersJa = {}
         risyuuki = driver.find_element_by_name('lblAc201ScrDispNm_01').get_attribute('value')
         othersJa.setdefault('履修期', risyuuki[0: risyuuki.find('／')])
