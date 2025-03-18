@@ -237,6 +237,9 @@ def act(m, a, b):
             break
         driver.find_elements_by_name('ERefer')[i % 100].click()
         # あとで
+        WebDriverWait(driver, 20).until(
+            lambda d: d.find_element_by_name('lblLsnCd')
+        )
         name = driver.find_element_by_name('lblLsnCd').get_attribute('value')
         subject.setdefault('campas', campas_data.index(driver.find_element_by_name('lblCc019ScrDispNm').get_attribute('value')))
         subject.setdefault('name', driver.find_element_by_name('lblRepSbjKnjNm').get_attribute('value'))
