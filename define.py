@@ -197,6 +197,7 @@ def act(m, a, b):
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     options.add_experimental_option("prefs",prefs)
     # "/home/c0665544/work_local/chromedriver",
+    # driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver", options=options)
     driver = webdriver.Chrome(options=options)
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
@@ -344,15 +345,24 @@ def act(m, a, b):
             othersJa.setdefault('授業の概要・背景', driver.find_element_by_name('lblVolItm80').get_attribute('value'))
         othersJa.setdefault('授業方法', driver.find_element_by_name('lblVolItm43').get_attribute('value'))
         othersJa.setdefault('トピック', topic)
-        subject.setdefault('開講期', driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_03').get_attribute('value'))
+        term_value = driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_03').get_attribute(
+            'value')
+        try:
+            term_index = term_data.index(term_value)
+        except ValueError:
+            term_index = None
+        subject.setdefault('開講期', term_index)
         othersJa.setdefault('評価', grading)
         for i in range(0, 8):
             try:
                 element_name = f"lstSlbtchinftJ002List_st[{i}].lblTmtxCd"
                 element = driver.find_element_by_name(element_name)
                 value = element.get_attribute("value")
-
-                subject[f'時限{i}'] = value
+                try:
+                    term_index = term_data.index(value)
+                except ValueError:
+                    term_index = None
+                subject.setdefault(f'時限{i+1}', term_index)
 
             except NoSuchElementException:
                 break
@@ -361,7 +371,7 @@ def act(m, a, b):
             if grading["成績評価Grading" + str(i)][0] == "備":
                 break
             if grading["成績評価Grading" + str(i)][0] in score:
-                subject.setdefault('評価' + str(i), score.index(grading["成績評価Grading" + str(i)][0]))
+                subject.setdefault('評価' + str(i + 1), score.index(grading["成績評価Grading" + str(i)][0]))
             i += 1
         remark_sections = driver.find_elements(By.XPATH, "//th[contains(text(), '成績評価')]/ancestor::tbody//tr[td[@colspan='4']]")
 
