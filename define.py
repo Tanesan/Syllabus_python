@@ -221,12 +221,30 @@ def act(m, a, b):
 
         driver.find_element_by_name('ESearch').click()
         for a in range(int(i / 100)):
-            if len(driver.find_elements_by_name('ENext')) == 0:
-                if fin == 1:
+            max_retry = 3
+            for attempt in range(max_retry):
+                try:
+                    # ENextが存在しない場合の処理
+                    if len(driver.find_elements_by_name('ENext')) == 0:
+                        if fin == 1:
+                            # 2回目連続で要素が無ければループを抜ける
+                            break
+                        fin = 1
+                    else:
+                        # 要素があればクリック
+                        driver.find_element_by_name('ENext').click()
+                    # クリック成功 or 存在しない場合の処理が終わったらリトライは不要
                     break
-                fin = 1
-            else:
-                driver.find_element_by_name('ENext').click()
+    
+                except StaleElementReferenceException:
+                    # StaleElementReferenceExceptionが出たら再取得のため少し待ってリトライ
+                    if attempt < max_retry - 1:
+                        time.sleep(1)  # 1秒待って再度クリックを試みる
+                    else:
+                        # 指定回数リトライしても失敗したら例外を再度投げて終了
+                        raise
+
+
         if len(driver.find_elements_by_name('ERefer')) != 0:
             if int(driver.find_element_by_name('lstSlbinftJ016RList_st[' + str(len(driver.find_elements_by_name('ERefer')) - 1) +'].lblNo').get_attribute('value')) <= i:
                 break
