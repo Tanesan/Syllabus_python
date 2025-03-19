@@ -369,7 +369,6 @@ def act(m, a, b):
             subject.setdefault('成績評価備考',remark_sections[0].text)
         data.setdefault(name, subject)
         searchingADJa = {**othersJa, **subject}
-        print(searchingADJa)
         with open('docs/all/' + str(name) + '.json', 'w+') as f:
             json.dump(searchingADJa, f, ensure_ascii=False)
         sleep(1)
