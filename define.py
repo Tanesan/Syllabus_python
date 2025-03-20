@@ -215,8 +215,8 @@ def act(m, a, b):
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     options.add_experimental_option("prefs",prefs)
     # "/home/c0665544/work_local/chromedriver",
-    # driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver", options=options)
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver", options=options)
+    # driver = webdriver.Chrome(options=options)
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
     #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
@@ -266,7 +266,7 @@ def act(m, a, b):
                         # 指定回数リトライしても失敗したら例外を再度投げて終了
                         raise
 
-
+        sleep(2)
         if len(driver.find_elements_by_name('ERefer')) != 0:
             if int(driver.find_element_by_name('lstSlbinftJ016RList_st[' + str(len(driver.find_elements_by_name('ERefer')) - 1) +'].lblNo').get_attribute('value')) <= i:
                 break
@@ -424,8 +424,6 @@ def act(m, a, b):
                 break
         i = 1
         while "成績評価Grading" + str(i) in grading:
-            print(grading["成績評価Grading" + str(i)][0])
-            print(grading["成績評価Grading" + str(i)][0] in score)
             if grading["成績評価Grading" + str(i)][0] == "備":
                 break
             if grading["成績評価Grading" + str(i)][0] in score:
