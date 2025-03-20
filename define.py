@@ -6,6 +6,7 @@ from selenium.common.exceptions import StaleElementReferenceException, NoSuchEle
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
+import re
 # import firebase_admin
 # from firebase_admin import credentials
 # import pandas as pandas
@@ -180,6 +181,23 @@ score = [
     "論文／Thesis, paper (05)",
     "実技、実験／Practical skill / Lab work (08)"
 ]
+
+def process_td(td):
+    """
+    td 要素内の innerHTML を取得し、<br> タグを改行に置換、
+    その他の HTML タグを除去してテキストとして返す関数。
+    """
+    try:
+        inner_html = td.get_attribute("innerHTML")
+        # <br> タグを改行に変換
+        text_with_newlines = re.sub(r'<br\s*/?>', '\n', inner_html)
+        # 残りの HTML タグを除去
+        text = re.sub(r'<[^>]+>', '', text_with_newlines)
+        text = text.replace("                                "," ")
+        return text.strip()
+    except Exception:
+        return td.text.strip()
+
 def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument("start-maximized")
@@ -222,6 +240,9 @@ def act(m, a, b):
         year_2022.send_keys("2025")
 
         driver.find_element_by_name('ESearch').click()
+        WebDriverWait(driver, 20).until(
+            lambda d: d.find_element_by_name('EDispNumberSet')
+        )
         for a in range(int(i / 100)):
             max_retry = 3
             for attempt in range(max_retry):
@@ -229,7 +250,6 @@ def act(m, a, b):
                     # ENextが存在しない場合の処理
                     if len(driver.find_elements_by_name('ENext')) == 0:
                         if fin == 1:
-                            # 2回目連続で要素が無ければループを抜ける
                             break
                         fin = 1
                     else:
@@ -294,56 +314,92 @@ def act(m, a, b):
             topic.setdefault('授業外学習2', driver.find_element_by_name('lblVolItm5').get_attribute('value'))
         grading = {}
         # ページ内のすべての output クラスの要素を取得（先頭2件は除く）
-        outputs = driver.find_elements_by_class_name('output')
-        for output in outputs[2:]:
+        tables = driver.find_elements_by_class_name('output')
+        for table in tables[3:]:
+            # キャプション要素があれば取得（なければ空文字）
+            caption_text = ""
             try:
-                tbody = output.find_element_by_tag_name('tbody')
-            except Exception as e:
-                # tbody が見つからない場合は次の output へ
-                continue
-            rows = tbody.find_elements_by_tag_name('tr')
-            if not rows:
-                continue
+                caption_elem = table.find_element_by_tag_name('caption')
+                caption_text = caption_elem.text.strip()
+            except Exception:
+                pass
 
-            # 先頭行にヘッダーがあれば、それを基準キーとする
-            base_key = ""
-            header_cells = rows[0].find_elements_by_tag_name('th')
-            if header_cells:
-                base_key = header_cells[0].text.replace("\n", "").strip()
-
-            for x, row in enumerate(rows):
-                tds = row.find_elements_by_tag_name('td')
-                ths = row.find_elements_by_tag_name('th')
-
-                # td が1つだけの場合、同じ行に th が無いときは先頭行の th を利用する
-                if len(tds) == 1:
-                    key_source = row if ths else rows[0]
-                    key_elements = key_source.find_elements_by_tag_name('th')
-                    if key_elements:
-                        key = key_elements[0].text.replace("\n", "").strip() + str(x)
-                        grading.setdefault(key, tds[0].text.strip())
-                # td が複数ある場合は、td のテキストリストを格納
-                elif len(tds) > 1:
-                    num = [td.text.strip() for td in tds]
-                    # 現在の行に th があればそれを、なければ先頭行の th（base_key）をキーに使用
-                    if ths:
-                        key = ths[0].text.replace("\n", "").strip() + str(x)
+            # キャプションに「教室情報」または "Classroom" が含まれている場合は教室情報テーブルとして処理
+            if caption_text and ("教室情報" in caption_text or "Classroom" in caption_text):
+                try:
+                    tbody = table.find_element_by_tag_name('tbody')
+                    rows = tbody.find_elements_by_tag_name('tr')
+                except Exception:
+                    rows = []
+                # 行番号（0: ヘッダー行 → 空配列、以降: 各データ行の<td>セル）
+                for idx, row in enumerate(rows):
+                    if idx == 0:
+                        grading[f"項番No.{idx}"] = []
                     else:
-                        key = base_key + str(x)
-                    grading.setdefault(key, num)
+                        # データ行の場合、<th>（項番）は除き<td>セルのみ取得
+                        td_elements = row.find_elements_by_tag_name('td')
+                        # 各セルのテキストをstripして配列に
+                        cell_texts = [td.text.strip() for td in td_elements if td.text.strip() != ""]
+                        grading[f"項番No.{idx}"] = cell_texts
+
+            else:
+                # キャプションがないテーブル（例：成績評価や教科書テーブル）の処理
+                try:
+                    tbody = table.find_element_by_tag_name('tbody')
+                    rows = tbody.find_elements_by_tag_name('tr')
+                except Exception:
+                    rows = []
+                if not rows:
+                    continue
+
+                # 最初の行に th が存在する場合はヘッダー行として扱う
+                header_ths = rows[0].find_elements_by_tag_name('th')
+                if header_ths:
+                    if "教科書" in header_ths[0].text or "更新日時" in header_ths[0].text or "参考文献" in header_ths[0].text:
+                        base_key = header_ths[0].text.replace("\n", "/").strip()
+                    else:
+                        base_key = header_ths[0].text.replace("\n", "").strip()
+                    header_tds = rows[0].find_elements_by_tag_name('td')
+                    if header_tds:
+                        header_values = [process_td(td) for td in header_tds]
+                        grading[f"{base_key}0"] = header_values
+                    for idx, row in enumerate(rows[1:], start=1):
+                        tds = row.find_elements_by_tag_name('td')
+                        if tds:
+                            values = [process_td(td).replace("\n", "") for td in tds]
+                            grading[f"{base_key}{idx}"] = values
+                else:
+                    for row in rows:
+                        th_elements = row.find_elements_by_tag_name('th')
+                        td_elements = row.find_elements_by_tag_name('td')
+                        if th_elements and td_elements:
+                            key_base = th_elements[0].text.replace("\n", "/")
+                            value = process_td(td_elements[0].replace("\n", ""))
+                            suffix = 0
+                            key = f"{key_base}{suffix}"
+                            while key in grading:
+                                suffix += 1
+                                key = f"{key_base}{suffix}"
+                            grading[key] = value
         othersJa = {}
         risyuuki = driver.find_element_by_name('lblAc201ScrDispNm_01').get_attribute('value')
         othersJa.setdefault('履修期', risyuuki[0: risyuuki.find('／')])
         if len(driver.find_elements_by_name('lblVolCd1')) != 0:
             language = driver.find_element_by_name('lblVolCd1').get_attribute('value')
             othersJa.setdefault('主な教授言語', language[0: language.find('／')])
-        othersJa.setdefault('授業目的', driver.find_element_by_name('lblVolItm2').get_attribute('value'))
-        othersJa.setdefault('到達目標', driver.find_element_by_name('lblVolItm3').get_attribute('value'))
+        raw_html = driver.find_element_by_name('lblVolItm2').get_attribute('value')
+        clean_text = re.sub(r'<[^>]*>', '', raw_html).strip()
+        othersJa.setdefault('授業目的', clean_text)
+        raw_html = driver.find_element_by_name('lblVolItm3').get_attribute('value')
+        clean_text = re.sub(r'<[^>]*>', '', raw_html).strip()
+        othersJa.setdefault('到達目標', clean_text)
         othersJa.setdefault('特記事項', driver.find_element_by_name('lblVolItm1').get_attribute('value'))
         othersJa.setdefault('関連科目', driver.find_element_by_name('lblVolItm4').get_attribute('value'))
         if len(driver.find_elements_by_name('lblVolItm80')) != 0:
             othersJa.setdefault('授業の概要・背景', driver.find_element_by_name('lblVolItm80').get_attribute('value'))
-        othersJa.setdefault('授業方法', driver.find_element_by_name('lblVolItm43').get_attribute('value'))
+        raw_html = driver.find_element_by_name('lblVolItm43').get_attribute('value')
+        clean_text = re.sub(r'<[^>]*>', '', raw_html).strip()
+        othersJa.setdefault('授業方法', clean_text)
         othersJa.setdefault('トピック', topic)
         term_value = driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_03').get_attribute(
             'value')
@@ -351,7 +407,7 @@ def act(m, a, b):
             term_index = term_data.index(term_value)
         except ValueError:
             term_index = None
-        subject.setdefault('開講期', term_index)
+        subject['開講期'] = term_index
         othersJa.setdefault('評価', grading)
         for i in range(0, 8):
             try:
@@ -359,19 +415,21 @@ def act(m, a, b):
                 element = driver.find_element_by_name(element_name)
                 value = element.get_attribute("value")
                 try:
-                    term_index = term_data.index(value)
+                    term_index = day_data.index(value)
                 except ValueError:
                     term_index = None
-                subject.setdefault(f'時限{i+1}', term_index)
+                subject[f'時限{i+1}'] = term_index
 
             except NoSuchElementException:
                 break
         i = 1
         while "成績評価Grading" + str(i) in grading:
+            print(grading["成績評価Grading" + str(i)][0])
+            print(grading["成績評価Grading" + str(i)][0] in score)
             if grading["成績評価Grading" + str(i)][0] == "備":
                 break
             if grading["成績評価Grading" + str(i)][0] in score:
-                subject.setdefault('評価' + str(i + 1), score.index(grading["成績評価Grading" + str(i)][0]))
+                subject.setdefault('評価' + str(i), score.index(grading["成績評価Grading" + str(i)][0]))
             i += 1
         remark_sections = driver.find_elements(By.XPATH, "//th[contains(text(), '成績評価')]/ancestor::tbody//tr[td[@colspan='4']]")
 
@@ -381,7 +439,6 @@ def act(m, a, b):
         searchingADJa = {**othersJa, **subject}
         with open('docs/all/' + str(name) + '.json', 'w+') as f:
             json.dump(searchingADJa, f, ensure_ascii=False)
-        sleep(1)
         data_all = {}
         data_all.update(data)
         json_open_all = open("docs/all.json", 'r')
