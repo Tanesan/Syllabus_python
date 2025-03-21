@@ -267,11 +267,11 @@ def act(m, a, b):
                         raise
 
         sleep(2)
-        if len(driver.find_elements_by_name('ERefer')) != 0:
-            if int(driver.find_element_by_name('lstSlbinftJ016RList_st[' + str(len(driver.find_elements_by_name('ERefer')) - 1) +'].lblNo').get_attribute('value')) <= i:
-                break
-        else:
-            sleep(0.1)
+        # if len(driver.find_elements_by_name('ERefer')) != 0:
+        #     if int(driver.find_element_by_name('lstSlbinftJ016RList_st[' + str(len(driver.find_elements_by_name('ERefer')) - 1) +'].lblNo').get_attribute('value')) <= i:
+        #         break
+        # else:
+        #     sleep(0.1)
         if len(driver.find_elements_by_name('ERefer')) == 0:
             break
         if fin == 1:
