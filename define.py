@@ -279,7 +279,11 @@ def act(m, a, b):
         WebDriverWait(driver, 20).until(
             lambda d: d.find_element_by_name('ERefer')
         )
-        driver.find_elements_by_name('ERefer')[i % 100].click()
+        try:
+            driver.find_elements_by_name('ERefer')[i % 100].click()
+        except IndexError:
+            print("IndexError: list index out of range encountered, breaking the loop.")
+            break
         # あとで
         WebDriverWait(driver, 20).until(
             lambda d: d.find_element_by_name('lblLsnCd')
