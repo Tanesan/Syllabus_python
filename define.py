@@ -248,6 +248,9 @@ def act(m, a, b):
             for attempt in range(max_retry):
                 try:
                     # ENextが存在しない場合の処理
+                    WebDriverWait(driver, 20).until(
+                        lambda d: d.find_element_by_name('ERefer')
+                    )
                     if len(driver.find_elements_by_name('ENext')) == 0:
                         if fin == 1:
                             break
