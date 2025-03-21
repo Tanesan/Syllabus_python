@@ -276,6 +276,9 @@ def act(m, a, b):
             break
         if fin == 1:
             break
+        WebDriverWait(driver, 20).until(
+            lambda d: d.find_element_by_name('ERefer')
+        )
         driver.find_elements_by_name('ERefer')[i % 100].click()
         # あとで
         WebDriverWait(driver, 20).until(
