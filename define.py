@@ -272,13 +272,15 @@ def act(m, a, b):
         #         break
         # else:
         #     sleep(0.1)
-        if len(driver.find_elements_by_name('ERefer')) == 0:
-            break
-        if fin == 1:
-            break
         WebDriverWait(driver, 20).until(
             lambda d: d.find_element_by_name('ERefer')
         )
+        if len(driver.find_elements_by_name('ERefer')) == 0:
+            print("No data found, breaking the loop.")
+            break
+        if fin == 1:
+            print("No fin found, breaking the loop.")
+            break
         try:
             driver.find_elements_by_name('ERefer')[i % 100].click()
         except IndexError:
