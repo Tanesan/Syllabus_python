@@ -249,15 +249,10 @@ def act(m, a, b):
                 try:
                     # ENextが存在しない場合の処理
                     WebDriverWait(driver, 20).until(
-                        lambda d: d.find_element_by_name('ERefer')
+                        lambda d: d.find_element_by_name('ENext')
                     )
-                    if len(driver.find_elements_by_name('ENext')) == 0:
-                        if fin == 1:
-                            break
-                        fin = 1
-                    else:
                         # 要素があればクリック
-                        driver.find_element_by_name('ENext').click()
+                    driver.find_element_by_name('ENext').click()
                     # クリック成功 or 存在しない場合の処理が終わったらリトライは不要
                     break
     
@@ -280,9 +275,6 @@ def act(m, a, b):
         )
         if len(driver.find_elements_by_name('ERefer')) == 0:
             print("No data found, breaking the loop.")
-            break
-        if fin == 1:
-            print("No fin found, breaking the loop.")
             break
         try:
             driver.find_elements_by_name('ERefer')[i % 100].click()
