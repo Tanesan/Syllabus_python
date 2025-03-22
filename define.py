@@ -215,8 +215,8 @@ def act(m, a, b):
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     options.add_experimental_option("prefs",prefs)
     # "/home/c0665544/work_local/chromedriver",
-    # driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver", options=options)
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver", options=options)
+    # driver = webdriver.Chrome(options=options)
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
     #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
@@ -371,6 +371,9 @@ def act(m, a, b):
                         tds = row.find_elements_by_tag_name('td')
                         if tds:
                             values = [process_td(td).replace("\n", "") for td in tds]
+                            if len(values) == 1:
+                                grading[f"{base_key}{idx}"] = values[0]
+                            print(grading)
                             grading[f"{base_key}{idx}"] = values
                 else:
                     for row in rows:
