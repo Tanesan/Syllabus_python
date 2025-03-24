@@ -240,9 +240,13 @@ def act(m, a, b):
         year_2022.send_keys("2025")
 
         driver.find_element_by_name('ESearch').click()
-        WebDriverWait(driver, 20).until(
+        try:
+            WebDriverWait(driver, 20).until(
             lambda d: d.find_element_by_name('EDispNumberSet')
         )
+        except:
+            print("No data found, breaking the loop.")
+            break
         for a in range(int(i / 100)):
             max_retry = 3
             for attempt in range(max_retry):
