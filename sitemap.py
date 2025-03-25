@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 import pandas
 import datetime
 import requests
+import os
 
 def access_url(url):
     try:
