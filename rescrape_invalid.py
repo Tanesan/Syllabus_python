@@ -3,14 +3,28 @@ import os
 import sys
 import time
 import logging
+import re
 from datetime import datetime
 from define import act
 
+log_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rescrape_failures.log')
 logging.basicConfig(
-    filename='rescrape_failures.log',
+    filename=log_file,
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
+
+def is_valid_id(file_id):
+    """
+    ファイルIDが有効な形式かどうかを検証する
+    
+    Args:
+        file_id: 検証するID
+    
+    Returns:
+        bool: IDが有効な形式の場合はTrue、そうでない場合はFalse
+    """
+    return bool(re.match(r'^\d{2,}$', file_id))
 
 def rescrape_invalid_json(invalid_ids, max_retries=3):
     """
@@ -19,17 +33,27 @@ def rescrape_invalid_json(invalid_ids, max_retries=3):
     Args:
         invalid_ids: 再スクレイピングするIDのリスト
         max_retries: 最大再試行回数
+    
+    Returns:
+        tuple: (成功数, 失敗数)
     """
     success_count = 0
     failure_count = 0
     
     for file_id in invalid_ids:
+        if not isinstance(file_id, str):
+            file_id = str(file_id)
+        
+        file_id = file_id.strip()
         print(f"Re-scraping {file_id}...")
         
-        if len(file_id) >= 2:
+        if is_valid_id(file_id):
             try:
                 department_code = int(file_id[:2])
                 subject_number = int(file_id[2:])
+                
+                if department_code <= 0 or subject_number <= 0:
+                    raise ValueError("Invalid department code or subject number")
                 
                 success = False
                 for attempt in range(max_retries):
@@ -62,12 +86,26 @@ def rescrape_invalid_json(invalid_ids, max_retries=3):
 
 def main():
     if len(sys.argv) > 1:
+        input_file = sys.argv[1]
+        
+        if not os.path.exists(input_file):
+            print(f"Error: File {input_file} does not exist")
+            return
+        
         try:
-            with open(sys.argv[1], 'r') as f:
+            with open(input_file, 'r') as f:
                 invalid_ids = json.load(f)
-            print(f"Loaded {len(invalid_ids)} invalid IDs from {sys.argv[1]}")
+                
+            if not isinstance(invalid_ids, list):
+                print("Error: Input file must contain a JSON array of IDs")
+                return
+                
+            print(f"Loaded {len(invalid_ids)} invalid IDs from {input_file}")
+        except json.JSONDecodeError as e:
+            print(f"Error: Invalid JSON format in {input_file}: {str(e)}")
+            return
         except Exception as e:
-            print(f"Error loading file {sys.argv[1]}: {str(e)}")
+            print(f"Error loading file {input_file}: {str(e)}")
             return
     else:
         print("Usage: python rescrape_invalid.py <invalid_ids_file.json>")
@@ -82,7 +120,7 @@ def main():
     print(f"- Failed to re-scrape: {failure_count}")
     
     if failure_count > 0:
-        print(f"Check rescrape_failures.log for details on failed re-scraping attempts")
+        print(f"Check {log_file} for details on failed re-scraping attempts")
 
 if __name__ == "__main__":
     main()
