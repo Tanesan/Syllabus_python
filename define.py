@@ -434,12 +434,18 @@ def act(m, a, b):
             except NoSuchElementException:
                 break
         i = 1
+        has_grading_field = False
         while "成績評価Grading" + str(i) in grading:
+            has_grading_field = True
             if grading["成績評価Grading" + str(i)][0] == "備":
                 break
             if grading["成績評価Grading" + str(i)][0] in score:
                 subject.setdefault('評価' + str(i), score.index(grading["成績評価Grading" + str(i)][0]))
             i += 1
+        
+        if not has_grading_field:
+            print(f"Warning: No 成績評価Grading field found for {name}. Need to re-scrape.")
+            return False
         remark_sections = driver.find_elements(By.XPATH, "//th[contains(text(), '成績評価')]/ancestor::tbody//tr[td[@colspan='4']]")
 
         if remark_sections and len(remark_sections) > 0:
