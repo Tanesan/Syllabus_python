@@ -444,7 +444,8 @@ def act(m, a, b):
             i += 1
         
         if not has_grading_field:
-            print(f"Warning: No 成績評価Grading field found for {name}. Need to re-scrape.")
+            safe_name = str(name).replace('<', '&lt;').replace('>', '&gt;')
+            print(f"Warning: No 成績評価Grading field found for {safe_name}. Need to re-scrape.")
             return False
         remark_sections = driver.find_elements(By.XPATH, "//th[contains(text(), '成績評価')]/ancestor::tbody//tr[td[@colspan='4']]")
 
