@@ -53,7 +53,8 @@ jobs:
           git add -N invalid_files_*.json
           if ! git diff --exit-code --quiet
           then
-            git add invalid_files_*.json && git commit -m "無効なJSONファイルリストを更新" && git push -u origin main
+            git add invalid_files_*.json && git commit -m "無効なJSONファイルリストを更新"
+            git push origin HEAD:${GITHUB_REF_NAME}
           fi
 
   rescrape-invalid-json:
@@ -101,5 +102,6 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-            git add docs/all/*.json rescrape_failures.log && git commit -m "無効なJSONファイルを再スクレイピング" && git push -u origin main
+            git add docs/all/*.json rescrape_failures.log && git commit -m "無効なJSONファイルを再スクレイピング"
+            git push origin HEAD:${GITHUB_REF_NAME}
           fi
