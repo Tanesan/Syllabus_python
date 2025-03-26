@@ -2,10 +2,11 @@ import json
 from time import sleep
 import os
 from selenium import webdriver
-from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException
+from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException, UnexpectedAlertPresentException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import re
 # import firebase_admin
 # from firebase_admin import credentials
@@ -198,6 +199,27 @@ def process_td(td):
     except Exception:
         return td.text.strip()
 
+def handle_alert(driver, timeout=3):
+    """
+    アラートが表示されている場合に処理するヘルパー関数
+    
+    Args:
+        driver: WebDriverインスタンス
+        timeout: アラートを待つ最大秒数
+        
+    Returns:
+        bool: アラートが処理された場合はTrue、そうでない場合はFalse
+    """
+    try:
+        WebDriverWait(driver, timeout).until(EC.alert_is_present())
+        alert = driver.switch_to.alert
+        alert_text = alert.text
+        print(f"Alert detected: {alert_text}")
+        alert.accept()
+        return True
+    except:
+        return False
+
 def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument("start-maximized")
@@ -239,7 +261,12 @@ def act(m, a, b):
         year_2022.clear()
         year_2022.send_keys("2025")
 
-        driver.find_element_by_name('ESearch').click()
+        try:
+            driver.find_element_by_name('ESearch').click()
+        except UnexpectedAlertPresentException:
+            handle_alert(driver)
+            driver.find_element_by_name('ESearch').click()
+            
         try:
             WebDriverWait(driver, 20).until(
             lambda d: d.find_element_by_name('EDispNumberSet')
@@ -281,6 +308,9 @@ def act(m, a, b):
             print("No data found, breaking the loop.")
             break
         try:
+            driver.find_elements_by_name('ERefer')[i % 100].click()
+        except UnexpectedAlertPresentException:
+            handle_alert(driver)
             driver.find_elements_by_name('ERefer')[i % 100].click()
         except IndexError:
             print("IndexError: list index out of range encountered, breaking the loop.")
