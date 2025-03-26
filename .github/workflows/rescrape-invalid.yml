@@ -37,7 +37,7 @@ jobs:
           python find_invalid_json.py
           
       - name: Upload invalid files list
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: invalid-files-list
           path: invalid_files_*.json
@@ -80,7 +80,7 @@ jobs:
           pip install selenium==4.2.0
 
       - name: Download invalid files list
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: invalid-files-list
           
