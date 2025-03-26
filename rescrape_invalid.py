@@ -6,6 +6,7 @@ import logging
 import re
 from datetime import datetime
 from define import act
+from selenium.common.exceptions import UnexpectedAlertPresentException
 
 log_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rescrape_failures.log')
 logging.basicConfig(
@@ -58,13 +59,19 @@ def rescrape_invalid_json(invalid_ids, max_retries=3):
                 success = False
                 for attempt in range(max_retries):
                     print(f"Attempt {attempt+1}/{max_retries}")
-                    success = act(department_code, subject_number, subject_number + 1)
-                    if success:
-                        print(f"Successfully re-scraped {file_id}")
-                        success_count += 1
-                        break
-                    else:
-                        print(f"Failed to re-scrape {file_id} (attempt {attempt+1}/{max_retries})")
+                    try:
+                        success = act(department_code, subject_number, subject_number + 1)
+                        if success:
+                            print(f"Successfully re-scraped {file_id}")
+                            success_count += 1
+                            break
+                        else:
+                            print(f"Failed to re-scrape {file_id} (attempt {attempt+1}/{max_retries})")
+                            if attempt < max_retries - 1:
+                                time.sleep(5)
+                    except UnexpectedAlertPresentException as e:
+                        print(f"Alert encountered during scraping: {str(e)}")
+                        logging.warning(f"Alert encountered for {file_id}: {str(e)}")
                         if attempt < max_retries - 1:
                             time.sleep(5)
                 
