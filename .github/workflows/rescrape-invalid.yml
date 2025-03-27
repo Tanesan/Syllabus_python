@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: find-invalid-json
     if: ${{ github.event.inputs.run_find_only != 'true' }}
-    timeout-minutes: 720
+    timeout-minutes: 1440
     steps:
       - uses: actions/checkout@v4
         with:
