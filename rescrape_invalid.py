@@ -59,7 +59,7 @@ def load_progress(progress_file):
             return []
     return []
 
-def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index=0, total_batches=1, progress_file=None, max_items=100):
+def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index=0, total_batches=1, progress_file=None, max_items=30):
     """
     無効なJSONファイルを再スクレイピングする関数
     
