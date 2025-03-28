@@ -59,7 +59,7 @@ def load_progress(progress_file):
             return []
     return []
 
-def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index=0, total_batches=1, progress_file=None, max_items=30):
+def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index=0, total_batches=1, progress_file=None, max_items=20):
     """
     無効なJSONファイルを再スクレイピングする関数
     
@@ -205,7 +205,7 @@ def main():
         batch_index=args.batch,
         total_batches=args.total_batches,
         progress_file=progress_file,
-        max_items=100  # 最大100件のアイテムのみ処理
+        max_items=20  # 最大100件のアイテムのみ処理
     )
     
     print(f"\nRe-scraping completed for batch {args.batch+1}/{args.total_batches}:")
