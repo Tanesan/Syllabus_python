@@ -59,7 +59,7 @@ def load_progress(progress_file):
             return []
     return []
 
-def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index=0, total_batches=1, progress_file=None):
+def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index=0, total_batches=1, progress_file=None, max_items=100):
     """
     無効なJSONファイルを再スクレイピングする関数
     
@@ -70,6 +70,7 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
         batch_index: 処理するバッチのインデックス（0から始まる）
         total_batches: 合計バッチ数
         progress_file: 進捗を保存するファイル
+        max_items: 処理する最大アイテム数
         
     Returns:
         tuple: (成功数, 失敗数)
@@ -77,6 +78,7 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
     success_count = 0
     failure_count = 0
     processed_ids = []
+    item_count = 0  # 処理したアイテムの数をカウント
     
     if progress_file and os.path.exists(progress_file):
         processed_ids = load_progress(progress_file)
@@ -102,6 +104,10 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
             if not isinstance(file_id, str):
                 file_id = str(file_id)
             
+            if item_count >= max_items:
+                print(f"Reached maximum number of items to process ({max_items}). Stopping.")
+                break
+                
             file_id = file_id.strip()
             print(f"Re-scraping {file_id}...")
             
@@ -121,6 +127,7 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
                             if success:
                                 print(f"Successfully re-scraped {file_id}")
                                 success_count += 1
+                                item_count += 1  # 成功した処理のカウントを増やす
                                 break
                             else:
                                 print(f"Failed to re-scrape {file_id} (attempt {attempt+1}/{max_retries})")
@@ -197,7 +204,8 @@ def main():
         batch_size=args.batch_size,
         batch_index=args.batch,
         total_batches=args.total_batches,
-        progress_file=progress_file
+        progress_file=progress_file,
+        max_items=100  # 最大100件のアイテムのみ処理
     )
     
     print(f"\nRe-scraping completed for batch {args.batch+1}/{args.total_batches}:")
