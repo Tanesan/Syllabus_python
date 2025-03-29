@@ -22,11 +22,18 @@ def setup_logging():
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler(detailed_log),
-            logging.FileHandler(failure_log),
+            logging.FileHandler(detailed_log, mode='w'),  # 'w'モードで既存ファイルを上書き
+            logging.FileHandler(failure_log, mode='w'),   # 'w'モードで既存ファイルを上書き
             logging.StreamHandler()
         ]
     )
+    
+    for log_path in [detailed_log, failure_log]:
+        if os.path.exists(log_path):
+            try:
+                os.chmod(log_path, 0o600)  # ユーザーのみ読み書き可能
+            except Exception as e:
+                print(f"Warning: Could not set permissions on {log_path}: {e}")
     
     logging.info("Logging initialized with both file and console output")
 
@@ -160,8 +167,8 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
                             logging.error(f"Index error for {file_id}: {str(e)}")
                             break  # インデックスエラーは再試行しても解決しないため中断
                         except Exception as e:
-                            print(f"Error re-scraping {file_id}: {str(e)}")
-                            logging.error(f"Error for {file_id}: {str(e)}")
+                            print(f"Error re-scraping {file_id}: {type(e).__name__}")
+                            logging.error(f"Error for {file_id}: {type(e).__name__}")
                             if attempt < max_retries - 1:
                                 time.sleep(5)
                     
@@ -170,7 +177,7 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
                         logging.warning(f"Failed to re-scrape {file_id} after {max_retries} attempts")
                 except Exception as e:
                     failure_count += 1
-                    error_message = f"Error re-scraping {file_id}: {str(e)}"
+                    error_message = f"Error re-scraping {file_id}: {type(e).__name__}"
                     print(error_message)
                     logging.error(error_message)
             else:

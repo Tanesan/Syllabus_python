@@ -123,7 +123,7 @@ def test_specific_id(file_id, max_retries=3):
                         driver.get(element.get_attribute("href") or driver.current_url)
                         logging.info("Navigated to element using alternative method")
                     except Exception as js_e:
-                        logging.error(f"JavaScript click also failed: {str(js_e)}")
+                        logging.error(f"Alternative navigation also failed: {str(js_e)}")
                         driver.quit()
                         continue
                 
