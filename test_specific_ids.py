@@ -7,7 +7,6 @@ from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -40,17 +39,18 @@ def test_specific_id(file_id, max_retries=3):
     logging.info(f"Testing ID: {file_id}")
     
     options = webdriver.ChromeOptions()
-    options.add_argument('--headless')
+    options.add_argument('--headless=new')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--disable-gpu')
     options.add_argument('--window-size=1920,1080')
+    options.add_argument('--remote-debugging-port=9222')
     
     for attempt in range(max_retries):
         logging.info(f"Attempt {attempt+1}/{max_retries}")
         
         try:
-            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+            driver = webdriver.Chrome(options=options)
             driver.set_page_load_timeout(30)
             
             driver.get('https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree')
@@ -79,10 +79,13 @@ def test_specific_id(file_id, max_retries=3):
             
             logging.info("Clicked search button")
             
-            WebDriverWait(driver, 20).until(
-                EC.presence_of_element_located((By.CLASS_NAME, 'tblBdr'))
-            )
-            logging.info("Search results loaded")
+            try:
+                WebDriverWait(driver, 20).until(
+                    EC.presence_of_element_located((By.CLASS_NAME, 'tblBdr'))
+                )
+                logging.info("Search results loaded")
+            except TimeoutException:
+                logging.warning("Timeout waiting for search results, but continuing anyway")
             
             id_input = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.ID, 'txtKmkId'))
@@ -104,9 +107,7 @@ def test_specific_id(file_id, max_retries=3):
                 )
                 logging.info("ID search results loaded")
             except TimeoutException:
-                logging.error("Timeout waiting for ID search results")
-                driver.quit()
-                continue
+                logging.warning("Timeout waiting for ID search results, but continuing anyway")
             
             try:
                 refer_elements = driver.find_elements_by_name('ERefer')
