@@ -103,7 +103,7 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
         for file_id in current_batch:
             if not isinstance(file_id, str):
                 file_id = str(file_id)
-            
+            print(f"now item is {item_count}")
             if item_count >= max_items:
                 print(f"Reached maximum number of items to process ({max_items}). Stopping.")
                 break
