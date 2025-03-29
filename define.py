@@ -199,26 +199,39 @@ def process_td(td):
     except Exception:
         return td.text.strip()
 
-def handle_alert(driver, timeout=3):
+def handle_alert(driver, timeout=3, max_retries=3):
     """
     アラートが表示されている場合に処理するヘルパー関数
     
     Args:
         driver: WebDriverインスタンス
         timeout: アラートを待つ最大秒数
+        max_retries: アラート処理の最大再試行回数
         
     Returns:
         bool: アラートが処理された場合はTrue、そうでない場合はFalse
     """
-    try:
-        WebDriverWait(driver, timeout).until(EC.alert_is_present())
-        alert = driver.switch_to.alert
-        alert_text = alert.text
-        print(f"Alert detected: {alert_text}")
-        alert.accept()
-        return True
-    except:
-        return False
+    for attempt in range(max_retries):
+        try:
+            WebDriverWait(driver, timeout).until(EC.alert_is_present())
+            alert = driver.switch_to.alert
+            alert_text = alert.text
+            print(f"Alert detected: {alert_text}")
+            
+            if "同一画面で一定時間が経過しました" in alert_text:
+                print("Timeout alert detected. Accepting and refreshing...")
+                alert.accept()
+                driver.refresh()
+                return True
+            
+            alert.accept()
+            return True
+        except Exception as e:
+            print(f"Alert handling failed (attempt {attempt+1}/{max_retries}): {str(e)}")
+            if attempt < max_retries - 1:
+                sleep(1)  # 1秒待って再試行
+    
+    return False
 
 def act(m, a, b):
     options = webdriver.ChromeOptions()
@@ -251,21 +264,38 @@ def act(m, a, b):
         subject = {}
         fin = 0
         driver.get('https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree')
-        select_element = driver.find_element(By.ID, 'selLsnMngPostCd')
-        select_object = Select(select_element)
-        select_object.select_by_index(1)
-        select_object.select_by_value(str(m))
-        # driver.implicitly_wait(2)
-        # 年度設定
-        year_2022 = driver.find_element_by_id("txtLsnOpcFcy")
-        year_2022.clear()
-        year_2022.send_keys("2025")
-
         try:
-            driver.find_element_by_name('ESearch').click()
+            select_element = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.ID, 'selLsnMngPostCd'))
+            )
+            select_object = Select(select_element)
+            select_object.select_by_index(1)
+            select_object.select_by_value(str(m))
+            
+            # 年度設定
+            year_2022 = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.ID, 'txtLsnOpcFcy'))
+            )
+            year_2022.clear()
+            year_2022.send_keys("2025")
+
+            search_button = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.NAME, 'ESearch'))
+            )
+            search_button.click()
         except UnexpectedAlertPresentException:
             handle_alert(driver)
-            driver.find_element_by_name('ESearch').click()
+            try:
+                search_button = WebDriverWait(driver, 10).until(
+                    EC.element_to_be_clickable((By.NAME, 'ESearch'))
+                )
+                search_button.click()
+            except Exception as e:
+                print(f"Error after handling alert: {str(e)}")
+                return False
+        except Exception as e:
+            print(f"Error in initial page setup: {str(e)}")
+            return False
             
         try:
             WebDriverWait(driver, 20).until(
@@ -308,10 +338,24 @@ def act(m, a, b):
             print("No data found, breaking the loop.")
             break
         try:
-            driver.find_elements_by_name('ERefer')[i % 100].click()
+            elements = driver.find_elements_by_name('ERefer')
+            if len(elements) == 0:
+                print("No ERefer elements found, breaking the loop.")
+                break
+            
+            if i % 100 >= len(elements):
+                print(f"IndexError prevention: i % 100 = {i % 100}, but only {len(elements)} elements available. Breaking the loop.")
+                break
+            
+            elements[i % 100].click()
         except UnexpectedAlertPresentException:
             handle_alert(driver)
-            driver.find_elements_by_name('ERefer')[i % 100].click()
+            elements = driver.find_elements_by_name('ERefer')
+            if len(elements) > 0 and i % 100 < len(elements):
+                elements[i % 100].click()
+            else:
+                print(f"Element at index {i % 100} not found after handling alert. Breaking the loop.")
+                break
         except IndexError:
             print("IndexError: list index out of range encountered, breaking the loop.")
             break

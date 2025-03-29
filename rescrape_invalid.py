@@ -59,7 +59,7 @@ def load_progress(progress_file):
             return []
     return []
 
-def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index=0, total_batches=1, progress_file=None, max_items=20):
+def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index=0, total_batches=1, progress_file=None, max_items=30):
     """
     無効なJSONファイルを再スクレイピングする関数
     
@@ -111,6 +111,8 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
             file_id = file_id.strip()
             print(f"Re-scraping {file_id}...")
             
+            item_count += 1
+            
             if is_valid_id(file_id):
                 try:
                     department_code = int(file_id[:2])
@@ -127,7 +129,6 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
                             if success:
                                 print(f"Successfully re-scraped {file_id}")
                                 success_count += 1
-                                item_count += 1  # 成功した処理のカウントを増やす
                                 break
                             else:
                                 print(f"Failed to re-scrape {file_id} (attempt {attempt+1}/{max_retries})")
@@ -136,6 +137,15 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
                         except UnexpectedAlertPresentException as e:
                             print(f"Alert encountered during scraping: {str(e)}")
                             logging.warning(f"Alert encountered for {file_id}: {str(e)}")
+                            if attempt < max_retries - 1:
+                                time.sleep(5)
+                        except IndexError as e:
+                            print(f"Index error while scraping {file_id}: {str(e)}")
+                            logging.error(f"Index error for {file_id}: {str(e)}")
+                            break  # インデックスエラーは再試行しても解決しないため中断
+                        except Exception as e:
+                            print(f"Error re-scraping {file_id}: {str(e)}")
+                            logging.error(f"Error for {file_id}: {str(e)}")
                             if attempt < max_retries - 1:
                                 time.sleep(5)
                     
@@ -205,7 +215,7 @@ def main():
         batch_index=args.batch,
         total_batches=args.total_batches,
         progress_file=progress_file,
-        max_items=20  # 最大100件のアイテムのみ処理
+        max_items=30  # 最大30件のアイテムのみ処理
     )
     
     print(f"\nRe-scraping completed for batch {args.batch+1}/{args.total_batches}:")
