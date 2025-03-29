@@ -9,12 +9,28 @@ from datetime import datetime
 from define import act
 from selenium.common.exceptions import UnexpectedAlertPresentException
 
-log_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rescrape_failures.log')
-logging.basicConfig(
-    filename=log_file,
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+log_dir = os.path.dirname(os.path.abspath(__file__))
+failure_log = os.path.join(log_dir, 'rescrape_failures.log')
+detailed_log = os.path.join(log_dir, 'rescrape_detailed.log')
+
+def setup_logging():
+    """詳細なロギング設定を行う関数"""
+    for handler in logging.root.handlers[:]:
+        logging.root.removeHandler(handler)
+    
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(detailed_log),
+            logging.FileHandler(failure_log),
+            logging.StreamHandler()
+        ]
+    )
+    
+    logging.info("Logging initialized with both file and console output")
+
+setup_logging()
 
 def is_valid_id(file_id):
     """
@@ -180,6 +196,7 @@ def main():
     parser.add_argument('--total-batches', type=int, default=1, help='合計バッチ数')
     parser.add_argument('--batch-size', type=int, default=50, help='ミニバッチサイズ')
     parser.add_argument('--max-retries', type=int, default=3, help='スクレイピングの最大再試行回数')
+    parser.add_argument('--ids', help='カンマ区切りの特定IDリスト（テスト用）')
     
     args = parser.parse_args()
     
@@ -189,25 +206,29 @@ def main():
         print(f"Error: File {input_file} does not exist")
         return
     
-    try:
-        with open(input_file, 'r') as f:
-            invalid_ids = json.load(f)
-            
-        if not isinstance(invalid_ids, list):
-            print("Error: Input file must contain a JSON array of IDs")
+    if args.ids:
+        invalid_ids = args.ids.split(',')
+        logging.info(f"Using specific IDs for testing: {invalid_ids}")
+    else:
+        try:
+            with open(input_file, 'r') as f:
+                invalid_ids = json.load(f)
+                
+            if not isinstance(invalid_ids, list):
+                logging.error("Error: Input file must contain a JSON array of IDs")
+                return
+                
+            logging.info(f"Loaded {len(invalid_ids)} invalid IDs from {input_file}")
+        except json.JSONDecodeError as e:
+            logging.error(f"Error: Invalid JSON format in {input_file}: {str(e)}")
             return
-            
-        print(f"Loaded {len(invalid_ids)} invalid IDs from {input_file}")
-    except json.JSONDecodeError as e:
-        print(f"Error: Invalid JSON format in {input_file}: {str(e)}")
-        return
-    except Exception as e:
-        print(f"Error loading file {input_file}: {str(e)}")
-        return
+        except Exception as e:
+            logging.error(f"Error loading file {input_file}: {str(e)}")
+            return
     
     progress_file = f"rescrape_progress_batch{args.batch}.json"
     
-    print(f"Starting re-scraping of invalid files (Batch {args.batch+1}/{args.total_batches})...")
+    logging.info(f"Starting re-scraping of invalid files (Batch {args.batch+1}/{args.total_batches})...")
     success_count, failure_count = rescrape_invalid_json(
         invalid_ids, 
         max_retries=args.max_retries,
@@ -218,12 +239,17 @@ def main():
         max_items=30  # 最大30件のアイテムのみ処理
     )
     
-    print(f"\nRe-scraping completed for batch {args.batch+1}/{args.total_batches}:")
-    print(f"- Successfully re-scraped: {success_count}")
-    print(f"- Failed to re-scrape: {failure_count}")
+    summary = f"\nRe-scraping completed for batch {args.batch+1}/{args.total_batches}:"
+    summary += f"\n- Successfully re-scraped: {success_count}"
+    summary += f"\n- Failed to re-scrape: {failure_count}"
+    
+    print(summary)
+    logging.info(summary)
     
     if failure_count > 0:
-        print(f"Check {log_file} for details on failed re-scraping attempts")
+        log_message = f"Check {failure_log} and {detailed_log} for details on failed re-scraping attempts"
+        print(log_message)
+        logging.info(log_message)
 
 if __name__ == "__main__":
     main()
