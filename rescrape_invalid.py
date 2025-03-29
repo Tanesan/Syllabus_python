@@ -59,7 +59,7 @@ def load_progress(progress_file):
             return []
     return []
 
-def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index=0, total_batches=1, progress_file=None, max_items=20):
+def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index=0, total_batches=1, progress_file=None, max_items=30):
     """
     無効なJSONファイルを再スクレイピングする関数
     
@@ -139,6 +139,15 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
                             logging.warning(f"Alert encountered for {file_id}: {str(e)}")
                             if attempt < max_retries - 1:
                                 time.sleep(5)
+                        except IndexError as e:
+                            print(f"Index error while scraping {file_id}: {str(e)}")
+                            logging.error(f"Index error for {file_id}: {str(e)}")
+                            break  # インデックスエラーは再試行しても解決しないため中断
+                        except Exception as e:
+                            print(f"Error re-scraping {file_id}: {str(e)}")
+                            logging.error(f"Error for {file_id}: {str(e)}")
+                            if attempt < max_retries - 1:
+                                time.sleep(5)
                     
                     if not success:
                         failure_count += 1
@@ -206,7 +215,7 @@ def main():
         batch_index=args.batch,
         total_batches=args.total_batches,
         progress_file=progress_file,
-        max_items=20  # 最大100件のアイテムのみ処理
+        max_items=30  # 最大30件のアイテムのみ処理
     )
     
     print(f"\nRe-scraping completed for batch {args.batch+1}/{args.total_batches}:")
