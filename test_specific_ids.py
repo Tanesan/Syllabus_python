@@ -6,6 +6,8 @@ import time
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -48,7 +50,7 @@ def test_specific_id(file_id, max_retries=3):
         logging.info(f"Attempt {attempt+1}/{max_retries}")
         
         try:
-            driver = webdriver.Chrome(options=options)
+            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
             driver.set_page_load_timeout(30)
             
             driver.get('https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree')
