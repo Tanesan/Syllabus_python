@@ -111,6 +111,8 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
             file_id = file_id.strip()
             print(f"Re-scraping {file_id}...")
             
+            item_count += 1
+            
             if is_valid_id(file_id):
                 try:
                     department_code = int(file_id[:2])
@@ -127,7 +129,6 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
                             if success:
                                 print(f"Successfully re-scraped {file_id}")
                                 success_count += 1
-                                item_count += 1  # 成功した処理のカウントを増やす
                                 break
                             else:
                                 print(f"Failed to re-scrape {file_id} (attempt {attempt+1}/{max_retries})")
