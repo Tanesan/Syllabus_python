@@ -404,10 +404,11 @@ def act(m, a, b):
             if not safe_click(driver, By.NAME, 'ERefer', timeout=5):
                 logging.error(f"Failed to click ERefer element at index {i % 100}")
                 try:
-                    driver.execute_script("arguments[0].click();", elements[i % 100])
-                    logging.info(f"Clicked ERefer element at index {i % 100} using JavaScript")
+                    element = elements[i % 100]
+                    driver.get(element.get_attribute("href") or driver.current_url)
+                    logging.info(f"Navigated to element at index {i % 100}")
                 except Exception as js_e:
-                    logging.error(f"JavaScript click also failed: {str(js_e)}")
+                    logging.error(f"Alternative navigation also failed: {str(js_e)}")
                     break
         except UnexpectedAlertPresentException:
             handle_alert(driver)
@@ -415,7 +416,8 @@ def act(m, a, b):
                 elements = driver.find_elements_by_name('ERefer')
                 if len(elements) > 0 and i % 100 < len(elements):
                     if not safe_click(driver, By.NAME, 'ERefer', timeout=5):
-                        driver.execute_script("arguments[0].click();", elements[i % 100])
+                        element = elements[i % 100]
+                        driver.get(element.get_attribute("href") or driver.current_url)
                 else:
                     logging.warning(f"Element at index {i % 100} not found after handling alert. Breaking the loop.")
                     break

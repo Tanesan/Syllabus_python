@@ -119,8 +119,9 @@ def test_specific_id(file_id, max_retries=3):
                 if not safe_click(driver, By.NAME, 'ERefer', timeout=10):
                     logging.error("Failed to click ERefer element")
                     try:
-                        driver.execute_script("arguments[0].click();", refer_elements[0])
-                        logging.info("Clicked ERefer element using JavaScript")
+                        element = refer_elements[0]
+                        driver.get(element.get_attribute("href") or driver.current_url)
+                        logging.info("Navigated to element using alternative method")
                     except Exception as js_e:
                         logging.error(f"JavaScript click also failed: {str(js_e)}")
                         driver.quit()
@@ -155,7 +156,8 @@ def test_specific_id(file_id, max_retries=3):
                     refer_elements = driver.find_elements_by_name('ERefer')
                     if len(refer_elements) > 0:
                         if not safe_click(driver, By.NAME, 'ERefer', timeout=5):
-                            driver.execute_script("arguments[0].click();", refer_elements[0])
+                            element = refer_elements[0]
+                            driver.get(element.get_attribute("href") or driver.current_url)
                     else:
                         logging.warning("No ERefer elements found after handling alert")
                         driver.quit()
