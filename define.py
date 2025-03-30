@@ -280,11 +280,12 @@ def handle_alert(driver, timeout=3, max_retries=3):
     
     return False
 
+
 def act(m, a, b):
     options = webdriver.ChromeOptions()
     options.add_argument("start-maximized")
     options.add_argument("enable-automation")
-    options.add_argument("--headless")
+    # options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-infobars")
     options.add_argument('--disable-extensions')
@@ -297,8 +298,8 @@ def act(m, a, b):
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     options.add_experimental_option("prefs",prefs)
     # "/home/c0665544/work_local/chromedriver",
-    # driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver", options=options)
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver", options=options)
+    # driver = webdriver.Chrome(options=options)
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
     #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
@@ -309,12 +310,24 @@ def act(m, a, b):
     max_session_time = 180  # 3 minutes
     session_start = time.time()
 
+    def get_lblLsnCd_value(index):
+        name_value = f"lstSlbinftJ016RList_st[{index}].lblLsnCd"
+        try:
+            element = driver.find_element(By.NAME, name_value)
+            # input 要素の場合は value 属性、それ以外は text を取得
+            value_str = element.get_attribute("value")
+            if not value_str:
+                value_str = element.text
+            return int(value_str.strip())
+        except Exception as e:
+            # 指定のインデックスの要素が見つからなかった場合は None を返す
+            return None
+
     for i in range(a, b):
         if time.time() - session_start > max_session_time:
             driver.delete_all_cookies()
             driver.refresh()
             session_start = time.time()
-        print(i)
         subject = {}
         fin = 0
         driver.get('https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree')
@@ -358,10 +371,28 @@ def act(m, a, b):
         except:
             print("No data found, breaking the loop.")
             break
+        checked = 0
         for a in range(int(i / 100)):
             max_retry = 3
             for attempt in range(max_retry):
                 try:
+                    if i >= 10000:
+                        threshold = get_lblLsnCd_value(99)
+                        if threshold is not None:
+                            if i <= threshold:
+                                for idx in range(99):
+                                    val = get_lblLsnCd_value(idx)
+                                    if val == i:
+                                        i = val
+                                        checked = 1
+                                        break
+                        else:
+                            for idx in range(99):
+                                val = get_lblLsnCd_value(idx)
+                                if val == i:
+                                    i = val
+                                    break
+
                     # ENextが存在しない場合の処理
                     WebDriverWait(driver, 20).until(
                         lambda d: d.find_element_by_name('ENext')
@@ -378,6 +409,8 @@ def act(m, a, b):
                     else:
                         # 指定回数リトライしても失敗したら例外を再度投げて終了
                         raise
+            if checked == 1:
+                break
 
         sleep(2)
         # if len(driver.find_elements_by_name('ERefer')) != 0:
@@ -522,7 +555,6 @@ def act(m, a, b):
                             values = [process_td(td).replace("\n", "") for td in tds]
                             if len(values) == 1:
                                 grading[f"{base_key}{idx}"] = values[0]
-                            print(grading)
                             grading[f"{base_key}{idx}"] = values
                 else:
                     for row in rows:

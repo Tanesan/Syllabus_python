@@ -139,7 +139,7 @@ def rescrape_invalid_json(invalid_ids, max_retries=3, batch_size=50, batch_index
             if is_valid_id(file_id):
                 try:
                     department_code = int(file_id[:2])
-                    subject_number = int(file_id[2:])
+                    subject_number = int(file_id)
                     
                     if department_code <= 0 or subject_number <= 0:
                         raise ValueError("Invalid department code or subject number")
