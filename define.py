@@ -9,16 +9,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import re
 import time
-import logging
-
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("scraping.log"),
-        logging.StreamHandler()
-    ]
-)
 
 # import firebase_admin
 # from firebase_admin import credentials
@@ -231,14 +221,11 @@ def safe_click(driver, by_method, selector, max_retries=3, timeout=10):
                 EC.element_to_be_clickable((by_method, selector))
             )
             element.click()
-            logging.info(f"Successfully clicked element: {by_method}={selector}")
             return True
         except Exception as e:
-            logging.warning(f"Click failed (attempt {attempt+1}/{max_retries}): {by_method}={selector}, Error: {str(e)}")
             if attempt < max_retries - 1:
                 time.sleep(1)
     
-    logging.error(f"Failed to click element after {max_retries} attempts: {by_method}={selector}")
     return False
 
 def handle_alert(driver, timeout=3, max_retries=3):
@@ -258,12 +245,9 @@ def handle_alert(driver, timeout=3, max_retries=3):
             WebDriverWait(driver, timeout).until(EC.alert_is_present())
             alert = driver.switch_to.alert
             alert_text = alert.text
-            print(f"Alert detected: {alert_text}")
-            logging.info(f"Alert detected: {alert_text}")
             
             if "同一画面で一定時間が経過しました" in alert_text:
                 print("Timeout alert detected. Accepting and refreshing...")
-                logging.info("Timeout alert detected. Accepting and refreshing...")
                 alert.accept()
                 time.sleep(1)  # アラート処理後の安定化待機
                 driver.refresh()
@@ -274,7 +258,6 @@ def handle_alert(driver, timeout=3, max_retries=3):
             return True
         except Exception as e:
             print(f"Alert handling failed (attempt {attempt+1}/{max_retries}): {str(e)}")
-            logging.warning(f"Alert handling failed (attempt {attempt+1}/{max_retries}): {str(e)}")
             if attempt < max_retries - 1:
                 time.sleep(1)  # 1秒待って再試行
     
@@ -338,7 +321,6 @@ def act(m, a, b):
             select_object = Select(select_element)
             select_object.select_by_index(1)
             select_object.select_by_value(str(m))
-            logging.info(f"Selected department value: {m}")
             
             # 年度設定
             year_2022 = WebDriverWait(driver, 10).until(
@@ -346,22 +328,16 @@ def act(m, a, b):
             )
             year_2022.clear()
             year_2022.send_keys("2025")
-            logging.info("Set year to 2025")
 
             if not safe_click(driver, By.NAME, 'ESearch', timeout=10):
-                logging.error("Failed to click search button")
                 return False
         except UnexpectedAlertPresentException:
-            logging.warning("Alert encountered during search button click")
             if not handle_alert(driver):
-                logging.error("Failed to handle alert")
                 return False
                 
             if not safe_click(driver, By.NAME, 'ESearch', timeout=10):
-                logging.error("Failed to click search button after handling alert")
                 return False
         except Exception as e:
-            logging.error(f"Error in initial page setup: {str(e)}")
             return False
             
         try:
@@ -427,21 +403,16 @@ def act(m, a, b):
         try:
             elements = driver.find_elements_by_name('ERefer')
             if len(elements) == 0:
-                logging.warning("No ERefer elements found, breaking the loop.")
                 break
             
             if i % 100 >= len(elements):
-                logging.warning(f"IndexError prevention: i % 100 = {i % 100}, but only {len(elements)} elements available. Breaking the loop.")
                 break
             
             if not safe_click(driver, By.NAME, 'ERefer', timeout=5):
-                logging.error(f"Failed to click ERefer element at index {i % 100}")
                 try:
                     element = elements[i % 100]
                     driver.get(element.get_attribute("href") or driver.current_url)
-                    logging.info(f"Navigated to element at index {i % 100}")
                 except Exception as js_e:
-                    logging.error(f"Alternative navigation also failed: {str(js_e)}")
                     break
         except UnexpectedAlertPresentException:
             handle_alert(driver)
@@ -452,16 +423,12 @@ def act(m, a, b):
                         element = elements[i % 100]
                         driver.get(element.get_attribute("href") or driver.current_url)
                 else:
-                    logging.warning(f"Element at index {i % 100} not found after handling alert. Breaking the loop.")
                     break
             except Exception as e:
-                logging.error(f"Error after handling alert: {str(e)}")
                 break
         except IndexError:
-            logging.error("IndexError: list index out of range encountered, breaking the loop.")
             break
         except Exception as e:
-            logging.error(f"Unexpected error during element interaction: {str(e)}")
             break
         # あとで
         WebDriverWait(driver, 20).until(
