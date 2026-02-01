@@ -185,6 +185,61 @@ score = [
     "実技、実験／Practical skill / Lab work (08)"
 ]
 
+def _normalize_label(value):
+    if value is None:
+        return None
+    return " ".join(value.replace("／", "/").replace("\u3000", " ").split())
+
+def _build_index_map(values):
+    return {_normalize_label(value): idx for idx, value in enumerate(values)}
+
+def _primary_label(value):
+    normalized = _normalize_label(value)
+    if not normalized:
+        return None
+    if "/" in normalized:
+        return normalized.split("/", 1)[0].strip()
+    return normalized
+
+def _build_alias_map(values):
+    alias_map = {}
+    collisions = set()
+    for idx, value in enumerate(values):
+        key = _primary_label(value)
+        if not key:
+            continue
+        if key in alias_map and alias_map[key] != idx:
+            collisions.add(key)
+        else:
+            alias_map[key] = idx
+    for key in collisions:
+        alias_map.pop(key, None)
+    return alias_map
+
+def safe_index(values, value, index_map=None, alias_map=None):
+    if value is None:
+        return None
+    if index_map is None:
+        index_map = _build_index_map(values)
+    normalized = _normalize_label(value)
+    idx = index_map.get(normalized)
+    if idx is not None:
+        return idx
+    if alias_map is None:
+        alias_map = _build_alias_map(values)
+    return alias_map.get(_primary_label(value))
+
+ad_data_index = _build_index_map(ad_data)
+study_index = _build_index_map(study)
+campas_data_index = _build_index_map(campas_data)
+day_data_index = _build_index_map(day_data)
+term_data_index = _build_index_map(term_data)
+ad_data_alias_index = _build_alias_map(ad_data)
+study_alias_index = _build_alias_map(study)
+campas_data_alias_index = _build_alias_map(campas_data)
+day_data_alias_index = _build_alias_map(day_data)
+term_data_alias_index = _build_alias_map(term_data)
+
 def process_td(td):
     """
     td 要素内の innerHTML を取得し、<br> タグを改行に置換、
@@ -435,20 +490,50 @@ def act(m, a, b):
             lambda d: d.find_element_by_name('lblLsnCd')
         )
         name = driver.find_element_by_name('lblLsnCd').get_attribute('value')
-        subject.setdefault('campas', campas_data.index(driver.find_element_by_name('lblCc019ScrDispNm').get_attribute('value')))
+        campas_value = driver.find_element_by_name('lblCc019ScrDispNm').get_attribute('value')
+        campas_idx = safe_index(campas_data, campas_value, campas_data_index, campas_data_alias_index)
+        if campas_idx is not None:
+            subject.setdefault('campas', campas_idx)
+        else:
+            safe_value = str(campas_value).replace('<', '&lt;').replace('>', '&gt;')
+            print(f"Warning: Unknown campas value: {safe_value}")
         subject.setdefault('name', driver.find_element_by_name('lblRepSbjKnjNm').get_attribute('value'))
-        subject.setdefault('管理部署', ad_data.index(driver.find_element_by_name('lblAc119ScrDispNm').get_attribute('value')))
+        ad_value = driver.find_element_by_name('lblAc119ScrDispNm').get_attribute('value')
+        ad_idx = safe_index(ad_data, ad_value, ad_data_index, ad_data_alias_index)
+        if ad_idx is not None:
+            subject.setdefault('管理部署', ad_idx)
+        else:
+            safe_value = str(ad_value).replace('<', '&lt;').replace('>', '&gt;')
+            print(f"Warning: Unknown 管理部署 value: {safe_value}")
         subject.setdefault('単位数', int(driver.find_element_by_name('lblSbjCrnum').get_attribute('value')))
         subject.setdefault('担当者', driver.find_element_by_name('lstChagTch_st[0].lblTchName').get_attribute('value'))
         subject.setdefault('履修基準年度', driver.find_element_by_name('lblCc004ScrDispNm').get_attribute('value'))
         subject.setdefault('履修登録方法', driver.find_element_by_name('lblTacRgMthCd').get_attribute('value'))
 
         if len(driver.find_elements_by_name('lblVolCd2')) != 0:
-            subject.setdefault('授業形態', study.index(driver.find_element_by_name('lblVolCd2').get_attribute('value')))
+            study_value = driver.find_element_by_name('lblVolCd2').get_attribute('value')
+            study_idx = safe_index(study, study_value, study_index, study_alias_index)
+            if study_idx is not None:
+                subject.setdefault('授業形態', study_idx)
+            else:
+                safe_value = str(study_value).replace('<', '&lt;').replace('>', '&gt;')
+                print(f"Warning: Unknown 授業形態 value: {safe_value}")
         if len(driver.find_elements_by_name('lblVolCd3')) != 0:
-            subject.setdefault('緊急授業形態', study.index(driver.find_element_by_name('lblVolCd3').get_attribute('value')))
+            study_value = driver.find_element_by_name('lblVolCd3').get_attribute('value')
+            study_idx = safe_index(study, study_value, study_index, study_alias_index)
+            if study_idx is not None:
+                subject.setdefault('緊急授業形態', study_idx)
+            else:
+                safe_value = str(study_value).replace('<', '&lt;').replace('>', '&gt;')
+                print(f"Warning: Unknown 緊急授業形態 value: {safe_value}")
         if len(driver.find_elements_by_name('lblVolCd4')) != 0:
-            subject.setdefault('オンライン授業形態', study.index(driver.find_element_by_name('lblVolCd4').get_attribute('value')))
+            study_value = driver.find_element_by_name('lblVolCd4').get_attribute('value')
+            study_idx = safe_index(study, study_value, study_index, study_alias_index)
+            if study_idx is not None:
+                subject.setdefault('オンライン授業形態', study_idx)
+            else:
+                safe_value = str(study_value).replace('<', '&lt;').replace('>', '&gt;')
+                print(f"Warning: Unknown オンライン授業形態 value: {safe_value}")
         
         driver.execute_script('document.querySelector("#slideBox3").style.display="block";')
         # list
@@ -558,10 +643,7 @@ def act(m, a, b):
         othersJa.setdefault('トピック', topic)
         term_value = driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_03').get_attribute(
             'value')
-        try:
-            term_index = term_data.index(term_value)
-        except ValueError:
-            term_index = None
+        term_index = safe_index(term_data, term_value, term_data_index, term_data_alias_index)
         subject['開講期'] = term_index
         othersJa.setdefault('評価', grading)
         for i in range(0, 8):
@@ -569,10 +651,7 @@ def act(m, a, b):
                 element_name = f"lstSlbtchinftJ002List_st[{i}].lblTmtxCd"
                 element = driver.find_element_by_name(element_name)
                 value = element.get_attribute("value")
-                try:
-                    term_index = day_data.index(value)
-                except ValueError:
-                    term_index = None
+                term_index = safe_index(day_data, value, day_data_index, day_data_alias_index)
                 subject[f'時限{i+1}'] = term_index
 
             except NoSuchElementException:
