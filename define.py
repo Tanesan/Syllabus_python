@@ -343,7 +343,8 @@ def act(m, a, b):
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     options.add_experimental_option("prefs",prefs)
     # "/home/c0665544/work_local/chromedriver",
-    driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver.exe", options=options)
+    # "/Users/keitotanemura/Downloads/chromedriver.exe",
+    driver = webdriver.Chrome(options=options)
 
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
