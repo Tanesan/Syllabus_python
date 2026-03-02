@@ -336,8 +336,8 @@ def act(m, a, b):
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     options.add_experimental_option("prefs",prefs)
     # "/home/c0665544/work_local/chromedriver",
-    driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver.exe", options=options)
-
+    # driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver", options=options)
+    driver = webdriver.Chrome(options=options)
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
     #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
@@ -382,7 +382,7 @@ def act(m, a, b):
                 EC.presence_of_element_located((By.ID, 'txtLsnOpcFcy'))
             )
             year_2022.clear()
-            year_2022.send_keys("2026")
+            year_2022.send_keys("2025")
 
             if not safe_click(driver, By.NAME, 'ESearch', timeout=10):
                 return False
@@ -676,19 +676,19 @@ def act(m, a, b):
             subject.setdefault('成績評価備考',remark_sections[0].text)
         data.setdefault(name, subject)
         searchingADJa = {**othersJa, **subject}
-        with open('docs/all/' + str(name) + '.json', 'w+', encoding="utf-8") as f:
+        with open('docs/all/' + str(name) + '.json', 'w+') as f:
             json.dump(searchingADJa, f, ensure_ascii=False)
         data_all = {}
         data_all.update(data)
         json_open_all = open("docs/all.json", 'r')
         json_load_all_files = json.load(json_open_all)
         json_load_all_files.update(data_all)
-        with open("docs/all.json", 'w', encoding="utf-8") as f:
+        with open("docs/all.json", 'w') as f:
             json.dump(json_load_all_files, f, ensure_ascii=False)
         id_json_list = open("docs/id.json", 'r')
         id_json_list = json.load(id_json_list)
         id_json_list.update({name: 0})
-        with open("docs/id.json", 'w', encoding="utf-8") as f:
+        with open("docs/id.json", 'w') as f:
             json.dump(id_json_list, f, ensure_ascii=False)
     # if os.path.isfile("docs/" + str(m) + '.json') and os.stat("docs/" + str(m) + '.json').st_size > 0:
     #     json_open = open("docs/" + str(m) + '.json', 'r')
