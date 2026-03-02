@@ -256,32 +256,39 @@ def process_td(td):
     except Exception:
         return td.text.strip()
 
-def safe_click(driver, by_method, selector, max_retries=3, timeout=10):
+def safe_click(driver, by_method, selector, index, max_retries=3, timeout=10):
     """
-    安全にクリック操作を行うヘルパー関数
-    
-    Args:
-        driver: WebDriverインスタンス
-        by_method: 要素の検索方法（By.ID, By.NAME など）
-        selector: 要素のセレクタ
-        max_retries: クリック操作の最大再試行回数
-        timeout: 要素を待つ最大秒数
-        
-    Returns:
-        bool: クリックが成功した場合はTrue、そうでない場合はFalse
+    locator(by_method, selector) に一致する要素群のうち、index番目(0-based)を安全にクリックする
     """
+    last_exc = None
     for attempt in range(max_retries):
         try:
-            element = WebDriverWait(driver, timeout).until(
-                EC.element_to_be_clickable((by_method, selector))
-            )
-            element.click()
+            def _get_nth(d):
+                elems = d.find_elements(by_method, selector)
+                if len(elems) > index:
+                    return elems[index]
+                return False  # Wait継続
+
+            elem = WebDriverWait(driver, timeout).until(_get_nth)
+            WebDriverWait(driver, timeout).until(lambda d: elem.is_displayed() and elem.is_enabled())
+            driver.execute_script("arguments[0].scrollIntoView({block:'center'});", elem)
+            elem.click()
             return True
+
+        except StaleElementReferenceException as e:
+            last_exc = e
+            time.sleep(0.5)
+        except TimeoutException as e:
+            last_exc = e
+            time.sleep(0.5)
         except Exception as e:
-            if attempt < max_retries - 1:
-                time.sleep(1)
-    
+            last_exc = e
+            time.sleep(0.5)
+
+    # デバッグしやすいように最後の例外を表示（必要ならraiseに変更）
+    print(f"safe_click_nth failed: selector={selector}, index={index}, last={last_exc}")
     return False
+
 
 def handle_alert(driver, timeout=3, max_retries=3):
     """
@@ -336,8 +343,8 @@ def act(m, a, b):
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     options.add_experimental_option("prefs",prefs)
     # "/home/c0665544/work_local/chromedriver",
-    # driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver", options=options)
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome("/Users/keitotanemura/Downloads/chromedriver.exe", options=options)
+
 
     # for m in [21, 22, 23, 24, 25, 26, 28, 29, 31, 32, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
     #           52, 53, 61, 62, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 81, 82, 83, 84, 85, 86, 88, 89, 90, 91,
@@ -382,15 +389,15 @@ def act(m, a, b):
                 EC.presence_of_element_located((By.ID, 'txtLsnOpcFcy'))
             )
             year_2022.clear()
-            year_2022.send_keys("2025")
+            year_2022.send_keys("2026")
 
-            if not safe_click(driver, By.NAME, 'ESearch', timeout=10):
+            if not safe_click(driver, By.NAME, 'ESearch', 0, timeout=10):
                 return False
         except UnexpectedAlertPresentException:
             if not handle_alert(driver):
                 return False
                 
-            if not safe_click(driver, By.NAME, 'ESearch', timeout=10):
+            if not safe_click(driver, By.NAME, 'ESearch', 0, timeout=10):
                 return False
         except Exception as e:
             return False
@@ -463,7 +470,7 @@ def act(m, a, b):
             if i % 100 >= len(elements):
                 break
             
-            if not safe_click(driver, By.NAME, 'ERefer', timeout=5):
+            if not safe_click(driver, By.NAME, 'ERefer', i, timeout=5):
                 try:
                     element = elements[i % 100]
                     driver.get(element.get_attribute("href") or driver.current_url)
@@ -474,7 +481,7 @@ def act(m, a, b):
             try:
                 elements = driver.find_elements_by_name('ERefer')
                 if len(elements) > 0 and i % 100 < len(elements):
-                    if not safe_click(driver, By.NAME, 'ERefer', timeout=5):
+                    if not safe_click(driver, By.NAME, 'ERefer', i, timeout=5):
                         element = elements[i % 100]
                         driver.get(element.get_attribute("href") or driver.current_url)
                 else:
@@ -676,19 +683,19 @@ def act(m, a, b):
             subject.setdefault('成績評価備考',remark_sections[0].text)
         data.setdefault(name, subject)
         searchingADJa = {**othersJa, **subject}
-        with open('docs/all/' + str(name) + '.json', 'w+') as f:
+        with open('docs/all/' + str(name) + '.json', 'w+', encoding="utf-8") as f:
             json.dump(searchingADJa, f, ensure_ascii=False)
         data_all = {}
         data_all.update(data)
-        json_open_all = open("docs/all.json", 'r')
+        json_open_all = open("docs/all.json", 'r', encoding="utf-8")
         json_load_all_files = json.load(json_open_all)
         json_load_all_files.update(data_all)
-        with open("docs/all.json", 'w') as f:
+        with open("docs/all.json", 'w', encoding="utf-8") as f:
             json.dump(json_load_all_files, f, ensure_ascii=False)
-        id_json_list = open("docs/id.json", 'r')
+        id_json_list = open("docs/id.json", 'r', encoding="utf-8")
         id_json_list = json.load(id_json_list)
         id_json_list.update({name: 0})
-        with open("docs/id.json", 'w') as f:
+        with open("docs/id.json", 'w', encoding="utf-8") as f:
             json.dump(id_json_list, f, ensure_ascii=False)
     # if os.path.isfile("docs/" + str(m) + '.json') and os.stat("docs/" + str(m) + '.json').st_size > 0:
     #     json_open = open("docs/" + str(m) + '.json', 'r')
