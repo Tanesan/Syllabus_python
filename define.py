@@ -2,7 +2,7 @@ import json
 from time import sleep
 import os
 from selenium import webdriver
-from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException, UnexpectedAlertPresentException
+from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException, UnexpectedAlertPresentException, TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
@@ -256,7 +256,7 @@ def process_td(td):
     except Exception:
         return td.text.strip()
 
-def safe_click(driver, by_method, selector, index, max_retries=3, timeout=10):
+def safe_click(driver, by_method, selector, index=0, max_retries=3, timeout=10):
     """
     locator(by_method, selector) に一致する要素群のうち、index番目(0-based)を安全にクリックする
     """
@@ -411,7 +411,8 @@ def act(m, a, b):
             print("No data found, breaking the loop.")
             break
         checked = 0
-        for a in range(int(i / 100)):
+        next_page_unavailable = False
+        for _ in range(i // 100):
             max_retry = 3
             for attempt in range(max_retry):
                 try:
@@ -432,24 +433,24 @@ def act(m, a, b):
                                     i = val
                                     break
 
-                    # ENextが存在しない場合の処理
-                    WebDriverWait(driver, 20).until(
-                        lambda d: d.find_element_by_name('ENext')
-                    )
-                        # 要素があればクリック
-                    driver.find_element_by_name('ENext').click()
-                    # クリック成功 or 存在しない場合の処理が終わったらリトライは不要
-                    break
-    
-                except StaleElementReferenceException:
-                    # StaleElementReferenceExceptionが出たら再取得のため少し待ってリトライ
+                    if safe_click(driver, By.NAME, 'ENext', 0, timeout=10):
+                        break
+
+                    raise TimeoutException("ENext click failed")
+
+                except (StaleElementReferenceException, TimeoutException):
                     if attempt < max_retry - 1:
-                        sleep(1)  # 1秒待って再度クリックを試みる
+                        sleep(1)
                     else:
-                        # 指定回数リトライしても失敗したら例外を再度投げて終了
-                        raise
+                        next_page_unavailable = True
             if checked == 1:
                 break
+            if next_page_unavailable:
+                break
+
+        if next_page_unavailable:
+            print("ENext could not be clicked. No more pages or button is unavailable.")
+            break
 
         sleep(2)
         # if len(driver.find_elements_by_name('ERefer')) != 0:
@@ -471,7 +472,7 @@ def act(m, a, b):
             if i % 100 >= len(elements):
                 break
             
-            if not safe_click(driver, By.NAME, 'ERefer', i, timeout=5):
+            if not safe_click(driver, By.NAME, 'ERefer', i % 100, timeout=5):
                 try:
                     element = elements[i % 100]
                     driver.get(element.get_attribute("href") or driver.current_url)
@@ -482,7 +483,7 @@ def act(m, a, b):
             try:
                 elements = driver.find_elements_by_name('ERefer')
                 if len(elements) > 0 and i % 100 < len(elements):
-                    if not safe_click(driver, By.NAME, 'ERefer', i, timeout=5):
+                    if not safe_click(driver, By.NAME, 'ERefer', i % 100, timeout=5):
                         element = elements[i % 100]
                         driver.get(element.get_attribute("href") or driver.current_url)
                 else:
