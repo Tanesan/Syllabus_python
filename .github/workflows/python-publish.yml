@@ -661,10 +661,49 @@ jobs:
           fi
         
 
-  School-of-Science-and-Technology1:
+  School-of-Business-Administration2:
     runs-on: ubuntu-latest
     timeout-minutes: 720
     needs: School-of-Business-Administration
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run main.py
+        run: |
+          python main5b.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "蝠・ｭｦ驛ｨ" && git push -u origin main
+          fi
+
+  School-of-Science-and-Technology1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Business-Administration2
     steps:
       - uses: actions/checkout@v2
         with:
@@ -830,10 +869,49 @@ jobs:
 
 
 
-  School-of-Policy-Studies:
+  School-of-Science-and-Technology5:
     runs-on: ubuntu-latest
     timeout-minutes: 720
     needs: School-of-Science-and-Technology4
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run main.py
+        run: |
+          python main6e.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "逅・ｷ･蟄ｦ驛ｨ3" && git push -u origin main
+          fi
+
+  School-of-Policy-Studies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Science-and-Technology5
     steps:
       - uses: actions/checkout@v2
         with:
