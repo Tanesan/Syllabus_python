@@ -1296,10 +1296,127 @@ jobs:
         
 
 
-  School-of-Biological-and-Environmental-Sciences:
+  School-of-Engineering3:
     runs-on: ubuntu-latest
     timeout-minutes: 720
     needs: School-of-Engineering2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run main.py
+        run: |
+          python mainc11.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "蟾･蟄ｦ驛ｨ" && git push -u origin main
+          fi
+
+  School-of-Engineering4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Engineering3
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run main.py
+        run: |
+          python maind11.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "蟾･蟄ｦ驛ｨ" && git push -u origin main
+          fi
+
+  School-of-Engineering5:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Engineering4
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run main.py
+        run: |
+          python maine11.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "蟾･蟄ｦ驛ｨ" && git push -u origin main
+          fi
+
+  School-of-Biological-and-Environmental-Sciences:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Engineering5
     steps:
       - uses: actions/checkout@v2
         with:
@@ -1382,10 +1499,127 @@ jobs:
         
 
 
-  School-of-Architecture:
+  School-of-Biological-and-Environmental-Sciences3:
     runs-on: ubuntu-latest
     timeout-minutes: 720
     needs: School-of-Biological-and-Environmental-Sciences2
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run main.py
+        run: |
+          python mainc12.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "逕溷多迺ｰ蠅・ｭｦ驛ｨ" &&git push -u origin main
+          fi
+
+  School-of-Biological-and-Environmental-Sciences4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Biological-and-Environmental-Sciences3
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run main.py
+        run: |
+          python maind12.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "逕溷多迺ｰ蠅・ｭｦ驛ｨ" &&git push -u origin main
+          fi
+
+  School-of-Biological-and-Environmental-Sciences5:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Biological-and-Environmental-Sciences4
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python -m pip install --upgrade pip
+          pip install chromedriver-binary
+          pip install selenium==4.2.0
+
+      - name: Run main.py
+        run: |
+          python maine12.py
+          python first.py
+
+      - name: git setting
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and Push
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add . && git commit -m "逕溷多迺ｰ蠅・ｭｦ驛ｨ" &&git push -u origin main
+          fi
+
+  School-of-Architecture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    needs: School-of-Biological-and-Environmental-Sciences5
     steps:
       - uses: actions/checkout@v2
         with:
