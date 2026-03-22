@@ -6,7 +6,7 @@ on: push
 
 jobs:
   post:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
       - uses: technote-space/get-diff-action@v6

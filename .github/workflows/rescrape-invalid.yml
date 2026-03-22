@@ -14,7 +14,7 @@ on:
 
 jobs:
   find-invalid-json:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
@@ -58,7 +58,7 @@ jobs:
           fi
 
   rescrape-invalid-json:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: find-invalid-json
     if: ${{ github.event.inputs.run_find_only != 'true' }}
     timeout-minutes: 720

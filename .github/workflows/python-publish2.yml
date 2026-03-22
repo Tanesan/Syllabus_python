@@ -8,7 +8,7 @@ on: workflow_dispatch
 
 jobs:
   School-of-Theology:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     steps:
       - uses: actions/checkout@v2
@@ -49,7 +49,7 @@ jobs:
           fi
 
   School-of-Humanities-1:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Theology
     steps:
@@ -86,7 +86,7 @@ jobs:
           fi
 
   School-of-Humanities-2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-1
     steps:
@@ -124,7 +124,7 @@ jobs:
           fi
 
   School-of-Humanities-3:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-2
     steps:
@@ -164,7 +164,7 @@ jobs:
 
 
   School-of-Humanities-4:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-3
     steps:
@@ -204,7 +204,7 @@ jobs:
 
 
   School-of-Humanities-5:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-4
     steps:
@@ -244,7 +244,7 @@ jobs:
 
 
   School-of-Humanities-6:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-5
     steps:
@@ -283,7 +283,7 @@ jobs:
 
 
   School-of-Sociology:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-6
     steps:
@@ -325,7 +325,7 @@ jobs:
         
 
   School-of-Sociology2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Sociology
     steps:
@@ -367,7 +367,7 @@ jobs:
         
 
   School-of-Law-and-Politics:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Sociology2
     steps:
@@ -409,7 +409,7 @@ jobs:
         
 
   School-of-Law-and-Politics-2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Law-and-Politics
     steps:
@@ -451,7 +451,7 @@ jobs:
 
 
   School-of-Law-and-Politics-3:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Law-and-Politics-2
     steps:
@@ -492,7 +492,7 @@ jobs:
           fi
 
   School-of-Economics-1:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Law-and-Politics-3
     steps:
@@ -533,7 +533,7 @@ jobs:
           fi
 
   School-of-Economics-2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Economics-1
     steps:
@@ -576,7 +576,7 @@ jobs:
 
 
   School-of-Economics-3:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Economics-2
     steps:
@@ -618,7 +618,7 @@ jobs:
 
 
   School-of-Business-Administration:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Economics-3
     steps:
@@ -660,7 +660,7 @@ jobs:
         
 
   School-of-Science-and-Technology1:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Business-Administration
     steps:
@@ -702,7 +702,7 @@ jobs:
 
 
   School-of-Science-and-Technology2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Science-and-Technology1
     steps:
@@ -743,7 +743,7 @@ jobs:
           fi
 
   School-of-Science-and-Technology3:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Science-and-Technology2
     steps:
@@ -786,7 +786,7 @@ jobs:
 
 
   School-of-Science-and-Technology4:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Science-and-Technology3
     steps:
@@ -829,7 +829,7 @@ jobs:
 
 
   School-of-Policy-Studies:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Science-and-Technology4
     steps:
@@ -872,7 +872,7 @@ jobs:
 
 
   School-of-Policy-Studies-2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Policy-Studies
     steps:
@@ -915,7 +915,7 @@ jobs:
 
 
   School-of-Human-Welfare-Studies:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Policy-Studies-2
     steps:
@@ -958,7 +958,7 @@ jobs:
 
 
   School-of-Human-Welfare-Studies2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Human-Welfare-Studies
     steps:
@@ -1001,7 +1001,7 @@ jobs:
 
 
   School-of-Education:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Human-Welfare-Studies2
     steps:
@@ -1040,7 +1040,7 @@ jobs:
           fi
 
   School-of-Education2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Education
     steps:
@@ -1081,7 +1081,7 @@ jobs:
 
 
   School-of-Education3:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Education2
     steps:
@@ -1122,7 +1122,7 @@ jobs:
 
 
   School-of-International-Studies:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Education3
     steps:
@@ -1165,7 +1165,7 @@ jobs:
 
 
   School-of-International-Studies2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-International-Studies
     steps:
@@ -1209,7 +1209,7 @@ jobs:
 
 
   School-of-Engineering:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-International-Studies2
     steps:
@@ -1252,7 +1252,7 @@ jobs:
 
 
   School-of-Engineering2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Engineering
     steps:
@@ -1295,7 +1295,7 @@ jobs:
 
 
   School-of-Biological-and-Environmental-Sciences:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Engineering2
     steps:
@@ -1338,7 +1338,7 @@ jobs:
 
 
   School-of-Biological-and-Environmental-Sciences2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Biological-and-Environmental-Sciences
     steps:
@@ -1381,7 +1381,7 @@ jobs:
 
 
   School-of-Architecture:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Biological-and-Environmental-Sciences2
     steps:
@@ -1423,7 +1423,7 @@ jobs:
         
 
   Sports-and-Health-Sciences-Program-Office:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Architecture
     steps:
@@ -1465,7 +1465,7 @@ jobs:
         
 
   Center-for-Common-Educational-Programs:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Sports-and-Health-Sciences-Program-Office
     steps:
@@ -1508,7 +1508,7 @@ jobs:
         
 
   Center-for-Career-Planning-and-Placement:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-Common-Educational-Programs
     steps:
@@ -1551,7 +1551,7 @@ jobs:
         
 
   Center-for-Common-Educational-Programs-Information-Science-Courses:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-Career-Planning-and-Placement
     steps:
@@ -1594,7 +1594,7 @@ jobs:
         
 
   Language-Center:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-Common-Educational-Programs-Information-Science-Courses
     steps:
@@ -1637,7 +1637,7 @@ jobs:
         
 
   Center-for-International-Education-and-Cooperation-JEASP:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Language-Center
     steps:
@@ -1680,7 +1680,7 @@ jobs:
         
 
   Research-Center-for-Teacher-Development-for-Certifications:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-International-Education-and-Cooperation-JEASP
     steps:
@@ -1723,7 +1723,7 @@ jobs:
         
 
   Research-Center-for-Teacher-Development-for-Special-Studies:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Research-Center-for-Teacher-Development-for-Certifications
     steps:
@@ -1766,7 +1766,7 @@ jobs:
         
 
   Center-for-International-Education-and-Cooperation:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Research-Center-for-Teacher-Development-for-Special-Studies
     steps:
@@ -1809,7 +1809,7 @@ jobs:
         
 
 #  Research-Center-for-Christianity-and-Culture:
-#    runs-on: ubuntu-latest
+#    runs-on: self-hosted
 #    timeout-minutes: 720
 #    needs: Center-for-International-Education-and-Cooperation
 #    steps:
@@ -1852,7 +1852,7 @@ jobs:
         
 
   Center-for-Japanese-Language-Education:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-International-Education-and-Cooperation
     steps:
@@ -1895,7 +1895,7 @@ jobs:
         
 
   Center-for-Hands-on-Learning-Programs:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-Japanese-Language-Education
     steps:
@@ -1938,7 +1938,7 @@ jobs:
         
 
   Integrated-Center-for-UN-and-Foreign-Affairs-Studies:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-Hands-on-Learning-Programs
     steps:
@@ -1981,7 +1981,7 @@ jobs:
         
 
   Graduate-School-of-Theology-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Integrated-Center-for-UN-and-Foreign-Affairs-Studies
     steps:
@@ -2024,7 +2024,7 @@ jobs:
         
 
   Graduate-School-of-Humanities-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Theology-Masters-Course
     steps:
@@ -2067,7 +2067,7 @@ jobs:
         
 
   Graduate-School-of-Sociology-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Humanities-Masters-Course
     steps:
@@ -2110,7 +2110,7 @@ jobs:
         
 
   Graduate-School-of-Law-and-Politics-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Sociology-Masters-Course
     steps:
@@ -2153,7 +2153,7 @@ jobs:
         
 
   Graduate-School-of-Economics-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Law-and-Politics-Masters-Course
     steps:
@@ -2196,7 +2196,7 @@ jobs:
         
 
   Graduate-School-of-Business-Administration-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Economics-Masters-Course
     steps:
@@ -2239,7 +2239,7 @@ jobs:
         
 
   Graduate-School-of-Science-and-Technology-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Business-Administration-Masters-Course
     steps:
@@ -2282,7 +2282,7 @@ jobs:
         
 
   Graduate-School-of-Policy-Studies-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Science-and-Technology-Masters-Course
     steps:
@@ -2325,7 +2325,7 @@ jobs:
         
 
   Graduate-School-of-Language-Communication-and-Culture-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Policy-Studies-Masters-Course
     steps:
@@ -2368,7 +2368,7 @@ jobs:
         
 
   Graduate-School-of-Human-Welfare-Studies-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Language-Communication-and-Culture-Masters-Course
     steps:
@@ -2411,7 +2411,7 @@ jobs:
         
 
   Graduate-School-of-Education-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Human-Welfare-Studies-Masters-Course
     steps:
@@ -2454,7 +2454,7 @@ jobs:
         
 
   Graduate-School-of-Science-and-Technology-Masters-Course2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Education-Masters-Course
     steps:
@@ -2497,7 +2497,7 @@ jobs:
         
 
   Graduate-School-of-International-Studies-Masters-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Science-and-Technology-Masters-Course2
     steps:
@@ -2540,7 +2540,7 @@ jobs:
         
 
   Graduate-School-of-Masters-Course-Certified:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-International-Studies-Masters-Course
     steps:
@@ -2583,7 +2583,7 @@ jobs:
         
 
   Graduate-School-of-Theology-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Masters-Course-Certified
     steps:
@@ -2626,7 +2626,7 @@ jobs:
         
 
   Graduate-School-of-Humanities-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Theology-Doctoral-Course
     steps:
@@ -2669,7 +2669,7 @@ jobs:
         
 
   Graduate-School-of-Sociology-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Humanities-Doctoral-Course
     steps:
@@ -2712,7 +2712,7 @@ jobs:
         
 
   Graduate-School-of-Law-and-Politics-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Sociology-Doctoral-Course
     steps:
@@ -2755,7 +2755,7 @@ jobs:
         
 
   Graduate-School-of-Economics-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Law-and-Politics-Doctoral-Course
     steps:
@@ -2798,7 +2798,7 @@ jobs:
         
 
   Graduate-School-of-Business-Administration-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Economics-Doctoral-Course
     steps:
@@ -2841,7 +2841,7 @@ jobs:
         
 
   Graduate-School-of-Science-and-Technology-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Business-Administration-Doctoral-Course
     steps:
@@ -2884,7 +2884,7 @@ jobs:
         
 
   Graduate-School-of-Policy-Studies-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Science-and-Technology-Doctoral-Course
     steps:
@@ -2927,7 +2927,7 @@ jobs:
         
 
   Graduate-School-of-Language-Communication-and-Culture-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Policy-Studies-Doctoral-Course
     steps:
@@ -2970,7 +2970,7 @@ jobs:
         
 
   Graduate-School-of-Human-Welfare-Studies-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Language-Communication-and-Culture-Doctoral-Course
     steps:
@@ -3013,7 +3013,7 @@ jobs:
         
 
   Graduate-School-of-Education-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Human-Welfare-Studies-Doctoral-Course
     steps:
@@ -3056,7 +3056,7 @@ jobs:
         
 
   Graduate-School-of-Institute-of-Business-and-Accounting-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Education-Doctoral-Course
     steps:
@@ -3099,7 +3099,7 @@ jobs:
         
 
   Graduate-School-of-International-Studies-Doctoral-Course:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Institute-of-Business-and-Accounting-Doctoral-Course
     steps:
@@ -3142,7 +3142,7 @@ jobs:
         
 
   Graduate-School-of-Doctoral-Course-Certified:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-International-Studies-Doctoral-Course
     steps:
@@ -3185,7 +3185,7 @@ jobs:
         
 
   Law-School:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Doctoral-Course-Certified
     steps:
@@ -3228,7 +3228,7 @@ jobs:
         
 
   Institute-of-Business-and-Accounting:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Law-School
     steps:
@@ -3271,7 +3271,7 @@ jobs:
         
 
   free2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Institute-of-Business-and-Accounting
     steps:
@@ -3314,7 +3314,7 @@ jobs:
         
 
   School-of-Science:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: free2
     steps:
@@ -3357,7 +3357,7 @@ jobs:
         
 
   Remove-Dubble:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Science
     steps:
@@ -3396,7 +3396,7 @@ jobs:
         
 
   Sitemap:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Remove-Dubble
     steps:
@@ -3438,7 +3438,7 @@ jobs:
         
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Sitemap
     steps:

@@ -8,7 +8,7 @@ on: workflow_dispatch
 
 jobs:
   Sitemap:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     steps:
       - uses: actions/checkout@v2
@@ -49,7 +49,7 @@ jobs:
         
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 720
     needs: Sitemap
     steps:
