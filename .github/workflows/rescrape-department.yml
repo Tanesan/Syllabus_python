@@ -1,0 +1,181 @@
+name: Rescrape Department
+
+on:
+  workflow_dispatch:
+    inputs:
+      department:
+        description: '再スクレイプする学部/部署'
+        required: true
+        type: choice
+        options:
+          - School-of-Theology
+          - School-of-Humanities
+          - School-of-Sociology
+          - School-of-Law-and-Politics
+          - School-of-Economics
+          - School-of-Business-Administration
+          - School-of-Science-and-Technology
+          - School-of-Policy-Studies
+          - School-of-Human-Welfare-Studies
+          - School-of-Education
+          - School-of-International-Studies
+          - School-of-Engineering
+          - School-of-Biological-and-Environmental-Sciences
+          - School-of-Architecture
+          - School-of-Science
+          - Sports-and-Health-Sciences
+          - Centers
+          - Graduate-Masters
+          - Graduate-Doctoral
+          - Law-School-and-IBA
+      run_sitemap:
+        description: 'Sitemap更新とデプロイも行う'
+        type: boolean
+        default: true
+
+jobs:
+  rescrape:
+    runs-on: self-hosted
+    timeout-minutes: 720
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python3 -m pip install --upgrade pip
+          pip3 install chromedriver-binary selenium==4.2.0
+
+      - name: Run scraper
+        run: |
+          DEPT="${{ github.event.inputs.department }}"
+          case "$DEPT" in
+            School-of-Theology)
+              python3 main0.py && python3 first.py
+              ;;
+            School-of-Humanities)
+              python3 main1.py && python3 mainb1.py && python3 mainc1.py && python3 maind1.py && python3 maine1.py && python3 mainf1.py
+              ;;
+            School-of-Sociology)
+              python3 main2.py && python3 mainb2.py
+              ;;
+            School-of-Law-and-Politics)
+              python3 main3.py && python3 mainb3.py && python3 mainc3.py
+              ;;
+            School-of-Economics)
+              python3 main4.py && python3 mainb4.py && python3 mainc4.py
+              ;;
+            School-of-Business-Administration)
+              python3 main5.py
+              ;;
+            School-of-Science-and-Technology)
+              python3 main6.py && python3 main6b.py && python3 main6c.py && python3 main6d.py
+              ;;
+            School-of-Policy-Studies)
+              python3 main7.py && python3 main7a.py
+              ;;
+            School-of-Human-Welfare-Studies)
+              python3 main8.py && python3 main8a.py
+              ;;
+            School-of-Education)
+              python3 main9.py && python3 mainb9.py && python3 mainc9.py
+              ;;
+            School-of-International-Studies)
+              python3 main10.py && python3 main10a.py
+              ;;
+            School-of-Engineering)
+              python3 main11.py && python3 main11a.py
+              ;;
+            School-of-Biological-and-Environmental-Sciences)
+              python3 main12.py && python3 main12a.py
+              ;;
+            School-of-Architecture)
+              python3 main13.py
+              ;;
+            School-of-Science)
+              python3 main59.py
+              ;;
+            Sports-and-Health-Sciences)
+              python3 main15.py
+              ;;
+            Centers)
+              python3 main16.py && python3 main17.py && python3 main18.py && python3 main19.py && python3 main20.py && python3 main21.py && python3 main22.py && python3 main23.py && python3 main25.py && python3 main26.py && python3 main27.py
+              ;;
+            Graduate-Masters)
+              python3 main28.py && python3 main29.py && python3 main30.py && python3 main31.py && python3 main32.py && python3 main33.py && python3 main34.py && python3 main35.py && python3 main36.py && python3 main37.py && python3 main38.py && python3 main39.py && python3 main40.py && python3 main41.py
+              ;;
+            Graduate-Doctoral)
+              python3 main42.py && python3 main43.py && python3 main44.py && python3 main45.py && python3 main46.py && python3 main47.py && python3 main48.py && python3 main49.py && python3 main50.py && python3 main51.py && python3 main52.py && python3 main53.py && python3 main54.py && python3 main55.py
+              ;;
+            Law-School-and-IBA)
+              python3 main56.py && python3 main57.py && python3 main58.py
+              ;;
+          esac
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -N .
+          if ! git diff --exit-code --quiet; then
+            git add . && git commit -m "${{ github.event.inputs.department }}" && git push -u origin main
+          else
+            echo "No changes to commit"
+          fi
+
+  post-process:
+    runs-on: self-hosted
+    timeout-minutes: 30
+    needs: rescrape
+    if: ${{ github.event.inputs.run_sitemap == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+
+      - name: Install dependencies
+        run: |
+          git fetch
+          git pull
+          python3 -m pip install --upgrade pip
+          pip3 install pandas
+
+      - name: Remove duplicates
+        run: |
+          python3 dubble.py
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -N .
+          if ! git diff --exit-code --quiet; then
+            git add . && git commit -m "remove dubble" && git push -u origin main
+          fi
+
+      - name: Update sitemap
+        run: |
+          git pull
+          python3 sitemap.py && python3 for_fuse.py
+          python3 versionup.py
+          git add -N .
+          if ! git diff --exit-code --quiet; then
+            git add . && git commit -m "Sitemap" && git push -u origin main
+          fi
+
+  deploy:
+    runs-on: self-hosted
+    timeout-minutes: 10
+    needs: post-process
+    if: ${{ github.event.inputs.run_sitemap == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
+      - name: Pull latest
+        run: git pull
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
