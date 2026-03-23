@@ -114,6 +114,14 @@ jobs:
               ;;
           esac
 
+      - name: Post-process
+        run: |
+          source .venv/bin/activate
+          pip install pandas
+          python3 dubble.py
+          python3 for_fuse.py
+          python3 versionup.py
+
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
