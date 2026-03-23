@@ -46,11 +46,14 @@ jobs:
         run: |
           git fetch
           git pull
-          python3 -m pip install --upgrade pip
-          pip3 install chromedriver-binary selenium==4.2.0
+          python3 -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install selenium webdriver-manager
 
       - name: Run scraper
         run: |
+          source .venv/bin/activate
           DEPT="${{ github.event.inputs.department }}"
           case "$DEPT" in
             School-of-Theology)
@@ -140,11 +143,14 @@ jobs:
         run: |
           git fetch
           git pull
-          python3 -m pip install --upgrade pip
-          pip3 install pandas
+          python3 -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install pandas
 
       - name: Remove duplicates
         run: |
+          source .venv/bin/activate
           python3 dubble.py
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -155,6 +161,7 @@ jobs:
 
       - name: Update sitemap
         run: |
+          source .venv/bin/activate
           git pull
           python3 sitemap.py && python3 for_fuse.py
           python3 versionup.py
