@@ -28,10 +28,6 @@ on:
           - Graduate-Masters
           - Graduate-Doctoral
           - Law-School-and-IBA
-      run_sitemap:
-        description: 'Sitemap更新とデプロイも行う'
-        type: boolean
-        default: true
 
 jobs:
   rescrape:
@@ -128,61 +124,3 @@ jobs:
           else
             echo "No changes to commit"
           fi
-
-  post-process:
-    runs-on: self-hosted
-    timeout-minutes: 30
-    needs: rescrape
-    if: ${{ github.event.inputs.run_sitemap == 'true' }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-
-      - name: Install dependencies
-        run: |
-          git fetch
-          git pull
-          python3 -m venv .venv
-          source .venv/bin/activate
-          pip install --upgrade pip
-          pip install pandas
-
-      - name: Remove duplicates
-        run: |
-          source .venv/bin/activate
-          python3 dubble.py
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -N .
-          if ! git diff --exit-code --quiet; then
-            git add . && git commit -m "remove dubble" && git push -u origin main
-          fi
-
-      - name: Update sitemap
-        run: |
-          source .venv/bin/activate
-          git pull
-          python3 sitemap.py && python3 for_fuse.py
-          python3 versionup.py
-          git add -N .
-          if ! git diff --exit-code --quiet; then
-            git add . && git commit -m "Sitemap" && git push -u origin main
-          fi
-
-  deploy:
-    runs-on: self-hosted
-    timeout-minutes: 10
-    needs: post-process
-    if: ${{ github.event.inputs.run_sitemap == 'true' }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-      - name: Pull latest
-        run: git pull
-      - name: deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
