@@ -2838,7 +2838,7 @@ jobs:
 
       - name: Run main.py
         run: |
-          python sitemap.py
+          python for_fuse.py
 
       - name: git setting
         run: |
