@@ -25,8 +25,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -65,8 +64,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
       - name: Run main.py
         run: |
           python main1.py
@@ -102,8 +100,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
       - name: Run main.py
         run: |
           python mainb1.py
@@ -140,8 +137,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
       - name: Run main.py
         run: |
           python mainc1.py
@@ -180,8 +176,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
       - name: Run main.py
         run: |
           python maind1.py
@@ -220,8 +215,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
       - name: Run main.py
         run: |
           python maine1.py
@@ -260,8 +254,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
       - name: Run main.py
         run: |
           python mainf1.py
@@ -300,8 +293,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -342,8 +334,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -384,8 +375,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -426,8 +416,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -468,8 +457,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -509,8 +497,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -550,8 +537,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -593,8 +579,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -635,8 +620,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -677,8 +661,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -719,8 +702,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -760,8 +742,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -803,8 +784,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -846,8 +826,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -889,8 +868,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -932,8 +910,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -975,8 +952,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1018,8 +994,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1057,8 +1032,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1098,8 +1072,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1139,8 +1112,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1182,8 +1154,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1226,8 +1197,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1269,8 +1239,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1312,8 +1281,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1355,8 +1323,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1398,8 +1365,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1440,8 +1406,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1483,8 +1448,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1526,8 +1490,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1569,8 +1532,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1612,8 +1574,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1655,8 +1616,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1698,8 +1658,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1741,8 +1700,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1784,8 +1742,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1870,8 +1827,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1913,8 +1869,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1956,8 +1911,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -1999,8 +1953,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2042,8 +1995,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2085,8 +2037,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2128,8 +2079,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2171,8 +2121,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2214,8 +2163,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2257,8 +2205,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2300,8 +2247,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2343,8 +2289,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2386,8 +2331,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2429,8 +2373,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2472,8 +2415,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2515,8 +2457,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2558,8 +2499,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2601,8 +2541,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2644,8 +2583,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2687,8 +2625,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2730,8 +2667,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2773,8 +2709,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2816,8 +2751,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2859,8 +2793,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2902,8 +2835,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2945,8 +2877,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -2988,8 +2919,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -3031,8 +2961,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -3074,8 +3003,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -3117,8 +3045,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -3160,8 +3087,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -3203,8 +3129,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -3246,8 +3171,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -3289,8 +3213,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |
@@ -3332,8 +3255,7 @@ jobs:
           git pull
           python -m pip install --upgrade pip
           pip install Flask
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Run main.py
         run: |

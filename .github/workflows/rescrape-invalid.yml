@@ -77,8 +77,7 @@ jobs:
           git fetch
           git pull
           python -m pip install --upgrade pip
-          pip install chromedriver-binary
-          pip install selenium==4.2.0
+          pip install selenium webdriver-manager
 
       - name: Download invalid files list
         uses: actions/download-artifact@v4
