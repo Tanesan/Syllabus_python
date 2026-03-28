@@ -42,7 +42,7 @@ jobs:
           git add -N .
           if ! git diff --exit-code --quiet
           then
-             python versionup.py
+            python3 versionup.py
             git add . && git commit -m "Sitemap" && git push -u origin main
           fi
         
