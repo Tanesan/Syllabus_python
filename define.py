@@ -658,6 +658,7 @@ def act(m, a, b):
         term_index = safe_index(term_data, term_value, term_data_index, term_data_alias_index)
         subject['開講期'] = term_index
         othersJa.setdefault('評価', grading)
+        semester_set = set()
         for i in range(0, 8):
             try:
                 element_name = f"lstSlbtchinftJ002List_st[{i}].lblTmtxCd"
@@ -665,9 +666,26 @@ def act(m, a, b):
                 value = element.get_attribute("value")
                 term_index = safe_index(day_data, value, day_data_index, day_data_alias_index)
                 subject[f'時限{i+1}'] = term_index
-
+                # 各時限の学期情報を保存 (0=春, 1=秋, -1=通年)
+                try:
+                    slot_term_element = driver.find_element_by_name(f'lstSlbtchinftJ002List_st[{i}].lblAc201ScrDispNm_03')
+                    slot_term_value = slot_term_element.get_attribute('value')
+                    if '春' in slot_term_value or 'Spring' in slot_term_value:
+                        subject[f'時限{i+1}_term'] = 0
+                        semester_set.add(0)
+                    elif '秋' in slot_term_value or 'Fall' in slot_term_value:
+                        subject[f'時限{i+1}_term'] = 1
+                        semester_set.add(1)
+                    else:
+                        subject[f'時限{i+1}_term'] = -1
+                        semester_set.add(-1)
+                except NoSuchElementException:
+                    pass
             except NoSuchElementException:
                 break
+        # 春と秋の両方にまたがる場合、開講期を通年(0)に修正
+        if {0, 1}.issubset(semester_set) and subject.get('開講期') != 0:
+            subject['開講期'] = 0
         i = 1
         has_grading_field = False
         while "成績評価Grading" + str(i) in grading:
