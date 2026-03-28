@@ -159,15 +159,16 @@ jobs:
             git add . && git commit -m "remove dubble" && git push -u origin main
           fi
 
-      - name: Update sitemap
+      - name: Update fuse.json
         run: |
           source .venv/bin/activate
           git pull
+          python3 add_term_fields.py
           python3 for_fuse.py
           python3 versionup.py
           git add -N .
           if ! git diff --exit-code --quiet; then
-            git add . && git commit -m "Sitemap" && git push -u origin main
+            git add . && git commit -m "fuse.json更新" && git push -u origin main
           fi
 
   deploy:

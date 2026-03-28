@@ -3605,6 +3605,7 @@ jobs:
         env:
            TARGET_URL: ${{ secrets.TARGET_URL }}
         run: |
+          python add_term_fields.py
           python for_fuse.py
 
       - name: git setting
