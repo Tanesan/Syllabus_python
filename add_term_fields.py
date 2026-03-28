@@ -60,6 +60,7 @@ for subject_id, subject in all_data.items():
 
         if is_year_round:
             # 通年: 項番No. の学期ラベルで春/秋を個別判定
+            # entry[1] を見て、通年なら entry[3] にフォールバック
             new_term = -1
             entry = eval_data.get(f'項番No.{slot_idx}')
             if isinstance(entry, list) and len(entry) > 1:
@@ -68,6 +69,12 @@ for subject_id, subject in all_data.items():
                     new_term = 0
                 elif '秋' in term_str or 'Fall' in term_str:
                     new_term = 1
+                elif len(entry) > 3:
+                    term_str2 = str(entry[3])
+                    if '春' in term_str2 or 'Spring' in term_str2:
+                        new_term = 0
+                    elif '秋' in term_str2 or 'Fall' in term_str2:
+                        new_term = 1
             subject[f'時限{slot_idx}_term'] = new_term
         else:
             # 非通年: 開講期から一律決定
