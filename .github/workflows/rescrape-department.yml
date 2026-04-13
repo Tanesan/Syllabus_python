@@ -27,6 +27,7 @@ on:
           - Centers
           - Graduate-Masters
           - Graduate-Doctoral
+          - Hands-on-Learning
           - Law-School-and-IBA
       run_sitemap:
         description: 'Sitemap更新とデプロイも行う'
@@ -112,6 +113,9 @@ jobs:
               ;;
             Graduate-Doctoral)
               python3 main42.py && python3 main43.py && python3 main44.py && python3 main45.py && python3 main46.py && python3 main47.py && python3 main48.py && python3 main49.py && python3 main50.py && python3 main51.py && python3 main52.py && python3 main53.py && python3 main54.py && python3 main55.py
+              ;;
+            Hands-on-Learning)
+              python3 main26.py
               ;;
             Law-School-and-IBA)
               python3 main56.py && python3 main57.py && python3 main58.py
