@@ -55,7 +55,7 @@ ad_data = [
     "国際教育・協力センター/CIEC／Center for International Education and Cooperation",
     "キリスト教と文化研究センター／Research Center for Christianity and Culture",
     "日本語教育センター／Center for Japanese Language Education",
-    "ハンズオン・ラーニングセンター／Hands-on Learning Center",
+    "共通教育センター（ハンズオン・ラーニング科目）／Common Education Center (Hands-on Learning Programs)",
     "国連・外交統括センター／Integrated Center for UN and Foreign Affairs Studies",
     "神学研究科前期／Graduate School of Theology Master's Course",
     "文学研究科前期／Graduate School of Humanities Master's Course",
