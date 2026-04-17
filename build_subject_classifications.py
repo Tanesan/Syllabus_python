@@ -28,31 +28,115 @@ ALL_DIR = DOCS / "all"
 
 SUBJECT_NAME_KEY = "【科目ナンバー/Course Number】授業名称"
 
+# 学部名 → 管理部署 index の対応 (define.py の ad_data と一致)
+DEPARTMENT_AD_INDEX = {
+    "神学部": 0,
+    "文学部": 1,
+    "社会学部": 2,
+    "法学部": 3,
+    "経済学部": 4,
+    "商学部": 5,
+    # 旧 理工学部 (6) は 2021 以前のみ
+    "総合政策学部": 7,
+    "人間福祉学部": 8,
+    "教育学部": 9,
+    "国際学部": 10,
+    "理学部": 11,
+    "工学部": 12,
+    "生命環境学部": 13,
+    "建築学部": 14,
+    # 全学科目 は複数の部署にまたがるため None
+}
+
+# 学部 → 関連する管理部署の広い集合 (開講学部が関連センターのケースも含む)
+# 例: 教育学部の要件に「教職教育研究センター」の科目が含まれることがある
+DEPARTMENT_EXTENDED_INDICES = {
+    "神学部": {0},
+    "文学部": {1, 23, 24, 26},  # キリスト教と文化研究センター等
+    "社会学部": {2},
+    "法学部": {3},
+    "経済学部": {4},
+    "商学部": {5},
+    "総合政策学部": {7},
+    "人間福祉学部": {8},
+    "教育学部": {9, 23, 24},  # 教職教育研究センター（資格/教職専門）
+    "国際学部": {10, 25, 27},  # 国際教育・協力センター、日本語教育
+    "理学部": {11},
+    "工学部": {12},
+    "生命環境学部": {13},
+    "建築学部": {14},
+}
+
+
+_ROMAN_MAP = [
+    ("Ⅰ", "I"), ("Ⅱ", "II"), ("Ⅲ", "III"), ("Ⅳ", "IV"), ("Ⅴ", "V"),
+    ("Ⅵ", "VI"), ("Ⅶ", "VII"), ("Ⅷ", "VIII"), ("Ⅸ", "IX"), ("Ⅹ", "X"),
+    ("ⅰ", "i"), ("ⅱ", "ii"), ("ⅲ", "iii"), ("ⅳ", "iv"), ("ⅴ", "v"),
+]
+
 
 def normalize_subject_name(name: str) -> str:
-    """Flutter版と同じ正規化ルール"""
+    """卒業要件JSON と 科目JSON の科目名を統一正規化する。
+
+    処理順:
+      1. 科目番号接頭 【000】 を除去
+      2. 全角空白での分割（all/*.json はセクション番号が 全角空白の後ろに付く）
+      3. 英名併記 ／ または / で分割
+      4. 全ての空白を削除
+      5. 全角ローマ数字を ASCII に変換（Ⅰ → I）
+      6. 全角数字を半角に
+      7. 全角英字を半角に
+    """
     if not name:
         return ""
     s = name.strip()
-    # 科目番号を除去: 【200】哲学A → 哲学A
+    # 1. 科目番号
     s = re.sub(r"【\d{1,3}】", "", s)
-    # 英名併記を除去: 哲学A／Philosophy A → 哲学A
-    if "\uFF0F" in s:  # full-width slash ／
+    # 2. 全角空白分割（セクション番号除去）
+    if "\u3000" in s:
+        s = s.split("\u3000", 1)[0]
+    # 3. 英名併記除去
+    if "\uFF0F" in s:
         s = s.split("\uFF0F", 1)[0]
-    # 半角スラッシュ
     if "/" in s and not s.startswith("/"):
         s = s.split("/", 1)[0]
-    # 全角空白除去
-    s = s.replace("\u3000", "")
+    # 4. 空白全削除
+    s = re.sub(r"\s+", "", s)
+    # 5. ローマ数字
+    for old, new in _ROMAN_MAP:
+        s = s.replace(old, new)
+    # 6/7. 全角英数字→半角
+    s = s.translate(
+        str.maketrans(
+            "ＡBＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ０１２３４５６７８９",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+        )
+    )
     return s.strip()
 
 
+def _extract_english_name(raw: str) -> str:
+    """all.json 形式 '【100】日本語名　1／English Name' から英名部分を取り出す"""
+    if not raw or "\uFF0F" not in raw:
+        return ""
+    after = raw.split("\uFF0F", 1)[1]
+    # 英名側にも末尾に空白+数字（セクション番号）がつく場合があるので削除
+    after = re.sub(r"\s+\d+\s*$", "", after)
+    after = after.strip()
+    return after
+
+
 def build_subject_index():
-    """全科目JSONから {正規化済み科目名: [id, ...]} の逆引きを構築"""
-    index = defaultdict(list)
+    """全科目JSONから逆引きインデックスを構築。
+    戻り値:
+      name_to_ids: {正規化済み科目名: [id, ...]}
+      id_to_ad:    {id: 管理部署インデックス}
+    """
+    name_to_ids = defaultdict(list)
+    id_to_ad = {}
     if not ALL_DIR.is_dir():
         print(f"Warning: {ALL_DIR} not found, no subjects loaded.")
-        return index
+        return name_to_ids, id_to_ad
 
     count = 0
     for p in ALL_DIR.iterdir():
@@ -63,14 +147,33 @@ def build_subject_index():
                 data = json.load(f)
         except (json.JSONDecodeError, OSError):
             continue
-        subject_id = data.get("id") or p.stem
+        subject_id = str(data.get("id") or p.stem)
         raw_name = data.get(SUBJECT_NAME_KEY) or data.get("name") or ""
+
+        ad_index = data.get("管理部署")
+        if isinstance(ad_index, int):
+            id_to_ad[subject_id] = ad_index
+
+        # 日本語名（／の前） を登録
         normalized = normalize_subject_name(raw_name)
         if normalized:
-            index[normalized].append(str(subject_id))
-            count += 1
-    print(f"Indexed {count} subjects into {len(index)} unique normalized names.")
-    return index
+            name_to_ids[normalized].append(subject_id)
+
+        # 英語名（／の後） も登録
+        english = _extract_english_name(raw_name)
+        if english:
+            en_normalized = normalize_subject_name(english)
+            if en_normalized and en_normalized != normalized:
+                name_to_ids[en_normalized].append(subject_id)
+
+        count += 1
+    # 重複ID除去
+    for k in list(name_to_ids.keys()):
+        name_to_ids[k] = sorted(set(name_to_ids[k]))
+    print(
+        f"Indexed {count} subjects into {len(name_to_ids)} unique normalized names."
+    )
+    return name_to_ids, id_to_ad
 
 
 def walk_categories(categories, path, collector):
@@ -90,16 +193,31 @@ def walk_categories(categories, path, collector):
             walk_categories(subcats, current_path, collector)
 
 
-def build_classifications(entry_year: int, subject_index):
+def _filter_ids_by_department(ids, id_to_ad, dept_name):
+    """卒業要件側の学部名で管理部署フィルタを適用。
+    フィルタ後が空になる場合はフィルタ前のリストをそのまま返す（保守的）。
+    """
+    allowed = DEPARTMENT_EXTENDED_INDICES.get(dept_name)
+    if allowed is None:
+        # 全学科目などは絞らない
+        return ids
+    filtered = [i for i in ids if id_to_ad.get(i) in allowed]
+    return filtered if filtered else ids
+
+
+def build_classifications(entry_year: int, subject_index_tuple):
     req_path = DOCS / f"graduation_requirements_{entry_year}.json"
     if not req_path.exists():
         print(f"Skip {entry_year}: {req_path} not found.")
         return None
 
+    name_to_ids, id_to_ad = subject_index_tuple
+
     with req_path.open(encoding="utf-8") as f:
         req_data = json.load(f)
 
     classifications = defaultdict(list)
+    filter_stats = {"applied": 0, "fallback": 0, "no_match": 0}
     departments = req_data.get("departments", {})
 
     for dept_name, dept_data in departments.items():
@@ -115,7 +233,19 @@ def build_classifications(entry_year: int, subject_index):
                 normalized = normalize_subject_name(subject_name)
                 if not normalized:
                     continue
-                ids = subject_index.get(normalized, [])
+                raw_ids = name_to_ids.get(normalized, [])
+                if not raw_ids:
+                    filter_stats["no_match"] += 1
+                    continue
+                # 管理部署で絞り込み（全学科目は None を返す → 絞らない）
+                ids = _filter_ids_by_department(raw_ids, id_to_ad, dept_name)
+                if ids is raw_ids and DEPARTMENT_EXTENDED_INDICES.get(dept_name) is not None and raw_ids:
+                    # フィルタ適用後に全件ゼロ → フォールバックした
+                    # （_filter_ids_by_department は fallback時に元のlistを返す）
+                    if not any(id_to_ad.get(i) in DEPARTMENT_EXTENDED_INDICES[dept_name] for i in raw_ids):
+                        filter_stats["fallback"] += 1
+                    else:
+                        filter_stats["applied"] += 1
                 for sid in ids:
                     entry = {
                         "department": dept_name,
@@ -154,8 +284,9 @@ def build_classifications(entry_year: int, subject_index):
     matched = len(classifications)
     total_entries = sum(len(v) for v in classifications.values())
     print(
-        f"{entry_year}: {matched} subjects matched, {total_entries} classification entries. "
-        f"→ {out_path.name}"
+        f"{entry_year}: {matched} subjects matched, {total_entries} entries "
+        f"(dept-filtered={filter_stats['applied']}, fallback={filter_stats['fallback']}, "
+        f"no-match={filter_stats['no_match']})"
     )
     return result
 
