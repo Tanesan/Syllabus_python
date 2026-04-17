@@ -199,6 +199,13 @@ def parse_subjects_from_line(line: str):
     # 変動単位部分を削除
     cleaned = full_var.sub(" ", converted)
 
+    # 英字直後の数字、数字直後の日本語の境界に空白を挿入
+    # 例: "Thought2 言語類型論" → "Thought 2 言語類型論"
+    #     "2言語類型論" → "2 言語類型論"
+    # ※変動単位 (1科目各2~4単位) を除去した後に行うことで副作用を防ぐ
+    cleaned = re.sub(r"([A-Za-z])(\d)", r"\1 \2", cleaned)
+    cleaned = re.sub(r"(\d)([\u3040-\u30FF\u4E00-\u9FFF])", r"\1 \2", cleaned)
+
     # 「科目名 数字」パターン（最も一般的）
     # 数字は1-2桁
     # ただし、英語科目のように「English Communication A 1」は
@@ -423,10 +430,14 @@ def parse(pdf_path):
         "departments": {},
     }
 
-    # 入学年度 (ファイル名やテキストから推測)
-    match = re.search(r"(\d{4})年度入学生用", "\n".join(lines[:20]))
+    # 入学年度 (テキスト全体から、無ければファイル名から推測)
+    match = re.search(r"(\d{4})年度入学生用", "\n".join(lines))
     if match:
         result["entry_year"] = int(match.group(1))
+    else:
+        fn_match = re.search(r"(\d{4})\d{4}", Path(pdf_path).name)
+        if fn_match:
+            result["entry_year"] = int(fn_match.group(1))
 
     # 第17節（卒業要件）の位置を探して先にパース
     graduation_reqs = {}
