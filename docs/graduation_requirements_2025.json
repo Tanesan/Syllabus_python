@@ -1,7 +1,7 @@
 {
-  "entry_year": null,
+  "entry_year": 2025,
   "source_pdf": "kwu_rules_20250401.pdf",
-  "generated_at": "2026-04-17T10:05:16.694725",
+  "generated_at": "2026-04-17T13:18:29.041766",
   "departments": {
     "全学科目": {
       "section_number": 1,
@@ -1674,7 +1674,11 @@
                   "credits": 2
                 },
                 {
-                  "name": "キリスト教と社会A2キリスト教と社会B",
+                  "name": "キリスト教と社会A",
+                  "credits": 2
+                },
+                {
+                  "name": "キリスト教と社会B",
                   "credits": 2
                 },
                 {
@@ -6428,7 +6432,11 @@
                   "credits": 2
                 },
                 {
-                  "name": "メディア・リテラシーB2ソーシャル・メディア論",
+                  "name": "メディア・リテラシーB",
+                  "credits": 2
+                },
+                {
+                  "name": "ソーシャル・メディア論",
                   "credits": 2
                 },
                 {
@@ -7547,7 +7555,11 @@
                   "credits": 2
                 },
                 {
-                  "name": "国家補償法2行政争訟法",
+                  "name": "国家補償法",
+                  "credits": 2
+                },
+                {
+                  "name": "行政争訟法",
                   "credits": 2
                 },
                 {
@@ -7999,7 +8011,11 @@
                   "credits": 2
                 },
                 {
-                  "name": "現代政治分析2政治心理学",
+                  "name": "現代政治分析",
+                  "credits": 2
+                },
+                {
+                  "name": "政治心理学",
                   "credits": 2
                 },
                 {
@@ -8087,7 +8103,11 @@
                   "credits": 2
                 },
                 {
-                  "name": "政策評価論2メディアと政治",
+                  "name": "政策評価論",
+                  "credits": 2
+                },
+                {
+                  "name": "メディアと政治",
                   "credits": 2
                 },
                 {
@@ -15065,7 +15085,11 @@
                       "credits": 2
                     },
                     {
-                      "name": "Culture and Thought2 言語類型論",
+                      "name": "Culture and Thought",
+                      "credits": 2
+                    },
+                    {
+                      "name": "言語類型論",
                       "credits": 2
                     },
                     {
@@ -15104,7 +15128,11 @@
                   "credits": 4
                 },
                 {
-                  "name": "オフキャンパス実習1又は2GCaP演習A",
+                  "name": "オフキャンパス実習",
+                  "credits": 1
+                },
+                {
+                  "name": "又は2GCaP演習A",
                   "credits": 1
                 },
                 {
@@ -18106,7 +18134,11 @@
                       "credits": 2
                     },
                     {
-                      "name": "社会2算数",
+                      "name": "社会",
+                      "credits": 2
+                    },
+                    {
+                      "name": "算数",
                       "credits": 2
                     },
                     {
@@ -19069,20 +19101,20 @@
                   "credits": 1
                 },
                 {
-                  "name": "Academic WritingA1",
+                  "name": "Academic WritingA",
                   "credits": 1
                 },
                 {
-                  "name": "Academic WritingB1",
+                  "name": "Academic WritingB",
                   "credits": 1
                 },
                 {
-                  "name": "Academic WritingA2",
-                  "credits": 1
+                  "name": "Academic WritingA",
+                  "credits": 2
                 },
                 {
-                  "name": "Academic WritingB2",
-                  "credits": 1
+                  "name": "Academic WritingB",
+                  "credits": 2
                 },
                 {
                   "name": "日本語プロジェクトA",
@@ -21189,6 +21221,10 @@
                       "credits": 2
                     },
                     {
+                      "name": "国内協定大学科目",
+                      "credits": 1
+                    },
+                    {
                       "name": "外国書講読",
                       "credits": 2
                     },
@@ -21477,6 +21513,10 @@
                       "credits": 2
                     },
                     {
+                      "name": "国内協定大学科目",
+                      "credits": 1
+                    },
+                    {
                       "name": "基礎化学実験Ⅰ",
                       "credits": 2
                     },
@@ -21727,6 +21767,10 @@
                     {
                       "name": "ベンチャー起業家講座",
                       "credits": 2
+                    },
+                    {
+                      "name": "国内協定大学科目",
+                      "credits": 1
                     },
                     {
                       "name": "教職概論",
@@ -22385,6 +22429,10 @@
                       "credits": 2
                     },
                     {
+                      "name": "国内協定大学科目",
+                      "credits": 1
+                    },
+                    {
                       "name": "電気電子応用入門",
                       "credits": 2
                     },
@@ -22699,6 +22747,10 @@
                     {
                       "name": "ベンチャーシーズ論",
                       "credits": 2
+                    },
+                    {
+                      "name": "国内協定大学科目",
+                      "credits": 1
                     },
                     {
                       "name": "情報工学概論",
@@ -23201,6 +23253,10 @@
                       "credits": 2
                     },
                     {
+                      "name": "国内協定大学科目",
+                      "credits": 1
+                    },
+                    {
                       "name": "コンピュータ演習A",
                       "credits": 2
                     },
@@ -23675,6 +23731,10 @@
                     {
                       "name": "ベンチャーシーズ論",
                       "credits": 2
+                    },
+                    {
+                      "name": "国内協定大学科目",
+                      "credits": 1
                     },
                     {
                       "name": "教職概論",
@@ -24329,6 +24389,10 @@
                       "credits": 2
                     },
                     {
+                      "name": "国内協定大学科目",
+                      "credits": 1
+                    },
+                    {
                       "name": "生命科学Ⅰ",
                       "credits": 2
                     },
@@ -24629,6 +24693,10 @@
                       "credits": 2
                     },
                     {
+                      "name": "国内協定大学科目",
+                      "credits": 1
+                    },
+                    {
                       "name": "基礎化学A",
                       "credits": 2
                     },
@@ -24854,6 +24922,10 @@
                     },
                     {
                       "name": "知財と起業",
+                      "credits": 1
+                    },
+                    {
+                      "name": "国内協定大学科目",
                       "credits": 1
                     },
                     {
@@ -25129,7 +25201,11 @@
                       "credits": 2
                     },
                     {
-                      "name": "中国語Ⅲ2中国語Ⅳ",
+                      "name": "中国語Ⅲ",
+                      "credits": 2
+                    },
+                    {
+                      "name": "中国語Ⅳ",
                       "credits": 2
                     },
                     {

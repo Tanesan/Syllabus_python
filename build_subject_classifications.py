@@ -18,6 +18,7 @@
 import json
 import re
 import sys
+import unicodedata
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -54,13 +55,6 @@ DEPARTMENT_AD_INDEX = {
 ACADEMIC_DEPT_INDICES = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
 
 
-_ROMAN_MAP = [
-    ("Ⅰ", "I"), ("Ⅱ", "II"), ("Ⅲ", "III"), ("Ⅳ", "IV"), ("Ⅴ", "V"),
-    ("Ⅵ", "VI"), ("Ⅶ", "VII"), ("Ⅷ", "VIII"), ("Ⅸ", "IX"), ("Ⅹ", "X"),
-    ("ⅰ", "i"), ("ⅱ", "ii"), ("ⅲ", "iii"), ("ⅳ", "iv"), ("ⅴ", "v"),
-]
-
-
 def normalize_subject_name(name: str) -> str:
     """卒業要件JSON と 科目JSON の科目名を統一正規化する。
 
@@ -68,16 +62,15 @@ def normalize_subject_name(name: str) -> str:
       1. 科目番号接頭 【000】 を除去
       2. 全角空白での分割（all/*.json はセクション番号が 全角空白の後ろに付く）
       3. 英名併記 ／ または / で分割
-      4. 全ての空白を削除
-      5. 全角ローマ数字を ASCII に変換（Ⅰ → I）
-      6. 全角数字を半角に
-      7. 全角英字を半角に
+      4. NFKC 正規化（全角英数→半角、全角括弧→半角、ローマ数字記号 Ⅰ→I 等を一括変換）
+      5. 末尾のクラス連番（NFKC 後に半角化された " 1" 等）を除去
+      6. 全空白を削除
     """
     if not name:
         return ""
     s = name.strip()
-    # 1. 科目番号
-    s = re.sub(r"【\d{1,3}】", "", s)
+    # 1. 科目番号と副題（【100】、【国際貿易の発展と税関】等を全て除去）
+    s = re.sub(r"【[^】]*】", "", s)
     # 2. 全角空白分割（セクション番号除去）
     if "\u3000" in s:
         s = s.split("\u3000", 1)[0]
@@ -86,29 +79,39 @@ def normalize_subject_name(name: str) -> str:
         s = s.split("\uFF0F", 1)[0]
     if "/" in s and not s.startswith("/"):
         s = s.split("/", 1)[0]
-    # 4. 空白全削除
+    # 4. NFKC: 全角英数→半角、全角括弧→半角、ローマ数字記号 Ⅰ Ⅱ Ⅲ → I II III、
+    #    全角空白→半角空白などを一括変換
+    s = unicodedata.normalize("NFKC", s)
+    # 5. 末尾のクラス連番（NFKC 後の半角空白 + 数字、念のため残骸対策）
+    s = re.sub(r"\s+\d+\s*$", "", s)
+    # 6. 全空白削除
     s = re.sub(r"\s+", "", s)
-    # 5. ローマ数字
-    for old, new in _ROMAN_MAP:
-        s = s.replace(old, new)
-    # 6/7. 全角英数字→半角
-    s = s.translate(
-        str.maketrans(
-            "ＡBＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ０１２３４５６７８９",
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
-        )
-    )
     return s.strip()
 
 
+_ARABIC_TO_ROMAN_UPPER = {
+    1: "I", 2: "II", 3: "III", 4: "IV", 5: "V",
+    6: "VI", 7: "VII", 8: "VIII", 9: "IX", 10: "X",
+}
+
+
 def _extract_english_name(raw: str) -> str:
-    """all.json 形式 '【100】日本語名　1／English Name' から英名部分を取り出す"""
+    """all.json 形式 '【100】日本語名　1／English Name' から英名部分を取り出す。
+
+    末尾のアラビア数字は **科目シリーズ番号** として扱い、ローマ数字に変換する。
+    卒業要件 PDF 側は "English Communication Ⅰ" のように Unicode ローマ数字で
+    書かれており NFKC で I/II/III に正規化される。シラバス本体側は
+    "English Communication 1" のようにアラビア数字で書かれているので、
+    ここで I/II/III に変換することで両者を揃える。
+    """
     if not raw or "\uFF0F" not in raw:
         return ""
-    after = raw.split("\uFF0F", 1)[1]
-    # 英名側にも末尾に空白+数字（セクション番号）がつく場合があるので削除
-    after = re.sub(r"\s+\d+\s*$", "", after)
-    after = after.strip()
+    after = raw.split("\uFF0F", 1)[1].strip()
+    m = re.match(r"^(.+?)\s+(\d{1,2})\s*$", after)
+    if m:
+        n = int(m.group(2))
+        if n in _ARABIC_TO_ROMAN_UPPER:
+            return f"{m.group(1).strip()} {_ARABIC_TO_ROMAN_UPPER[n]}"
     return after
 
 
