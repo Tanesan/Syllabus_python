@@ -52,7 +52,8 @@ FULL_TO_HALF = str.maketrans(
 # ノイズ行（学則ヘッダ・フッタ等）
 NOISE_PATTERNS = [
     re.compile(r"^【関西学院大学"),
-    re.compile(r"^\d+/\d+$"),  # ページ番号
+    re.compile(r"^\d+/\d+$"),  # 新版 "1/89"
+    re.compile(r"^[-－‐–]\s*\d+\s*[-－‐–]$"),  # 旧版 "- 1 –"
 ]
 
 # 科目行のパターン: 「科目名 数字」が繰り返されるフォーマット
@@ -107,6 +108,36 @@ def is_category_header(line: str) -> bool:
         if hint in line:
             return True
     return False
+
+
+_JAPANESE_RE = re.compile(
+    r"[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\uFF65-\uFF9F]"
+)
+
+
+def _is_japanese_token(tok: str) -> bool:
+    """トークン内に日本語文字が含まれるか"""
+    return bool(_JAPANESE_RE.search(tok))
+
+
+def _collapse_subject_name_parts(parts):
+    """旧版PDFの 'キ リ ス ト 教 学 A' のような文字単位に分割された科目名を結合。
+
+    ルール:
+      - 全パーツが1文字 → 区切りなしで連結 (例: "キリスト教学A")
+      - 日本語トークンが過半数 → 全て空白を詰めて連結 (例: "知識社会学A")
+        ※不規則な結合 ("社 会学") にも対応
+      - 日本語トークンが少数（英語科目名等） → 空白区切り
+    """
+    if not parts:
+        return ""
+    if all(len(p) == 1 for p in parts):
+        return "".join(parts)
+    jp_count = sum(1 for p in parts if _is_japanese_token(p))
+    if jp_count > len(parts) / 2:
+        # 日本語中心 → 空白を全削除して結合
+        return "".join(parts)
+    return " ".join(parts)
 
 
 def is_likely_extraction_error(name: str) -> bool:
@@ -182,7 +213,7 @@ def parse_subjects_from_line(line: str):
         # 数字?
         if re.fullmatch(r"\d{1,2}", tok):
             if current_name_parts:
-                name = " ".join(current_name_parts).strip()
+                name = _collapse_subject_name_parts(current_name_parts)
                 if not is_likely_extraction_error(name):
                     subjects.append({"name": name, "credits": int(tok)})
                 current_name_parts = []
