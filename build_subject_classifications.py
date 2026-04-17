@@ -48,24 +48,10 @@ DEPARTMENT_AD_INDEX = {
     # 全学科目 は複数の部署にまたがるため None
 }
 
-# 学部 → 関連する管理部署の広い集合 (開講学部が関連センターのケースも含む)
-# 例: 教育学部の要件に「教職教育研究センター」の科目が含まれることがある
-DEPARTMENT_EXTENDED_INDICES = {
-    "神学部": {0},
-    "文学部": {1, 23, 24, 26},  # キリスト教と文化研究センター等
-    "社会学部": {2},
-    "法学部": {3},
-    "経済学部": {4},
-    "商学部": {5},
-    "総合政策学部": {7},
-    "人間福祉学部": {8},
-    "教育学部": {9, 23, 24},  # 教職教育研究センター（資格/教職専門）
-    "国際学部": {10, 25, 27},  # 国際教育・協力センター、日本語教育
-    "理学部": {11},
-    "工学部": {12},
-    "生命環境学部": {13},
-    "建築学部": {14},
-}
+# 学部開講科目の管理部署 (0-14)
+# この範囲の管理部署の科目は「その学部」のみの卒業要件に紐づく (1対1)
+# 15以上は共通センター・研究科・大学院等 → 全学部の要件に紐づけてよい
+ACADEMIC_DEPT_INDICES = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
 
 
 _ROMAN_MAP = [
@@ -194,15 +180,28 @@ def walk_categories(categories, path, collector):
 
 
 def _filter_ids_by_department(ids, id_to_ad, dept_name):
-    """卒業要件側の学部名で管理部署フィルタを適用。
-    フィルタ後が空になる場合はフィルタ前のリストをそのまま返す（保守的）。
+    """学部開講科目(管理部署 0-14)は、その学部の要件にのみ1対1で紐づく。
+    センター/研究科等(管理部署 15+)は全学部の要件に紐づいてよい (1対多)。
+    全学科目は絞らない。
     """
-    allowed = DEPARTMENT_EXTENDED_INDICES.get(dept_name)
-    if allowed is None:
-        # 全学科目などは絞らない
+    expected = DEPARTMENT_AD_INDEX.get(dept_name)
+    if expected is None:
+        # 全学科目: 学部所属科目も含めて全許可（従来通り）
         return ids
-    filtered = [i for i in ids if id_to_ad.get(i) in allowed]
-    return filtered if filtered else ids
+    result = []
+    for i in ids:
+        ad = id_to_ad.get(i)
+        if ad is None:
+            # 管理部署不明 → 念のため含める
+            result.append(i)
+        elif ad in ACADEMIC_DEPT_INDICES:
+            # 学部所属科目 → 当該学部とのみ紐付け
+            if ad == expected:
+                result.append(i)
+        else:
+            # センター系（共通科目）→ 全学部に紐付け可
+            result.append(i)
+    return result
 
 
 def build_classifications(entry_year: int, subject_index_tuple):
@@ -217,7 +216,7 @@ def build_classifications(entry_year: int, subject_index_tuple):
         req_data = json.load(f)
 
     classifications = defaultdict(list)
-    filter_stats = {"applied": 0, "fallback": 0, "no_match": 0}
+    filter_stats = {"matched": 0, "rejected_by_dept": 0, "no_match_in_allJson": 0}
     departments = req_data.get("departments", {})
 
     for dept_name, dept_data in departments.items():
@@ -235,17 +234,14 @@ def build_classifications(entry_year: int, subject_index_tuple):
                     continue
                 raw_ids = name_to_ids.get(normalized, [])
                 if not raw_ids:
-                    filter_stats["no_match"] += 1
+                    filter_stats["no_match_in_allJson"] += 1
                     continue
-                # 管理部署で絞り込み（全学科目は None を返す → 絞らない）
+                # 管理部署で絞り込み（厳格: 一致しないものは除外）
                 ids = _filter_ids_by_department(raw_ids, id_to_ad, dept_name)
-                if ids is raw_ids and DEPARTMENT_EXTENDED_INDICES.get(dept_name) is not None and raw_ids:
-                    # フィルタ適用後に全件ゼロ → フォールバックした
-                    # （_filter_ids_by_department は fallback時に元のlistを返す）
-                    if not any(id_to_ad.get(i) in DEPARTMENT_EXTENDED_INDICES[dept_name] for i in raw_ids):
-                        filter_stats["fallback"] += 1
-                    else:
-                        filter_stats["applied"] += 1
+                if not ids:
+                    filter_stats["rejected_by_dept"] += 1
+                    continue
+                filter_stats["matched"] += 1
                 for sid in ids:
                     entry = {
                         "department": dept_name,
@@ -284,9 +280,9 @@ def build_classifications(entry_year: int, subject_index_tuple):
     matched = len(classifications)
     total_entries = sum(len(v) for v in classifications.values())
     print(
-        f"{entry_year}: {matched} subjects matched, {total_entries} entries "
-        f"(dept-filtered={filter_stats['applied']}, fallback={filter_stats['fallback']}, "
-        f"no-match={filter_stats['no_match']})"
+        f"{entry_year}: {matched} subjects, {total_entries} entries "
+        f"(matched={filter_stats['matched']}, rejected={filter_stats['rejected_by_dept']}, "
+        f"noAllMatch={filter_stats['no_match_in_allJson']})"
     )
     return result
 
