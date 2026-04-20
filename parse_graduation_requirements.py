@@ -352,6 +352,7 @@ def parse_graduation_requirements_page(lines, start_idx):
 
 
 # トップレベル的なカテゴリ名（これが出現したら親-子関係をリセット）
+# 注: 要件側のカテゴリ名（req_top_names）がある場合はそちらを優先
 TOP_LEVEL_KEYWORDS = [
     "キリスト教", "言語教育", "教養", "演習", "卒業論文", "卒業研究",
     "卒業演習", "基礎科目群", "専門科目群", "教職", "共通科目",
@@ -361,27 +362,46 @@ TOP_LEVEL_KEYWORDS = [
 ]
 
 
-def is_top_level_category(name: str) -> bool:
+def is_top_level_category(name: str, req_top_names=None) -> bool:
+    """要件側のトップレベル名があればそれと一致するかを判定。
+    なければ従来キーワード判定。"""
+    if req_top_names:
+        return name in req_top_names
     for kw in TOP_LEVEL_KEYWORDS:
         if name.startswith(kw) or (kw in name and "群" in name):
             return True
     return False
 
 
-def nest_categories(categories):
-    """空カテゴリを親カテゴリとして、後続を子として階層化する。"""
+def nest_categories(categories, req_top_names=None):
+    """空カテゴリ or 要件トップレベル名のカテゴリを親として、
+    それ以外は直前の親の子として階層化する。"""
     result = []
     i = 0
     while i < len(categories):
         cat = categories[i]
-        if not cat.get("subjects"):
+        is_req_top = req_top_names is not None and cat["name"] in req_top_names
+        is_parent_candidate = (not cat.get("subjects")) or is_req_top
+        if is_parent_candidate:
             # 親候補 → 後続カテゴリを子として収集
-            parent = {"name": cat["name"], "subcategories": []}
+            # 要件トップに入る場合、自分の subjects は保持しつつ後続を sub にまとめる
+            parent = {
+                "name": cat["name"],
+                "subjects": cat.get("subjects", []) if is_req_top else [],
+                "subcategories": [],
+            }
             j = i + 1
             while j < len(categories):
                 nxt = categories[j]
-                # 次のトップレベルに到達したら終了
-                if is_top_level_category(nxt["name"]):
+                # 次のトップレベル（要件定義 or 空カテゴリ）に到達したら終了
+                if req_top_names is not None:
+                    # 要件トップ名に一致 or 空カテゴリなら停止
+                    if nxt["name"] in req_top_names:
+                        break
+                    # 空カテゴリも新しい親の開始とみなす（要件無一致の別親）
+                    if not nxt.get("subjects") and not nxt.get("subcategories"):
+                        break
+                elif is_top_level_category(nxt["name"]):
                     break
                 # 次も空カテゴリなら、これも親候補 → 孫階層（再帰的に処理）
                 parent["subcategories"].append(nxt)
@@ -498,9 +518,26 @@ def parse(pdf_path):
             subjects = parse_subjects_from_line(line)
             current_category["subjects"].extend(subjects)
 
+        # 要件側のトップレベルカテゴリ名（階層化の基準に使用）
+        req_top_names = set()
+        if name in graduation_reqs:
+            reqs_for_dept = graduation_reqs[name]
+            reqs_list = reqs_for_dept.get("requirements", [])
+            for r in reqs_list:
+                cat_name = r.get("category", "")
+                if cat_name:
+                    req_top_names.add(cat_name)
+            # subdepartments 内の requirements も含める
+            for _, sub_req in reqs_for_dept.get("subdepartments", {}).items():
+                for r in sub_req.get("requirements", []):
+                    cat_name = r.get("category", "")
+                    if cat_name:
+                        req_top_names.add(cat_name)
+
         # 空のサブセクションを整理 + 階層化
         for sub_name, sub_data in dept_data["subdepartments"].items():
-            sub_data["categories"] = nest_categories(sub_data["categories"])
+            sub_data["categories"] = nest_categories(
+                sub_data["categories"], req_top_names=req_top_names)
         dept_data["subdepartments"] = {
             k: v for k, v in dept_data["subdepartments"].items()
             if v.get("categories")
