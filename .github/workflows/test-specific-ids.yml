@@ -12,25 +12,22 @@ jobs:
   test-specific-ids:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v3
-      
+      - uses: actions/checkout@v4
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-          
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install selenium webdriver-manager
-          
-      - name: Install Chrome
-        run: |
-          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-          
+
+      # Chrome はセルフホストランナー(VPS)に事前インストール済み。
+      # 旧来の `sudo apt-get install google-chrome-stable` は最小権限runner(sudo無し)では
+      # 失敗し、かつ不要なため削除した。
+
       - name: Create test IDs file
         run: |
           echo '["${{ github.event.inputs.ids }}"]' | tr ',' '",' | sed 's/,"/","/g' > invalid_ids.json
@@ -41,7 +38,7 @@ jobs:
           python test_specific_ids.py
           
       - name: Upload test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-results
           path: |

@@ -110,7 +110,7 @@ def test_specific_id(file_id, max_retries=3):
                 logging.warning("Timeout waiting for ID search results, but continuing anyway")
             
             try:
-                refer_elements = driver.find_elements_by_name('ERefer')
+                refer_elements = driver.find_elements(By.NAME, 'ERefer')
                 if len(refer_elements) == 0:
                     logging.warning("No ERefer elements found")
                     driver.quit()
@@ -153,7 +153,7 @@ def test_specific_id(file_id, max_retries=3):
                     continue
                 
                 try:
-                    refer_elements = driver.find_elements_by_name('ERefer')
+                    refer_elements = driver.find_elements(By.NAME, 'ERefer')
                     if len(refer_elements) > 0:
                         if not safe_click(driver, By.NAME, 'ERefer', timeout=5):
                             element = refer_elements[0]
