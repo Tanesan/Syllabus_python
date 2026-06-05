@@ -408,7 +408,7 @@ def act(m, a, b):
             
         try:
             WebDriverWait(driver, 20).until(
-            lambda d: d.find_element_by_name('EDispNumberSet')
+            lambda d: d.find_element(By.NAME, 'EDispNumberSet')
         )
         except:
             print("No data found, breaking the loop.")
@@ -456,19 +456,19 @@ def act(m, a, b):
             break
 
         sleep(2)
-        # if len(driver.find_elements_by_name('ERefer')) != 0:
-        #     if int(driver.find_element_by_name('lstSlbinftJ016RList_st[' + str(len(driver.find_elements_by_name('ERefer')) - 1) +'].lblNo').get_attribute('value')) <= i:
+        # if len(driver.find_elements(By.NAME, 'ERefer')) != 0:
+        #     if int(driver.find_element(By.NAME, 'lstSlbinftJ016RList_st[' + str(len(driver.find_elements(By.NAME, 'ERefer')) - 1) +'].lblNo').get_attribute('value')) <= i:
         #         break
         # else:
         #     sleep(0.1)
         WebDriverWait(driver, 20).until(
-            lambda d: d.find_element_by_name('ERefer')
+            lambda d: d.find_element(By.NAME, 'ERefer')
         )
-        if len(driver.find_elements_by_name('ERefer')) == 0:
+        if len(driver.find_elements(By.NAME, 'ERefer')) == 0:
             print("No data found, breaking the loop.")
             break
         try:
-            elements = driver.find_elements_by_name('ERefer')
+            elements = driver.find_elements(By.NAME, 'ERefer')
             if len(elements) == 0:
                 break
             
@@ -484,7 +484,7 @@ def act(m, a, b):
         except UnexpectedAlertPresentException:
             handle_alert(driver)
             try:
-                elements = driver.find_elements_by_name('ERefer')
+                elements = driver.find_elements(By.NAME, 'ERefer')
                 if len(elements) > 0 and i % 100 < len(elements):
                     if not safe_click(driver, By.NAME, 'ERefer', i % 100, timeout=5):
                         element = elements[i % 100]
@@ -499,47 +499,47 @@ def act(m, a, b):
             break
         # あとで
         WebDriverWait(driver, 20).until(
-            lambda d: d.find_element_by_name('lblLsnCd')
+            lambda d: d.find_element(By.NAME, 'lblLsnCd')
         )
-        name = driver.find_element_by_name('lblLsnCd').get_attribute('value')
-        campas_value = driver.find_element_by_name('lblCc019ScrDispNm').get_attribute('value')
+        name = driver.find_element(By.NAME, 'lblLsnCd').get_attribute('value')
+        campas_value = driver.find_element(By.NAME, 'lblCc019ScrDispNm').get_attribute('value')
         campas_idx = safe_index(campas_data, campas_value, campas_data_index, campas_data_alias_index)
         if campas_idx is not None:
             subject.setdefault('campas', campas_idx)
         else:
             safe_value = str(campas_value).replace('<', '&lt;').replace('>', '&gt;')
             print(f"Warning: Unknown campas value: {safe_value}")
-        subject.setdefault('name', driver.find_element_by_name('lblRepSbjKnjNm').get_attribute('value'))
-        ad_value = driver.find_element_by_name('lblAc119ScrDispNm').get_attribute('value')
+        subject.setdefault('name', driver.find_element(By.NAME, 'lblRepSbjKnjNm').get_attribute('value'))
+        ad_value = driver.find_element(By.NAME, 'lblAc119ScrDispNm').get_attribute('value')
         ad_idx = safe_index(ad_data, ad_value, ad_data_index, ad_data_alias_index)
         if ad_idx is not None:
             subject.setdefault('管理部署', ad_idx)
         else:
             safe_value = str(ad_value).replace('<', '&lt;').replace('>', '&gt;')
             print(f"Warning: Unknown 管理部署 value: {safe_value}")
-        subject.setdefault('単位数', int(driver.find_element_by_name('lblSbjCrnum').get_attribute('value')))
-        subject.setdefault('担当者', driver.find_element_by_name('lstChagTch_st[0].lblTchName').get_attribute('value'))
-        subject.setdefault('履修基準年度', driver.find_element_by_name('lblCc004ScrDispNm').get_attribute('value'))
-        subject.setdefault('履修登録方法', driver.find_element_by_name('lblTacRgMthCd').get_attribute('value'))
+        subject.setdefault('単位数', int(driver.find_element(By.NAME, 'lblSbjCrnum').get_attribute('value')))
+        subject.setdefault('担当者', driver.find_element(By.NAME, 'lstChagTch_st[0].lblTchName').get_attribute('value'))
+        subject.setdefault('履修基準年度', driver.find_element(By.NAME, 'lblCc004ScrDispNm').get_attribute('value'))
+        subject.setdefault('履修登録方法', driver.find_element(By.NAME, 'lblTacRgMthCd').get_attribute('value'))
 
-        if len(driver.find_elements_by_name('lblVolCd2')) != 0:
-            study_value = driver.find_element_by_name('lblVolCd2').get_attribute('value')
+        if len(driver.find_elements(By.NAME, 'lblVolCd2')) != 0:
+            study_value = driver.find_element(By.NAME, 'lblVolCd2').get_attribute('value')
             study_idx = safe_index(study, study_value, study_index, study_alias_index)
             if study_idx is not None:
                 subject.setdefault('授業形態', study_idx)
             else:
                 safe_value = str(study_value).replace('<', '&lt;').replace('>', '&gt;')
                 print(f"Warning: Unknown 授業形態 value: {safe_value}")
-        if len(driver.find_elements_by_name('lblVolCd3')) != 0:
-            study_value = driver.find_element_by_name('lblVolCd3').get_attribute('value')
+        if len(driver.find_elements(By.NAME, 'lblVolCd3')) != 0:
+            study_value = driver.find_element(By.NAME, 'lblVolCd3').get_attribute('value')
             study_idx = safe_index(study, study_value, study_index, study_alias_index)
             if study_idx is not None:
                 subject.setdefault('緊急授業形態', study_idx)
             else:
                 safe_value = str(study_value).replace('<', '&lt;').replace('>', '&gt;')
                 print(f"Warning: Unknown 緊急授業形態 value: {safe_value}")
-        if len(driver.find_elements_by_name('lblVolCd4')) != 0:
-            study_value = driver.find_element_by_name('lblVolCd4').get_attribute('value')
+        if len(driver.find_elements(By.NAME, 'lblVolCd4')) != 0:
+            study_value = driver.find_element(By.NAME, 'lblVolCd4').get_attribute('value')
             study_idx = safe_index(study, study_value, study_index, study_alias_index)
             if study_idx is not None:
                 subject.setdefault('オンライン授業形態', study_idx)
@@ -551,25 +551,25 @@ def act(m, a, b):
         # list
         topic = {}
         for x in range(40):
-            if len(driver.find_elements_by_name('lblVolItm' + str(x + 6))) > 0:
+            if len(driver.find_elements(By.NAME, 'lblVolItm' + str(x + 6))) > 0:
                 topic.setdefault('第' + str(x + 1) + '回',
-                                 [driver.find_element_by_name('lblVolItm' + str(x + 6)).get_attribute('value'),
-                                  driver.find_element_by_name('lblVolItm' + str(46 + x)).get_attribute('value')])
-            elif len(driver.find_elements_by_name('lblVolItm38')) > 0:
-                topic.setdefault('授業計画1', driver.find_element_by_name('lblVolItm38').get_attribute('value'))
+                                 [driver.find_element(By.NAME, 'lblVolItm' + str(x + 6)).get_attribute('value'),
+                                  driver.find_element(By.NAME, 'lblVolItm' + str(46 + x)).get_attribute('value')])
+            elif len(driver.find_elements(By.NAME, 'lblVolItm38')) > 0:
+                topic.setdefault('授業計画1', driver.find_element(By.NAME, 'lblVolItm38').get_attribute('value'))
                 break
             else:
                 break
-        if len(driver.find_elements_by_name('lblVolItm5')) > 0:
-            topic.setdefault('授業外学習2', driver.find_element_by_name('lblVolItm5').get_attribute('value'))
+        if len(driver.find_elements(By.NAME, 'lblVolItm5')) > 0:
+            topic.setdefault('授業外学習2', driver.find_element(By.NAME, 'lblVolItm5').get_attribute('value'))
         grading = {}
         # ページ内のすべての output クラスの要素を取得（先頭2件は除く）
-        tables = driver.find_elements_by_class_name('output')
+        tables = driver.find_elements(By.CLASS_NAME, 'output')
         for table in tables[3:]:
             # キャプション要素があれば取得（なければ空文字）
             caption_text = ""
             try:
-                caption_elem = table.find_element_by_tag_name('caption')
+                caption_elem = table.find_element(By.TAG_NAME, 'caption')
                 caption_text = caption_elem.text.strip()
             except Exception:
                 pass
@@ -577,8 +577,8 @@ def act(m, a, b):
             # キャプションに「教室情報」または "Classroom" が含まれている場合は教室情報テーブルとして処理
             if caption_text and ("教室情報" in caption_text or "Classroom" in caption_text):
                 try:
-                    tbody = table.find_element_by_tag_name('tbody')
-                    rows = tbody.find_elements_by_tag_name('tr')
+                    tbody = table.find_element(By.TAG_NAME, 'tbody')
+                    rows = tbody.find_elements(By.TAG_NAME, 'tr')
                 except Exception:
                     rows = []
                 # 行番号（0: ヘッダー行 → 空配列、以降: 各データ行の<td>セル）
@@ -587,7 +587,7 @@ def act(m, a, b):
                         grading[f"項番No.{idx}"] = []
                     else:
                         # データ行の場合、<th>（項番）は除き<td>セルのみ取得
-                        td_elements = row.find_elements_by_tag_name('td')
+                        td_elements = row.find_elements(By.TAG_NAME, 'td')
                         # 各セルのテキストをstripして配列に
                         cell_texts = [td.text.strip() for td in td_elements if td.text.strip() != ""]
                         grading[f"項番No.{idx}"] = cell_texts
@@ -595,26 +595,26 @@ def act(m, a, b):
             else:
                 # キャプションがないテーブル（例：成績評価や教科書テーブル）の処理
                 try:
-                    tbody = table.find_element_by_tag_name('tbody')
-                    rows = tbody.find_elements_by_tag_name('tr')
+                    tbody = table.find_element(By.TAG_NAME, 'tbody')
+                    rows = tbody.find_elements(By.TAG_NAME, 'tr')
                 except Exception:
                     rows = []
                 if not rows:
                     continue
 
                 # 最初の行に th が存在する場合はヘッダー行として扱う
-                header_ths = rows[0].find_elements_by_tag_name('th')
+                header_ths = rows[0].find_elements(By.TAG_NAME, 'th')
                 if header_ths:
                     if "教科書" in header_ths[0].text or "更新日時" in header_ths[0].text or "参考文献" in header_ths[0].text:
                         base_key = header_ths[0].text.replace("\n", "/").strip()
                     else:
                         base_key = header_ths[0].text.replace("\n", "").strip()
-                    header_tds = rows[0].find_elements_by_tag_name('td')
+                    header_tds = rows[0].find_elements(By.TAG_NAME, 'td')
                     if header_tds:
                         header_values = [process_td(td) for td in header_tds]
                         grading[f"{base_key}0"] = header_values
                     for idx, row in enumerate(rows[1:], start=1):
-                        tds = row.find_elements_by_tag_name('td')
+                        tds = row.find_elements(By.TAG_NAME, 'td')
                         if tds:
                             values = [process_td(td).replace("\n", "") for td in tds]
                             if len(values) == 1:
@@ -622,8 +622,8 @@ def act(m, a, b):
                             grading[f"{base_key}{idx}"] = values
                 else:
                     for row in rows:
-                        th_elements = row.find_elements_by_tag_name('th')
-                        td_elements = row.find_elements_by_tag_name('td')
+                        th_elements = row.find_elements(By.TAG_NAME, 'th')
+                        td_elements = row.find_elements(By.TAG_NAME, 'td')
                         if th_elements and td_elements:
                             key_base = th_elements[0].text.replace("\n", "/")
                             value = process_td(td_elements[0].replace("\n", ""))
@@ -634,26 +634,26 @@ def act(m, a, b):
                                 key = f"{key_base}{suffix}"
                             grading[key] = value
         othersJa = {}
-        risyuuki = driver.find_element_by_name('lblAc201ScrDispNm_01').get_attribute('value')
+        risyuuki = driver.find_element(By.NAME, 'lblAc201ScrDispNm_01').get_attribute('value')
         othersJa.setdefault('履修期', risyuuki[0: risyuuki.find('／')])
-        if len(driver.find_elements_by_name('lblVolCd1')) != 0:
-            language = driver.find_element_by_name('lblVolCd1').get_attribute('value')
+        if len(driver.find_elements(By.NAME, 'lblVolCd1')) != 0:
+            language = driver.find_element(By.NAME, 'lblVolCd1').get_attribute('value')
             othersJa.setdefault('主な教授言語', language[0: language.find('／')])
-        raw_html = driver.find_element_by_name('lblVolItm2').get_attribute('value')
+        raw_html = driver.find_element(By.NAME, 'lblVolItm2').get_attribute('value')
         clean_text = re.sub(r'<[^>]*>', '', raw_html).strip()
         othersJa.setdefault('授業目的', clean_text)
-        raw_html = driver.find_element_by_name('lblVolItm3').get_attribute('value')
+        raw_html = driver.find_element(By.NAME, 'lblVolItm3').get_attribute('value')
         clean_text = re.sub(r'<[^>]*>', '', raw_html).strip()
         othersJa.setdefault('到達目標', clean_text)
-        othersJa.setdefault('特記事項', driver.find_element_by_name('lblVolItm1').get_attribute('value'))
-        othersJa.setdefault('関連科目', driver.find_element_by_name('lblVolItm4').get_attribute('value'))
-        if len(driver.find_elements_by_name('lblVolItm80')) != 0:
-            othersJa.setdefault('授業の概要・背景', driver.find_element_by_name('lblVolItm80').get_attribute('value'))
-        raw_html = driver.find_element_by_name('lblVolItm43').get_attribute('value')
+        othersJa.setdefault('特記事項', driver.find_element(By.NAME, 'lblVolItm1').get_attribute('value'))
+        othersJa.setdefault('関連科目', driver.find_element(By.NAME, 'lblVolItm4').get_attribute('value'))
+        if len(driver.find_elements(By.NAME, 'lblVolItm80')) != 0:
+            othersJa.setdefault('授業の概要・背景', driver.find_element(By.NAME, 'lblVolItm80').get_attribute('value'))
+        raw_html = driver.find_element(By.NAME, 'lblVolItm43').get_attribute('value')
         clean_text = re.sub(r'<[^>]*>', '', raw_html).strip()
         othersJa.setdefault('授業方法', clean_text)
         othersJa.setdefault('トピック', topic)
-        term_value = driver.find_element_by_name('lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_03').get_attribute(
+        term_value = driver.find_element(By.NAME, 'lstSlbtchinftJ002List_st[0].lblAc201ScrDispNm_03').get_attribute(
             'value')
         term_index = safe_index(term_data, term_value, term_data_index, term_data_alias_index)
         subject['開講期'] = term_index
@@ -662,13 +662,13 @@ def act(m, a, b):
         for i in range(0, 8):
             try:
                 element_name = f"lstSlbtchinftJ002List_st[{i}].lblTmtxCd"
-                element = driver.find_element_by_name(element_name)
+                element = driver.find_element(By.NAME, element_name)
                 value = element.get_attribute("value")
                 term_index = safe_index(day_data, value, day_data_index, day_data_alias_index)
                 subject[f'時限{i+1}'] = term_index
                 # 各時限の学期情報を保存 (0=春, 1=秋, -1=通年)
                 try:
-                    slot_term_element = driver.find_element_by_name(f'lstSlbtchinftJ002List_st[{i}].lblAc201ScrDispNm_03')
+                    slot_term_element = driver.find_element(By.NAME, f'lstSlbtchinftJ002List_st[{i}].lblAc201ScrDispNm_03')
                     slot_term_value = slot_term_element.get_attribute('value')
                     if '春' in slot_term_value or 'Spring' in slot_term_value:
                         subject[f'時限{i+1}_term'] = 0
