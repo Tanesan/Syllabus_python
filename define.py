@@ -203,17 +203,36 @@ def _primary_label(value):
         return normalized.split("/", 1)[0].strip()
     return normalized
 
+def _secondary_label(value):
+    normalized = _normalize_label(value)
+    if not normalized:
+        return None
+    if "/" in normalized:
+        return normalized.split("/", 1)[1].strip()
+    return None
+
 def _build_alias_map(values):
     alias_map = {}
     collisions = set()
-    for idx, value in enumerate(values):
-        key = _primary_label(value)
-        if not key:
-            continue
-        if key in alias_map and alias_map[key] != idx:
-            collisions.add(key)
-        else:
-            alias_map[key] = idx
+
+    def _add(extractor):
+        local_collisions = set()
+        for idx, value in enumerate(values):
+            key = extractor(value)
+            if not key:
+                continue
+            if key in alias_map and alias_map[key] != idx:
+                local_collisions.add(key)
+            else:
+                alias_map[key] = idx
+        collisions.update(local_collisions)
+
+    # Match by Japanese (primary) label first, then fall back to English
+    # (secondary) label so we still resolve when the source site tweaks
+    # only one half (e.g. 対面授業 → 対面授業科目, English unchanged).
+    _add(_primary_label)
+    _add(_secondary_label)
+
     for key in collisions:
         alias_map.pop(key, None)
     return alias_map
@@ -229,7 +248,10 @@ def safe_index(values, value, index_map=None, alias_map=None):
         return idx
     if alias_map is None:
         alias_map = _build_alias_map(values)
-    return alias_map.get(_primary_label(value))
+    idx = alias_map.get(_primary_label(value))
+    if idx is not None:
+        return idx
+    return alias_map.get(_secondary_label(value))
 
 ad_data_index = _build_index_map(ad_data)
 study_index = _build_index_map(study)
@@ -461,9 +483,13 @@ def act(m, a, b):
         #         break
         # else:
         #     sleep(0.1)
-        WebDriverWait(driver, 20).until(
-            lambda d: d.find_element(By.NAME, 'ERefer')
-        )
+        try:
+            WebDriverWait(driver, 20).until(
+                lambda d: d.find_element(By.NAME, 'ERefer')
+            )
+        except TimeoutException:
+            print("ERefer did not appear within timeout, breaking the loop.")
+            break
         if len(driver.find_elements(By.NAME, 'ERefer')) == 0:
             print("No data found, breaking the loop.")
             break
