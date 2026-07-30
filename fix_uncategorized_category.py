@@ -48,6 +48,19 @@ def fix_department(dept_name: str, dept_data: dict) -> list:
     """学部内の未分類トップをリネーム。変更ログの文字列リストを返す。"""
     changes = []
     req_cats = dept_requirement_categories(dept_data)
+
+    # ルール2 (商学部など): 「◯◯コース」サブセクション内の未分類トップは
+    # コース専門科目の科目群 (コース見出し直後に科目行が始まりヘッダが無い)。
+    if "コース専門科目" in req_cats and TARGET_NAME not in req_cats:
+        for sub_name, sub_data in dept_data.get("subdepartments", {}).items():
+            if not sub_name.endswith("コース"):
+                continue
+            for c in sub_data.get("categories", []):
+                if c.get("name") == TARGET_NAME:
+                    c["name"] = "コース専門科目"
+                    changes.append(
+                        f"{dept_name}/{sub_name}: 未分類 → コース専門科目")
+
     if RENAME_TO not in req_cats or TARGET_NAME in req_cats:
         return changes
 

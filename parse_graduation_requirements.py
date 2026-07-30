@@ -554,6 +554,17 @@ def parse(pdf_path):
                     ]
                     if any("キリスト教科目" in s for s in sub_names):
                         cat["name"] = "総合教育科目"
+            # 「未分類」トップの救済 その2 (商学部など):
+            # 「◯◯コース」サブセクションの見出し直後にコース専門科目の
+            # 科目行が始まるため、コース配下の科目群が「未分類」に落ちる。
+            # 要件側に「コース専門科目」がある学部の「コース」サブセクション
+            # 内の未分類トップはコース専門科目へリネームする。
+            if ("コース専門科目" in req_top_names
+                    and "未分類" not in req_top_names
+                    and sub_name.endswith("コース")):
+                for cat in sub_data["categories"]:
+                    if cat.get("name") == "未分類":
+                        cat["name"] = "コース専門科目"
         dept_data["subdepartments"] = {
             k: v for k, v in dept_data["subdepartments"].items()
             if v.get("categories")
