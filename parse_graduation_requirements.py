@@ -538,6 +538,22 @@ def parse(pdf_path):
         for sub_name, sub_data in dept_data["subdepartments"].items():
             sub_data["categories"] = nest_categories(
                 sub_data["categories"], req_top_names=req_top_names)
+            # 「未分類」トップの救済: 一部学部 (経済/理/工/教育/生命環境等) は
+            # 学則PDFの「総合教育科目」見出しが抽出できず、キリスト教科目・
+            # 言語教育科目などの総合教育科目群が「未分類」トップに落ちる。
+            # その場合、アプリの単位集計で要件カテゴリと一致せず科目が
+            # 自由科目扱いになるため、要件側に「総合教育科目」があり
+            # サブに「キリスト教科目」を含む未分類トップはリネームする。
+            if "総合教育科目" in req_top_names and "未分類" not in req_top_names:
+                for cat in sub_data["categories"]:
+                    if cat.get("name") != "未分類":
+                        continue
+                    sub_names = [
+                        s.get("name", "")
+                        for s in cat.get("subcategories", [])
+                    ]
+                    if any("キリスト教科目" in s for s in sub_names):
+                        cat["name"] = "総合教育科目"
         dept_data["subdepartments"] = {
             k: v for k, v in dept_data["subdepartments"].items()
             if v.get("categories")
