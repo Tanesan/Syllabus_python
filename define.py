@@ -68,7 +68,12 @@ ad_data = [
     "言語コミュニケーション前期／Graduate School of Language, Communication, and Culture Master's Course",
     "人間福祉研究科前期／Graduate School of Human Welfare Studies Master's Course",
     "教育学研究科前期／Graduate School of Education Master's Course",
-    "理工学研究科修士／Graduate School of Science and Technology Master's Course",
+    # 注意: 旧名称のレガシー枠 (現行データでは科目0件)。英語名が
+    # 「理工学研究科前期」と完全に同一だったため、エイリアスマップ構築時に
+    # 衝突扱いで両方の英語フォールバックが削除され、大学サイト側の日本語
+    # 表記が揺れた場合に部署解決へ失敗する問題があった。英語名に (Legacy)
+    # を付けて衝突を解消する (リスト位置=部署コードは変更しないこと)。
+    "理工学研究科修士／Graduate School of Science and Technology Master's Course (Legacy)",
     "国際学研究科前期／Graduate School of International Studies Master's Course",
     "大学院共通科目・認定科目前期／Graduate School of Master's Course (Certified)",
     "神学研究科後期／Graduate School of Theology Doctoral Course",
