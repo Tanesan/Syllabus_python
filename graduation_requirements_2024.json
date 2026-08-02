@@ -9818,7 +9818,7 @@
         "_default": {
           "categories": [
             {
-              "name": "未分類",
+              "name": "総合教育科目",
               "subjects": [],
               "subcategories": [
                 {
@@ -11656,7 +11656,7 @@
         "経営コース": {
           "categories": [
             {
-              "name": "未分類",
+              "name": "コース専門科目",
               "subjects": [
                 {
                   "name": "経営学原理Ⅰ",
@@ -11831,7 +11831,7 @@
         "会計コース": {
           "categories": [
             {
-              "name": "未分類",
+              "name": "コース専門科目",
               "subjects": [
                 {
                   "name": "会計職業と倫理",
@@ -11962,7 +11962,7 @@
         "マーケティングコース": {
           "categories": [
             {
-              "name": "未分類",
+              "name": "コース専門科目",
               "subjects": [
                 {
                   "name": "マーケティングマネジメント",
@@ -12117,7 +12117,7 @@
         "ファイナンスコース": {
           "categories": [
             {
-              "name": "未分類",
+              "name": "コース専門科目",
               "subjects": [
                 {
                   "name": "金融論Ⅰ",
@@ -12260,7 +12260,7 @@
         "ビジネス情報コース": {
           "categories": [
             {
-              "name": "未分類",
+              "name": "コース専門科目",
               "subjects": [
                 {
                   "name": "統計分析論Ⅰ",
@@ -12423,7 +12423,7 @@
         "国際ビジネスコース": {
           "categories": [
             {
-              "name": "未分類",
+              "name": "コース専門科目",
               "subjects": [
                 {
                   "name": "国際ビジネスコミュニケーション論",
@@ -16856,7 +16856,7 @@
         "_default": {
           "categories": [
             {
-              "name": "未分類",
+              "name": "総合教育科目",
               "subjects": [],
               "subcategories": [
                 {
@@ -19981,7 +19981,7 @@
         "_default": {
           "categories": [
             {
-              "name": "未分類",
+              "name": "総合教育科目",
               "subjects": [],
               "subcategories": [
                 {
@@ -21040,7 +21040,7 @@
         "_default": {
           "categories": [
             {
-              "name": "未分類",
+              "name": "総合教育科目",
               "subjects": [],
               "subcategories": [
                 {
@@ -22947,7 +22947,7 @@
         "_default": {
           "categories": [
             {
-              "name": "未分類",
+              "name": "総合教育科目",
               "subjects": [],
               "subcategories": [
                 {
