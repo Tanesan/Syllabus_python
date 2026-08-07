@@ -43,7 +43,7 @@ jobs:
           if ! git diff --exit-code --quiet
           then
             python3 versionup.py
-            git add . && git commit -m "Sitemap" && git push -u origin main || (git pull --rebase origin main && git push -u origin main)
+            git add . && git commit -m "Sitemap" && git push -u origin main || (git rebase --abort 2>/dev/null; git pull --rebase origin main && git push -u origin main) || (git rebase --abort 2>/dev/null; sleep 15; git pull --rebase origin main && git push -u origin main) || (git rebase --abort 2>/dev/null; exit 1)
           fi
         
 
