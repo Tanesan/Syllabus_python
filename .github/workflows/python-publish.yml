@@ -8,6 +8,10 @@ on:
     - cron: "0 22 */4 * *" # cronで定期実行
 # on: workflow_dispatch
 
+# 各ジョブは needs で1本につながっている。既定では1つ失敗すると後続が全部
+# スキップされ、2026-09-22 はランナー停止で1ジョブ落ちただけで残り71ジョブ
+# (索引 fuse.json の再生成を含む) が止まった。needs を持つジョブには
+# `if: ${{ !cancelled() }}` を付け、失敗しても続行する (手動キャンセル時だけ止まる)。
 jobs:
   School-of-Theology:
     runs-on: ubuntu-latest
@@ -53,6 +57,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Theology
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -89,6 +94,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-1
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -126,6 +132,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -165,6 +172,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-3
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -204,6 +212,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-4
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -243,6 +252,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-5
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -281,6 +291,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Humanities-6
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -322,6 +333,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Sociology
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -363,6 +375,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Sociology2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -404,6 +417,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Law-and-Politics
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -445,6 +459,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Law-and-Politics-2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -485,6 +500,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Law-and-Politics-3
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -525,6 +541,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Economics-1
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -567,6 +584,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Economics-2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -608,6 +626,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Economics-3
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -649,6 +668,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Business-Administration
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -687,6 +707,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Business-Administration2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -728,6 +749,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Science-and-Technology1
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -768,6 +790,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Science-and-Technology2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -810,6 +833,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Science-and-Technology3
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -852,6 +876,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Science-and-Technology4
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -890,6 +915,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Science-and-Technology5
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -932,6 +958,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Policy-Studies
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -974,6 +1001,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Policy-Studies-2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1016,6 +1044,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Human-Welfare-Studies
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1058,6 +1087,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Human-Welfare-Studies2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1096,6 +1126,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Education
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1136,6 +1167,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Education2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1176,6 +1208,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Education3
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1218,6 +1251,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-International-Studies
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1261,6 +1295,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-International-Studies2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1303,6 +1338,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Engineering
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1345,6 +1381,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Engineering2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1383,6 +1420,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Engineering3
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1421,6 +1459,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Engineering4
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1459,6 +1498,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Engineering5
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1501,6 +1541,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Biological-and-Environmental-Sciences
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1543,6 +1584,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Biological-and-Environmental-Sciences2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1581,6 +1623,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Biological-and-Environmental-Sciences3
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1619,6 +1662,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Biological-and-Environmental-Sciences4
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1657,6 +1701,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Biological-and-Environmental-Sciences5
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1698,6 +1743,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Architecture
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1739,6 +1785,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Sports-and-Health-Sciences-Program-Office
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1780,6 +1827,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-Common-Educational-Programs
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1821,6 +1869,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-Career-Planning-and-Placement
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1862,6 +1911,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-Common-Educational-Programs-Information-Science-Courses
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1903,6 +1953,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Language-Center
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1944,6 +1995,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-International-Education-and-Cooperation-JEASP
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -1985,6 +2037,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Research-Center-for-Teacher-Development-for-Certifications
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2026,6 +2079,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Research-Center-for-Teacher-Development-for-Special-Studies
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2110,6 +2164,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-International-Education-and-Cooperation
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2151,6 +2206,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-Japanese-Language-Education
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2192,6 +2248,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Center-for-Hands-on-Learning-Programs
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2233,6 +2290,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Integrated-Center-for-UN-and-Foreign-Affairs-Studies
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2274,6 +2332,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Theology-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2315,6 +2374,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Humanities-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2356,6 +2416,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Sociology-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2397,6 +2458,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Law-and-Politics-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2438,6 +2500,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Economics-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2479,6 +2542,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Business-Administration-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2520,6 +2584,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Science-and-Technology-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2561,6 +2626,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Policy-Studies-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2602,6 +2668,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Language-Communication-and-Culture-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2643,6 +2710,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Human-Welfare-Studies-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2684,6 +2752,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Education-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2725,6 +2794,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Science-and-Technology-Masters-Course2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2766,6 +2836,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-International-Studies-Masters-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2807,6 +2878,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Masters-Course-Certified
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2848,6 +2920,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Theology-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2889,6 +2962,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Humanities-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2930,6 +3004,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Sociology-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -2971,6 +3046,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Law-and-Politics-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3012,6 +3088,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Economics-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3053,6 +3130,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Business-Administration-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3094,6 +3172,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Science-and-Technology-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3135,6 +3214,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Policy-Studies-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3176,6 +3256,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Language-Communication-and-Culture-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3217,6 +3298,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Human-Welfare-Studies-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3258,6 +3340,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Education-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3299,6 +3382,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Institute-of-Business-and-Accounting-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3340,6 +3424,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-International-Studies-Doctoral-Course
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3381,6 +3466,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Graduate-School-of-Doctoral-Course-Certified
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3422,6 +3508,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Law-School
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3463,6 +3550,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Institute-of-Business-and-Accounting
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3504,6 +3592,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: free2
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3545,6 +3634,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: School-of-Science
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3584,6 +3674,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Remove-Dubble
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -3629,6 +3720,7 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 720
     needs: Sitemap
+    if: ${{ !cancelled() }}
     steps:
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
