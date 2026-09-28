@@ -30,7 +30,7 @@ on:
           - Hands-on-Learning
           - Law-School-and-IBA
       run_sitemap:
-        description: 'Sitemap更新とデプロイも行う'
+        description: 'gh-pages へのデプロイも行う (索引 fuse.json の再生成は常に行う)'
         type: boolean
         default: true
 
@@ -137,7 +137,9 @@ jobs:
     runs-on: self-hosted
     timeout-minutes: 30
     needs: rescrape
-    if: ${{ github.event.inputs.run_sitemap == 'true' }}
+    # 索引 (fuse.json) は毎回作り直す。以前は run_sitemap のときだけで、再スクレイプした
+    # 科目の詳細だけが新しくなり、検索一覧 (fuse.json) は古いまま残っていた。
+    if: ${{ !cancelled() }}
     steps:
       - uses: actions/checkout@v4
         with:
